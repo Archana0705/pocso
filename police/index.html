@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html class="no-js  page-1 app-POCSO182168171" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>POCSO</title>
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/Core-new.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/new-custom.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/aos.min.css" type="text/css" />
+  <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png" />
+  <link rel="icon" href="../assets/img/app-icon-32.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-image: linear-gradient(to right, var(--shade1), var(--shade2));
+    }
+
+    #dyy {
+      width: 160px !important;
+    }
+
+    .toast-container {
+      right: 0.5%;
+    }
+
+    #successToast {
+      background: #198754 !important;
+    }
+
+    #errorToast {
+      background: #ff0000 !important;
+    }
+  </style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.pocsoportal.tn.gov.in/ords/r/wspocso/111/files/static/v1962/apexcharts.min.js"></script>
+  <!-- Toast -->
+  <div class="toast-container position-fixed p-3 custom_toast" x-data="transButtonComponent()">
+    <div id="errorToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="errorMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+    <div id="successToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="successMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <!-- Toast -->
+</head>
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form role="none" action="wwv_flow.accept?p_context=pocso182168171/home/4924695955763" method="post" name="wwv_flow"
+    id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
+    <input type="hidden" name="p_flow_id" value="111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
+      value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="4924695955763" id="pInstance" /><input
+      type="hidden" name="p_page_submission_id" value="8872383355407808905540257396399135875"
+      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
+      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
+      value="pocso182168171&#x2F;home&#x2F;4924695955763" id="pContext" /><input type="hidden"
+      value="8872383355407808905540257396399135875" id="pSalt" />
+    <header class="t-Header" id="t_Header" role="banner">
+      <div class="t-Header-branding pad">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo row">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;home?session=4924695955763" class="t-Header-logo-link"><img src="&#x9;r&#x2F;wspocso&#x2F;111&#x2F;files&#x2F;static&#x2F;v1962&#x2F;tnlogo.png" alt="" class="apex-logo-img" /><span class="apex-logo-text">POCSO Database Management and VCF Dispersal Portal</span></a> -->
+          <div class="col"><img class="header-logo" src="../assets/img/tnlogo.png" data-aos="fade-left"
+              data-aos-delay="600" data-aos-duration="800"></div>
+          <div class="col-8 heading text-middle">
+            <h2 data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200">Department of Children Welfare and
+              Special Services</h2>
+            <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200">குழந்தைகள் நலன் மற்றும் சிறப்புச்
+              சேவைகள் துறை</h2>
+          </div>
+          <div class="col"><img class="header-logo" src="../assets/img/deptlogo.png" data-aos="fade-right"
+              data-aos-delay="600" data-aos-duration="800"></div>
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div class="t-Header-navBar--center">
+            <ul class="t-NavigationBar " id="333474357255036612">
+              <li class="t-NavigationBar-item ">
+                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
+                  id="L333486390590036621" data-menu="menu_L333486390590036621" title="">
+                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" last-log></span><span
+                    class="t-Button-label">Awps - Avadi</span><span class="t-Button-badge"></span><span
+                    class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+                </button>
+                <div class="t-NavigationBar-menu" style="display: none" id="menu_L333486390590036621">
+                  <ul>
+                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
+                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
+                        href="apex_authentication.logout?p_app_id=111&p_session_id=4924695955763" title=""
+                        target="">Sign Out</a></li>
+                    <li class="" data-current="false" data-icon=""><a
+                        href="javascript:apex.theme42.dialog('\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fchange-password?session=4924695955763\u0026dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg',{title:'Change Password',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)"
+                        title="" target="">Change Password</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="t-NavigationBar-item ">
+                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+                  <span class="t-Icon " aria-hidden="true" last-log></span><span class="t-Button-label">Last Logged in:
+                    13-11-2024 11:40 AM</span><span class="t-Button-badge"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav">
+        <div class="t-Header-nav-list js-tabLike js-tabLike" id="t_MenuNav">
+          <ul>
+            <li class="a-MenuBar-item a-Menu--current" data-current="true" data-id="" data-disabled="" data-hide=""
+              data-shortcut="" data-icon=""><a class="a-MenuBar-label" href="index.html" title=""
+                target="">Dashboard</a></li>
+            <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut=""
+              data-icon="fa&#x20;fa-table"><a class="a-MenuBar-label" href="police-form.html" title="" target="">Add New
+                Case</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="t-Body">
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"></div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="345766732811634868_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="345766732811634868_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent"></div>
+            <div class="t-Body-contentInner">
+              <div class="container">
+                <div class="row ">
+                  <div class="col col-12 apex-col-auto col-start col-end">
+                    <div id="R90760425424705547" role="region"
+                      aria-label="Dashboard&#x2F;Report&#x20;for&#x20;Police111111111" class="t-IRR-region ">
+                      <div class="t-Region-orderBy"></div>
+                      <div id="R90760425424705547_ir" class="a-IRR-container">
+                        <div id="R90760425424705547_worksheet_region" class="a-IRR" aria-live="polite">
+                          <div id="R90760425424705547_single_row_view" class="a-IRR-singleRowView"></div>
+                          <div id="R90760425424705547_full_view" class="a-IRR-fullView">
+                            <div id="R90760425424705547_actions_menu"></div>
+                            <div id="R90760425424705547_toolbar" class="a-IRR-toolbar">
+                              <div role="search"
+                                aria-label="Search&#x20;bar&#x20;of&#x20;Dashboard&#x2F;Report&#x20;for&#x20;Police111111111"
+                                id="R90760425424705547_toolbar_controls" class="a-IRR-controls">
+                                <div class="a-IRR-controlGroup a-IRR-controlGroup--search a-IRR-controlGroup--hidden">
+                                  <div class="a-IRR-search"><input type="hidden"
+                                      id="R90760425424705547_column_search_current_column" /><input type="hidden"
+                                      id="R90760425424705547_search_field" value="" /></div>
+                                </div>
+                                <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
+                                <div class="a-IRR-controlGroup a-IRR-controlGroup--options">
+                                  <input type="hidden" id="R90760425424705547_row_select" value="10" />
+                                  <div class="a-IRR-actions"><button id="R90760425424705547_actions_button"
+                                      class="a-Button a-IRR-button a-IRR-button--actions" type="button"
+                                      data-menu="R90760425424705547_actions_menu">Actions<span aria-hidden="true"
+                                        class="a-Icon icon-menu-drop-down"></span></button></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="R90760425424705547_content" class="a-IRR-content ">
+                              <div id="R90760425424705547_dialog_js" class="a-IRR-dialogBody" style="display:none">
+                              </div>
+                              <input type="hidden" id="R90760425424705547_worksheet_id" value="90760521613705548" />
+                              <input type="hidden" id="R90760425424705547_app_user" value="POL_AVADI_006" />
+                              <input type="hidden" id="R90760425424705547_report_id" value="91620527044003583" />
+                              <input type="hidden" id="R90760425424705547_view_mode" value="REPORT" />
+                              <style id="R90760425424705547_worksheet_css" type="text/css"></style>
+                              <div role="region"
+                                aria-label="Chart&#x20;view&#x20;of&#x20;Dashboard&#x2F;Report&#x20;for&#x20;Police111111111"
+                                id="R90760425424705547_chart" class="a-IRR-chartView"></div>
+                              <div role="region"
+                                aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Dashboard&#x2F;Report&#x20;for&#x20;Police111111111"
+                                id="R90760425424705547_group_by" class="a-IRR-groupByView"></div>
+                              <div role="region"
+                                aria-label="Pivot&#x20;view&#x20;of&#x20;Dashboard&#x2F;Report&#x20;for&#x20;Police111111111"
+                                id="R90760425424705547_pivot" class="a-IRR-pivotView"></div>
+                              <div role="region"
+                                aria-label="Data&#x20;view&#x20;of&#x20;Dashboard&#x2F;Report&#x20;for&#x20;Police111111111"
+                                id="R90760425424705547_data_panel" class="a-IRR-reportView">
+                                <!-- <div class="a-IRR-tableContainer">
+                                  <table
+                                    aria-label="Dashboard&#x2F;Report&#x20;for&#x20;Police111111111,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
+                                    class="a-IRR-table" id="90760521613705548">
+                                    <tr>
+                                      <th class="a-IRR-header a-IRR-header--linkCol" id="R90760425424705547_LINK"><span
+                                          class="u-vh">Link</span></th>
+                                      <th class="a-IRR-header u-tC" id="C91992478670485334"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91992478670485334" href="#">Complaint
+                                          Date</a></th>
+                                      <th class="a-IRR-header u-tC" id="C15905621408498128"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="15905621408498128" href="#">Complaint
+                                          Made By</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91993118832485340"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91993118832485340" href="#">FIR No</a>
+                                      </th>
+                                      <th class="a-IRR-header u-tC" id="C91993162395485341"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91993162395485341" href="#">Date of
+                                          FIR</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91993788881485347"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91993788881485347"
+                                          href="#">Chargesheet/Final Report</a></th>
+                                      <th class="a-IRR-header u-tC" id="C19999750040426303"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="19999750040426303" href="#">Charge Sheet
+                                          Date</a></th>
+                                      <th class="a-IRR-header u-tC" id="C16509760019310103"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="16509760019310103" href="#">Gender of
+                                          the Victim</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91994117353485350"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91994117353485350" href="#">Name Of the
+                                          Parent/Guadian</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91994152706485351"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91994152706485351" href="#">Willingness
+                                          for Compensation</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91994308160485352"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91994308160485352" href="#">Compensation
+                                          Applied By</a></th>
+                                      <th class="a-IRR-header u-tC" id="C20000284044426308"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="20000284044426308" href="#">Applied
+                                          On</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91994402263485353"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91994402263485353" href="#">Relationship
+                                          with Victim</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91994606625485355"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91994606625485355" href="#">Account
+                                          Holder Name</a></th>
+                                      <th class="a-IRR-header u-tC" id="C91994667116485356"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="91994667116485356" href="#">Account
+                                          Number</a></th>
+                                      <th class="a-IRR-header u-tC" id="C92344296745616807"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="92344296745616807" href="#">Bank
+                                          Name</a></th>
+                                      <th class="a-IRR-header u-tC" id="C92344355974616808"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="92344355974616808" href="#">Branch
+                                          Name</a></th>
+                                      <th class="a-IRR-header u-tC" id="C15905581781498127"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="15905581781498127" href="#">Name of the
+                                          medical institution</a></th>
+                                      <th class="a-IRR-header u-tC" id="C15905793091498129"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="15905793091498129" href="#">Date of
+                                          requisition sent by police</a></th>
+                                      <th class="a-IRR-header u-tC" id="C15905897370498130"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="15905897370498130" href="#">Date of
+                                          medical examination of the victim</a></th>
+                                      <th class="a-IRR-header u-tC" id="C15905945566498131"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="15905945566498131" href="#">Date of
+                                          Interim/Provisional medical opinion</a></th>
+                                      <th class="a-IRR-header u-tC" id="C13752837579123339"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="13752837579123339" href="#">Is Interim
+                                          Compensation awarded?</a></th>
+                                      <th class="a-IRR-header u-tC" id="C13751706210123328"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="13751706210123328" href="#">Interim
+                                          Compensation Status</a></th>
+                                      <th class="a-IRR-header u-tC" id="C13751842961123329"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="13751842961123329" href="#">Court Case
+                                          Status</a></th>
+                                      <th class="a-IRR-header u-tC" id="C13751992308123330"><a aria-haspopup="dialog"
+                                          class="a-IRR-headerLink" data-column="13751992308123330" href="#">Final
+                                          Compensation Status</a></th>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FNOVEMBER&#x25;20&#x25;2F2024&#x25;2F2506&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;3uFJeu04vKU7P6KT7_PYe0E2rn9FzvAbRTLQ6dlvvEaGlPHES0Jm5KXLg7lwSTIFPQmdmdPjVsSRWstMvNVmNJg"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">30-Oct-2024</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">598</td>
+                                      <td class=" u-tC" headers="C91993162395485341">30-Oct-2024</td>
+                                      <td class=" u-tC" headers="C91993788881485347">No</td>
+                                      <td class=" u-tC" headers="C19999750040426303">-</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">Lakshmi</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">Lakshmi</td>
+                                      <td class=" u-tC" headers="C20000284044426308">08-Nov-2024</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">Lakshmi</td>
+                                      <td class=" u-tC" headers="C91994667116485356">709968477</td>
+                                      <td class=" u-tC" headers="C92344296745616807">TNSC</td>
+                                      <td class=" u-tC" headers="C92344355974616808">Anna Nagar</td>
+                                      <td class=" u-tC" headers="C15905581781498127">KMC</td>
+                                      <td class=" u-tC" headers="C15905793091498129">02-Nov-2024</td>
+                                      <td class=" u-tC" headers="C15905897370498130">02-Nov-2024</td>
+                                      <td class=" u-tC" headers="C15905945566498131">02-Nov-2024</td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FOCTOBER&#x25;20&#x25;20&#x25;2F2024&#x25;2F2366&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;3Z86dg7_ifOakv7d1Mv99pyEdMiOJq8QM-Qik0NmKzr-XEssgpCPfDJjc_urnZ2wIS7yQCO3QG9st46BbUmggkQ"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">18-Sep-2024</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">566</td>
+                                      <td class=" u-tC" headers="C91993162395485341">18-Sep-2024</td>
+                                      <td class=" u-tC" headers="C91993788881485347">No</td>
+                                      <td class=" u-tC" headers="C19999750040426303">-</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">Meena</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">Meena</td>
+                                      <td class=" u-tC" headers="C20000284044426308">24-Oct-2024</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">Meena</td>
+                                      <td class=" u-tC" headers="C91994667116485356">547802010013272</td>
+                                      <td class=" u-tC" headers="C92344296745616807">Union Bank</td>
+                                      <td class=" u-tC" headers="C92344355974616808">Avadi</td>
+                                      <td class=" u-tC" headers="C15905581781498127">KMC</td>
+                                      <td class=" u-tC" headers="C15905793091498129">10-Oct-2024</td>
+                                      <td class=" u-tC" headers="C15905897370498130">10-Oct-2024</td>
+                                      <td class=" u-tC" headers="C15905945566498131">10-Oct-2024</td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FOCTOBER&#x25;20&#x25;20&#x25;2F2024&#x25;2F2364&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;38IWTppOP82B44c9Wj5XhGr5Alfey0bV_uhpvmHr6C9h--G6i0U_HIkD911t8UOifVqd_gncUamACN7n7UjAAQQ"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">04-Sep-2024</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">538</td>
+                                      <td class=" u-tC" headers="C91993162395485341">04-Sep-2024</td>
+                                      <td class=" u-tC" headers="C91993788881485347">No</td>
+                                      <td class=" u-tC" headers="C19999750040426303">-</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">Lakshmi</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">Lakshmi</td>
+                                      <td class=" u-tC" headers="C20000284044426308">24-Oct-2024</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">Lakshmi</td>
+                                      <td class=" u-tC" headers="C91994667116485356">1264155000160219</td>
+                                      <td class=" u-tC" headers="C92344296745616807">Karur Vysya Bank</td>
+                                      <td class=" u-tC" headers="C92344355974616808">Avadi</td>
+                                      <td class=" u-tC" headers="C15905581781498127">KMC</td>
+                                      <td class=" u-tC" headers="C15905793091498129">09-Sep-2024</td>
+                                      <td class=" u-tC" headers="C15905897370498130">09-Sep-2024</td>
+                                      <td class=" u-tC" headers="C15905945566498131">09-Sep-2024</td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FOCTOBER&#x25;20&#x25;20&#x25;2F2024&#x25;2F2363&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;3_uA5BD4F1T0udiPzkspZY-O-S4NKHh19RNl8IeMUfrwuR8coBlZVS4BIkdk1ZWY15rXL9Ka4J_AQsYCHR4zJUA"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">27-May-2024</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">14</td>
+                                      <td class=" u-tC" headers="C91993162395485341">27-May-2024</td>
+                                      <td class=" u-tC" headers="C91993788881485347">Yes</td>
+                                      <td class=" u-tC" headers="C19999750040426303">30-Sep-2024</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">Manjula</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">Manjula</td>
+                                      <td class=" u-tC" headers="C20000284044426308">24-Oct-2024</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">Manjula</td>
+                                      <td class=" u-tC" headers="C91994667116485356">73173314111</td>
+                                      <td class=" u-tC" headers="C92344296745616807">Andhra Pradesh Grameena Vikas Bank
+                                      </td>
+                                      <td class=" u-tC" headers="C92344355974616808">Thirumalagiri</td>
+                                      <td class=" u-tC" headers="C15905581781498127">KMC</td>
+                                      <td class=" u-tC" headers="C15905793091498129">27-May-2024</td>
+                                      <td class=" u-tC" headers="C15905897370498130">27-May-2024</td>
+                                      <td class=" u-tC" headers="C15905945566498131">27-May-2024</td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FSEPTEMBER&#x25;2F2024&#x25;2F1589&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;3iG6JEBmENqMEYCw7RiSQa_KeL3EG_q6bdcRcX5rOTfLdunA-EgXMsCu3qG8ItMWs2XT0mgePgFRdVHtIFmxcEQ"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">25-Jun-2024</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">371</td>
+                                      <td class=" u-tC" headers="C91993162395485341">25-Jun-2024</td>
+                                      <td class=" u-tC" headers="C91993788881485347">Yes</td>
+                                      <td class=" u-tC" headers="C19999750040426303">25-Jul-2024</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">Sathiya</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">Sathya</td>
+                                      <td class=" u-tC" headers="C20000284044426308">-</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">Sathya</td>
+                                      <td class=" u-tC" headers="C91994667116485356">6556393685</td>
+                                      <td class=" u-tC" headers="C92344296745616807">Indian Bank</td>
+                                      <td class=" u-tC" headers="C92344355974616808">Arumbakkam</td>
+                                      <td class=" u-tC" headers="C15905581781498127"></td>
+                                      <td class=" u-tC" headers="C15905793091498129"></td>
+                                      <td class=" u-tC" headers="C15905897370498130"></td>
+                                      <td class=" u-tC" headers="C15905945566498131"></td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FSEPTEMBER&#x25;2F2024&#x25;2F1588&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;3mmYHtCG3fIp2tGm1nqkloFMh-FoTwfWTLs1SuBDCgZBmhmfY80tFqoJdJJEukqWM2UFAaTbQjXp_sCmAHx1mlA"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">22-Jun-2024</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">453</td>
+                                      <td class=" u-tC" headers="C91993162395485341">22-Jun-2024</td>
+                                      <td class=" u-tC" headers="C91993788881485347">Yes</td>
+                                      <td class=" u-tC" headers="C19999750040426303">02-Sep-2024</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">Saravanan</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">C Saravanan</td>
+                                      <td class=" u-tC" headers="C20000284044426308">-</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">C Saravanan</td>
+                                      <td class=" u-tC" headers="C91994667116485356">6310008437</td>
+                                      <td class=" u-tC" headers="C92344296745616807">Indian Bank</td>
+                                      <td class=" u-tC" headers="C92344355974616808">Thirumullaivoyal</td>
+                                      <td class=" u-tC" headers="C15905581781498127">KMC</td>
+                                      <td class=" u-tC" headers="C15905793091498129">26-Jun-2024</td>
+                                      <td class=" u-tC" headers="C15905897370498130">26-Jun-2024</td>
+                                      <td class=" u-tC" headers="C15905945566498131">26-Jun-2024</td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FSEPTEMBER&#x25;2F2024&#x25;2F1587&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;3dLNFwh8bYEz1Zzwmyx8mMo_7u2DwejQmZ86EPwd25Rc5tJu0seduKfhm5qfWa24tVIqfAFzJuifJ_y8KG7vTYQ"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">11-Nov-2023</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">42</td>
+                                      <td class=" u-tC" headers="C91993162395485341">11-Nov-2023</td>
+                                      <td class=" u-tC" headers="C91993788881485347">Yes</td>
+                                      <td class=" u-tC" headers="C19999750040426303">20-Mar-2024</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">Lakshmi</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">Lakshmi</td>
+                                      <td class=" u-tC" headers="C20000284044426308">11-Nov-2023</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">Lakshmi</td>
+                                      <td class=" u-tC" headers="C91994667116485356">500101012185868</td>
+                                      <td class=" u-tC" headers="C92344296745616807">Union Bank</td>
+                                      <td class=" u-tC" headers="C92344355974616808">Choolai</td>
+                                      <td class=" u-tC" headers="C15905581781498127">KMC</td>
+                                      <td class=" u-tC" headers="C15905793091498129">11-Dec-2023</td>
+                                      <td class=" u-tC" headers="C15905897370498130">11-Dec-2023</td>
+                                      <td class=" u-tC" headers="C15905945566498131">11-Dec-2023</td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="a-IRR-linkCol u-tC" headers="R90760425424705547_LINK"><a
+                                          href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;police-entry-form&#x3F;p73_id&#x3D;POCSO&#x25;2FSEPTEMBER&#x25;2F2024&#x25;2F1586&#x26;session&#x3D;4924695955763&#x26;cs&#x3D;3lvTiabWtkI8Qk6OtQ1QOsCZgvIfy7XoHr1iktidjHvRo__zXiWN3uq9B0YjlIxTYja-HyDeD5fTcRywBfFbUJg"><span
+                                            role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span></a>
+                                      </td>
+                                      <td class=" u-tC" headers="C91992478670485334">04-Jun-2021</td>
+                                      <td class=" u-tC" headers="C15905621408498128">Parent</td>
+                                      <td class=" u-tC" headers="C91993118832485340">419</td>
+                                      <td class=" u-tC" headers="C91993162395485341">04-Jun-2021</td>
+                                      <td class=" u-tC" headers="C91993788881485347">Yes</td>
+                                      <td class=" u-tC" headers="C19999750040426303">30-Sep-2022</td>
+                                      <td class=" u-tC" headers="C16509760019310103">Female</td>
+                                      <td class=" u-tC" headers="C91994117353485350">TmtSujatha</td>
+                                      <td class=" u-tC" headers="C91994152706485351">Yes</td>
+                                      <td class=" u-tC" headers="C91994308160485352">Sujatha</td>
+                                      <td class=" u-tC" headers="C20000284044426308">02-Dec-2021</td>
+                                      <td class=" u-tC" headers="C91994402263485353">Parent</td>
+                                      <td class=" u-tC" headers="C91994606625485355">S Yuvasri</td>
+                                      <td class=" u-tC" headers="C91994667116485356">37476384151</td>
+                                      <td class=" u-tC" headers="C92344296745616807">State Bank Of India</td>
+                                      <td class=" u-tC" headers="C92344355974616808">Ayapakkam</td>
+                                      <td class=" u-tC" headers="C15905581781498127">KMC</td>
+                                      <td class=" u-tC" headers="C15905793091498129">20-Jul-2021</td>
+                                      <td class=" u-tC" headers="C15905897370498130">20-Jul-2021</td>
+                                      <td class=" u-tC" headers="C15905945566498131">20-Jul-2021</td>
+                                      <td class=" u-tC" headers="C13752837579123339">-</td>
+                                      <td class=" u-tC" headers="C13751706210123328">Pending</td>
+                                      <td class=" u-tC" headers="C13751842961123329">Pending Trail</td>
+                                      <td class=" u-tC" headers="C13751992308123330">Pending</td>
+                                    </tr>
+                                  </table>
+                                </div> -->
+                                <div class="a-IRR-tableContainer">
+                                  <table class="a-IRR-table" id="bullParticipantsTable">
+                                    <thead>
+                                      <tr>
+                                        <th class="a-IRR-header u-tC">Bull ID</th>
+                                        <th class="a-IRR-header u-tC">Event Type</th>
+                                        <th class="a-IRR-header u-tC">Event Date</th>
+                                        <th class="a-IRR-header u-tC">Place of Event</th>
+                                        <th class="a-IRR-header u-tC">District</th>
+                                        <th class="a-IRR-header u-tC">Selected Bull</th>
+                                        <th class="a-IRR-header u-tC">Mobile Number</th>
+                                        <th class="a-IRR-header u-tC">Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <!-- Data will be dynamically inserted here -->
+                                    </tbody>
+                                  </table>
+                                </div>
+
+                                <div role="region"
+                                  aria-label="Pagination&#x20;of&#x20;Dashboard&#x2F;Report&#x20;for&#x20;Police111111111"
+                                  class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
+                                  <ul class="a-IRR-pagination">
+                                    <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                    <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label"> 1 - 8</span>
+                                    </li>
+                                    <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
+                          id="R90760425424705547_sort_widget" style="display:none;">
+                          <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column
+                            Actions</h1>
+                          <ul role="toolbar" class="a-IRR-sortWidget-actions"
+                            id="R90760425424705547_sort_widget_actions">
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R90760425424705547_sort_widget_action_up"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R90760425424705547_sort_widget_action_down"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R90760425424705547_sort_widget_action_hide"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R90760425424705547_sort_widget_action_break"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R90760425424705547_sort_widget_action_help"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
+                                aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
+                                  class="a-Icon icon-irr-help"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R90760425424705547_sort_widget_action_computation"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
+                                aria-label="Compute" data-option="computation"><span aria-hidden="true"
+                                  class="a-Icon icon-irr-calculator"></span></button></li>
+                          </ul>
+                          <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
+                            id="R90760425424705547_sort_widget_help"></div>
+                          <div role="search" class="a-IRR-sortWidget-search" id="R90760425424705547_sort_widget_search">
+                            <label for="R90760425424705547_sort_widget_search_field"
+                              class="a-IRR-sortWidget-searchLabel"><span class="u-vh">Search</span></label><input
+                              id="R90760425424705547_sort_widget_search_field" class="a-IRR-sortWidget-searchField"
+                              type="text" placeholder="Filter..." />
+                            <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
+                              id="R90760425424705547_sort_widget_rows"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="P1_IS_LOGGED_IN" id="P1_IS_LOGGED_IN" value="YES">
+              </div>
+            </div>
+          </main>
+          <footer class="t-Footer" id="t_Footer" role="contentinfo">
+            <div class="t-Footer-body">
+              <div class="t-Footer-content"></div>
+              <div class="t-Footer-apex">
+                <div class="t-Footer-version">Release 1.0</div>
+                <div class="t-Footer-customize"></div>
+              </div>
+            </div>
+            <div class="t-Footer-top">
+              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div>
+    <input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="&#x2F;-LIG01aKMe59ENV7q_qEhIRugSAOsckz1mnsmwmQG5I343TDfzZxTr442aBh6W-1FUYxPNSfJhi7Qw7-WbYG3A" />
+  </form>
+  <script>
+    var apex_img_dir = "\u002Fi\u002F";
+    var apex = {
+      env: { APP_USER: "POL_AVADI_006", APP_ID: "111", APP_PAGE_ID: "1", APP_SESSION: "4924695955763", APP_FILES: "r\u002Fwspocso\u002F111\u002Ffiles\u002Fstatic\u002Fv1962\u002F", WORKSPACE_FILES: "r\u002Fwspocso\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "23.2.1", APEX_BASE_VERSION: "23.2" },
+      libVersions: { ckeditor5: "36.0.0", cropperJs: "1.5.13", domPurify: "3.0.5", fullcalendar: "6.1.8", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "2.4.0", markedJs: "5.1.2", prismJs: "1.29.0", oraclejet: "15.0.7", tinymce: "6.7.1", turndown: "7.1.1", monacoEditor: "0.32.1", lessJs: "4.1.3" }
+    };
+  </script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/add.min.js"></script>
+  <script type="text/javascript" src="../assets/js/aos.js"></script>
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Include DataTables and Buttons JS -->
+  <script src="../assets/vendor/datatable/jquery.dataTables.min.js"></script>
+  <script src="../assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/jszip.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/pdfmake.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/vfs_fonts.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+  <script>
+    AOS.init();
+    function showSuccessToast(message) {
+      const toastElement = document.getElementById('successToast');
+      const toastBody = document.getElementById('successMessage');
+
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    function showErrorToast(message) {
+      const toastElement = document.getElementById('errorToast');
+      const toastBody = document.getElementById('errorMessage');
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    $(document).ready(function () {
+      const apiUrl = `https://tngis.tnega.org/lcap_api/jallikattu/v1/assistant_user/commonReport/all_bull_registered?user_id=5`;
+      const tableBody = $("#bullParticipantsTable tbody");
+      const approveApiUrl = `https://tngis.tnega.org/lcap_api/jallikattu/v1/mhs_user/approve_bull_participant`;
+
+      function fetchBullParticipants() {
+        tableBody.html('<tr><td colspan="9" class="text-center">Loading...</td></tr>');
+
+        $.ajax({
+          url: apiUrl,
+          method: "GET",
+          headers: {
+            "X-APP-KEY": "j6ll!k@ttu",
+            "X-APP-NAME": "tn jallikattu"
+          },
+          success: function (response) {
+            const tableData = response.data;
+            tableBody.empty();
+
+            if (!tableData || tableData.length === 0) {
+              tableBody.append('<tr><td colspan="9" class="text-center">No Data Found</td></tr>');
+              return;
+            }
+
+            tableData.forEach(item => {
+              const newRow = `
+            <tr>
+              <td>${(item.bulls_id) || 'N/A'}</td>
+              <td>${(item.event_type) || 'N/A'}</td>
+              <td>${(item.event_date) || 'N/A'}</td>
+              <td>${(item.place_of_event) || 'N/A'}</td>
+              <td>${(item.district) || 'N/A'}</td>
+              <td>${(item.selected_bull) || 'N/A'}</td>
+              <td>${(item.mobile) || 'N/A'}</td>
+              <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
+            </tr>`;
+              tableBody.append(newRow);
+            });
+
+            if ($.fn.DataTable.isDataTable('#bullParticipantsTable')) {
+              $('#bullParticipantsTable').DataTable().destroy();
+            }
+
+            $('#bullParticipantsTable').DataTable({
+              paging: true,
+              searching: false,
+              ordering: true,
+              order: [[0, 'asc']],
+              responsive: true,
+              scrollX: true,
+              scrollY: 400,
+            });
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching data: ", error);
+            tableBody.html('<tr><td colspan="9" class="text-center">Failed to load data</td></tr>');
+          }
+        });
+      }
+
+      tableBody.on("click", ".btn-edit", function () {
+        const bullsId = $(this).data("bulls-id");
+        console.log("Edit button clicked for Bull ID:", bullsId);
+        // Add edit functionality here
+      });
+
+      fetchBullParticipants();
+    });
+
+
+  </script>
+</body>
+
+</html>
