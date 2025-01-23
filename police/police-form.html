@@ -941,7 +941,7 @@
                             <tr>
                               <td align="left"><button
                                   class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
-                                  type="button" id="B237147312308154150"><span
+                                  type="button" onclick="handleCancelButton()" id="B237147312308154150"><span
                                     class="t-Button-label">Cancel</span></button></td>
                               <td align="right"><button onclick="registerNewCase()"
                                   class="t-Button t-Button--large&#x20;t-Button--success" type="button"
@@ -1711,6 +1711,10 @@
         delay: 3000
       });
       toast.show();
+    }
+
+    function handleCancelButton() {
+      window.location.href = 'event-pending-requests-district.html';
     }
 
     function registerNewCase() {
