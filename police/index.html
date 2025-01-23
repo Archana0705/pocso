@@ -542,17 +542,37 @@
                                   </table>
                                 </div> -->
                                 <div class="a-IRR-tableContainer">
-                                  <table class="a-IRR-table" id="bullParticipantsTable">
+                                  <table class="a-IRR-table" id="policeFormTable">
                                     <thead>
                                       <tr>
-                                        <th class="a-IRR-header u-tC">Bull ID</th>
-                                        <th class="a-IRR-header u-tC">Event Type</th>
-                                        <th class="a-IRR-header u-tC">Event Date</th>
-                                        <th class="a-IRR-header u-tC">Place of Event</th>
-                                        <th class="a-IRR-header u-tC">District</th>
-                                        <th class="a-IRR-header u-tC">Selected Bull</th>
-                                        <th class="a-IRR-header u-tC">Mobile Number</th>
-                                        <th class="a-IRR-header u-tC"> Status Status</th>
+                                        <th class="a-IRR-header u-tC" id="actions">
+                                          <span class="a-IRR-headerLabel">Actions</span>
+                                          <div class="t-fht-cell"></div>
+                                        </th>
+                                        <th class="a-IRR-header u-tC">Complaint Date</th>
+                                        <th class="a-IRR-header u-tC">Complaint Made By</th>
+                                        <th class="a-IRR-header u-tC">FIR No</th>
+                                        <th class="a-IRR-header u-tC">Date of FIR</th>
+                                        <th class="a-IRR-header u-tC">Chargesheet/Final Report</th>
+                                        <th class="a-IRR-header u-tC">Charge Sheet Date</th>
+                                        <th class="a-IRR-header u-tC">Gender of the Victim</th>
+                                        <th class="a-IRR-header u-tC">Name Of the Parent/Guadian</th>
+                                        <th class="a-IRR-header u-tC">Willingness for Compensation</th>
+                                        <th class="a-IRR-header u-tC">Compensation Applied By</th>
+                                        <th class="a-IRR-header u-tC">Applied On</th>
+                                        <th class="a-IRR-header u-tC">Relationship with Victim</th>
+                                        <th class="a-IRR-header u-tC">Account Holder Name</th>
+                                        <th class="a-IRR-header u-tC">Account Number</th>
+                                        <th class="a-IRR-header u-tC">Bank Name</th>
+                                        <th class="a-IRR-header u-tC">Branch Name</th>
+                                        <th class="a-IRR-header u-tC">Name of the Medical Institution</th>
+                                        <th class="a-IRR-header u-tC">Date of Requisition Sent by Police</th>
+                                        <th class="a-IRR-header u-tC">Date of Medical Examination of the Victim</th>
+                                        <th class="a-IRR-header u-tC">Date of Interim/Provisional Medical Opinion</th>
+                                        <th class="a-IRR-header u-tC">Is Interim Compensation Awarded?</th>
+                                        <th class="a-IRR-header u-tC">Interim Compensation Status</th>
+                                        <th class="a-IRR-header u-tC">Court Case Status</th>
+                                        <th class="a-IRR-header u-tC">Final Compensation Status</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -652,6 +672,23 @@
     <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
       value="&#x2F;-LIG01aKMe59ENV7q_qEhIRugSAOsckz1mnsmwmQG5I343TDfzZxTr442aBh6W-1FUYxPNSfJhi7Qw7-WbYG3A" />
   </form>
+  <script src="script.js" async></script>
+  <script src="core.js" defer></script>
+  <script src="analytics.js" async></script>
+  <script>
+    // Lazy load extra features
+    document.addEventListener('DOMContentLoaded', () => {
+      import('./extra.js').then((module) => module.init());
+    });
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const timing = performance.timing;
+      const loadTime = timing.loadEventEnd - timing.navigationStart; // Total load time
+      console.log(`Page load time: ${loadTime} ms`);
+    });
+  </script>
   <script>
     var apex_img_dir = "\u002Fi\u002F";
     var apex = {
@@ -683,6 +720,7 @@
 
   <script>
     AOS.init();
+
     function showSuccessToast(message) {
       const toastElement = document.getElementById('successToast');
       const toastBody = document.getElementById('successMessage');
@@ -706,10 +744,10 @@
     }
     $(document).ready(function () {
       const apiUrl = `https://tngis.tnega.org/lcap_api/jallikattu/v1/assistant_user/commonReport/all_bull_registered?user_id=5`;
-      const tableBody = $("#bullParticipantsTable tbody");
+      const tableBody = $("#policeFormTable tbody");
       const approveApiUrl = `https://tngis.tnega.org/lcap_api/jallikattu/v1/mhs_user/approve_bull_participant`;
 
-      function fetchBullParticipants() {
+      function fetchTableData() {
         tableBody.html('<tr><td colspan="9" class="text-center">Loading...</td></tr>');
 
         $.ajax({
@@ -731,6 +769,7 @@
             tableData.forEach(item => {
               const newRow = `
             <tr>
+              <td class="u-tL"><a href="police-entry-form.html"><i class="bi bi-pencil-square"></i></a></td>
               <td>${(item.bulls_id) || 'N/A'}</td>
               <td>${(item.event_type) || 'N/A'}</td>
               <td>${(item.event_date) || 'N/A'}</td>
@@ -739,15 +778,32 @@
               <td>${(item.selected_bull) || 'N/A'}</td>
               <td>${(item.mobile) || 'N/A'}</td>
               <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
+              <td>${(item.bulls_id) || 'N/A'}</td>
+              <td>${(item.event_type) || 'N/A'}</td>
+              <td>${(item.event_date) || 'N/A'}</td>
+              <td>${(item.place_of_event) || 'N/A'}</td>
+              <td>${(item.district) || 'N/A'}</td>
+              <td>${(item.selected_bull) || 'N/A'}</td>
+              <td>${(item.mobile) || 'N/A'}</td>
+              <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
+              <td>${(item.bulls_id) || 'N/A'}</td>
+              <td>${(item.event_type) || 'N/A'}</td>
+              <td>${(item.event_date) || 'N/A'}</td>
+              <td>${(item.place_of_event) || 'N/A'}</td>
+              <td>${(item.district) || 'N/A'}</td>
+              <td>${(item.selected_bull) || 'N/A'}</td>
+              <td>${(item.mobile) || 'N/A'}</td>
+              <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
+           
             </tr>`;
               tableBody.append(newRow);
             });
 
-            if ($.fn.DataTable.isDataTable('#bullParticipantsTable')) {
-              $('#bullParticipantsTable').DataTable().destroy();
+            if ($.fn.DataTable.isDataTable('#policeFormTable')) {
+              $('#policeFormTable').DataTable().destroy();
             }
 
-            $('#bullParticipantsTable').DataTable({
+            $('#policeFormTable').DataTable({
               paging: true,
               searching: false,
               ordering: true,
@@ -770,7 +826,7 @@
         // Add edit functionality here
       });
 
-      fetchBullParticipants();
+      fetchTableData();
     });
 
 
