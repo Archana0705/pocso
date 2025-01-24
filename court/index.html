@@ -746,45 +746,45 @@
                                       <td class=" u-tC" headers="C15906900623498141"></td>
                                     </tr>
                                   </table> -->
-                                  <div class="a-IRR-tableContainer">
-                                    <table class="a-IRR-table" id="policeFormTable">
-                                      <thead>
-                                        <tr>
-                                          <th class="a-IRR-header u-tC" id="actions">
-                                            <span class="a-IRR-headerLabel">Actions</span>
-                                            <div class="t-fht-cell"></div>
-                                          </th>
-                                          <th class="a-IRR-header u-tC">Complaint Date</th>
-                                          <th class="a-IRR-header u-tC">Complaint Made By</th>
-                                          <th class="a-IRR-header u-tC">FIR No</th>
-                                          <th class="a-IRR-header u-tC">Date of FIR</th>
-                                          <th class="a-IRR-header u-tC">Chargesheet/Final Report</th>
-                                          <th class="a-IRR-header u-tC">Charge Sheet Date</th>
-                                          <th class="a-IRR-header u-tC">Gender of the Victim</th>
-                                          <th class="a-IRR-header u-tC">Name Of the Parent/Guadian</th>
-                                          <th class="a-IRR-header u-tC">Willingness for Compensation</th>
-                                          <th class="a-IRR-header u-tC">Compensation Applied By</th>
-                                          <th class="a-IRR-header u-tC">Applied On</th>
-                                          <th class="a-IRR-header u-tC">Relationship with Victim</th>
-                                          <th class="a-IRR-header u-tC">Account Holder Name</th>
-                                          <th class="a-IRR-header u-tC">Account Number</th>
-                                          <th class="a-IRR-header u-tC">Bank Name</th>
-                                          <th class="a-IRR-header u-tC">Branch Name</th>
-                                          <th class="a-IRR-header u-tC">Name of the Medical Institution</th>
-                                          <th class="a-IRR-header u-tC">Date of Requisition Sent by Police</th>
-                                          <th class="a-IRR-header u-tC">Date of Medical Examination of the Victim</th>
-                                          <th class="a-IRR-header u-tC">Date of Interim/Provisional Medical Opinion</th>
-                                          <th class="a-IRR-header u-tC">Is Interim Compensation Awarded?</th>
-                                          <th class="a-IRR-header u-tC">Interim Compensation Status</th>
-                                          <th class="a-IRR-header u-tC">Court Case Status</th>
-                                          <th class="a-IRR-header u-tC">Final Compensation Status</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <!-- Data will be dynamically inserted here -->
-                                      </tbody>
-                                    </table>
-                                  </div>
+                                  <!-- <div class="a-IRR-tableContainer"> -->
+                                  <table class="a-IRR-table" id="courtFormTable">
+                                    <thead>
+                                      <tr>
+                                        <th class="a-IRR-header u-tC" id="actions">
+                                          <span class="a-IRR-headerLabel">Actions</span>
+                                          <div class="t-fht-cell"></div>
+                                        </th>
+                                        <th class="a-IRR-header u-tC">Complaint Date</th>
+                                        <th class="a-IRR-header u-tC">Complaint Made By</th>
+                                        <th class="a-IRR-header u-tC">FIR No</th>
+                                        <th class="a-IRR-header u-tC">Date of FIR</th>
+                                        <th class="a-IRR-header u-tC">Chargesheet/Final Report</th>
+                                        <th class="a-IRR-header u-tC">Charge Sheet Date</th>
+                                        <th class="a-IRR-header u-tC">Gender of the Victim</th>
+                                        <th class="a-IRR-header u-tC">Name Of the Parent/Guadian</th>
+                                        <th class="a-IRR-header u-tC">Willingness for Compensation</th>
+                                        <th class="a-IRR-header u-tC">Compensation Applied By</th>
+                                        <th class="a-IRR-header u-tC">Applied On</th>
+                                        <th class="a-IRR-header u-tC">Relationship with Victim</th>
+                                        <th class="a-IRR-header u-tC">Account Holder Name</th>
+                                        <th class="a-IRR-header u-tC">Account Number</th>
+                                        <th class="a-IRR-header u-tC">Bank Name</th>
+                                        <th class="a-IRR-header u-tC">Branch Name</th>
+                                        <th class="a-IRR-header u-tC">Name of the Medical Institution</th>
+                                        <th class="a-IRR-header u-tC">Date of Requisition Sent by Police</th>
+                                        <th class="a-IRR-header u-tC">Date of Medical Examination of the Victim</th>
+                                        <th class="a-IRR-header u-tC">Date of Interim/Provisional Medical Opinion</th>
+                                        <th class="a-IRR-header u-tC">Is Interim Compensation Awarded?</th>
+                                        <th class="a-IRR-header u-tC">Interim Compensation Status</th>
+                                        <th class="a-IRR-header u-tC">Court Case Status</th>
+                                        <th class="a-IRR-header u-tC">Final Compensation Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <!-- Data will be dynamically inserted here -->
+                                    </tbody>
+                                  </table>
+                                  <!-- </div> -->
                                   <div role="region"
                                     aria-label="Pagination&#x20;of&#x20;Dashboard&#x2F;Report&#x20;for&#x20;Court"
                                     class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
@@ -952,11 +952,11 @@
 
     let userId = "1354";
     $(document).ready(function () {
-      const apiUrl = `https://tngis.tnega.org/lcap_api/pocso/api/v1/police/dashboard`;
-      const tableBody = $("#policeFormTable tbody");
+      const apiUrl = `https://tngis.tnega.org/lcap_api/pocso/api/v1/court/view/viewPoliceEntryDetailsById`;
+      const tableBody = $("#courtFormTable tbody");
 
       const requestData = {
-        employee_id: userId // Pass as a string
+        id: "POCSO/JULY     /2024/0332"
       };
 
       function fetchTableData() {
@@ -983,17 +983,18 @@
             tableData.forEach(item => {
               const newRow = `
             <tr>
-              <td class="u-tL"><a href="police-entry-form.html"><i class="bi bi-pencil-square"></i></a></td>
-              <td>${(item.bulls_id) || 'N/A'}</td>
-              <td>${(item.event_type) || 'N/A'}</td>
-              <td>${(item.event_date) || 'N/A'}</td>
-              <td>${(item.place_of_event) || 'N/A'}</td>
-              <td>${(item.district) || 'N/A'}</td>
-              <td>${(item.selected_bull) || 'N/A'}</td>
-              <td>${(item.mobile) || 'N/A'}</td>
-              <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
-              <td>${(item.bulls_id) || 'N/A'}</td>
-              <td>${(item.event_type) || 'N/A'}</td>
+              <td class="u-tL"><a href="court-form.html"><i class="bi bi-pencil-square"></i></a></td>
+              
+              <td>${(item.pol_stat) || 'N/A'}</td>
+              <td>${(item.complaint_made) || 'N/A'}</td>
+              <td>${(item.fir_no) || 'N/A'}</td>
+              <td>${(item.date_of_fir) || 'N/A'}</td>
+              <td>${(item.willingness_compensation) || 'N/A'}</td>
+              <td>${(item.who_relationship) || 'N/A'}</td>
+              <td>${(item.date_of_interim) || 'N/A'}</td>
+              <td>${(item.charge_sheet_yes_no) === "Y" ? "Approved" : "Pending"}</td>
+              <td>${(item.charge_sheet_date) || 'N/A'}</td>
+              <td>${(item.child_gender) || 'N/A'}</td>
               <td>${(item.event_date) || 'N/A'}</td>
               <td>${(item.place_of_event) || 'N/A'}</td>
               <td>${(item.district) || 'N/A'}</td>
@@ -1013,11 +1014,11 @@
               tableBody.append(newRow);
             });
 
-            if ($.fn.DataTable.isDataTable('#policeFormTable')) {
-              $('#policeFormTable').DataTable().destroy();
+            if ($.fn.DataTable.isDataTable('#courtFormTable')) {
+              $('#courtFormTable').DataTable().destroy();
             }
 
-            $('#policeFormTable').DataTable({
+            $('#courtFormTable').DataTable({
               paging: true,
               searching: false,
               ordering: true,
