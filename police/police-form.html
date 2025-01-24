@@ -433,7 +433,7 @@
                                   </div>
                                   <div class="t-Form-inputContainer col col-4">
                                     <div class="t-Form-itemWrapper"><input type="text" id="P50_AGE" name="P50_AGE"
-                                        class="text_field&#x20;apex-item-text" value="" size="30" />
+                                        class="text_field&#x20;apex-item-text" readonly value="" size="30" />
                                     </div>
                                     <div class="t-Form-itemAssistance">
                                       <span id="P50_AGE_error_placeholder" class="a-Form-error"
@@ -1693,6 +1693,27 @@
   <script>
     AOS.init();
     $(document).ready(function () {
+      $(document).on('blur', '#P50_CHILD_AGE input', function () {
+          $(this).trigger('change'); // Manually trigger change event
+      });
+      $(document).on('change', '#P50_CHILD_AGE input, #P50_CHILD_AGE', function () { debugger;
+        var selectedDate = $('#P50_CHILD_AGE input').val();
+        
+        if (selectedDate) {
+            var birthDate = new Date(selectedDate);
+            var today = new Date();
+
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            $('#P50_AGE').val(age); // Update the age field
+        }
+    });
+      
       $('.initWillHide').hide();
       $('.initChargeSheetHide').hide();
       $('#P50_WILLINGNESS_COMPENSATION input').on('click', function () {
