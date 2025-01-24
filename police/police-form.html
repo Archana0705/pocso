@@ -1736,76 +1736,56 @@
       });
       toast.show();
     }
-    function convertDateFormat(dateString) { debugger;
-      let [month, day, year] = dateString.split("/");
-      return `${year}-${month}-${day}`;
-    }
-    function registerNewCase() {
-      debugger
-      var polStn = document.getElementById('P50_POL_STAT').value || "";
-      var districtName = document.getElementById('P50_DISTRICT_NAME').value || "";
-      var ComplaintData = document.getElementById('P50_COMPLAINT_NAME_input').value || "";
-      var formatComplaintData = convertDateFormat(ComplaintData);
-      var complaintMadeBy = document.getElementById('P50_COMPLAINT_MADE').value || "";
-      var firNo = document.getElementById('P50_FIR_NO').value || "";
-      var dateOfFIR = document.getElementById('P50_DATE_OF_FIR_input').value || "";
-      var formatdateOfFIR = convertDateFormat(dateOfFIR);
-      var childGender = document.getElementById('P50_CHILD_GENDER').value || "";
-      var childDOB = document.getElementById('P50_CHILD_AGE_input').value || "";
-      var formatchildDOB = convertDateFormat(childDOB);
-      var childAge = document.getElementById('P50_AGE').value || "";
-      var nameOfGuardian = document.getElementById('P50_NAME_PARENT').value || "";
-      var willingness = $('input[name="P50_WILLINGNESS_COMPENSATION"]:checked').val();
-      var willName = document.getElementById('P50_WHO_NAME').value || "";
-      var willRelation = document.getElementById('P50_WHO_RELATIONSHIP').value || "";
-      var willDate = document.getElementById('P50_WHO_DATE_input').value || "";
-      var formatwillDate = convertDateFormat(willDate);
-      var accName = document.getElementById('P50_ACCOUNT_HOLDER_NAME').value || "";
-      var accNo = document.getElementById('P50_ACCOUNT_NUMBER').value || "";
-      var bankName = document.getElementById('P50_BANK_NAME').value || "";
-      var branchName = document.getElementById('P50_BRANCH_NAME').value || "";
-      var ifsc = document.getElementById('P50_IFSC_CODE').value || "";
-      var charge = $('input[id="P50_CHARGE_SHEET_YES_NO_0"]:checked').val();
-      var chargeDate = document.getElementById('P50_CHARGE_SHEET_DATE_input').value || "";
-      var formatchargeDate = convertDateFormat(chargeDate);
-      var nameOfMedInst = document.getElementById('P50_NAME_MEDICAL_INSTITUTION').value || "";
-      var dateOfReq = document.getElementById('P50_DATE_REQUISITION_MEDICAL_EXAMINATION_input').value || "";
-      var formatdateOfReq = convertDateFormat(dateOfReq);
-      var dateOFMedExam = document.getElementById('P50_DATE_OF_MEDICAL_EXAMINATION_VICTIM_input').value || "";
-      var formatdateOFMedExam = convertDateFormat(dateOFMedExam);
-      var dateOfInterm = document.getElementById('P50_DATE_OF_INTERIM_input').value || "";
-      var formatdateOfInterm = convertDateFormat(dateOfInterm);
-
-      if (
-        polStn === "" ||
-        districtName === "" ||
-        ComplaintData === "" ||
-        complaintMadeBy === "" ||
-        firNo === "" ||
-        dateOfFIR === "" ||
-        childGender === "" ||
-        childDOB === "" ||
-        childAge === "" ||
-        nameOfGuardian === "" ||
-        willingness === undefined ||
-        willName === "" ||
-        willRelation === "" ||
-        willDate === "" ||
-        accName === "" ||
-        accNo === "" ||
-        bankName === "" ||
-        branchName === "" ||
-        ifsc === "" ||
-        charge === undefined ||
-        chargeDate === "" ||
-        nameOfMedInst === "" ||
-        dateOfReq === "" ||
-        dateOFMedExam === "" ||
-        dateOfInterm === ""
-      ) {
-        showErrorToast("Please fill in all required fields.");
+    function convertDateFormat(dateString) {
+      if (dateString === "") {
+        return "";
+      } else {
+        let [month, day, year] = dateString.split("/");
+        return `${year}-${month}-${day}`;
       }
-      else {
+    }
+    async function registerNewCase() {
+      try {
+        debugger;
+        var polStn = document.getElementById('P50_POL_STAT').value || "";
+        var districtName = document.getElementById('P50_DISTRICT_NAME').value || "";
+        var ComplaintData = document.getElementById('P50_COMPLAINT_NAME_input').value || "";
+        var formatComplaintData = convertDateFormat(ComplaintData);
+        var complaintMadeBy = document.getElementById('P50_COMPLAINT_MADE').value || "";
+        var firNo = document.getElementById('P50_FIR_NO').value || "";
+        var dateOfFIR = document.getElementById('P50_DATE_OF_FIR_input').value || "";
+        var formatdateOfFIR = convertDateFormat(dateOfFIR);
+        var childGender = document.getElementById('P50_CHILD_GENDER').value || "";
+        var childDOB = document.getElementById('P50_CHILD_AGE_input').value || "";
+        var formatchildDOB = convertDateFormat(childDOB);
+        var childAge = document.getElementById('P50_AGE').value || "";
+        var nameOfGuardian = document.getElementById('P50_NAME_PARENT').value || "";
+        var willingness = $('input[name="P50_WILLINGNESS_COMPENSATION"]:checked').val();
+        var willName = document.getElementById('P50_WHO_NAME').value || "";
+        var willRelation = document.getElementById('P50_WHO_RELATIONSHIP').value || "";
+        var willDate = document.getElementById('P50_WHO_DATE_input').value || "";
+        var formatwillDate = convertDateFormat(willDate);
+        var accName = document.getElementById('P50_ACCOUNT_HOLDER_NAME').value || "";
+        var accNo = document.getElementById('P50_ACCOUNT_NUMBER').value || "";
+        var bankName = document.getElementById('P50_BANK_NAME').value || "";
+        var branchName = document.getElementById('P50_BRANCH_NAME').value || "";
+        var ifsc = document.getElementById('P50_IFSC_CODE').value || "";
+        var charge = $('input[id="P50_CHARGE_SHEET_YES_NO_0"]:checked').val();
+        var chargeDate = document.getElementById('P50_CHARGE_SHEET_DATE_input').value || "";
+        var formatchargeDate = convertDateFormat(chargeDate);
+        var nameOfMedInst = document.getElementById('P50_NAME_MEDICAL_INSTITUTION').value || "";
+        var dateOfReq = document.getElementById('P50_DATE_REQUISITION_MEDICAL_EXAMINATION_input').value || "";
+        var formatdateOfReq = convertDateFormat(dateOfReq);
+        var dateOFMedExam = document.getElementById('P50_DATE_OF_MEDICAL_EXAMINATION_VICTIM_input').value || "";
+        var formatdateOFMedExam = convertDateFormat(dateOFMedExam);
+        var dateOfInterm = document.getElementById('P50_DATE_OF_INTERIM_input').value || "";
+        var formatdateOfInterm = convertDateFormat(dateOfInterm);
+
+        // if (!polStn || !districtName || !ComplaintData || !complaintMadeBy || !firNo || !dateOfFIR || !childGender || !childDOB || !childAge || !nameOfGuardian || !willingness || !willName || !willRelation || !willDate || !accName || !accNo || !bankName || !branchName || !ifsc || !charge || !chargeDate || !nameOfMedInst || !dateOfReq || !dateOFMedExam || !dateOfInterm) {
+        //   showErrorToast("Please fill in all required fields.");
+        //   return;
+        // }
+
         var registrationPayload = {
           "DISTRICT_NAME": districtName,
           "POL_STAT": polStn,
@@ -1834,29 +1814,121 @@
           "DATE_REQUISITION_MEDICAL_EXAMINATION": formatdateOfReq,
           "DATE_OF_MEDICAL_EXAMINATION_VICTIM": formatdateOFMedExam,
           "DATE_OF_INTERIM": formatdateOfInterm
-      };      
-        $.ajax({
+        };
+
+        let user_id = { "user_id": "" };
+
+        await $.ajax({
           url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertPoliceEntry',
           type: 'POST',
-          headers: {
-            'X-App-Key': 'posco',
-            'X-App-Name': 'posco',
-          },
+          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
           contentType: 'application/json',
           data: JSON.stringify(registrationPayload),
-          success: function (response) {
-            showSuccessToast("Submitted Successful");
-            setTimeout(function () {
-              window.location.href = "../police/index.html";
-            }, 1000);
+          success: function () {
+            showSuccessToast("Submitted Successfully");
+            setTimeout(() => window.location.href = "../police/index.html", 1000);
           },
-          error: function (xhr, status, error) {
+          error: function (error) {
             console.error('Error:', error);
-            showErrorToast("An error occurred during Submittion of Data.");
+            showErrorToast("An error occurred during submission of data.");
           }
         });
+
+        await $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateRequestStatus',
+          type: 'POST',
+          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+          contentType: 'application/json',
+          data: JSON.stringify(user_id),
+          success: function () {
+            showSuccessToast("Request status updated successfully");
+          },
+          error: function (error) {
+            console.error('Error:', error);
+            showErrorToast("An error occurred while updating request status.");
+          }
+        });
+
+        let complaintPayload = {
+          "id" : "",
+          "COMPLAINT_COPY": "COMPLAINT_COPY",
+          "COMPLAINT_COPY_FILENAME": "complaint.pdf",
+          "COMPLAINT_COPY_MIMETYPE": "application/pdf"
+        }
+        await $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateComplaintCopy',
+          type: 'POST',
+          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+          contentType: 'application/json',
+          data: JSON.stringify(complaintPayload),
+          success: function () {
+            showSuccessToast("Complaint copy updated successfully");
+          },
+          error: function (error) {
+            console.error('Error:', error);
+            showErrorToast("An error occurred while updating Complaint copy.");
+          }
+        });
+
+        let firPayload = {
+          "id": 123,
+          "FIR": "Sample FIR data",
+          "FIR_ATTACH_FILENAME": "sample_fir.pdf",
+          "FIR_ATTACH_MIMETYPE": "application/pdf"
+        }
+        await $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateFirCopy',
+          type: 'POST',
+          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+          contentType: 'application/json',
+          data: JSON.stringify(firPayload),
+          success: function () {
+            showSuccessToast("FIR copy updated successfully");
+          },
+          error: function (error) {
+            console.error('Error:', error);
+            showErrorToast("An error occurred while updating FIR copy.");
+          }
+        });
+
+        
+        await $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertJudgeLogin',
+          type: 'POST',
+          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+          contentType: 'application/json',
+          data: JSON.stringify(user_id),
+          success: function () {
+            showSuccessToast("Judge Added successfully");
+          },
+          error: function (error) {
+            console.error('Error:', error);
+            showErrorToast("An error occurred while adding judge.");
+          }
+        });
+
+        await $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertSuperintendent',
+          type: 'POST',
+          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+          contentType: 'application/json',
+          data: JSON.stringify(user_id),
+          success: function () {
+            showSuccessToast("Superintendent Added successfully");
+          },
+          error: function (error) {
+            console.error('Error:', error);
+            showErrorToast("An error occurred while adding Superintendent.");
+          }
+        });
+        
+      } catch (error) {
+        console.error('Error:', error);
+        showErrorToast("An unexpected error occurred.");
       }
     }
+
+
   </script>
 </body>
 
