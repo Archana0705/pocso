@@ -486,11 +486,10 @@
                                         class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"
                                         role="radiogroup" aria-orientation="vertical">
                                         <div class="apex-item-option">
-                                          <input type="radio"
-                                            id="P50_WILLINGNESS_COMPENSATION_0" name="P50_WILLINGNESS_COMPENSATION"
-                                            data-display="Yes" value="Yes" required aria-label="Yes">
-                                            <label
-                                            class="u-radio" for="P50_WILLINGNESS_COMPENSATION_0"
+                                          <input type="radio" id="P50_WILLINGNESS_COMPENSATION_0"
+                                            name="P50_WILLINGNESS_COMPENSATION" data-display="Yes" value="Yes" required
+                                            aria-label="Yes">
+                                          <label class="u-radio" for="P50_WILLINGNESS_COMPENSATION_0"
                                             aria-hidden="true">Yes</label>
                                         </div>
                                         <div class="apex-item-option"><input type="radio"
@@ -944,7 +943,7 @@
                             <tr>
                               <td align="left"><button
                                   class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
-                                  type="button" id="B237147312308154150"><span
+                                  type="button" onclick="handleCancelButton()" id="B237147312308154150"><span
                                     class="t-Button-label">Cancel</span></button></td>
                               <td align="right"><button onclick="registerNewCase()"
                                   class="t-Button t-Button--large&#x20;t-Button--success" type="button"
@@ -1693,13 +1692,13 @@
 
   <script>
     AOS.init();
-    $(document).ready( function () {
+    $(document).ready(function () {
       $('.initWillHide').hide();
       $('.initChargeSheetHide').hide();
       $('#P50_WILLINGNESS_COMPENSATION input').on('click', function () {
         var WillingnessSelectedValue = $('input[name="P50_WILLINGNESS_COMPENSATION"]:checked').val();
         alert(WillingnessSelectedValue);
-        if(WillingnessSelectedValue === "Yes") {
+        if (WillingnessSelectedValue === "Yes") {
           $('.initWillHide').show();
         } else {
           $('.initWillHide').hide();
@@ -1707,7 +1706,7 @@
       })
       $('#P50_CHARGE_SHEET_YES_NO_CONTAINER input').on('click', function () {
         var ChargesheetVal = $('input[id="P50_CHARGE_SHEET_YES_NO_0"]:checked').val();
-        if(ChargesheetVal === "Yes") {
+        if (ChargesheetVal === "Yes") {
           $('.initChargeSheetHide').show();
         } else {
           $('.initChargeSheetHide').hide();
