@@ -1815,7 +1815,8 @@
           "DATE_OF_INTERIM": formatdateOfInterm
         };
 
-        let user_id = { "user_id": "" };
+        let user_id = {};
+        let Court_id = {};
 
         await $.ajax({
           url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertPoliceEntry',
@@ -1823,7 +1824,9 @@
           headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
           contentType: 'application/json',
           data: JSON.stringify(registrationPayload),
-          success: function () {
+          success: function (response) {
+            user_id.id = response.return_id;
+            Court_id.COURT_ID = response.return_id;
             showSuccessToast("Submitted Successfully");
             setTimeout(() => window.location.href = "../police/index.html", 1000);
           },
@@ -1848,47 +1851,6 @@
           }
         });
 
-        let complaintPayload = {
-          "id" : "",
-          "COMPLAINT_COPY": "COMPLAINT_COPY",
-          "COMPLAINT_COPY_FILENAME": "complaint.pdf",
-          "COMPLAINT_COPY_MIMETYPE": "application/pdf"
-        }
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateComplaintCopy',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(complaintPayload),
-          success: function () {
-            showSuccessToast("Complaint copy updated successfully");
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred while updating Complaint copy.");
-          }
-        });
-
-        let firPayload = {
-          "id": 123,
-          "FIR": "Sample FIR data",
-          "FIR_ATTACH_FILENAME": "sample_fir.pdf",
-          "FIR_ATTACH_MIMETYPE": "application/pdf"
-        }
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateFirCopy',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(firPayload),
-          success: function () {
-            showSuccessToast("FIR copy updated successfully");
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred while updating FIR copy.");
-          }
-        });
 
         
         await $.ajax({
@@ -1896,7 +1858,7 @@
           type: 'POST',
           headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
           contentType: 'application/json',
-          data: JSON.stringify(user_id),
+          data: JSON.stringify(Court_id),
           success: function () {
             showSuccessToast("Judge Added successfully");
           },
@@ -1911,7 +1873,7 @@
           type: 'POST',
           headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
           contentType: 'application/json',
-          data: JSON.stringify(user_id),
+          data: JSON.stringify(Court_id),
           success: function () {
             showSuccessToast("Superintendent Added successfully");
           },
