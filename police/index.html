@@ -742,21 +742,28 @@
       });
       toast.show();
     }
+
+    let userId = "1354";
     $(document).ready(function () {
-      const apiUrl = `https://tngis.tnega.org/lcap_api/jallikattu/v1/assistant_user/commonReport/all_bull_registered?user_id=5`;
+      const apiUrl = `https://tngis.tnega.org/lcap_api/pocso/api/v1/police/dashboard`;
       const tableBody = $("#policeFormTable tbody");
-      const approveApiUrl = `https://tngis.tnega.org/lcap_api/jallikattu/v1/mhs_user/approve_bull_participant`;
+
+      const requestData = {
+        employee_id: userId // Pass as a string
+      };
 
       function fetchTableData() {
         tableBody.html('<tr><td colspan="9" class="text-center">Loading...</td></tr>');
 
         $.ajax({
           url: apiUrl,
-          method: "GET",
+          method: "POST",
           headers: {
-            "X-APP-KEY": "j6ll!k@ttu",
-            "X-APP-NAME": "tn jallikattu"
+            'X-App-Key': 'posco',
+            'X-App-Name': 'posco',
           },
+          contentType: "application/json",
+          data: JSON.stringify(requestData),
           success: function (response) {
             const tableData = response.data;
             tableBody.empty();

@@ -486,11 +486,10 @@
                                         class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"
                                         role="radiogroup" aria-orientation="vertical">
                                         <div class="apex-item-option">
-                                          <input type="radio"
-                                            id="P50_WILLINGNESS_COMPENSATION_0" name="P50_WILLINGNESS_COMPENSATION"
-                                            data-display="Yes" value="Yes" required aria-label="Yes">
-                                            <label
-                                            class="u-radio" for="P50_WILLINGNESS_COMPENSATION_0"
+                                          <input type="radio" id="P50_WILLINGNESS_COMPENSATION_0"
+                                            name="P50_WILLINGNESS_COMPENSATION" data-display="Yes" value="Yes" required
+                                            aria-label="Yes">
+                                          <label class="u-radio" for="P50_WILLINGNESS_COMPENSATION_0"
                                             aria-hidden="true">Yes</label>
                                         </div>
                                         <div class="apex-item-option"><input type="radio"
@@ -1693,13 +1692,13 @@
 
   <script>
     AOS.init();
-    $(document).ready( function () {
+    $(document).ready(function () {
       $('.initWillHide').hide();
       $('.initChargeSheetHide').hide();
       $('#P50_WILLINGNESS_COMPENSATION input').on('click', function () {
         var WillingnessSelectedValue = $('input[name="P50_WILLINGNESS_COMPENSATION"]:checked').val();
         alert(WillingnessSelectedValue);
-        if(WillingnessSelectedValue === "Yes") {
+        if (WillingnessSelectedValue === "Yes") {
           $('.initWillHide').show();
         } else {
           $('.initWillHide').hide();
@@ -1707,7 +1706,7 @@
       })
       $('#P50_CHARGE_SHEET_YES_NO_CONTAINER input').on('click', function () {
         var ChargesheetVal = $('input[id="P50_CHARGE_SHEET_YES_NO_0"]:checked').val();
-        if(ChargesheetVal === "Yes") {
+        if (ChargesheetVal === "Yes") {
           $('.initChargeSheetHide').show();
         } else {
           $('.initChargeSheetHide').hide();
@@ -1736,7 +1735,8 @@
       });
       toast.show();
     }
-    function convertDateFormat(dateString) { debugger;
+    function convertDateFormat(dateString) {
+      debugger;
       let [month, day, year] = dateString.split("/");
       return `${year}-${month}-${day}`;
     }
@@ -1776,87 +1776,87 @@
       var dateOfInterm = document.getElementById('P50_DATE_OF_INTERIM_input').value || "";
       var formatdateOfInterm = convertDateFormat(dateOfInterm);
 
-      if (
-        polStn === "" ||
-        districtName === "" ||
-        ComplaintData === "" ||
-        complaintMadeBy === "" ||
-        firNo === "" ||
-        dateOfFIR === "" ||
-        childGender === "" ||
-        childDOB === "" ||
-        childAge === "" ||
-        nameOfGuardian === "" ||
-        willingness === undefined ||
-        willName === "" ||
-        willRelation === "" ||
-        willDate === "" ||
-        accName === "" ||
-        accNo === "" ||
-        bankName === "" ||
-        branchName === "" ||
-        ifsc === "" ||
-        charge === undefined ||
-        chargeDate === "" ||
-        nameOfMedInst === "" ||
-        dateOfReq === "" ||
-        dateOFMedExam === "" ||
-        dateOfInterm === ""
-      ) {
-        showErrorToast("Please fill in all required fields.");
-      }
-      else {
-        var registrationPayload = {
-          "DISTRICT_NAME": districtName,
-          "POL_STAT": polStn,
-          "COMPLAINT_NAME": formatComplaintData,
-          "COMPLAINT_MADE": complaintMadeBy,
-          "FIR_NO": firNo,
-          "DATE_OF_FIR": formatdateOfFIR,
-          "CHILD_GENDER": childGender,
-          "CHILD_AGE": formatchildDOB,
-          "AGE": childAge,
-          "NAME_PARENT": nameOfGuardian,
-          "WILLINGNESS_COMPENSATION": willingness,
-          "WHO_APPLYING": willName,
-          "WHO_NAME": willName,
-          "WHO_RELATIONSHIP": willRelation,
-          "WHO_DATE": formatwillDate,
-          "BANK_DETAILS": "Bank Details",
-          "ACCOUNT_HOLDER_NAME": accName,
-          "ACCOUNT_NUMBER": accNo,
-          "BANK_NAME": bankName,
-          "BRANCH_NAME": branchName,
-          "IFSC_CODE": ifsc,
-          "CHARGE_SHEET_YES_NO": charge,
-          "CHARGE_SHEET_DATE": formatchargeDate,
-          "NAME_MEDICAL_INSTITUTION": nameOfMedInst,
-          "DATE_REQUISITION_MEDICAL_EXAMINATION": formatdateOfReq,
-          "DATE_OF_MEDICAL_EXAMINATION_VICTIM": formatdateOFMedExam,
-          "DATE_OF_INTERIM": formatdateOfInterm
-      };      
-        $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertPoliceEntry',
-          type: 'POST',
-          headers: {
-            'X-App-Key': 'posco',
-            'X-App-Name': 'posco',
-          },
-          contentType: 'application/json',
-          data: JSON.stringify(registrationPayload),
-          success: function (response) {
-            showSuccessToast("Submitted Successful");
-            setTimeout(function () {
-              window.location.href = "../police/index.html";
-            }, 1000);
-          },
-          error: function (xhr, status, error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred during Submittion of Data.");
-          }
-        });
-      }
+      // if (
+      //   polStn === "" ||
+      //   districtName === "" ||
+      //   ComplaintData === "" ||
+      //   complaintMadeBy === "" ||
+      //   firNo === "" ||
+      //   dateOfFIR === "" ||
+      //   childGender === "" ||
+      //   childDOB === "" ||
+      //   childAge === "" ||
+      //   nameOfGuardian === "" ||
+      //   willingness === undefined ||
+      //   willName === "" ||
+      //   willRelation === "" ||
+      //   willDate === "" ||
+      //   accName === "" ||
+      //   accNo === "" ||
+      //   bankName === "" ||
+      //   branchName === "" ||
+      //   ifsc === "" ||
+      //   charge === undefined ||
+      //   chargeDate === "" ||
+      //   nameOfMedInst === "" ||
+      //   dateOfReq === "" ||
+      //   dateOFMedExam === "" ||
+      //   dateOfInterm === ""
+      // ) {
+      //   showErrorToast("Please fill in all required fields.");
+      // }
+      // else {
+      var registrationPayload = {
+        "DISTRICT_NAME": districtName,
+        "POL_STAT": polStn,
+        "COMPLAINT_NAME": formatComplaintData,
+        "COMPLAINT_MADE": complaintMadeBy,
+        "FIR_NO": firNo,
+        "DATE_OF_FIR": formatdateOfFIR,
+        "CHILD_GENDER": childGender,
+        "CHILD_AGE": formatchildDOB,
+        "AGE": childAge,
+        "NAME_PARENT": nameOfGuardian,
+        "WILLINGNESS_COMPENSATION": willingness,
+        "WHO_APPLYING": willName,
+        "WHO_NAME": willName,
+        "WHO_RELATIONSHIP": willRelation,
+        "WHO_DATE": formatwillDate,
+        "BANK_DETAILS": "Bank Details",
+        "ACCOUNT_HOLDER_NAME": accName,
+        "ACCOUNT_NUMBER": accNo,
+        "BANK_NAME": bankName,
+        "BRANCH_NAME": branchName,
+        "IFSC_CODE": ifsc,
+        "CHARGE_SHEET_YES_NO": charge,
+        "CHARGE_SHEET_DATE": formatchargeDate,
+        "NAME_MEDICAL_INSTITUTION": nameOfMedInst,
+        "DATE_REQUISITION_MEDICAL_EXAMINATION": formatdateOfReq,
+        "DATE_OF_MEDICAL_EXAMINATION_VICTIM": formatdateOFMedExam,
+        "DATE_OF_INTERIM": formatdateOfInterm
+      };
+      $.ajax({
+        url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertPoliceEntry',
+        type: 'POST',
+        headers: {
+          'X-App-Key': 'posco',
+          'X-App-Name': 'posco',
+        },
+        contentType: 'application/json',
+        data: JSON.stringify(registrationPayload),
+        success: function (response) {
+          showSuccessToast("Submitted Successful");
+          setTimeout(function () {
+            window.location.href = "../police/index.html";
+          }, 1000);
+        },
+        error: function (xhr, status, error) {
+          console.error('Error:', error);
+          showErrorToast("An error occurred during Submittion of Data.");
+        }
+      });
     }
+    // }
   </script>
 </body>
 
