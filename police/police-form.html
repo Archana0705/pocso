@@ -344,7 +344,6 @@
                                       <a-date-picker id="P50_DATE_OF_FIR" required
                                         aria-labelledby="P50_DATE_OF_FIR_LABEL" change-month="true" change-year="true"
                                         display-as="popup" display-weeks="none" format="DS"
-                                        max="2024-11-13T00&#x3A;00&#x3A;00" previous-next-distance="one-month"
                                         show-days-outside-month="visible" show-on="focus" show-time="false" size="30"
                                         time-increment-minute="15" today-button="true"
                                         valid-example="11&#x2F;13&#x2F;2024" year-selection-range="5"><input
@@ -433,7 +432,7 @@
                                   </div>
                                   <div class="t-Form-inputContainer col col-4">
                                     <div class="t-Form-itemWrapper"><input type="text" id="P50_AGE" name="P50_AGE"
-                                        class="text_field&#x20;apex-item-text" value="" size="30" />
+                                        class="text_field&#x20;apex-item-text" readonly value="" size="30" />
                                     </div>
                                     <div class="t-Form-itemAssistance">
                                       <span id="P50_AGE_error_placeholder" class="a-Form-error"
@@ -1693,6 +1692,23 @@
   <script>
     AOS.init();
     $(document).ready(function () {
+      // $(document).on('blur', '#P50_CHILD_AGE input', function () {
+      //     $(this).trigger('change');
+      // });
+      $(document).on('blur', '#P50_CHILD_AGE input, #P50_CHILD_AGE', function () {
+        var selectedDate = $('#P50_CHILD_AGE input').val();        
+        if (selectedDate) {
+            var birthDate = new Date(selectedDate);
+            var today = new Date();
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var monthDiff = today.getMonth() - birthDate.getMonth();            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            $('#P50_AGE').val(age);
+        }
+    });
+      
       $('.initWillHide').hide();
       $('.initChargeSheetHide').hide();
       $('#P50_WILLINGNESS_COMPENSATION input').on('click', function () {
@@ -1779,10 +1795,16 @@
         var dateOfInterm = document.getElementById('P50_DATE_OF_INTERIM_input').value || "";
         var formatdateOfInterm = convertDateFormat(dateOfInterm);
 
-        // if (!polStn || !districtName || !ComplaintData || !complaintMadeBy || !firNo || !dateOfFIR || !childGender || !childDOB || !childAge || !nameOfGuardian || !willingness || !willName || !willRelation || !willDate || !accName || !accNo || !bankName || !branchName || !ifsc || !charge || !chargeDate || !nameOfMedInst || !dateOfReq || !dateOFMedExam || !dateOfInterm) {
-        //   showErrorToast("Please fill in all required fields.");
-        //   return;
-        // }
+        if (!polStn || !districtName || !ComplaintData || !complaintMadeBy || !firNo || !dateOfFIR || !childGender || !childDOB || !childAge || !nameOfGuardian ) {
+          if(willingness === "Yes") {
+            if(!willingness || !willName || !willRelation || !willDate || !accName || !accNo || !bankName || !branchName || !ifsc) {
+              showErrorToast("Please fill in all required fields.");
+              return;
+            }
+          }
+          showErrorToast("Please fill in all required fields.");
+          return;
+        }
 
         var registrationPayload = {
           "DISTRICT_NAME": districtName,
@@ -1826,7 +1848,7 @@
           success: function (response) {
             user_id.id = response.return_id;
             Court_id.COURT_ID = response.return_id;
-            showSuccessToast("Submitted Successfully");
+            //showSuccessToast("Submitted Successfully");
             setTimeout(() => window.location.href = "../police/index.html", 1000);
           },
           error: function (error) {
@@ -1842,7 +1864,7 @@
           contentType: 'application/json',
           data: JSON.stringify(user_id),
           success: function () {
-            showSuccessToast("Request status updated successfully");
+            //showSuccessToast("Request status updated successfully");
           },
           error: function (error) {
             console.error('Error:', error);
@@ -1859,7 +1881,7 @@
           contentType: 'application/json',
           data: JSON.stringify(Court_id),
           success: function () {
-            showSuccessToast("Judge Added successfully");
+            //showSuccessToast("Judge Added successfully");
           },
           error: function (error) {
             console.error('Error:', error);
@@ -1874,14 +1896,14 @@
           contentType: 'application/json',
           data: JSON.stringify(Court_id),
           success: function () {
-            showSuccessToast("Superintendent Added successfully");
+            //showSuccessToast("Superintendent Added successfully");
           },
           error: function (error) {
             console.error('Error:', error);
             showErrorToast("An error occurred while adding Superintendent.");
           }
         });
-        
+        await showSuccessToast('Data Submitted Successfully');
       } catch (error) {
         console.error('Error:', error);
         showErrorToast("An unexpected error occurred.");
@@ -1889,6 +1911,16 @@
     }
 
 
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () { debugger;
+      let datePicker = $("#P50_DATE_OF_FIR input");
+      if (datePicker) {
+          let today = new Date();
+          let formattedDate = today.toISOString().split("T")[0] + "T00:00:00"; 
+          $("#P50_DATE_OF_FIR input").attr("max", formattedDate);
+      }
+    });
   </script>
 </body>
 
