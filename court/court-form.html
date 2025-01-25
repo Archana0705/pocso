@@ -1916,35 +1916,35 @@
               "COURT_ID": "POCSO/FEBRUARY /2024/0048"
             }
 
-            // $.ajax({
-            //   url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderStatus',
-            //   type: 'POST',
-            //   headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-            //   contentType: 'application/json',
-            //   data: JSON.stringify(interimStatusPayload),
-            //   success: function () {
-            //     showSuccessToast("Interim status updated successfully");
-            //   },
-            //   error: function (error) {
-            //     console.error('Error:', error);
-            //     showErrorToast("An error occurred while updating request status.");
-            //   }
-            // });
+            $.ajax({
+              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderStatus',
+              type: 'POST',
+              headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+              contentType: 'application/json',
+              data: JSON.stringify(interimStatusPayload),
+              success: function () {
+                showSuccessToast("Interim status updated successfully");
+              },
+              error: function (error) {
+                console.error('Error:', error);
+                showErrorToast("An error occurred while updating request status.");
+              }
+            });
 
-            // $.ajax({
-            //   url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrder',
-            //   type: 'POST',
-            //   headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-            //   contentType: 'application/json',
-            //   data: JSON.stringify(interimPayload),
-            //   success: function () {
-            //     showSuccessToast("Interim Data updated successfully");
-            //   },
-            //   error: function (error) {
-            //     console.error('Error:', error);
-            //     showErrorToast("An error occurred while updating request status.");
-            //   }
-            // });
+            $.ajax({
+              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrder',
+              type: 'POST',
+              headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+              contentType: 'application/json',
+              data: JSON.stringify(interimPayload),
+              success: function () {
+                showSuccessToast("Interim Data updated successfully");
+              },
+              error: function (error) {
+                console.error('Error:', error);
+                showErrorToast("An error occurred while updating request status.");
+              }
+            });
 
             $.ajax({
               url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimAttactFileMinetype',
