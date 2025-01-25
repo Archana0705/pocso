@@ -991,34 +991,27 @@
                                   class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
                                   id="P53_INTERIM_CONTAINER">
                                   <div class="t-Form-labelContainer col col-2">
-                                    <label for="P53_INTERIM" id="P53_INTERIM_LABEL" class="t-Form-label">Interim
-                                      Copy</label>
+                                    <label for="P53_INTERIM" id="P53_INTERIM_LABEL" class="t-Form-label">
+                                      Interim Copy</label>
                                   </div>
-                                  <div class="t-Form-inputContainer col col-2">
+
+                                  <div class="t-Form-inputContainer col col-4">
                                     <div class="t-Form-itemWrapper">
                                       <a-file-upload id="P53_INTERIM" name="P53_INTERIM" upload-type="FILE"
-                                        display-style="INLINE" size="30" label="Choose&#x20;File"
-                                        description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                        download-link="true">
-                                        <input type="file" id="P53_INTERIM_input" aria-labelledby="P53_INTERIM_LABEL"
-                                          class="u-vh" />
-                                        <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                          <div class="a-FileDrop-icon">
-                                            <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                            </span>
-                                          </div>
-                                          <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                              File</span><span class="a-FileDrop-description">Select a file or drop one
-                                              here.</span></div>
-                                          <div class="a-FileDrop-action"><span
-                                              class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span>
-                                          </div>
+                                        display-style="NATIVE" accept=".pdf,.jpg,.jpeg" size="30" max-file-size="2048">
+                                        <input type="file" id="P53_INTERIM_input" name="P53_INTERIM"
+                                          class="text_field&#x20;apex-item-text" value="" maxlength="1000" />
+                                        <div class="a-FileDrop a-FileDrop--native">
                                         </div>
                                       </a-file-upload>
                                     </div>
-                                    <span id="P53_INTERIM_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
+                                    <div class="t-Form-itemAssistance">
+                                      <span id="P53_INTERIM_PLACEHOLDER" class="a-Form-error"
+                                        data-template-id="70091003340642546032_ET"></span>
+                                      <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                    </div>
                                   </div>
+
                                 </div>
                               </div>
                               <div class="col col-6 apex-col-auto col-end">
@@ -1568,6 +1561,57 @@
       toast.show();
     }
 
+    function checkFile(selector) {
+      var fileInput = $(selector).find('input[type="file"]');
+      const validTypes = ['application/pdf', 'image/jpeg', 'image/jpg'];
+      const maxSize = 2 * 1024 * 1024; // 2MB in bytes
+      var file = fileInput[0].files[0];
+
+      // Check if a file has been selected
+      if (file) {
+        // Check file type
+        if (!validTypes.includes(file.type)) {
+          errors = true;
+          $('#' + selector.replace('#', '') + '_error_placeholder').text('Invalid file type. Supported types are .pdf, .jpg, .jpeg.').css('color', 'red');
+          return;
+        }
+
+        // Check file size
+        if (file.size > maxSize) {
+          errors = true;
+          $('#' + selector.replace('#', '') + '_error_placeholder').text("File size exceeds the 2MB limit.").css('color', 'red');
+          return;
+        }
+      }
+    }
+    function processFile(selector) {
+      return new Promise((resolve, reject) => {
+        var fileInput = $(selector)[0];
+        var file = fileInput.files[0];
+        if (file === undefined) showErrorToast('Please upload all the required files');
+        if (file) {
+          const reader = new FileReader();
+          const fileData = {};
+
+          reader.onload = function (event) {
+            // File processed as Base64 string
+            fileData.fileBase64 = event.target.result.split(',')[1];
+            fileData.mimetype = file.type;
+            fileData.filename = file.name;
+
+            resolve(fileData); // Resolve the promise with fileData
+          };
+
+          reader.onerror = function (error) {
+            reject(error); // Reject the promise in case of error
+          };
+
+          reader.readAsDataURL(file); // Read the file as a data URL (Base64)
+        }
+      });
+    }
+
+
     document.getElementById('P53_TYPE').addEventListener('change', function () {
 
       const selectedValue = this.value;
@@ -1755,10 +1799,32 @@
         var branchName = document.getElementById('P53_BRANCH_NAME_1').value || "";
         var accountNumber = document.getElementById('P53_ACCOUNT_NUMBER_1').value || "";
         var accountHolderName = document.getElementById('P53_BAK_ACCOUNT').value || "";
+        checkFile('#P53_INTERIM');
+        // Check and process optional file fields
+        let interimInputFile = null;  // Declare insurance variable at the beginning
+
+        if ($('#P53_INTERIM_input')) {
+          debugger
+          interimInputFile = await processFile('#P53_INTERIM_input');
+        }
 
         if (!nameOfCourt || !orderNumber || !typeOfOrder) {
           showErrorToast("Please fill in all required fields.");
           return;
+        }
+
+        if (typeOfOrder === "Interim Compensation") {
+          if (!interimAmount) {
+            showErrorToast("Please fill Interim Compensation Amount field.");
+            return;
+          }
+        }
+
+        if (typeOfOrder === "Final Compensation") {
+          if (!finalAmount) {
+            showErrorToast("Please fill Final Compensation Amount field.");
+            return;
+          }
         }
 
         var bankDetailsPayload = {
@@ -1818,6 +1884,18 @@
           "INTERIM_ORDER_DATE": null,
         }
 
+        var finalOrderDatePayload = {
+          "FINAL_AMOUNT": finalAmount,
+          "FINAL_ORDER_DATE": finalOrderDate,
+          "ID": "POCSO/FEBRUARY/2024/0048"
+        }
+
+        var InterimOrderFileAttachPayload = {
+          "INTERIM": interimInputFile && interimInputFile.fileBase64 ? interimInputFile.fileBase64 : null,
+          "INTERIM_ATTACH_FILENAME": interimInputFile && interimInputFile.filename ? interimInputFile.filename : null,
+          "INTERIM_ATTACH_MIMETYPE": interimInputFile && interimInputFile.mimetype ? interimInputFile.mimetype : null,
+          "COURT_ID": "POCSO/FEBRUARY /2024/0048"
+        }
 
 
         if (changeBankAccount) {
@@ -1844,33 +1922,48 @@
         if (typeOfOrder) {
           debugger
           if (typeOfOrder === "Interim Compensation") {
-            $.ajax({
-              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderStatus',
-              type: 'POST',
-              headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-              contentType: 'application/json',
-              data: JSON.stringify(interimStatusPayload),
-              success: function () {
-                showSuccessToast("Interim status updated successfully");
-              },
-              error: function (error) {
-                console.error('Error:', error);
-                showErrorToast("An error occurred while updating request status.");
-              }
-            });
+            // $.ajax({
+            //   url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderStatus',
+            //   type: 'POST',
+            //   headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+            //   contentType: 'application/json',
+            //   data: JSON.stringify(interimStatusPayload),
+            //   success: function () {
+            //     showSuccessToast("Interim status updated successfully");
+            //   },
+            //   error: function (error) {
+            //     console.error('Error:', error);
+            //     showErrorToast("An error occurred while updating request status.");
+            //   }
+            // });
+
+            // $.ajax({
+            //   url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrder',
+            //   type: 'POST',
+            //   headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+            //   contentType: 'application/json',
+            //   data: JSON.stringify(interimPayload),
+            //   success: function () {
+            //     showSuccessToast("Interim Data updated successfully");
+            //   },
+            //   error: function (error) {
+            //     console.error('Error:', error);
+            //     showErrorToast("An error occurred while updating request status.");
+            //   }
+            // });
 
             $.ajax({
-              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrder',
+              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimAttactFileMinetype',
               type: 'POST',
               headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
               contentType: 'application/json',
-              data: JSON.stringify(interimPayload),
+              data: JSON.stringify(InterimOrderFileAttachPayload),
               success: function () {
-                showSuccessToast("Interim Data updated successfully");
+                showSuccessToast("Final Upload updated successfully");
               },
               error: function (error) {
                 console.error('Error:', error);
-                showErrorToast("An error occurred while updating request status.");
+                showErrorToast("An error occurred while updating File Upload.");
               }
             });
 
@@ -1893,6 +1986,23 @@
               showErrorToast("An error occurred while updating request status.");
             }
           });
+
+
+          $.ajax({
+            url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateFinalAmtFinalOrderDate',
+            type: 'POST',
+            headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+            contentType: 'application/json',
+            data: JSON.stringify(finalOrderDatePayload),
+            success: function () {
+              showSuccessToast("Final Data updated successfully");
+            },
+            error: function (error) {
+              console.error('Error:', error);
+              showErrorToast("An error occurred while updating request status.");
+            }
+          });
+
         }
 
       } catch (error) {
