@@ -1119,30 +1119,22 @@
                                   <div class="t-Form-labelContainer col col-2">
                                     <label for="P53_FINAL" id="P53_FINAL_LABEL" class="t-Form-label">Final Copy</label>
                                   </div>
-                                  <div class="t-Form-inputContainer col col-2">
+
+                                  <div class="t-Form-inputContainer col col-4">
                                     <div class="t-Form-itemWrapper">
-                                      <a-file-upload id="P53_FINAL" name="P53_FINAL" upload-type="FILE"
-                                        display-style="INLINE" size="30" label="Choose&#x20;Files"
-                                        description="Select&#x20;or&#x20;drop&#x20;files&#x20;here."
-                                        download-link="true" multiple="true">
-                                        <input type="file" id="P53_FINAL_input" aria-labelledby="P53_FINAL_LABEL"
-                                          class="u-vh" />
-                                        <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                          <div class="a-FileDrop-icon">
-                                            <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                            </span>
-                                          </div>
-                                          <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                              Files</span><span class="a-FileDrop-description">Select or drop files
-                                              here.</span></div>
-                                          <div class="a-FileDrop-action"><span
-                                              class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                              Files</span></div>
+                                      <a-file-upload" id="P53_FINAL" name="P53_FINAL" upload-type="FILE"
+                                        display-style="NATIVE" accept=".pdf,.jpg,.jpeg" size="30" max-file-size="2048">
+                                        <input type="file" id="P53_FINAL_input" name="P53_FINAL"
+                                          class="text_field&#x20;apex-item-text" value="" maxlength="1000" />
+                                        <div class="a-FileDrop a-FileDrop--native">
                                         </div>
-                                      </a-file-upload>
+                                        </a-file-upload>
                                     </div>
-                                    <span id="P53_FINAL_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
+                                    <div class="t-Form-itemAssistance">
+                                      <span id="P53_FINAL_PLACEHOLDER" class="a-Form-error"
+                                        data-template-id="70091003340642546032_ET"></span>
+                                      <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1799,14 +1791,9 @@
         var branchName = document.getElementById('P53_BRANCH_NAME_1').value || "";
         var accountNumber = document.getElementById('P53_ACCOUNT_NUMBER_1').value || "";
         var accountHolderName = document.getElementById('P53_BAK_ACCOUNT').value || "";
-        checkFile('#P53_INTERIM');
+        let finalInputFile = null;
+        let interimInputFile = null;
         // Check and process optional file fields
-        let interimInputFile = null;  // Declare insurance variable at the beginning
-
-        if ($('#P53_INTERIM_input')) {
-          debugger
-          interimInputFile = await processFile('#P53_INTERIM_input');
-        }
 
         if (!nameOfCourt || !orderNumber || !typeOfOrder) {
           showErrorToast("Please fill in all required fields.");
@@ -1890,12 +1877,6 @@
           "ID": "POCSO/FEBRUARY/2024/0048"
         }
 
-        var InterimOrderFileAttachPayload = {
-          "INTERIM": interimInputFile && interimInputFile.fileBase64 ? interimInputFile.fileBase64 : null,
-          "INTERIM_ATTACH_FILENAME": interimInputFile && interimInputFile.filename ? interimInputFile.filename : null,
-          "INTERIM_ATTACH_MIMETYPE": interimInputFile && interimInputFile.mimetype ? interimInputFile.mimetype : null,
-          "COURT_ID": "POCSO/FEBRUARY /2024/0048"
-        }
 
 
         if (changeBankAccount) {
@@ -1922,6 +1903,19 @@
         if (typeOfOrder) {
           debugger
           if (typeOfOrder === "Interim Compensation") {
+            if ($('#P53_INTERIM_input')) {
+              interimInputFile = await processFile('#P53_INTERIM_input');
+            }
+
+            checkFile('#P53_INTERIM');
+
+            var InterimOrderFileAttachPayload = {
+              "INTERIM": interimInputFile && interimInputFile.fileBase64 ? interimInputFile.fileBase64 : null,
+              "INTERIM_ATTACH_FILENAME": interimInputFile && interimInputFile.filename ? interimInputFile.filename : null,
+              "INTERIM_ATTACH_MIMETYPE": interimInputFile && interimInputFile.mimetype ? interimInputFile.mimetype : null,
+              "COURT_ID": "POCSO/FEBRUARY /2024/0048"
+            }
+
             // $.ajax({
             //   url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderStatus',
             //   type: 'POST',
@@ -1972,6 +1966,17 @@
 
 
         if (typeOfOrder === "Final Compensation") {
+          if ($('#P53_FINAL_input')) {
+            finalInputFile = await processFile('#P53_FINAL_input');
+          }
+          checkFile('#P53_FINAL');
+
+          var finalOrderFileAttachPayload = {
+            "INTERIM": finalInputFile && finalInputFile.fileBase64 ? finalInputFile.fileBase64 : null,
+            "FINAL_ATTACH_FILENAME": finalInputFile && finalInputFile.filename ? finalInputFile.filename : null,
+            "FINAL_ATTACH_MIMETYPE": finalInputFile && finalInputFile.mimetype ? finalInputFile.mimetype : null,
+            "COURT_ID": "POCSO/FEBRUARY /2024/0048"
+          }
           $.ajax({
             url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderFinal',
             type: 'POST',
@@ -2003,6 +2008,20 @@
             }
           });
 
+          $.ajax({
+            url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateFinalAttactFileMinetype',
+            type: 'POST',
+            headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+            contentType: 'application/json',
+            data: JSON.stringify(finalOrderFileAttachPayload),
+            success: function () {
+              showSuccessToast("Final Upload updated successfully");
+            },
+            error: function (error) {
+              console.error('Error:', error);
+              showErrorToast("An error occurred while updating File Upload.");
+            }
+          });
         }
 
       } catch (error) {
