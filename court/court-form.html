@@ -1035,10 +1035,12 @@
                                         aria-labelledby="P53_INTERIM_AWARDED_YES_LABEL"
                                         class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"
                                         role="radiogroup" aria-orientation="vertical">
-                                        <div class="apex-item-option"><input type="radio" id="P53_INTERIM_AWARDED_YES_0"
+                                        <div class="apex-item-option">
+                                          <input type="radio" id="P53_INTERIM_AWARDED_YES_0"
                                             name="P53_INTERIM_AWARDED_YES" data-display="Yes" value="Yes"
                                             aria-label="Yes"><label class="u-radio" for="P53_INTERIM_AWARDED_YES_0"
-                                            aria-hidden="true">Yes</label></div>
+                                            aria-hidden="true">Yes</label>
+                                        </div>
                                         <div class="apex-item-option"><input type="radio" id="P53_INTERIM_AWARDED_YES_1"
                                             name="P53_INTERIM_AWARDED_YES" data-display="No" value="No"
                                             aria-label="No"><label class="u-radio" for="P53_INTERIM_AWARDED_YES_1"
@@ -1321,7 +1323,7 @@
                           </div>
                           <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                              <td align="left"><button
+                              <td align="left"><button onclick="handleCancelButton()"
                                   class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
                                   type="button" id="B237147423489154151"><span
                                     class="t-Button-label">Cancel</span></button></td>
@@ -1544,11 +1546,31 @@
     //   }
     // })
     // $('#P53_TYPE select').on('click', function () {
+    function showSuccessToast(message) {
+      const toastElement = document.getElementById('successToast');
+      const toastBody = document.getElementById('successMessage');
+
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    function showErrorToast(message) {
+      const toastElement = document.getElementById('errorToast');
+      const toastBody = document.getElementById('errorMessage');
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
 
     document.getElementById('P53_TYPE').addEventListener('change', function () {
 
       const selectedValue = this.value;
-      alert(selectedValue)
       const targetElement = document.getElementById('interimDetails');
 
       if (selectedValue === "Interim Compensation") {
@@ -1717,20 +1739,76 @@
         var nameOfCourt = document.getElementById('P53_NAME_OF_COURT').value || "";
         var orderNumber = document.getElementById('P53_ORDER_NO').value || "";
         var courtFileDate = document.getElementById('P53_COURT_FILE_DATE').value || "";
+        var orderDate = document.getElementById('P53_INTERIM_ORDER_DATE').value || "";
+        var interimAmount = document.getElementById('P53_INTERIM_AMOUNT').value || "";
+        var judgement = document.getElementById('P53_JUDGEMENT').value || "";
         var formatComplaintData = convertDateFormat(courtFileDate);
+
+
         var typeOfOrder = $('#P53_TYPE').val() || "";
         var changeBankAccount = $('input[name="P53_CHANGE_BANK_ACCOUNT"]:checked').val();
+        var interimAwarded = $('input[name="P53_INTERIM_AWARDED_YES"]:checked').val();
+
+        var ifscCode = document.getElementById('P53_IFSC_CODE_1').value || "";
+        var bankName = document.getElementById('P53_BANK_NAME_1').value || "";
+        var branchName = document.getElementById('P53_BRANCH_NAME_1').value || "";
+        var accountNumber = document.getElementById('P53_ACCOUNT_NUMBER_1').value || "";
+        var accountHolderName = document.getElementById('P53_BAK_ACCOUNT').value || "";
+
+        if (!interimAmount || !nameOfCourt || !orderNumber || !typeOfOrder) {
+          showErrorToast("Please fill in all required fields.");
+          return;
+        }
+
+        var bankDetailsPayload = {
+          COURT_ID: "POCSO/JULY     /2024/0332",
+          IFSC_CODE: ifscCode,
+          BANK_NAME: bankName,
+          BRANCH_NAME: branchName,
+          ACCOUNT_NUMBER: accountNumber,
+          ACCOUNT_HOLDER_NAME: accountHolderName,
+          BAK_ACCOUNT: accountHolderName,
+          IFSC_CODE_1: "XYZ789",
+          BANK_NAME_1: "Bank B",
+          BRANCH_NAME_1: "Branch 2",
+          ACCOUNT_NUMBER_1: "9876543210",
+        }
+
+        var interimStatusPayload = {
+          "COURT_ID_1": "1234",
+          "ID": "5678"
+        }
+
+        var interimPayload = {
+          "COURT_ID": "12345",
+          "ORDER_NO": orderNumber,
+          "COURT_FILE_DATE": courtFileDate,
+          "NAME_OF_COURT": nameOfCourt,
+          "INTERIM_ORDER_DATE": orderDate,
+          "INTERIM_AMOUNT": interimAmount,
+          "JUDGEMENT": judgement,
+          "TYPE": typeOfOrder,
+          "CHANGE_BANK_ACCOUNT": changeBankAccount,
+          "INTERIM_AWARDED_YES": interimAwarded,
+          "BRANCH_NAME_1": branchName,
+          "BAK_ACCOUNT": accountHolderName,
+          "IFSC_CODE_1": ifscCode,
+          "ACCOUNT_NUMBER_1": accountNumber,
+          "BANK_NAME_1": bankName
+        }
+
+
 
 
         if (changeBankAccount) {
           debugger
           if (changeBankAccount === "Yes") {
             await $.ajax({
-              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateRequestStatus',
+              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateBankDetails',
               type: 'POST',
               headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
               contentType: 'application/json',
-              // data: JSON.stringify(user_id),
+              data: JSON.stringify(bankDetailsPayload),
               success: function () {
                 showSuccessToast("Request status updated successfully");
               },
@@ -1742,141 +1820,43 @@
 
           }
         }
-        var registrationPayload = {
-          "DISTRICT_NAME": districtName,
-          "POL_STAT": polStn,
-          "COMPLAINT_NAME": formatComplaintData,
-          "COMPLAINT_MADE": complaintMadeBy,
-          "FIR_NO": firNo,
-          "DATE_OF_FIR": formatdateOfFIR,
-          "CHILD_GENDER": childGender,
-          "CHILD_AGE": formatchildDOB,
-          "AGE": childAge,
-          "NAME_PARENT": nameOfGuardian,
-          "WILLINGNESS_COMPENSATION": willingness,
-          "WHO_APPLYING": willName,
-          "WHO_NAME": willName,
-          "WHO_RELATIONSHIP": willRelation,
-          "WHO_DATE": formatwillDate,
-          "BANK_DETAILS": "Bank Details",
-          "ACCOUNT_HOLDER_NAME": accName,
-          "ACCOUNT_NUMBER": accNo,
-          "BANK_NAME": bankName,
-          "BRANCH_NAME": branchName,
-          "IFSC_CODE": ifsc,
-          "CHARGE_SHEET_YES_NO": charge,
-          "CHARGE_SHEET_DATE": formatchargeDate,
-          "NAME_MEDICAL_INSTITUTION": nameOfMedInst,
-          "DATE_REQUISITION_MEDICAL_EXAMINATION": formatdateOfReq,
-          "DATE_OF_MEDICAL_EXAMINATION_VICTIM": formatdateOFMedExam,
-          "DATE_OF_INTERIM": formatdateOfInterm
-        };
 
-        let user_id = { "user_id": "" };
+        if (typeOfOrder) {
+          debugger
+          if (typeOfOrder === "Interim Compensation") {
+            $.ajax({
+              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderStatus',
+              type: 'POST',
+              headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+              contentType: 'application/json',
+              data: JSON.stringify(interimStatusPayload),
+              success: function () {
+                showSuccessToast("Interim status updated successfully");
+              },
+              error: function (error) {
+                console.error('Error:', error);
+                showErrorToast("An error occurred while updating request status.");
+              }
+            });
 
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertPoliceEntry',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(registrationPayload),
-          success: function () {
-            showSuccessToast("Submitted Successfully");
-            setTimeout(() => window.location.href = "../police/index.html", 1000);
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred during submission of data.");
+            $.ajax({
+              url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrder',
+              type: 'POST',
+              headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+              contentType: 'application/json',
+              data: JSON.stringify(interimPayload),
+              success: function () {
+                showSuccessToast("Interim Data updated successfully");
+              },
+              error: function (error) {
+                console.error('Error:', error);
+                showErrorToast("An error occurred while updating request status.");
+              }
+            });
+
           }
-        });
-
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateRequestStatus',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(user_id),
-          success: function () {
-            showSuccessToast("Request status updated successfully");
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred while updating request status.");
-          }
-        });
-
-        let complaintPayload = {
-          "id": "",
-          "COMPLAINT_COPY": "COMPLAINT_COPY",
-          "COMPLAINT_COPY_FILENAME": "complaint.pdf",
-          "COMPLAINT_COPY_MIMETYPE": "application/pdf"
         }
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateComplaintCopy',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(complaintPayload),
-          success: function () {
-            showSuccessToast("Complaint copy updated successfully");
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred while updating Complaint copy.");
-          }
-        });
 
-        let firPayload = {
-          "id": 123,
-          "FIR": "Sample FIR data",
-          "FIR_ATTACH_FILENAME": "sample_fir.pdf",
-          "FIR_ATTACH_MIMETYPE": "application/pdf"
-        }
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateFirCopy',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(firPayload),
-          success: function () {
-            showSuccessToast("FIR copy updated successfully");
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred while updating FIR copy.");
-          }
-        });
-
-
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertJudgeLogin',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(user_id),
-          success: function () {
-            showSuccessToast("Judge Added successfully");
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred while adding judge.");
-          }
-        });
-
-        await $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertSuperintendent',
-          type: 'POST',
-          headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
-          contentType: 'application/json',
-          data: JSON.stringify(user_id),
-          success: function () {
-            showSuccessToast("Superintendent Added successfully");
-          },
-          error: function (error) {
-            console.error('Error:', error);
-            showErrorToast("An error occurred while adding Superintendent.");
-          }
-        });
 
       } catch (error) {
         console.error('Error:', error);
