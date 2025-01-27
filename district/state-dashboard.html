@@ -33,7 +33,59 @@
       position: absolute;
     }
     </style>
+<style>
+  .colorBlue {
+    color : #056ac8;
+  }
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #12121261;
+    /*width: 57%;*/
+    border-radius: 13px 35px;
+  }
 
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(53% - 30px);
+    border: 6px solid #f92020b8;
+    border-top-color: #e2eefd;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+    z-index: 9999;
+  }
+
+  @-webkit-keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<!-- <div id="preloader"></div> -->
   </head>
   <body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
     <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
@@ -171,8 +223,194 @@
                                   </div>
                                   <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
                                   <div class="a-IRR-controlGroup a-IRR-controlGroup--options">
-                                    <input type="hidden" id="R237835556341397432_row_select" value="50" />
-                                    <div class="a-IRR-actions"><button id="R237835556341397432_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="R237835556341397432_actions_menu">Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div>
+                                    <input type="hidden" id="DMCF_row_select" value="50" />
+                                    <div class="a-IRR-actions"><button id="DMCF_actions_button"
+                                        class="a-Button a-IRR-button a-IRR-button--actions" type="button"
+                                        data-menu="DMCF_actions_menu" onclick="downloadExcel()">Actions<span
+                                          aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="DMCF_content" class="a-IRR-content ">
+                                <div id="DMCF_dialog_js" class="a-IRR-dialogBody" style="display:none"></div>
+                                <input type="hidden" id="DMCF_worksheet_id" value="9998004421635189198" />
+                                <input type="hidden" id="DMCF_app_user" value="9962109933" />
+                                <input type="hidden" id="DMCF_report_id" value="9998518817966199258" />
+                                <input type="hidden" id="DMCF_view_mode" value="REPORT" />
+                                <style id="DMCF_worksheet_css" type="text/css"></style>
+                                <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                  id="DMCF_chart" class="a-IRR-chartView"></div>
+                                <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                  id="DMCF_group_by" class="a-IRR-groupByView"></div>
+                                <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                  id="DMCF_pivot" class="a-IRR-pivotView"></div>
+                                <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                  id="DMCF_data_panel" class="a-IRR-reportView">
+                                  <div class="a-IRR-tableContainer scroll_Hidden">
+                                    <table aria-label="GO Report, Report = Primary Default, View = Report" class="a-IRR-table" id="state_dashboard">
+                                      <thead>
+                                        <!-- Group header row -->
+                                        <tr class="group-header">
+                                          <th class="a-IRR-header u-tL">
+                                            <span class="a-IRR-headerLabel"></span>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="3" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">FIR &amp; Chargesheet</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Case Status</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="4" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Status Of Cases</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim Awarded</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim Disbursed</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim Pending</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final Awarded</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final Disbursed</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final Pending</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="8" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                                        </tr>
+                                        <!-- Updated header row -->
+                                        <tr>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">S No</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="2" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_district_name" id="R153010267768955516_ig_grid_vc_district_name">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">District Name</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="3" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_pocso_cases_filed" id="R153010267768955516_ig_grid_vc_no_of_pocso_cases_filed">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">No Of Pocso Cases Filed</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="4" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_chargesheet_filed" id="R153010267768955516_ig_grid_vc_no_of_chargesheet_filed">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">No Of Chargesheet Filed</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="5" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_case_status_pending" id="R153010267768955516_ig_grid_vc_case_status_pending">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Case Status Pending</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="6" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_case_status_completed" id="R153010267768955516_ig_grid_vc_case_status_completed">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Case Status Completed</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="7" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_cases_acquitted" id="R153010267768955516_ig_grid_vc_no_of_cases_acquitted">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">No Of Cases Acquitted</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="8" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_cases_convicted" id="R153010267768955516_ig_grid_vc_no_of_cases_convicted">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">No Of Cases Convicted</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="9" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_other_disposals" id="R153010267768955516_ig_grid_vc_other_disposals">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Other Disposals</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="10" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_conviction_rate" id="R153010267768955516_ig_grid_vc_conviction_rate">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Conviction Rate</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="11" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_willingness_compensation" id="R153010267768955516_ig_grid_vc_willingness_compensation">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Willingness Compensation</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="12" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Compensation No Of Cases Awarded</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="13" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_awarded_amount" id="R153010267768955516_ig_grid_vc_interim_compensation_awarded_amount">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Compensation Awarded Amount</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="14" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_disbursed" id="R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_disbursed">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Compensation No Of Cases Disbursed</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="15" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_disbursed_amount" id="R153010267768955516_ig_grid_vc_interim_compensation_disbursed_amount">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Compensation Disbursed Amount</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="16" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_pending" id="R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_pending">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Compensation No Of Cases Pending</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="17" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_pending_amount" id="R153010267768955516_ig_grid_vc_interim_compensation_pending_amount">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Compensation Pending Amount</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Compensation No Of Cases Awarded</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Compensation Awarded Amount</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Compensation No Of Cases Disbursed</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Compensation Disbursed Amount</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Compensation No Of Cases Pending</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Compensation Pending Amount</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Disbursed1</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Pending1</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Not Applicable</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Disbursed2</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Pending2</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Disbursed3</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Pending3</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_final_compensation_no_of_cases_awarded">
+                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Total</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody></tbody>
+                                    </table>
+                                    
+                                    
+                                  </div>
+                                  <div role="region" aria-label="Pagination&#x20;of&#x20;GO&#x20;Report"
+                                    class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
+                                    <ul class="a-IRR-pagination">
+                                      <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                      <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label"> 1 -
+                                          50</span></li>
+                                      <li class="a-IRR-pagination-item"><button type="button"
+                                          class="a-Button a-IRR-button a-IRR-button--pagination" aria-controls="DMCF"
+                                          title="Next" aria-label="Next"
+                                          data-pagination="pgR_min_row=51max_rows=50rows_fetched=50"><span
+                                            class="a-Icon icon-right-chevron" aria-hidden="true"></span></button></li>
+                                    </ul>
                                   </div>
                                 </div>
                               </div>
@@ -187,10 +425,10 @@
                                 <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;State&#x20;Dashboard" id="R237835556341397432_group_by" class="a-IRR-groupByView"></div>
                                 <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;State&#x20;Dashboard" id="R237835556341397432_pivot" class="a-IRR-pivotView"></div>
                                 <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;State&#x20;Dashboard" id="R237835556341397432_data_panel" class="a-IRR-reportView">
-                                  <div role="region" aria-label="Message" class="a-IRR-noDataMsg">
+                                  <!-- <div role="region" aria-label="Message" class="a-IRR-noDataMsg">
                                     <div class="a-IRR-noDataMsg-icon"><span class="a-Icon icon-irr-no-results" aria-hidden="true"></span></div>
                                     <span class="a-IRR-noDataMsg-text">No data found.</span>
-                                  </div>
+                                  </div> -->
                                 </div>
                               </div>
                             </div>
@@ -289,6 +527,218 @@
     </script>
     <script>
       AOS.init();
+      $(document).ready(function () {
+        // $('#state_dashboard').DataTable({
+        //       paging: true,
+        //       searching: false,
+        //       ordering: true,
+        //       order: [[0, 'asc']],
+        //       responsive: true,
+        //       columnDefs: [
+        //         { targets: '_all', orderable: true }, // Enable sorting for all columns
+        //       ],
+        //       scrollCollapse: true,
+        //       scrollY: '400px',
+        //       fixedHeader: true
+        // });
+        $('#preloader').hide();
+        const apiUrl = "https://tngis.tnega.org/lcap_api/pocso/api/v1/StateAdminLogin/view/viewDashboard";
+        const tableBody = $("#state_dashboard tbody");
+        const viewDashboardPayload = {
+            "EMPLOYEE_ID": "12345",
+            "DISTRICT_NAME": "Sample District",
+            "DATE_OF_FIR_FROM": "2023-01-01",
+            "DATE_OF_FIR_TO": "2023-12-31",
+            "CHARGE_SHEET_DATE_FROM": "2023-06-01",
+            "CHARGE_SHEET_DATE_TO": "2023-12-31"
+        }
+        tableBody.html('<tr><td colspan="9" class="text-center">Loading...</td></tr>');
+        $.ajax({
+          url: apiUrl,
+          method: "POST",
+          headers: {
+            "X-APP-KEY": "pocso",
+            "X-APP-NAME": "pocso"
+          },
+          contentType: "application/json", // Specify raw JSON
+          data: JSON.stringify(viewDashboardPayload),
+          success: function (response) {
+            const tableData = response.data;
+            tableBody.empty();
+
+            if (!tableData || tableData.length === 0) {
+              tableBody.append('<tr><td colspan="9" class="text-center">No Data Found</td></tr>');
+              return;
+            }
+
+            tableData.forEach(item => {
+              const newRow = `
+              <tr>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.rownum) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly"><a href="" class="colorBlue">${(item.district_name) || 'N/A'}</a></td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.no_of_pocso_cases_filed) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.no_of_chargesheet_filed) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.case_status_pending) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.case_status_completed) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.no_of_cases_acquitted) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.no_of_cases_convicted) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.other_disposals) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.conviction_rate) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.willingness_compensation) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.interim_compensation_no_of_cases_awarded) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.interim_compensation_awarded_amount) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.interim_compensation_no_of_cases_disbursed) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.interim_compensation_disbursed_amount) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.interim_compensation_no_of_cases_pending) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.interim_compensation_pending_amount) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.final_compensation_no_of_cases_awarded) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.final_compensation_awarded_amount) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.final_compensation_no_of_cases_disbursed) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.final_compensation_disbursed_amount) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.final_compensation_no_of_cases_pending) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.final_compensation_pending_amount) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.disbursed1) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.pending1) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.not_applicable) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.disbursed2) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.pending2) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.disposed3) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.pending3) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.total) || 'N/A'}</td>
+              </tr>`;
+              tableBody.append(newRow);
+            });
+
+            if ($.fn.DataTable.isDataTable('#state_dashboard')) {
+              $('#state_dashboard').DataTable().destroy();
+            }
+
+            $(document).on('click', '.download-btn', function () {
+              debugger
+              const fileBase64 = $(this).data('download');
+              const fileName = $(this).data('filename');
+              const fileMimeType = $(this).data('mimetype');
+
+              let newWindow = window.open('', '_blank');  // Open an empty new tab
+
+              if (newWindow) {
+                if (fileMimeType.startsWith("image")) {
+                  // If the file is an image (JPEG, JPG, PNG, etc.)
+                  openImageInNewPage(newWindow, fileBase64, fileName, fileMimeType);
+                } else if (fileMimeType.startsWith("application/pdf")) {
+                  // If the file is a PDF
+                  openPdfInNewPage(newWindow, fileBase64, fileName);
+                } else if (fileMimeType.startsWith("text")) {
+                  // If the file is a text file
+                  openTextInNewPage(newWindow, fileBase64, fileName);
+                } else {
+                  console.error("Unknown MIME type: ", fileMimeType);
+                }
+              } else {
+                console.error("Failed to open a new tab.");
+              }
+            });
+
+            // Function to open image in the same window/tab
+            function openImageInNewPage(newWindow, fileBase64, fileName, fileMimeType) {
+              const img = new Image();
+              img.src = fileBase64;  // Directly using base64 as src
+              newWindow.document.body.innerHTML = '';  // Clear the existing content
+              newWindow.document.body.appendChild(img);
+            }
+
+            // Function to open PDF in the same window/tab
+            function openPdfInNewPage(newWindow, fileBase64, fileName) {
+              newWindow.document.body.innerHTML = '';  // Clear the existing content
+              newWindow.document.write(`<iframe width="100%" height="100%" src="data:application/pdf;base64,${fileBase64}" frameborder="0"></iframe>`);
+            }
+
+            // Function to open text in the same window/tab
+            function openTextInNewPage(newWindow, fileBase64, fileName) {
+              const textContent = atob(fileBase64); // Decode the base64 string
+              newWindow.document.body.innerHTML = '';  // Clear the existing content
+              newWindow.document.write(`<pre>${textContent}</pre>`);
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching data: ", error);
+            tableBody.html('<tr><td colspan="9" class="text-center">Failed to load data</td></tr>');
+          }
+        });
+      })
+    //   function downloadExcel() {
+    //   const table = $('#state_dashboard').DataTable();
+
+    //   // If no data in table
+    //   if (table.rows().count() === 0) {
+    //     alert("No data available to download.");
+    //     return;
+    //   }
+
+    //   // Create a new workbook
+    //   const wb = XLSX.utils.book_new();
+
+    //   // Get all rows (not just visible ones) using DataTable API
+    //   const rows = table.rows().data(); // Get data for all rows
+
+    //   // Convert table data into a 2D array (for XLSX)
+    //   const dataRows = [];
+    //   rows.each(function (rowData) {
+    //     const row = [];
+    //     rowData.forEach(function (cellData) {
+    //       // Check if the cell contains an anchor tag
+    //       if (typeof cellData === 'string' && cellData.includes('<a') || typeof cellData === 'string' && cellData.includes('<span')) {
+    //         row.push('-'); // Exclude the data inside anchor tags (set to empty string)
+    //       } else {
+    //         row.push(cellData); // Include the data if it's not inside anchor tags
+    //       }
+    //     });
+    //     dataRows.push(row);
+    //   });
+
+    //   // Add the static header (you can create this based on your table headers)
+    //   const headers = [
+    //     'S.No',
+    //     'Event Id',
+    //     'Event Date',
+    //     'Name Of Organization',
+    //     'Commitee register number',
+    //     'Name of president',
+    //     'Contact of president',
+    //     'Mobile of president',
+    //     'Name of village',
+    //     'Name of taluk',
+    //     'Name of district',
+    //     'Place of event',
+    //     'Pincode',
+    //     'Request Status',
+    //     'Request letter',
+    //     'Assurance bond',
+    //     'Insurance copy',
+    //     'Layout sketch',
+    //     'Other docs',
+    //     'Previous event',
+    //     'Panchayat union',
+    //     'Fir',
+    //     'Upload photo',
+    //     'Mhs comments',
+    //     'Event type',
+    //     'Go',
+    //     'Join monitoring commitee report'
+    //   ];
+
+
+    //   dataRows.unshift(headers);  // Prepend headers to the data
+
+    //   // Create the worksheet from the data rows
+    //   const ws = XLSX.utils.aoa_to_sheet(dataRows);
+
+    //   // Add the worksheet to the workbook
+    //   XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+
+    //   // Download the Excel file with the name 'need_more_information_report.xlsx'
+    //   XLSX.writeFile(wb, "godownload.xlsx");
+    // }
     </script>
     <script>
     $(document).ready(function () {
@@ -309,6 +759,16 @@
       $(document).on("click", function () {
         $("#t_MenuNav_9m").hide();
       });
+    });
+    $(document).on({
+      ajaxStart: function () {
+        $('#preloader').show();
+        $("body").addClass("user_loading");
+      },
+      ajaxStop: function () {
+        $('#preloader').hide();
+        $("body").removeClass("user_loading");
+      }
     });
   </script>
   </body>
