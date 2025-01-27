@@ -14,12 +14,61 @@
   <link rel="stylesheet" href="../assets/css/aos.min.css" type="text/css" />
   <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png" />
   <link rel="icon" href="../assets/img/app-icon-32.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <style type="text/css">
+    .toast-container {
+      right: 0.5%;
+    }
+
+    #successToast {
+      background: #198754 !important;
+    }
+
+    #errorToast {
+      background: #ff0000 !important;
+    }
+  </style>
+
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="-1" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <script src="r/wspocso/111/files/static/v1962/apexcharts.min.js"></script> -->
+  <!-- Toast -->
+  <div class="toast-container position-fixed p-3 custom_toast" x-data="transButtonComponent()">
+    <div id="errorToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="errorMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+    <div id="successToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="successMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <!-- Toast -->
 </head>
 
 <body
@@ -148,12 +197,13 @@
                                       class="t-Form-label">District Name</label>
                                   </div>
                                   <div class="t-Form-inputContainer col col-4">
-                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P56_DISTRICT_NAME"
-                                        name="P56_DISTRICT_NAME" value="Madurai"><input type="hidden"
-                                        data-for="P56_DISTRICT_NAME"
+                                    <div class="t-Form-itemWrapper">
+                                      <input type="hidden" id="P56_DISTRICT_NAME" name="P56_DISTRICT_NAME">
+                                      <input type="hidden" data-for="P56_DISTRICT_NAME"
                                         value="zn7I4GLBkPpVnOhPDaZp-8BSIApzLvDjPKw83SBic2kXURIo64ZRrE-kLzo_8__tj6i30XzxvDVJ9wZwNUIiug"><span
                                         id="P56_DISTRICT_NAME_DISPLAY" class="display_only&#x20;apex-item-display-only"
-                                        data-escape="true">Madurai</span></div>
+                                        data-escape="true"></span>
+                                    </div>
                                     <span id="P56_DISTRICT_NAME_error_placeholder" class="a-Form-error"
                                       data-template-id="333363771109036567_ET"></span>
                                   </div>
@@ -1450,67 +1500,299 @@
     };
   </script>
 
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/desktop_all.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/aos.js"></script>
-  <script src="../assets/js/widget.interactiveReport.min.js"></script>
-  <script src="../assets/js/widget.iconList.min.js"></script>
-  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
-  <script src="../assets/js/widget.stickyWidget.min.js"></script>
-  <script src="../assets/js/item.Colorpicker.min.js"></script>
-  <script src="../assets/js/require.js"></script>
-  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
-  <script src="../assets/js/jetCommonBundle.min.js"></script>
-  <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/add.min.js"></script>
+  <script type="text/javascript" src="../assets/js/aos.js"></script>
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Include DataTables and Buttons JS -->
+  <script src="../assets/vendor/datatable/jquery.dataTables.min.js"></script>
+  <script src="../assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/jszip.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/pdfmake.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/vfs_fonts.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.colVis.min.js"></script>
 
-  <script type="text/javascript">
-    apex.da.initDaEventList = function () {
-      apex.da.gEventList = [
-        { "triggeringElementType": "ITEM", "triggeringElement": "P56_NEW_STATUS", "conditionElement": "P56_NEW_STATUS", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Interim Order Status", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P56_INTERIM_PAYMENT_STATUS,P56_INTERIM_PROCEEDINGS", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P56_INTERIM_PAYMENT_STATUS,P56_INTERIM_PROCEEDINGS", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] },
-        { "triggeringElementType": "ITEM", "triggeringElement": "P56_NEW_STATUS", "conditionElement": "P56_NEW_STATUS", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Final Order Status", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P56_FINAL_PROCEEDINGS,P56_FINAL_PAYMENT_STATUS", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P56_FINAL_PROCEEDINGS,P56_FINAL_PAYMENT_STATUS", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] }];
-    }
-  </script>
-
-  <script type="text/javascript">
-    apex.session.initTimeouts(180, { "idle_time_ms": 1192000, "life_time_ms": 28376000, "max_idle_time_ms": 1200000 }, '\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fhome', '\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fhome');
-    apex.jQuery(function () {
-      apex.page.init(this, function () {
-        try {
-          (function () {
-            var e = apex.jQuery("#t_MenuNav", apex.gPageContext$);
-            if (e.hasClass("js-addActions")) {
-              apex.actions.addFromMarkup(e);
-            }
-            e.menu({
-              behaveLikeTabs: e.hasClass("js-tabLike"),
-              menubarShowSubMenuIcon: e.hasClass("js-showSubMenuIcons") || null,
-              menubar: true,
-              menubarOverflow: true,
-              callout: e.hasClass("js-menu-callout")
-            });
-          })();
-          (function () { apex.widget.selectList("#P56_NEW_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MzgwMDY3NTM3Mjc0MzYwMzMz\u002F1D1UC7aVgqz6mK0-3RUv47dULSrtmxyyTzx0QeKvrwh1E8FZaPqzIx8S6fAfUVn_H_iezXSUtmIsxtfdHu0kRg" }); })();
-          (function () { apex.widget.selectList("#P56_INTERIM_PAYMENT_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MjM5ODcwMDQ2MDMyMjQwNzg0\u002Fz4uGFDIR8jLmT6WMLOsvJl78HwQSDPULG5hbcEliV7LMEfLpy0ooavC8XWs642H-o2cpbRfJLoQH1tCVn71rIQ" }); })();
-          (function () { apex.widget.selectList("#P56_FINAL_PAYMENT_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-OTIzMDQwNzI2ODM1ODY5MDc\u002Fy3cTkw0E59ukSAKJc7BclrRyiwqgDXTLbUf7dcxEqW3G6FAWQpI3k4lCLJxFzHLLzk9pmdElP5t5O4ywFGbzqg" }); })();
-        } catch (e) { apex.debug.error(e) };
-        apex.item.waitForDelayLoadItems().done(function () {
-          try {
-            (function () {
-              apex.da.initDaEventList();
-              apex.da.init();
-            })();
-            apex.theme42.initializePage.noSideCol();
-
-            apex.page.warnOnUnsavedChanges();
-          } finally {
-            apex.event.trigger(apex.gPageContext$, 'apexreadyend');
-          };
-        });
-      });
-    }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fsw.js?v=23.2.1-513764662\u0026lang=en' });
-  </script>
   <script>
     AOS.init();
+
+    function showSuccessToast(message) {
+      const toastElement = document.getElementById('successToast');
+      const toastBody = document.getElementById('successMessage');
+
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    function showErrorToast(message) {
+      const toastElement = document.getElementById('errorToast');
+      const toastBody = document.getElementById('errorMessage');
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    $(document).ready(function () {
+      function handlePoliceData() {
+        debugger
+        const requestData = {
+          id: "POCSO/JULY     /2024/0332"
+        };
+
+        function formatDate(rawDate, format = 'dd/MM/yyyy') {
+          if (!rawDate) {
+            return "";
+          }
+          const dateObj = new Date(rawDate);
+          if (dateObj instanceof Date && !isNaN(dateObj)) {
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            let formattedDate = new Intl.DateTimeFormat('en-GB', options).format(dateObj);
+            const dateTimeParts = formattedDate.split(", ");
+            const date = dateTimeParts[0].split('/');
+            const time = dateTimeParts[1].split(':');
+
+            if (format === 'dd/MM/yyyy') {
+              return `${date[0]}/${date[1]}/${date[2]}`;
+            } else if (format === 'dd/MM/yyyy hh:mm:ss') {
+              return `${date[0]}/${date[1]}/${date[2]} ${time[0]}:${time[1]}:${time[2]}`;
+            }
+          }
+
+          return "";
+        }
+
+
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const encodedDetails = urlParams.get('details');
+
+        let details = '';
+        let courtid = "POCSO/JULY     /2024/0332";
+        // const decodedDetails = atob(encodedDetails); // Base64 decode
+        // const eventIdObject = JSON.parse(decodedDetails);
+        // eventid = eventIdObject;
+        // console.log("Decoded Event Object:", eventIdObject);
+
+        // const decodedEventId = decodeURIComponent(eventIdObject); // Decode URI component
+        // console.log('Decoded Event ID:', decodedEventId);
+        // eventCom = decodedEventId
+        // Fetch data from the API
+        $.ajax({
+          url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewPoliceEntryFormById`,
+          method: 'POST',
+          headers: {
+            'X-App-Key': 'pocso',
+            'X-App-Name': 'pocso',
+          },
+          contentType: "application/json",
+          data: JSON.stringify(requestData),
+          success: function (response) {
+            if (response.success == 1) {
+              details = response.data;
+              document.getElementById('P56_DISTRICT_NAME_DISPLAY').textContent = details.district_name || "-";
+              document.getElementById('P56_POL_STAT_DISPLAY').textContent = details.willingness_compensation || "-";
+              const formattedComplaintDate = formatDate(details.complaint_data, 'dd/MM/yyyy');
+              document.getElementById('P56_COMPLAINT_NAME_DISPLAY').textContent = formattedComplaintDate;
+              document.getElementById('P56_COMPLAINT_MADE_DISPLAY').textContent = details.complaint_made || "-";
+              document.getElementById('P56_FIR_NO_DISPLAY').textContent = details.fir_no || "-";
+              document.getElementById('P56_DATE_OF_FIR_DISPLAY').textContent = details.date_of_fir || "-";
+              const formattedDate = formatDate(details.date_of_fir, 'dd/MM/yyyy hh:mm:ss');
+              document.getElementById('P56_DATE_OF_FIR_DISPLAY').textContent = formattedDate;
+              document.getElementById('P56_CHILD_GENDER_DISPLAY').textContent = details.child_gender || "-";
+              document.getElementById('P56_CHILD_AGE_DISPLAY').textContent = details.child_age || "-";
+              document.getElementById('P56_AGE_DISPLAY').textContent = details.age || "-";
+              document.getElementById('P56_NAME_PARENT_DISPLAY').textContent = details.name_parent || "-";
+              document.getElementById('P56_WHO_NAME_DISPLAY').textContent = details.who_name || "-";
+              document.getElementById('P56_WHO_RELATIONSHIP_DISPLAY').textContent = details.who_relationship || "-";
+              document.getElementById('P56_WHO_DATE_DISPLAY').textContent = details.who_date || "-";
+              document.getElementById('P56_BANK_NAME_DISPLAY').textContent = details.bank_name || "-";
+              document.getElementById('P56_ACCOUNT_HOLDER_NAME_DISPLAY').textContent = details.account_holder_name || "-";
+              document.getElementById('P56_BRANCH_NAME_DISPLAY').textContent = details.branch_name || "-";
+              document.getElementById('P56_IFSC_CODE_DISPLAY').textContent = details.ifsc_code || "-";
+              document.getElementById('P56_CHARGE_SHEET_DATE_DISPLAY').textContent = details.charge_sheet_date || "-";
+              document.getElementById('P56_NAME_MEDICAL_INSTITUTION_DISPLAY').textContent = details.name_medical_institution || "-";
+              const formattedMedExamDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
+              document.getElementById('P56_DATE_REQUISITION_MEDICAL_EXAMINATION_DISPLAY').textContent = formattedMedExamDate;
+              const formattedMedVictimDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
+              document.getElementById('P56_DATE_OF_MEDICAL_EXAMINATION_VICTIM_DISPLAY').textContent = formattedMedVictimDate;
+              const formattedInterimDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
+              document.getElementById('P56_DATE_OF_INTERIM_DISPLAY').textContent = formattedInterimDate;
+
+
+              const spanElement = document.getElementById('P56_WILLINGNESS_COMPENSATION_DISPLAY');
+              const compensationDetails = document.getElementById('compensationDetails');
+
+              if (spanElement && compensationDetails) {
+                const spanValue = spanElement.textContent.trim().toLowerCase();
+                if (spanValue === "yes") {
+                  compensationDetails.style.display = 'block';
+                } else {
+                  compensationDetails.style.display = 'none';
+                }
+              }
+
+              const chargeSheetElement = document.getElementById('P56_CHARGE_SHEET_YES_NO_DISPLAY');
+              const chargeSheetDetails = document.getElementById('chargeSheetDetails');
+
+              if (chargeSheetElement && chargeSheetDetails) {
+                const spanValue = chargeSheetElement.textContent.trim().toLowerCase();
+                if (spanValue === "yes") {
+                  chargeSheetDetails.style.display = 'block';
+                } else {
+                  chargeSheetDetails.style.display = 'none';
+                }
+              }
+
+            }
+          },
+          error: function (xhr, status, error) {
+            showErrorToast("Something went wrong");
+            console.error('Error fetching data: ', error);
+          }
+        });
+
+      }
+      handlePoliceData();
+
+      function handleCourtData() {
+        debugger
+        const requestData = {
+          id: "POCSO/JULY     /2024/0332"
+        };
+
+        function formatDate(rawDate, format = 'dd/MM/yyyy') {
+          if (!rawDate) {
+            return "";
+          }
+          const dateObj = new Date(rawDate);
+          if (dateObj instanceof Date && !isNaN(dateObj)) {
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            let formattedDate = new Intl.DateTimeFormat('en-GB', options).format(dateObj);
+            const dateTimeParts = formattedDate.split(", ");
+            const date = dateTimeParts[0].split('/');
+            const time = dateTimeParts[1].split(':');
+
+            if (format === 'dd/MM/yyyy') {
+              return `${date[0]}/${date[1]}/${date[2]}`;
+            } else if (format === 'dd/MM/yyyy hh:mm:ss') {
+              return `${date[0]}/${date[1]}/${date[2]} ${time[0]}:${time[1]}:${time[2]}`;
+            }
+          }
+
+          return "";
+        }
+
+
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const encodedDetails = urlParams.get('details');
+
+        let details = '';
+        let courtid = "POCSO/JULY     /2024/0332";
+        // const decodedDetails = atob(encodedDetails); // Base64 decode
+        // const eventIdObject = JSON.parse(decodedDetails);
+        // eventid = eventIdObject;
+        // console.log("Decoded Event Object:", eventIdObject);
+
+        // const decodedEventId = decodeURIComponent(eventIdObject); // Decode URI component
+        // console.log('Decoded Event ID:', decodedEventId);
+        // eventCom = decodedEventId
+        // Fetch data from the API
+        $.ajax({
+          url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewPoliceEntryFormById`,
+          method: 'POST',
+          headers: {
+            'X-App-Key': 'pocso',
+            'X-App-Name': 'pocso',
+          },
+          contentType: "application/json",
+          data: JSON.stringify(requestData),
+          success: function (response) {
+            if (response.success == 1) {
+              details = response.data;
+              document.getElementById('P56_DISTRICT_NAME_DISPLAY').textContent = details.district_name || "-";
+              document.getElementById('P56_POL_STAT_DISPLAY').textContent = details.willingness_compensation || "-";
+              const formattedComplaintDate = formatDate(details.complaint_data, 'dd/MM/yyyy');
+              document.getElementById('P56_COMPLAINT_NAME_DISPLAY').textContent = formattedComplaintDate;
+              document.getElementById('P56_COMPLAINT_MADE_DISPLAY').textContent = details.complaint_made || "-";
+              document.getElementById('P56_FIR_NO_DISPLAY').textContent = details.fir_no || "-";
+              document.getElementById('P56_DATE_OF_FIR_DISPLAY').textContent = details.date_of_fir || "-";
+              const formattedDate = formatDate(details.date_of_fir, 'dd/MM/yyyy hh:mm:ss');
+              document.getElementById('P56_DATE_OF_FIR_DISPLAY').textContent = formattedDate;
+              document.getElementById('P56_CHILD_GENDER_DISPLAY').textContent = details.child_gender || "-";
+              document.getElementById('P56_CHILD_AGE_DISPLAY').textContent = details.child_age || "-";
+              document.getElementById('P56_AGE_DISPLAY').textContent = details.age || "-";
+              document.getElementById('P56_NAME_PARENT_DISPLAY').textContent = details.name_parent || "-";
+              document.getElementById('P56_WHO_NAME_DISPLAY').textContent = details.who_name || "-";
+              document.getElementById('P56_WHO_RELATIONSHIP_DISPLAY').textContent = details.who_relationship || "-";
+              document.getElementById('P56_WHO_DATE_DISPLAY').textContent = details.who_date || "-";
+              document.getElementById('P56_BANK_NAME_DISPLAY').textContent = details.bank_name || "-";
+              document.getElementById('P56_ACCOUNT_HOLDER_NAME_DISPLAY').textContent = details.account_holder_name || "-";
+              document.getElementById('P56_BRANCH_NAME_DISPLAY').textContent = details.branch_name || "-";
+              document.getElementById('P56_IFSC_CODE_DISPLAY').textContent = details.ifsc_code || "-";
+              document.getElementById('P56_CHARGE_SHEET_DATE_DISPLAY').textContent = details.charge_sheet_date || "-";
+              document.getElementById('P56_NAME_MEDICAL_INSTITUTION_DISPLAY').textContent = details.name_medical_institution || "-";
+              const formattedMedExamDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
+              document.getElementById('P56_DATE_REQUISITION_MEDICAL_EXAMINATION_DISPLAY').textContent = formattedMedExamDate;
+              const formattedMedVictimDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
+              document.getElementById('P56_DATE_OF_MEDICAL_EXAMINATION_VICTIM_DISPLAY').textContent = formattedMedVictimDate;
+              const formattedInterimDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
+              document.getElementById('P56_DATE_OF_INTERIM_DISPLAY').textContent = formattedInterimDate;
+
+
+              const spanElement = document.getElementById('P56_WILLINGNESS_COMPENSATION_DISPLAY');
+              const compensationDetails = document.getElementById('compensationDetails');
+
+              if (spanElement && compensationDetails) {
+                const spanValue = spanElement.textContent.trim().toLowerCase();
+                if (spanValue === "yes") {
+                  compensationDetails.style.display = 'block';
+                } else {
+                  compensationDetails.style.display = 'none';
+                }
+              }
+
+              const chargeSheetElement = document.getElementById('P56_CHARGE_SHEET_YES_NO_DISPLAY');
+              const chargeSheetDetails = document.getElementById('chargeSheetDetails');
+
+              if (chargeSheetElement && chargeSheetDetails) {
+                const spanValue = chargeSheetElement.textContent.trim().toLowerCase();
+                if (spanValue === "yes") {
+                  chargeSheetDetails.style.display = 'block';
+                } else {
+                  chargeSheetDetails.style.display = 'none';
+                }
+              }
+
+            }
+          },
+          error: function (xhr, status, error) {
+            showErrorToast("Something went wrong");
+            console.error('Error fetching data: ', error);
+          }
+        });
+
+      }
+      handleCourtData();
+      function handleCancelButton() {
+        window.location.href = 'index.html';
+      }
+
+    });
+
+
   </script>
 </body>
 
