@@ -924,7 +924,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col col-4 apex-col-auto col-end">
+                              <!-- <div class="col col-4 apex-col-auto col-end">
                                 <div
                                   class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
                                   id="P56_INTERIM_COPY_CONTAINER">
@@ -953,6 +953,24 @@
                                           </div>
                                         </div>
                                       </a-file-upload>
+                                    </div>
+                                    <span id="P56_INTERIM_COPY_error_placeholder" class="a-Form-error"
+                                      data-template-id="333363771109036567_ET"></span>
+                                  </div>
+                                </div>
+                              </div> -->
+                              <div class="col col-4 apex-col-auto col-end">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
+                                  id="P56_INTERIM_COPY_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P56_INTERIM_COPY" id="P56_INTERIM_COPY_LABEL" class="t-Form-label">
+                                      Interim Copy
+                                    </label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-2">
+                                    <div class="t-Form-itemWrapper" id="P56_INTERIM_COPY_LINK_CONTAINER">
+                                      <!-- Download link will be injected dynamically -->
                                     </div>
                                     <span id="P56_INTERIM_COPY_error_placeholder" class="a-Form-error"
                                       data-template-id="333363771109036567_ET"></span>
@@ -1030,32 +1048,14 @@
                                   class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
                                   id="P56_FINAL_COPY_CONTAINER">
                                   <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_FINAL_COPY" id="P56_FINAL_COPY_LABEL" class="t-Form-label">Final
-                                      Copy</label>
+                                    <label for="P56_FINAL_COPY" id="P56_FINAL_COPY_LABEL" class="t-Form-label">
+                                      Final Copy</label>
                                   </div>
                                   <div class="t-Form-inputContainer col col-2">
-                                    <div class="t-Form-itemWrapper">
-                                      <a-file-upload id="P56_FINAL_COPY" name="P56_FINAL_COPY" upload-type="FILE"
-                                        display-style="INLINE" size="30" label="Choose&#x20;File"
-                                        description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                        download-link="true">
-                                        <input type="file" id="P56_FINAL_COPY_input"
-                                          aria-labelledby="P56_FINAL_COPY_LABEL" class="u-vh" />
-                                        <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                          <div class="a-FileDrop-icon">
-                                            <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                            </span>
-                                          </div>
-                                          <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                              File</span><span class="a-FileDrop-description">Select a file or drop one
-                                              here.</span></div>
-                                          <div class="a-FileDrop-action"><span
-                                              class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span>
-                                          </div>
-                                        </div>
-                                      </a-file-upload>
+                                    <div class="t-Form-itemWrapper" id="P56_FINAL_COPY_LINK_CONTAINER">
+                                      <!-- Download link will be injected dynamically -->
                                     </div>
-                                    <span id="P56_FINAL_COPY_error_placeholder" class="a-Form-error"
+                                    <span id="P56_INTERIM_COPY_error_placeholder" class="a-Form-error"
                                       data-template-id="333363771109036567_ET"></span>
                                   </div>
                                 </div>
@@ -1119,121 +1119,128 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="row ">
-                              <div class="col col-6 apex-col-auto col-start">
-                                <div
-                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                  id="P56_ACCOUNT_NUMBER_1_CONTAINER">
-                                  <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_ACCOUNT_NUMBER_1" id="P56_ACCOUNT_NUMBER_1_LABEL"
-                                      class="t-Form-label">Account Number</label>
-                                  </div>
-                                  <div class="t-Form-inputContainer col col-4">
-                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P56_ACCOUNT_NUMBER_1"
-                                        name="P56_ACCOUNT_NUMBER_1" value=""><input type="hidden"
-                                        data-for="P56_ACCOUNT_NUMBER_1"
-                                        value="r0m0NeFZ_B0gT0z_OZTLFz3kgI4hGX-181JiXtQdS22M0ZJU9rPpe8ifrI-i62EAVccHmftjN7p_U8xekvzI3Q"><span
-                                        id="P56_ACCOUNT_NUMBER_1_DISPLAY"
-                                        class="display_only&#x20;apex-item-display-only" data-escape="true"></span>
+                            <div id="bankDetailsHidden" style="display: none;">
+                              <div class="row ">
+                                <div class="col col-6 apex-col-auto col-start">
+                                  <div
+                                    class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                    id="P56_ACCOUNT_NUMBER_1_CONTAINER">
+                                    <div class="t-Form-labelContainer col col-2">
+                                      <label for="P56_ACCOUNT_NUMBER_1" id="P56_ACCOUNT_NUMBER_1_LABEL"
+                                        class="t-Form-label">Account Number</label>
                                     </div>
-                                    <span id="P56_ACCOUNT_NUMBER_1_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
+                                    <div class="t-Form-inputContainer col col-4">
+                                      <div class="t-Form-itemWrapper"><input type="hidden" id="P56_ACCOUNT_NUMBER_1"
+                                          name="P56_ACCOUNT_NUMBER_1" value=""><input type="hidden"
+                                          data-for="P56_ACCOUNT_NUMBER_1"
+                                          value="r0m0NeFZ_B0gT0z_OZTLFz3kgI4hGX-181JiXtQdS22M0ZJU9rPpe8ifrI-i62EAVccHmftjN7p_U8xekvzI3Q"><span
+                                          id="P56_ACCOUNT_NUMBER_1_DISPLAY"
+                                          class="display_only&#x20;apex-item-display-only" data-escape="true"></span>
+                                      </div>
+                                      <span id="P56_ACCOUNT_NUMBER_1_error_placeholder" class="a-Form-error"
+                                        data-template-id="333363771109036567_ET"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col col-6 apex-col-auto col-end">
+                                  <div
+                                    class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                    id="P56_BAK_ACCOUNT_CONTAINER">
+                                    <div class="t-Form-labelContainer col col-2">
+                                      <label for="P56_BAK_ACCOUNT" id="P56_BAK_ACCOUNT_LABEL"
+                                        class="t-Form-label">Account
+                                        Holder Name</label>
+                                    </div>
+                                    <div class="t-Form-inputContainer col col-4">
+                                      <div class="t-Form-itemWrapper"><input type="hidden" id="P56_BAK_ACCOUNT"
+                                          name="P56_BAK_ACCOUNT" value=""><input type="hidden"
+                                          data-for="P56_BAK_ACCOUNT"
+                                          value="VeWwY6ZQ9a8ZxruOXTyRKFQTXAb12kqMGc4ZDRAsn9rs_ZJr3qIQjBG2yYyEpUj5rWBtX5HNQFkz61QqFs01QA"><span
+                                          id="P56_BAK_ACCOUNT_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                          data-escape="true"></span></div>
+                                      <span id="P56_BAK_ACCOUNT_error_placeholder" class="a-Form-error"
+                                        data-template-id="333363771109036567_ET"></span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col col-6 apex-col-auto col-end">
-                                <div
-                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                  id="P56_BAK_ACCOUNT_CONTAINER">
-                                  <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_BAK_ACCOUNT" id="P56_BAK_ACCOUNT_LABEL" class="t-Form-label">Account
-                                      Holder Name</label>
+                              <div class="row ">
+                                <div class="col col-6 apex-col-auto col-start">
+                                  <div
+                                    class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                    id="P56_BANK_NAME_1_CONTAINER">
+                                    <div class="t-Form-labelContainer col col-2">
+                                      <label for="P56_BANK_NAME_1" id="P56_BANK_NAME_1_LABEL" class="t-Form-label">Bank
+                                        Name</label>
+                                    </div>
+                                    <div class="t-Form-inputContainer col col-4">
+                                      <div class="t-Form-itemWrapper"><input type="hidden" id="P56_BANK_NAME_1"
+                                          name="P56_BANK_NAME_1" value=""><input type="hidden"
+                                          data-for="P56_BANK_NAME_1"
+                                          value="Pqx99wxrj55eDlz_hDDC4ndBf4mylCoRnqgy6uFfTK_9LWzib9gzkf7XY62wkRVRWBxZb-pNC5TrCCXftjsZZg"><span
+                                          id="P56_BANK_NAME_1_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                          data-escape="true"></span></div>
+                                      <span id="P56_BANK_NAME_1_error_placeholder" class="a-Form-error"
+                                        data-template-id="333363771109036567_ET"></span>
+                                    </div>
                                   </div>
-                                  <div class="t-Form-inputContainer col col-4">
-                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P56_BAK_ACCOUNT"
-                                        name="P56_BAK_ACCOUNT" value=""><input type="hidden" data-for="P56_BAK_ACCOUNT"
-                                        value="VeWwY6ZQ9a8ZxruOXTyRKFQTXAb12kqMGc4ZDRAsn9rs_ZJr3qIQjBG2yYyEpUj5rWBtX5HNQFkz61QqFs01QA"><span
-                                        id="P56_BAK_ACCOUNT_DISPLAY" class="display_only&#x20;apex-item-display-only"
-                                        data-escape="true"></span></div>
-                                    <span id="P56_BAK_ACCOUNT_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
+                                </div>
+                                <div class="col col-6 apex-col-auto col-end">
+                                  <div
+                                    class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                    id="P56_BRANCH_NAME_1_CONTAINER">
+                                    <div class="t-Form-labelContainer col col-2">
+                                      <label for="P56_BRANCH_NAME_1" id="P56_BRANCH_NAME_1_LABEL"
+                                        class="t-Form-label">Branch Name</label>
+                                    </div>
+                                    <div class="t-Form-inputContainer col col-4">
+                                      <div class="t-Form-itemWrapper"><input type="hidden" id="P56_BRANCH_NAME_1"
+                                          name="P56_BRANCH_NAME_1" value=""><input type="hidden"
+                                          data-for="P56_BRANCH_NAME_1"
+                                          value="-tKCjEyhow-Iu7WcJV6jMmiWCPImQdT0-YU4RyXtG3kOawioukEhsR0V4WOI6Sln7Oe7awPMHbYc0RguPqpYaQ"><span
+                                          id="P56_BRANCH_NAME_1_DISPLAY"
+                                          class="display_only&#x20;apex-item-display-only" data-escape="true"></span>
+                                      </div>
+                                      <span id="P56_BRANCH_NAME_1_error_placeholder" class="a-Form-error"
+                                        data-template-id="333363771109036567_ET"></span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                            <div class="row ">
-                              <div class="col col-6 apex-col-auto col-start">
-                                <div
-                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                  id="P56_BANK_NAME_1_CONTAINER">
-                                  <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_BANK_NAME_1" id="P56_BANK_NAME_1_LABEL" class="t-Form-label">Bank
-                                      Name</label>
+                              <div class="row ">
+                                <div class="col col-12 apex-col-auto col-start col-end">
+                                  <div
+                                    class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                    id="P56_IFSC_CODE_1_CONTAINER">
+                                    <div class="t-Form-labelContainer col col-2">
+                                      <label for="P56_IFSC_CODE_1" id="P56_IFSC_CODE_1_LABEL" class="t-Form-label">IFSC
+                                        Code</label>
+                                    </div>
+                                    <div class="t-Form-inputContainer col col-10">
+                                      <div class="t-Form-itemWrapper"><input type="hidden" id="P56_IFSC_CODE_1"
+                                          name="P56_IFSC_CODE_1" value=""><input type="hidden"
+                                          data-for="P56_IFSC_CODE_1"
+                                          value="t_hK3qOSvIqRkhM6Xsk8enpDR3-2KyM0hoq1o3soGsVzJ2imxz_4mRwPTxtmIvOgY21lHFv_pSCvngSlf1ZRdA"><span
+                                          id="P56_IFSC_CODE_1_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                          data-escape="true"></span></div>
+                                      <span id="P56_IFSC_CODE_1_error_placeholder" class="a-Form-error"
+                                        data-template-id="333363771109036567_ET"></span>
+                                    </div>
                                   </div>
-                                  <div class="t-Form-inputContainer col col-4">
-                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P56_BANK_NAME_1"
-                                        name="P56_BANK_NAME_1" value=""><input type="hidden" data-for="P56_BANK_NAME_1"
-                                        value="Pqx99wxrj55eDlz_hDDC4ndBf4mylCoRnqgy6uFfTK_9LWzib9gzkf7XY62wkRVRWBxZb-pNC5TrCCXftjsZZg"><span
-                                        id="P56_BANK_NAME_1_DISPLAY" class="display_only&#x20;apex-item-display-only"
-                                        data-escape="true"></span></div>
-                                    <span id="P56_BANK_NAME_1_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
-                                  </div>
+                                  <input type="hidden" name="P56_REMARKS_BANK" id="P56_REMARKS_BANK" value=""><input
+                                    type="hidden" name="P56_INTERIM_ATTACH_MIMETYPE" id="P56_INTERIM_ATTACH_MIMETYPE"
+                                    value=""><input type="hidden" name="P56_INTERIM_ATTACH_FILENAME"
+                                    id="P56_INTERIM_ATTACH_FILENAME" value=""><input type="hidden"
+                                    name="P56_INTERIM_ATTACH_LAST_UPDATE" id="P56_INTERIM_ATTACH_LAST_UPDATE"
+                                    value=""><input type="hidden" name="P56_FINAL_ATTACH_MIMETYPE"
+                                    id="P56_FINAL_ATTACH_MIMETYPE" value="application&#x2F;pdf"><input type="hidden"
+                                    name="P56_FINAL_ATTACH_FILENAME" id="P56_FINAL_ATTACH_FILENAME"
+                                    value="Special Sessions Case No.26 of 2020 -ORIGINAL FINAL(signed).pdf"><input
+                                    type="hidden" name="P56_FINAL_ATTACH_LAST_UPDATE" id="P56_FINAL_ATTACH_LAST_UPDATE"
+                                    value=""><input type="hidden" name="P56_FINAL_ATTACH_CHARSET"
+                                    id="P56_FINAL_ATTACH_CHARSET" value=""><input type="hidden"
+                                    name="P56_INTERIM_ATTACH_CHARSET" id="P56_INTERIM_ATTACH_CHARSET" value="">
                                 </div>
-                              </div>
-                              <div class="col col-6 apex-col-auto col-end">
-                                <div
-                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                  id="P56_BRANCH_NAME_1_CONTAINER">
-                                  <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_BRANCH_NAME_1" id="P56_BRANCH_NAME_1_LABEL"
-                                      class="t-Form-label">Branch Name</label>
-                                  </div>
-                                  <div class="t-Form-inputContainer col col-4">
-                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P56_BRANCH_NAME_1"
-                                        name="P56_BRANCH_NAME_1" value=""><input type="hidden"
-                                        data-for="P56_BRANCH_NAME_1"
-                                        value="-tKCjEyhow-Iu7WcJV6jMmiWCPImQdT0-YU4RyXtG3kOawioukEhsR0V4WOI6Sln7Oe7awPMHbYc0RguPqpYaQ"><span
-                                        id="P56_BRANCH_NAME_1_DISPLAY" class="display_only&#x20;apex-item-display-only"
-                                        data-escape="true"></span></div>
-                                    <span id="P56_BRANCH_NAME_1_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row ">
-                              <div class="col col-12 apex-col-auto col-start col-end">
-                                <div
-                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                  id="P56_IFSC_CODE_1_CONTAINER">
-                                  <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_IFSC_CODE_1" id="P56_IFSC_CODE_1_LABEL" class="t-Form-label">IFSC
-                                      Code</label>
-                                  </div>
-                                  <div class="t-Form-inputContainer col col-10">
-                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P56_IFSC_CODE_1"
-                                        name="P56_IFSC_CODE_1" value=""><input type="hidden" data-for="P56_IFSC_CODE_1"
-                                        value="t_hK3qOSvIqRkhM6Xsk8enpDR3-2KyM0hoq1o3soGsVzJ2imxz_4mRwPTxtmIvOgY21lHFv_pSCvngSlf1ZRdA"><span
-                                        id="P56_IFSC_CODE_1_DISPLAY" class="display_only&#x20;apex-item-display-only"
-                                        data-escape="true"></span></div>
-                                    <span id="P56_IFSC_CODE_1_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
-                                  </div>
-                                </div>
-                                <input type="hidden" name="P56_REMARKS_BANK" id="P56_REMARKS_BANK" value=""><input
-                                  type="hidden" name="P56_INTERIM_ATTACH_MIMETYPE" id="P56_INTERIM_ATTACH_MIMETYPE"
-                                  value=""><input type="hidden" name="P56_INTERIM_ATTACH_FILENAME"
-                                  id="P56_INTERIM_ATTACH_FILENAME" value=""><input type="hidden"
-                                  name="P56_INTERIM_ATTACH_LAST_UPDATE" id="P56_INTERIM_ATTACH_LAST_UPDATE"
-                                  value=""><input type="hidden" name="P56_FINAL_ATTACH_MIMETYPE"
-                                  id="P56_FINAL_ATTACH_MIMETYPE" value="application&#x2F;pdf"><input type="hidden"
-                                  name="P56_FINAL_ATTACH_FILENAME" id="P56_FINAL_ATTACH_FILENAME"
-                                  value="Special Sessions Case No.26 of 2020 -ORIGINAL FINAL(signed).pdf"><input
-                                  type="hidden" name="P56_FINAL_ATTACH_LAST_UPDATE" id="P56_FINAL_ATTACH_LAST_UPDATE"
-                                  value=""><input type="hidden" name="P56_FINAL_ATTACH_CHARSET"
-                                  id="P56_FINAL_ATTACH_CHARSET" value=""><input type="hidden"
-                                  name="P56_INTERIM_ATTACH_CHARSET" id="P56_INTERIM_ATTACH_CHARSET" value="">
                               </div>
                             </div>
                           </div>
@@ -1546,6 +1553,29 @@
       });
       toast.show();
     }
+    const createDownloadLink = (content, mimeType, filename) => {
+      if (!content) return "N/A";
+
+      try {
+        const base64Pattern = /^[A-Za-z0-9+/=]+$/;
+        if (base64Pattern.test(content.replace(/\s/g, ""))) {
+          // Decode Base64 content and create a blob
+          const blob = new Blob(
+            [new Uint8Array(atob(content).split("").map(c => c.charCodeAt(0)))],
+            { type: mimeType }
+          );
+          const url = URL.createObjectURL(blob);
+          return `<a href="${url}" download="${filename}" class="btn btn-sm btn-link">Download</a>`;
+        }
+
+        // If the content is not Base64, assume it's a URL
+        return `<a href="${content}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
+      } catch (error) {
+        console.error("Error creating download link:", error);
+        return "Invalid content";
+      }
+    };
+
     $(document).ready(function () {
       function handlePoliceData() {
         debugger
@@ -1669,10 +1699,9 @@
 
       function handleCourtData() {
         debugger
-        const requestData = {
-          id: "POCSO/JULY     /2024/0332"
+        const requestCourtData = {
+          court_id: "POCSO/JULY     /2024/0332"
         };
-
         function formatDate(rawDate, format = 'dd/MM/yyyy') {
           if (!rawDate) {
             return "";
@@ -1711,49 +1740,31 @@
         // eventCom = decodedEventId
         // Fetch data from the API
         $.ajax({
-          url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewPoliceEntryFormById`,
+          url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewCourtEntryFormById`,
           method: 'POST',
           headers: {
             'X-App-Key': 'pocso',
             'X-App-Name': 'pocso',
           },
           contentType: "application/json",
-          data: JSON.stringify(requestData),
+          data: JSON.stringify(requestCourtData),
           success: function (response) {
             if (response.success == 1) {
-              details = response.data;
-              document.getElementById('P56_DISTRICT_NAME_DISPLAY').textContent = details.district_name || "-";
-              document.getElementById('P56_POL_STAT_DISPLAY').textContent = details.willingness_compensation || "-";
-              const formattedComplaintDate = formatDate(details.complaint_data, 'dd/MM/yyyy');
-              document.getElementById('P56_COMPLAINT_NAME_DISPLAY').textContent = formattedComplaintDate;
-              document.getElementById('P56_COMPLAINT_MADE_DISPLAY').textContent = details.complaint_made || "-";
-              document.getElementById('P56_FIR_NO_DISPLAY').textContent = details.fir_no || "-";
-              document.getElementById('P56_DATE_OF_FIR_DISPLAY').textContent = details.date_of_fir || "-";
-              const formattedDate = formatDate(details.date_of_fir, 'dd/MM/yyyy hh:mm:ss');
-              document.getElementById('P56_DATE_OF_FIR_DISPLAY').textContent = formattedDate;
-              document.getElementById('P56_CHILD_GENDER_DISPLAY').textContent = details.child_gender || "-";
-              document.getElementById('P56_CHILD_AGE_DISPLAY').textContent = details.child_age || "-";
-              document.getElementById('P56_AGE_DISPLAY').textContent = details.age || "-";
-              document.getElementById('P56_NAME_PARENT_DISPLAY').textContent = details.name_parent || "-";
-              document.getElementById('P56_WHO_NAME_DISPLAY').textContent = details.who_name || "-";
-              document.getElementById('P56_WHO_RELATIONSHIP_DISPLAY').textContent = details.who_relationship || "-";
-              document.getElementById('P56_WHO_DATE_DISPLAY').textContent = details.who_date || "-";
-              document.getElementById('P56_BANK_NAME_DISPLAY').textContent = details.bank_name || "-";
-              document.getElementById('P56_ACCOUNT_HOLDER_NAME_DISPLAY').textContent = details.account_holder_name || "-";
-              document.getElementById('P56_BRANCH_NAME_DISPLAY').textContent = details.branch_name || "-";
-              document.getElementById('P56_IFSC_CODE_DISPLAY').textContent = details.ifsc_code || "-";
-              document.getElementById('P56_CHARGE_SHEET_DATE_DISPLAY').textContent = details.charge_sheet_date || "-";
-              document.getElementById('P56_NAME_MEDICAL_INSTITUTION_DISPLAY').textContent = details.name_medical_institution || "-";
-              const formattedMedExamDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
-              document.getElementById('P56_DATE_REQUISITION_MEDICAL_EXAMINATION_DISPLAY').textContent = formattedMedExamDate;
-              const formattedMedVictimDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
-              document.getElementById('P56_DATE_OF_MEDICAL_EXAMINATION_VICTIM_DISPLAY').textContent = formattedMedVictimDate;
-              const formattedInterimDate = formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy');
-              document.getElementById('P56_DATE_OF_INTERIM_DISPLAY').textContent = formattedInterimDate;
+              details = response.data[0];
+              document.getElementById('P56_ORDER_NO_DISPLAY').textContent = details.order_no;
+              const formattedFileDate = formatDate(details.court_file_date, 'dd/MM/yyyy');
+              document.getElementById('P56_COURT_FILE_DATE_DISPLAY').textContent = formattedFileDate;
+              document.getElementById('P56_NAME_OF_COURT_DISPLAY').textContent = details.name_of_court || "-";
+              document.getElementById('P56_TYPE_DISPLAY').textContent = details.type || "-";
+              document.getElementById('P56_INTERIM_ORDER_DATE_DISPLAY').textContent = details.interim_order_date || "-";
+              document.getElementById('P56_INTERIM_AMOUNT_DISPLAY').textContent = details.interim_amount || "-"
+              const formattedFinalOrderDate = formatDate(details.final_order_date, 'dd/MM/yyyy');
+              document.getElementById('P56_FINAL_ORDER_DATE_DISPLAY').textContent = formattedFinalOrderDate;
+              document.getElementById('P56_JUDGEMENT_DISPLAY').textContent = details.judgement || "-";
+              document.getElementById('P56_CHANGE_BANK_ACCOUNT_DISPLAY').textContent = "yes";
 
-
-              const spanElement = document.getElementById('P56_WILLINGNESS_COMPENSATION_DISPLAY');
-              const compensationDetails = document.getElementById('compensationDetails');
+              const spanElement = document.getElementById('P56_CHANGE_BANK_ACCOUNT_DISPLAY');
+              const compensationDetails = document.getElementById('bankDetailsHidden');
 
               if (spanElement && compensationDetails) {
                 const spanValue = spanElement.textContent.trim().toLowerCase();
@@ -1764,18 +1775,31 @@
                 }
               }
 
-              const chargeSheetElement = document.getElementById('P56_CHARGE_SHEET_YES_NO_DISPLAY');
-              const chargeSheetDetails = document.getElementById('chargeSheetDetails');
+              document.getElementById('P56_ACCOUNT_NUMBER_1_DISPLAY').textContent = details.account_number;
+              document.getElementById('P56_BAK_ACCOUNT_DISPLAY').textContent = details.bak_account;
+              document.getElementById('P56_BANK_NAME_1_DISPLAY').textContent = details.bank_name;
+              document.getElementById('P56_BRANCH_NAME_1_DISPLAY').textContent = details.branch_name;
+              document.getElementById('P56_IFSC_CODE_1_DISPLAY').textContent = details.ifsc_code;
 
-              if (chargeSheetElement && chargeSheetDetails) {
-                const spanValue = chargeSheetElement.textContent.trim().toLowerCase();
-                if (spanValue === "yes") {
-                  chargeSheetDetails.style.display = 'block';
-                } else {
-                  chargeSheetDetails.style.display = 'none';
-                }
+              const interimLinkContainer = document.getElementById("P56_INTERIM_COPY_LINK_CONTAINER");
+              if (interimLinkContainer) {
+                const downloadLinkHTML = createDownloadLink(
+                  details.interim,
+                  details.interim_attach_mimetype,
+                  details.interim_attach_filename
+                );
+                interimLinkContainer.innerHTML = downloadLinkHTML;
               }
 
+              const finalLinkContainer = document.getElementById("P56_FINAL_COPY_LINK_CONTAINER");
+              if (finalLinkContainer) {
+                const finalDownloadLinkHTML = createDownloadLink(
+                  details.final, 
+                  details.final_attach_mimetype,
+                  details.final_attach_filename 
+                );
+                finalLinkContainer.innerHTML = finalDownloadLinkHTML;
+              }
             }
           },
           error: function (xhr, status, error) {
