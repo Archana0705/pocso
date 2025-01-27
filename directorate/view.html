@@ -1282,8 +1282,8 @@
                                   class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
                                   id="P56_NEW_STATUS_CONTAINER">
                                   <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_NEW_STATUS" id="P56_NEW_STATUS_LABEL" class="t-Form-label">Update
-                                      Order </label>
+                                    <label for="P56_NEW_STATUS" id="P56_NEW_STATUS_LABEL" class="t-Form-label">
+                                      Update Order </label>
                                   </div>
                                   <div class="t-Form-inputContainer col col-10">
                                     <div class="t-Form-itemWrapper">
@@ -1304,7 +1304,7 @@
                                 <input type="hidden" name="P56_REMARKS_1" id="P56_REMARKS_1" value="">
                               </div>
                             </div>
-                            <div class="row ">
+                            <div class="row" id="interimDetails" style="display: none;">
                               <div class="col col-12 apex-col-auto col-start col-end">
                                 <div
                                   class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
@@ -1356,8 +1356,36 @@
                                   id="P56_PROCEED_INTERIM" value=""><input type="hidden" name="P56_PROCEED_FINAL"
                                   id="P56_PROCEED_FINAL" value="">
                               </div>
+                              <div class="row ">
+                                <div class="col col-12 apex-col-auto col-start col-end">
+                                  <div
+                                    class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
+                                    id="P56_INTERIM_PROCEEDINGS_CONTAINER">
+                                    <div class="t-Form-labelContainer col col-2">
+                                      <label for="P56_INTERIM_PROCEEDINGS" id="P56_INTERIM_PROCEEDINGS_LABEL"
+                                        class="t-Form-label">Interim Proceedings</label>
+                                    </div>
+                                    <div class="t-Form-inputContainer col col-10">
+                                      <div class="t-Form-itemWrapper">
+                                        <a-file-upload id="P56_INTERIM_PROCEEDINGS" name="P56_INTERIM_PROCEEDINGS"
+                                          upload-type="FILE" display-style="NATIVE" accept=".pdf,.jpg,.jpeg" size="30"
+                                          max-file-size="2048">
+                                          <input type="file" id="P56_INTERIM_PROCEEDINGS_input"
+                                            name="P56_INTERIM_PROCEEDINGS" value="" maxlength="1000" />
+                                          <div class="a-FileDrop a-FileDrop--native">
+                                          </div>
+                                          <a id="P56_INTERIM_PROCEEDINGS_file_exist" target="_blank"
+                                            class="btn btn-sm btn-link">Download</a>
+                                        </a-file-upload>
+                                      </div>
+                                      <span id="P56_INTERIM_PROCEEDINGS_error_placeholder" class="a-Form-error"
+                                        data-template-id="333363771109036567_ET"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="row ">
+                            <div class="row" id="finalDetails" style="display: none;">
                               <div class="col col-12 apex-col-auto col-start col-end">
                                 <div
                                   class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
@@ -1379,81 +1407,48 @@
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                            <div class="row ">
-                              <div class="col col-12 apex-col-auto col-start col-end">
-                                <div
-                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
-                                  id="P56_INTERIM_PROCEEDINGS_CONTAINER">
-                                  <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_INTERIM_PROCEEDINGS" id="P56_INTERIM_PROCEEDINGS_LABEL"
-                                      class="t-Form-label">Interim Proceedings</label>
-                                  </div>
-                                  <div class="t-Form-inputContainer col col-10">
-                                    <div class="t-Form-itemWrapper">
-                                      <a-file-upload id="P56_INTERIM_PROCEEDINGS" name="P56_INTERIM_PROCEEDINGS"
-                                        upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File"
-                                        description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                        download-link="true">
-                                        <input type="file" id="P56_INTERIM_PROCEEDINGS_input"
-                                          aria-labelledby="P56_INTERIM_PROCEEDINGS_LABEL" class="u-vh" />
-                                        <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                          <div class="a-FileDrop-icon">
-                                            <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                            </span>
-                                          </div>
-                                          <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                              File</span><span class="a-FileDrop-description">Select a file or drop one
-                                              here.</span></div>
-                                          <div class="a-FileDrop-action"><span
-                                              class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span>
-                                          </div>
-                                        </div>
-                                      </a-file-upload>
+                              <div class="row ">
+                                <div class="col col-12 apex-col-auto col-start col-end">
+                                  <div
+                                    class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
+                                    id="P56_FINAL_PROCEEDINGS_CONTAINER">
+                                    <div class="t-Form-labelContainer col col-2">
+                                      <label for="P56_FINAL_PROCEEDINGS" id="P56_FINAL_PROCEEDINGS_LABEL"
+                                        class="t-Form-label">Final Proceedings</label>
                                     </div>
-                                    <span id="P56_INTERIM_PROCEEDINGS_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
+                                    <div class="t-Form-inputContainer col col-10">
+                                      <div class="t-Form-itemWrapper">
+                                        <a-file-upload id="P56_FINAL_PROCEEDINGS" name="P56_FINAL_PROCEEDINGS"
+                                          upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File"
+                                          description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
+                                          download-link="true">
+                                          <input type="file" id="P56_FINAL_PROCEEDINGS_input"
+                                            aria-labelledby="P56_FINAL_PROCEEDINGS_LABEL" class="u-vh" />
+                                          <div class="a-FileDrop&#x20;a-FileDrop--inline">
+                                            <div class="a-FileDrop-icon">
+                                              <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
+                                              </span>
+                                            </div>
+                                            <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
+                                                File</span><span class="a-FileDrop-description">Select a file or drop
+                                                one
+                                                here.</span></div>
+                                            <div class="a-FileDrop-action"><span
+                                                class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
+                                                File</span>
+                                            </div>
+                                          </div>
+                                        </a-file-upload>
+                                      </div>
+                                      <span id="P56_FINAL_PROCEEDINGS_error_placeholder" class="a-Form-error"
+                                        data-template-id="333363771109036567_ET"></span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="row ">
-                              <div class="col col-12 apex-col-auto col-start col-end">
-                                <div
-                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
-                                  id="P56_FINAL_PROCEEDINGS_CONTAINER">
-                                  <div class="t-Form-labelContainer col col-2">
-                                    <label for="P56_FINAL_PROCEEDINGS" id="P56_FINAL_PROCEEDINGS_LABEL"
-                                      class="t-Form-label">Final Proceedings</label>
-                                  </div>
-                                  <div class="t-Form-inputContainer col col-10">
-                                    <div class="t-Form-itemWrapper">
-                                      <a-file-upload id="P56_FINAL_PROCEEDINGS" name="P56_FINAL_PROCEEDINGS"
-                                        upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File"
-                                        description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                        download-link="true">
-                                        <input type="file" id="P56_FINAL_PROCEEDINGS_input"
-                                          aria-labelledby="P56_FINAL_PROCEEDINGS_LABEL" class="u-vh" />
-                                        <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                          <div class="a-FileDrop-icon">
-                                            <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                            </span>
-                                          </div>
-                                          <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                              File</span><span class="a-FileDrop-description">Select a file or drop one
-                                              here.</span></div>
-                                          <div class="a-FileDrop-action"><span
-                                              class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span>
-                                          </div>
-                                        </div>
-                                      </a-file-upload>
-                                    </div>
-                                    <span id="P56_FINAL_PROCEEDINGS_error_placeholder" class="a-Form-error"
-                                      data-template-id="333363771109036567_ET"></span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+
+
                           </div>
                           <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
@@ -1578,7 +1573,6 @@
 
     $(document).ready(function () {
       function handlePoliceData() {
-        debugger
         const requestData = {
           id: "POCSO/JULY     /2024/0332"
         };
@@ -1698,7 +1692,6 @@
       handlePoliceData();
 
       function handleCourtData() {
-        debugger
         const requestCourtData = {
           court_id: "POCSO/JULY     /2024/0332"
         };
@@ -1794,9 +1787,9 @@
               const finalLinkContainer = document.getElementById("P56_FINAL_COPY_LINK_CONTAINER");
               if (finalLinkContainer) {
                 const finalDownloadLinkHTML = createDownloadLink(
-                  details.final, 
+                  details.final,
                   details.final_attach_mimetype,
-                  details.final_attach_filename 
+                  details.final_attach_filename
                 );
                 finalLinkContainer.innerHTML = finalDownloadLinkHTML;
               }
@@ -1810,9 +1803,172 @@
 
       }
       handleCourtData();
+
       function handleCancelButton() {
         window.location.href = 'index.html';
       }
+
+
+      document.getElementById('P56_NEW_STATUS').addEventListener('change', function () {
+
+        const selectedValue = this.value;
+        alert(selectedValue)
+        if (selectedValue === "Interim Order Status") {
+          $('#interimDetails').show();
+          $('#finalDetails').hide();
+        } else if ((selectedValue === "Final Order Status")) {
+          $('#interimDetails').hide();
+          $('#finalDetails').show();
+        }
+      });
+
+      // function handleDisbursalData() {
+      //   debugger
+      //   const requestDisbursalData = {
+      //     id: 137
+      //   };
+      //   function formatDate(rawDate, format = 'dd/MM/yyyy') {
+      //     if (!rawDate) {
+      //       return "";
+      //     }
+      //     const dateObj = new Date(rawDate);
+      //     if (dateObj instanceof Date && !isNaN(dateObj)) {
+      //       const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      //       let formattedDate = new Intl.DateTimeFormat('en-GB', options).format(dateObj);
+      //       const dateTimeParts = formattedDate.split(", ");
+      //       const date = dateTimeParts[0].split('/');
+      //       const time = dateTimeParts[1].split(':');
+
+      //       if (format === 'dd/MM/yyyy') {
+      //         return `${date[0]}/${date[1]}/${date[2]}`;
+      //       } else if (format === 'dd/MM/yyyy hh:mm:ss') {
+      //         return `${date[0]}/${date[1]}/${date[2]} ${time[0]}:${time[1]}:${time[2]}`;
+      //       }
+      //     }
+
+      //     return "";
+      //   }
+
+
+      //   // const urlParams = new URLSearchParams(window.location.search);
+      //   // const encodedDetails = urlParams.get('details');
+
+      //   let details = '';
+      //   let courtid = "POCSO/JULY     /2024/0332";
+      //   // const decodedDetails = atob(encodedDetails); // Base64 decode
+      //   // const eventIdObject = JSON.parse(decodedDetails);
+      //   // eventid = eventIdObject;
+      //   // console.log("Decoded Event Object:", eventIdObject);
+
+      //   // const decodedEventId = decodeURIComponent(eventIdObject); // Decode URI component
+      //   // console.log('Decoded Event ID:', decodedEventId);
+      //   // eventCom = decodedEventId
+      //   // Fetch data from the API
+      //   $.ajax({
+      //     url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewDisbersalStatusById`,
+      //     method: 'POST',
+      //     headers: {
+      //       'X-App-Key': 'pocso',
+      //       'X-App-Name': 'pocso',
+      //     },
+      //     contentType: "application/json",
+      //     data: JSON.stringify(requestDisbursalData),
+      //     success: function (response) {
+      //       if (response.success == 1) {
+      //         details = response.data[0];
+      //         const interimField = document.getElementById("P56_NEW_STATUS");
+      //         interimField = "Final Order Status"
+      //         const interimPaymentStatusField = document.getElementById("P56_INTERIM_PAYMENT_STATUS");
+      //         if (details.interim_payment_status) {
+      //           interimPaymentStatusField.value = "Completed";
+      //         }
+
+      //         const interimLinkContainer = document.getElementById("P56_INTERIM_COPY_LINK_CONTAINER");
+      //         if (interimLinkContainer) {
+      //           const downloadLinkHTML = createDownloadLink(
+      //             details.interim,
+      //             details.interim_attach_mimetype,
+      //             details.interim_attach_filename
+      //           );
+      //           interimLinkContainer.innerHTML = downloadLinkHTML;
+      //         }
+
+      //         const finalLinkContainer = document.getElementById("P56_FINAL_COPY_LINK_CONTAINER");
+      //         if (finalLinkContainer) {
+      //           const finalDownloadLinkHTML = createDownloadLink(
+      //             details.final,
+      //             details.final_attach_mimetype,
+      //             details.final_attach_filename
+      //           );
+      //           finalLinkContainer.innerHTML = finalDownloadLinkHTML;
+      //         }
+      //       }
+      //     },
+      //     error: function (xhr, status, error) {
+      //       showErrorToast("Something went wrong");
+      //       console.error('Error fetching data: ', error);
+      //     }
+      //   });
+
+      // }
+      // handleDisbursalData();
+      function handleDisbursalData() {
+        debugger
+        const requestDisbursalData = {
+          id: 137
+        };
+
+        $.ajax({
+          url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewDisbersalStatusById`,
+          method: 'POST',
+          headers: {
+            'X-App-Key': 'pocso',
+            'X-App-Name': 'pocso',
+          },
+          contentType: "application/json",
+          data: JSON.stringify(requestDisbursalData),
+          success: function (response) {
+            if (response.success === 1) {
+              const details = response.data[0];
+
+              const interimField = document.getElementById("P56_NEW_STATUS");
+              const interimPaymentField = document.getElementById("P56_INTERIM_PAYMENT_STATUS");
+              const defaultValue = "Interim Order Status";
+              const defaultPaymentValue = "Completed"
+
+              if (defaultPaymentValue) {
+                interimPaymentField.value = defaultPaymentValue;
+              }
+
+              if (defaultValue) {
+                interimField.value = defaultValue;
+                // Automatically display sections based on the default value
+                if (defaultValue === "Interim Order Status") {
+                  $('#interimDetails').show();
+                  $('#finalDetails').hide();
+                } else if (defaultValue === "Final Order Status") {
+                  $('#interimDetails').hide();
+                  $('#finalDetails').show();
+                }
+              }
+
+              const fileContent = details.fileContent;
+              const mimeType = 'application/pdf';
+              const filename = 'example-file.pdf';
+              const fileLinkContainer = document.getElementById('P56_INTERIM_PROCEEDINGS_file_exist');
+              const downloadLinkHTML = createDownloadLink(fileContent, mimeType, filename);
+              fileLinkContainer.innerHTML = downloadLinkHTML;
+
+            }
+          },
+          error: function (error) {
+            console.error("Error fetching disbursal data:", error);
+          }
+        });
+      }
+
+      // Call the function to load data and set the dropdown value
+      handleDisbursalData();
 
     });
 
