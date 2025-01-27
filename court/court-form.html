@@ -2029,8 +2029,59 @@
         showErrorToast("An unexpected error occurred.");
       }
     }
+  </script>
+  <script>
+    const requestData = {
+      "user_id": "POCSO/FEBRUARY /2024/0044"
+    };
 
+    var courtId = "POCSO/FEBRUARY /2024/0044";
 
+    function viewDisbursal() {
+      debugger
+      $.ajax({
+        url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/court/view/viewDisbursalStatusById`,
+        method: 'POST',
+        headers: {
+          'X-App-Key': 'pocso',
+          'X-App-Name': 'pocso',
+        },
+        contentType: "application/json",
+        data: JSON.stringify(requestData),
+        success: function (response) {
+          if (response.success == 1) {
+            details = response.data.find(court => court.court_id === courtId);
+            let chargeSheetStatus = details.charge_sheet_status;
+            let radioButtons = document.getElementsByName('P73_CHARGE_SHEET_YES_NO');
+
+            for (let i = 0; i < radioButtons.length; i++) {
+              if (radioButtons[i].value === chargeSheetStatus) {
+                radioButtons[i].checked = true;
+                break;
+              }
+            }
+
+            let chargeSheetDate = details.charge_sheet_date;
+
+            let dateInput = document.querySelector("#P73_CHARGE_SHEET_DATE input[type='text']");
+            if (dateInput) {
+              dateInput.value = chargeSheetDate;
+              dateInput.dispatchEvent(new Event('change'));
+            }
+
+            document.getElementById('P53_NEW_STATUS_DISPLAY').textContent = courtId;
+            document.getElementById('P53_INTERIM_PAYMENT_STATUS_DISPLAY').textContent = details.interim_payment_status;
+            document.getElementById('P53_FINAL_PAYMENT_STATUS').textContent = details.interim_payment_status;
+          }
+        },
+        error: function (xhr, status, error) {
+          showErrorToast("Something went wrong");
+          console.error('Error fetching data: ', error);
+        }
+      });
+    }
+
+    viewDisbursal();
 
   </script>
 </body>
