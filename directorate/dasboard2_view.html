@@ -94,16 +94,16 @@
                 </div>
                 <div class="t-Header-logo row">
                     <!-- <a href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;home?session=6405172798553" class="t-Header-logo-link"><img src="&#x9;r&#x2F;wspocso&#x2F;111&#x2F;files&#x2F;static&#x2F;v1962&#x2F;tnlogo.png" alt="" class="apex-logo-img" /><span class="apex-logo-text">POCSO Database Management and VCF Dispersal Portal</span></a> -->
-                    <div class="col"><img class="header-logo" src="r/wspocso/111/files/static/v1962/tnlogo.png"
-                            data-aos="fade-left" data-aos-delay="600" data-aos-duration="800"></div>
+                    <div class="col"><img class="header-logo" src="../assets/img/tnlogo.png" data-aos="fade-left"
+                            data-aos-delay="600" data-aos-duration="800"></div>
                     <div class="col-8 heading text-middle">
                         <h2 data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200">Department of Children
                             Welfare and Special Services</h2>
                         <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200">குழந்தைகள் நலன் மற்றும்
                             சிறப்புச் சேவைகள் துறை</h2>
                     </div>
-                    <div class="col"><img class="header-logo" src="r/wspocso/111/files/static/v1962/deptlogo.png"
-                            data-aos="fade-right" data-aos-delay="600" data-aos-duration="800"></div>
+                    <div class="col"><img class="header-logo" src="../assets/img/deptlogo.png" data-aos="fade-right"
+                            data-aos-delay="600" data-aos-duration="800"></div>
 
                 </div>
                 <div class="t-Header-navBar">
@@ -149,17 +149,14 @@
                 <div class="t-Header-nav-list js-tabLike js-tabLike" id="t_MenuNav">
                     <ul>
                         <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut=""
-                            data-icon=""><a class="a-MenuBar-label"
-                                href="/ords/r/wspocso/pocso182168171/home?session=6405172798553" title=""
-                                target="">Dashboard</a></li>
+                            data-icon=""><a class="a-MenuBar-label" href="home.html" title="" target="">Dashboard</a>
+                        </li>
                         <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut=""
-                            data-icon="fa&#x20;fa-table"><a class="a-MenuBar-label"
-                                href="/ords/r/wspocso/pocso182168171/70?session=6405172798553" title=""
+                            data-icon="fa&#x20;fa-table"><a class="a-MenuBar-label" href="report.html" title=""
                                 target="">Customize Report</a></li>
                         <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut=""
-                            data-icon=""><a class="a-MenuBar-label"
-                                href="/ords/r/wspocso/pocso182168171/police-entry-form1?session=6405172798553" title=""
-                                target="">Add New Case</a></li>
+                            data-icon=""><a class="a-MenuBar-label" href="dasboard2_view.html" title="" target="">Add
+                                New Case</a></li>
                     </ul>
                 </div>
             </div>
@@ -588,291 +585,310 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
-                                                            <div class="col col-6 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_WHO_NAME_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_WHO_NAME"
-                                                                            id="P86_WHO_NAME_LABEL"
-                                                                            class="t-Form-label">Name </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_WHO_NAME"
-                                                                                name="P86_WHO_NAME" value=""><input
-                                                                                type="hidden" data-for="P86_WHO_NAME"
-                                                                                value="ngsBEf3G-WblRsk4WO8762M99ho_JMi8E8uI646nbfh2U-p6hEIxJDpP3qrFHiwKTz9OSL-asiKbWzxF5QYlIg"><span
-                                                                                id="P86_WHO_NAME_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
+                                                        <div id="compensationDetails" style="display: none;">
+                                                            <div class="row ">
+                                                                <div class="col col-6 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_WHO_NAME_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_WHO_NAME"
+                                                                                id="P86_WHO_NAME_LABEL"
+                                                                                class="t-Form-label">Name </label>
                                                                         </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span id="P86_WHO_NAME_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden" id="P86_WHO_NAME"
+                                                                                    name="P86_WHO_NAME" value=""><input
+                                                                                    type="hidden"
+                                                                                    data-for="P86_WHO_NAME"
+                                                                                    value="ngsBEf3G-WblRsk4WO8762M99ho_JMi8E8uI646nbfh2U-p6hEIxJDpP3qrFHiwKTz9OSL-asiKbWzxF5QYlIg"><span
+                                                                                    id="P86_WHO_NAME_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_WHO_NAME_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_WHO_RELATIONSHIP_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_WHO_RELATIONSHIP"
+                                                                                id="P86_WHO_RELATIONSHIP_LABEL"
+                                                                                class="t-Form-label">Relationship
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden"
+                                                                                    id="P86_WHO_RELATIONSHIP"
+                                                                                    name="P86_WHO_RELATIONSHIP"
+                                                                                    value=""><input type="hidden"
+                                                                                    data-for="P86_WHO_RELATIONSHIP"
+                                                                                    value="uox80HiTeUxweQSTAodlA7WplUe8b81UJT3YIm4pvFM53mL83sA_lojnBMgYWsDuS4-fd5WyxGNirl1BJxoSiQ"><span
+                                                                                    id="P86_WHO_RELATIONSHIP_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_WHO_RELATIONSHIP_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
+
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_WHO_RELATIONSHIP_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_WHO_RELATIONSHIP"
-                                                                            id="P86_WHO_RELATIONSHIP_LABEL"
-                                                                            class="t-Form-label">Relationship </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_WHO_RELATIONSHIP"
-                                                                                name="P86_WHO_RELATIONSHIP"
-                                                                                value=""><input type="hidden"
-                                                                                data-for="P86_WHO_RELATIONSHIP"
-                                                                                value="uox80HiTeUxweQSTAodlA7WplUe8b81UJT3YIm4pvFM53mL83sA_lojnBMgYWsDuS4-fd5WyxGNirl1BJxoSiQ"><span
-                                                                                id="P86_WHO_RELATIONSHIP_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
+                                                            <div class="row ">
+                                                                <div class="col col-5  col-start">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_WHO_DATE_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_WHO_DATE"
+                                                                                id="P86_WHO_DATE_LABEL"
+                                                                                class="t-Form-label">Date </label>
                                                                         </div>
-                                                                        <div class="t-Form-itemAssistance">
+                                                                        <div class="t-Form-inputContainer col col-3">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden" id="P86_WHO_DATE"
+                                                                                    name="P86_WHO_DATE" value=""><input
+                                                                                    type="hidden"
+                                                                                    data-for="P86_WHO_DATE"
+                                                                                    value="lVsjCFwMOpo8KIXxnZL2Mbi5uJH62bsuFJni2zf3KKNGfFBEpU2Mnbg9xo6zyUrHJzz5Zmgjs7T_YhcTpIAslA"><span
+                                                                                    id="P86_WHO_DATE_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_WHO_DATE_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col col-12 apex-col-auto col-start col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_BANK_DETAILS_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_BANK_DETAILS"
+                                                                                id="P86_BANK_DETAILS_LABEL"
+                                                                                class="t-Form-label">Bank Account
+                                                                                Details</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-10">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden" id="P86_BANK_DETAILS"
+                                                                                    name="P86_BANK_DETAILS"
+                                                                                    value=""><input type="hidden"
+                                                                                    data-for="P86_BANK_DETAILS"
+                                                                                    value="erBUAvccz1130EwxSzwPQR8Hy-vY7i8FZ7pPTZjeb_iRuEqQZ6g4qMUTBzGkgGSjVdTuH3s2IlAn5DF0qTD7RA"><span
+                                                                                    id="P86_BANK_DETAILS_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span></div>
                                                                             <span
-                                                                                id="P86_WHO_RELATIONSHIP_error_placeholder"
+                                                                                id="P86_BANK_DETAILS_error_placeholder"
                                                                                 class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
+                                                                                data-template-id="333363771109036567_ET"></span>
                                                                         </div>
-
                                                                     </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col col-6 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_ACCOUNT_HOLDER_NAME_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_ACCOUNT_HOLDER_NAME"
+                                                                                id="P86_ACCOUNT_HOLDER_NAME_LABEL"
+                                                                                class="t-Form-label">Account Holder Name
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden"
+                                                                                    id="P86_ACCOUNT_HOLDER_NAME"
+                                                                                    name="P86_ACCOUNT_HOLDER_NAME"
+                                                                                    value=""><input type="hidden"
+                                                                                    data-for="P86_ACCOUNT_HOLDER_NAME"
+                                                                                    value="L8M2GUnHm3B2Vgt7sBNIswBKKomEBGiob7kHvE_wNR4BzZ9jFLbo57n5HzL455rZ1D24c6_OtebymaPvWUMe-Q"><span
+                                                                                    id="P86_ACCOUNT_HOLDER_NAME_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_ACCOUNT_HOLDER_NAME_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_ACCOUNT_NUMBER_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_ACCOUNT_NUMBER"
+                                                                                id="P86_ACCOUNT_NUMBER_LABEL"
+                                                                                class="t-Form-label">Account Number
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden"
+                                                                                    id="P86_ACCOUNT_NUMBER"
+                                                                                    name="P86_ACCOUNT_NUMBER"
+                                                                                    value=""><input type="hidden"
+                                                                                    data-for="P86_ACCOUNT_NUMBER"
+                                                                                    value="ckFZ4uq_gX8lu1rwDFIyuLaomtMqbR01GndepwdVIA-Pwv7200hch_1p1jRDq5yfOx8rraffRzEpuYqmGLqsFw"><span
+                                                                                    id="P86_ACCOUNT_NUMBER_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_ACCOUNT_NUMBER_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col col-6 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_BANK_NAME_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_BANK_NAME"
+                                                                                id="P86_BANK_NAME_LABEL"
+                                                                                class="t-Form-label">Bank Name </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden" id="P86_BANK_NAME"
+                                                                                    name="P86_BANK_NAME" value=""><input
+                                                                                    type="hidden"
+                                                                                    data-for="P86_BANK_NAME"
+                                                                                    value="pE44oyvCgyl89Sb4SZdyrJPAo1-34Jav8LWtAuphu9a4520FhGXXi3OgEGsMi9yIntbqTkek5m6Gde7NRxIX2A"><span
+                                                                                    id="P86_BANK_NAME_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_BANK_NAME_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_BRANCH_NAME_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_BRANCH_NAME"
+                                                                                id="P86_BRANCH_NAME_LABEL"
+                                                                                class="t-Form-label">Branch Name
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden" id="P86_BRANCH_NAME"
+                                                                                    name="P86_BRANCH_NAME"
+                                                                                    value=""><input type="hidden"
+                                                                                    data-for="P86_BRANCH_NAME"
+                                                                                    value="21G-65YTILOa6sJbUR2QjZvX2x879xqfMM9AHs4U2HyG13WDjXpKE7qZnY0W7r-L9sPuhbqUQFWkrL8WBzKF8Q"><span
+                                                                                    id="P86_BRANCH_NAME_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_BRANCH_NAME_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col col-6  col-start">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
+                                                                        id="P86_IFSC_CODE_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_IFSC_CODE"
+                                                                                id="P86_IFSC_CODE_LABEL"
+                                                                                class="t-Form-label">IFSC Code </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="hidden" id="P86_IFSC_CODE"
+                                                                                    name="P86_IFSC_CODE" value=""><input
+                                                                                    type="hidden"
+                                                                                    data-for="P86_IFSC_CODE"
+                                                                                    value="adjzAGitYhMSMAyfnLFwgIj4jb-UBdJ45egLOEqd1Uv1doIgtyQz_7OZYJYuGbj4tWpzUUNcWsp5-SwzE1Q8rw"><span
+                                                                                    id="P86_IFSC_CODE_DISPLAY"
+                                                                                    class="display_only&#x20;apex-item-display-only"
+                                                                                    data-escape="true"></span>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_IFSC_CODE_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div><input type="hidden"
+                                                                        name="P86_FIR_ATTACH_MIMETYPE"
+                                                                        id="P86_FIR_ATTACH_MIMETYPE" value=""><input
+                                                                        type="hidden" name="P86_FIR_ATTACH_FILENAME"
+                                                                        id="P86_FIR_ATTACH_FILENAME" value=""><input
+                                                                        type="hidden" name="P86_FIR_ATTACH_LAST_UPDATE"
+                                                                        id="P86_FIR_ATTACH_LAST_UPDATE" value=""><input
+                                                                        type="hidden" name="P86_FIR_ATTACH_CHARSET"
+                                                                        id="P86_FIR_ATTACH_CHARSET" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
-                                                            <div class="col col-5  col-start">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_WHO_DATE_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_WHO_DATE"
-                                                                            id="P86_WHO_DATE_LABEL"
-                                                                            class="t-Form-label">Date </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-3">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_WHO_DATE"
-                                                                                name="P86_WHO_DATE" value=""><input
-                                                                                type="hidden" data-for="P86_WHO_DATE"
-                                                                                value="lVsjCFwMOpo8KIXxnZL2Mbi5uJH62bsuFJni2zf3KKNGfFBEpU2Mnbg9xo6zyUrHJzz5Zmgjs7T_YhcTpIAslA"><span
-                                                                                id="P86_WHO_DATE_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
-                                                                        </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span id="P86_WHO_DATE_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
 
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row ">
-                                                            <div class="col col-12 apex-col-auto col-start col-end">
-                                                                <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_BANK_DETAILS_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_BANK_DETAILS"
-                                                                            id="P86_BANK_DETAILS_LABEL"
-                                                                            class="t-Form-label">Bank Account
-                                                                            Details</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-10">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_BANK_DETAILS"
-                                                                                name="P86_BANK_DETAILS" value=""><input
-                                                                                type="hidden"
-                                                                                data-for="P86_BANK_DETAILS"
-                                                                                value="erBUAvccz1130EwxSzwPQR8Hy-vY7i8FZ7pPTZjeb_iRuEqQZ6g4qMUTBzGkgGSjVdTuH3s2IlAn5DF0qTD7RA"><span
-                                                                                id="P86_BANK_DETAILS_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span></div><span
-                                                                            id="P86_BANK_DETAILS_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="333363771109036567_ET"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row ">
-                                                            <div class="col col-6 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_ACCOUNT_HOLDER_NAME_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_ACCOUNT_HOLDER_NAME"
-                                                                            id="P86_ACCOUNT_HOLDER_NAME_LABEL"
-                                                                            class="t-Form-label">Account Holder Name
-                                                                        </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden"
-                                                                                id="P86_ACCOUNT_HOLDER_NAME"
-                                                                                name="P86_ACCOUNT_HOLDER_NAME"
-                                                                                value=""><input type="hidden"
-                                                                                data-for="P86_ACCOUNT_HOLDER_NAME"
-                                                                                value="L8M2GUnHm3B2Vgt7sBNIswBKKomEBGiob7kHvE_wNR4BzZ9jFLbo57n5HzL455rZ1D24c6_OtebymaPvWUMe-Q"><span
-                                                                                id="P86_ACCOUNT_HOLDER_NAME_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
-                                                                        </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span
-                                                                                id="P86_ACCOUNT_HOLDER_NAME_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_ACCOUNT_NUMBER_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_ACCOUNT_NUMBER"
-                                                                            id="P86_ACCOUNT_NUMBER_LABEL"
-                                                                            class="t-Form-label">Account Number </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_ACCOUNT_NUMBER"
-                                                                                name="P86_ACCOUNT_NUMBER"
-                                                                                value=""><input type="hidden"
-                                                                                data-for="P86_ACCOUNT_NUMBER"
-                                                                                value="ckFZ4uq_gX8lu1rwDFIyuLaomtMqbR01GndepwdVIA-Pwv7200hch_1p1jRDq5yfOx8rraffRzEpuYqmGLqsFw"><span
-                                                                                id="P86_ACCOUNT_NUMBER_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
-                                                                        </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span
-                                                                                id="P86_ACCOUNT_NUMBER_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row ">
-                                                            <div class="col col-6 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_BANK_NAME_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_BANK_NAME"
-                                                                            id="P86_BANK_NAME_LABEL"
-                                                                            class="t-Form-label">Bank Name </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_BANK_NAME"
-                                                                                name="P86_BANK_NAME" value=""><input
-                                                                                type="hidden" data-for="P86_BANK_NAME"
-                                                                                value="pE44oyvCgyl89Sb4SZdyrJPAo1-34Jav8LWtAuphu9a4520FhGXXi3OgEGsMi9yIntbqTkek5m6Gde7NRxIX2A"><span
-                                                                                id="P86_BANK_NAME_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
-                                                                        </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span id="P86_BANK_NAME_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_BRANCH_NAME_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_BRANCH_NAME"
-                                                                            id="P86_BRANCH_NAME_LABEL"
-                                                                            class="t-Form-label">Branch Name </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_BRANCH_NAME"
-                                                                                name="P86_BRANCH_NAME" value=""><input
-                                                                                type="hidden" data-for="P86_BRANCH_NAME"
-                                                                                value="21G-65YTILOa6sJbUR2QjZvX2x879xqfMM9AHs4U2HyG13WDjXpKE7qZnY0W7r-L9sPuhbqUQFWkrL8WBzKF8Q"><span
-                                                                                id="P86_BRANCH_NAME_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
-                                                                        </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span id="P86_BRANCH_NAME_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row ">
-                                                            <div class="col col-6  col-start">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--display-only"
-                                                                    id="P86_IFSC_CODE_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_IFSC_CODE"
-                                                                            id="P86_IFSC_CODE_LABEL"
-                                                                            class="t-Form-label">IFSC Code </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="hidden" id="P86_IFSC_CODE"
-                                                                                name="P86_IFSC_CODE" value=""><input
-                                                                                type="hidden" data-for="P86_IFSC_CODE"
-                                                                                value="adjzAGitYhMSMAyfnLFwgIj4jb-UBdJ45egLOEqd1Uv1doIgtyQz_7OZYJYuGbj4tWpzUUNcWsp5-SwzE1Q8rw"><span
-                                                                                id="P86_IFSC_CODE_DISPLAY"
-                                                                                class="display_only&#x20;apex-item-display-only"
-                                                                                data-escape="true"></span>
-                                                                        </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span id="P86_IFSC_CODE_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div><input type="hidden"
-                                                                    name="P86_FIR_ATTACH_MIMETYPE"
-                                                                    id="P86_FIR_ATTACH_MIMETYPE" value=""><input
-                                                                    type="hidden" name="P86_FIR_ATTACH_FILENAME"
-                                                                    id="P86_FIR_ATTACH_FILENAME" value=""><input
-                                                                    type="hidden" name="P86_FIR_ATTACH_LAST_UPDATE"
-                                                                    id="P86_FIR_ATTACH_LAST_UPDATE" value=""><input
-                                                                    type="hidden" name="P86_FIR_ATTACH_CHARSET"
-                                                                    id="P86_FIR_ATTACH_CHARSET" value="">
-                                                            </div>
-                                                        </div>
                                                         <div class="row ">
                                                             <div class="col col-6 apex-col-auto col-start">
                                                                 <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--radiogroup"
@@ -920,83 +936,92 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--date-picker-apex apex-item-wrapper--date-picker-apex-popup"
-                                                                    id="P86_CHARGE_SHEET_DATE_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_CHARGE_SHEET_DATE"
-                                                                            id="P86_CHARGE_SHEET_DATE_LABEL"
-                                                                            class="t-Form-label">Chargesheet/Final
-                                                                            Report Date</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><a-date-picker
-                                                                                id="P86_CHARGE_SHEET_DATE"
-                                                                                aria-labelledby="P86_CHARGE_SHEET_DATE_LABEL"
-                                                                                change-month="true" change-year="true"
-                                                                                display-as="popup" display-weeks="none"
-                                                                                format="DS"
-                                                                                previous-next-distance="one-month"
-                                                                                show-days-outside-month="visible"
-                                                                                show-on="focus" show-time="false"
-                                                                                size="30" time-increment-minute="15"
-                                                                                today-button="true"
-                                                                                valid-example="1&#x2F;29&#x2F;2025"
-                                                                                value="11&#x2F;16&#x2F;2024"
-                                                                                year-selection-range="5"><input
-                                                                                    aria-haspopup="dialog"
-                                                                                    class="apex-item-text&#x20;apex-item-datepicker"
-                                                                                    name="P86_CHARGE_SHEET_DATE"
-                                                                                    size="30" type="text"
-                                                                                    value="11&#x2F;16&#x2F;2024"><button
-                                                                                    aria-haspopup="dialog"
-                                                                                    aria-label="Select&#x20;Date"
-                                                                                    class="a-Button&#x20;a-Button--calendar"
-                                                                                    tabindex="-1"
-                                                                                    title="Select&#x20;Date"
-                                                                                    type="button"><span
-                                                                                        class="a-Icon icon-calendar"></span></button></a-date-picker>
-                                                                        </div><span
-                                                                            id="P86_CHARGE_SHEET_DATE_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="333363771109036567_ET"></span>
-                                                                    </div>
-                                                                </div><input type="hidden"
-                                                                    name="P86_COMPLAINT_COPY_MIMETYPE"
-                                                                    id="P86_COMPLAINT_COPY_MIMETYPE" value=""><input
-                                                                    type="hidden" name="P86_COMPLAINT_COPY_FILENAME"
-                                                                    id="P86_COMPLAINT_COPY_FILENAME" value=""><input
-                                                                    type="hidden" name="P86_COMPLAINT_COPY_LAST_UPDATE"
-                                                                    id="P86_COMPLAINT_COPY_LAST_UPDATE" value=""><input
-                                                                    type="hidden" name="P86_COMPLAINT_COPY_CHARSET"
-                                                                    id="P86_COMPLAINT_COPY_CHARSET" value=""><input
-                                                                    type="hidden" name="P86_COURT_FILE_NO"
-                                                                    id="P86_COURT_FILE_NO" value=""><input type="hidden"
-                                                                    name="P86_TYPE_OF_ORDER" id="P86_TYPE_OF_ORDER"
-                                                                    value=""><input type="hidden"
-                                                                    name="P86_INTERIM_DATE" id="P86_INTERIM_DATE"
-                                                                    value=""><input type="hidden" name="P86_FINAL_DATE"
-                                                                    id="P86_FINAL_DATE" value=""><input type="hidden"
-                                                                    name="P86_AMOUNT_OF_COMPENSATION"
-                                                                    id="P86_AMOUNT_OF_COMPENSATION" value=""><input
-                                                                    type="hidden" name="P86_COURT_ATTACH_MIMETYPE"
-                                                                    id="P86_COURT_ATTACH_MIMETYPE" value=""><input
-                                                                    type="hidden" name="P86_COURT_ATTACH_FILENAME"
-                                                                    id="P86_COURT_ATTACH_FILENAME" value=""><input
-                                                                    type="hidden" name="P86_COURT_ATTACH_LAST_UPDATE"
-                                                                    id="P86_COURT_ATTACH_LAST_UPDATE" value=""><input
-                                                                    type="hidden" name="P86_COURT_ATTACH_CHARSET"
-                                                                    id="P86_COURT_ATTACH_CHARSET" value=""><input
-                                                                    type="hidden" name="P86_REQUEST_STATUS"
-                                                                    id="P86_REQUEST_STATUS" value="E"><input
-                                                                    type="hidden" name="P86_INTERIM_YES"
-                                                                    id="P86_INTERIM_YES" value=""><input type="hidden"
-                                                                    name="P86_FINAL_YES" id="P86_FINAL_YES"
-                                                                    value=""><input type="hidden" name="P86_ID"
-                                                                    id="P86_ID"
-                                                                    value="POCSO&#x2F;DECEMBER &#x2F;2024&#x2F;3764"><input
-                                                                    type="hidden" name="P86_DOC_REF" id="P86_DOC_REF"
-                                                                    value="">
+                                                            <div id="chargeSheetDetails" style="display: none;">
+                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--date-picker-apex apex-item-wrapper--date-picker-apex-popup"
+                                                                        id="P86_CHARGE_SHEET_DATE_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_CHARGE_SHEET_DATE"
+                                                                                id="P86_CHARGE_SHEET_DATE_LABEL"
+                                                                                class="t-Form-label">Chargesheet/Final
+                                                                                Report Date</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <a-date-picker
+                                                                                    id="P86_CHARGE_SHEET_DATE"
+                                                                                    aria-labelledby="P86_CHARGE_SHEET_DATE_LABEL"
+                                                                                    change-month="true"
+                                                                                    change-year="true"
+                                                                                    display-as="popup"
+                                                                                    display-weeks="none" format="DS"
+                                                                                    previous-next-distance="one-month"
+                                                                                    show-days-outside-month="visible"
+                                                                                    show-on="focus" show-time="false"
+                                                                                    size="30" time-increment-minute="15"
+                                                                                    today-button="true"
+                                                                                    valid-example="1&#x2F;29&#x2F;2025"
+                                                                                    value="11&#x2F;16&#x2F;2024"
+                                                                                    year-selection-range="5"><input
+                                                                                        aria-haspopup="dialog"
+                                                                                        class="apex-item-text&#x20;apex-item-datepicker"
+                                                                                        name="P86_CHARGE_SHEET_DATE"
+                                                                                        size="30" type="text"
+                                                                                        value="11&#x2F;16&#x2F;2024"><button
+                                                                                        aria-haspopup="dialog"
+                                                                                        aria-label="Select&#x20;Date"
+                                                                                        class="a-Button&#x20;a-Button--calendar"
+                                                                                        tabindex="-1"
+                                                                                        title="Select&#x20;Date"
+                                                                                        type="button"><span
+                                                                                            class="a-Icon icon-calendar"></span></button></a-date-picker>
+                                                                            </div><span
+                                                                                id="P86_CHARGE_SHEET_DATE_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333363771109036567_ET"></span>
+                                                                        </div>
+                                                                    </div><input type="hidden"
+                                                                        name="P86_COMPLAINT_COPY_MIMETYPE"
+                                                                        id="P86_COMPLAINT_COPY_MIMETYPE" value=""><input
+                                                                        type="hidden" name="P86_COMPLAINT_COPY_FILENAME"
+                                                                        id="P86_COMPLAINT_COPY_FILENAME" value=""><input
+                                                                        type="hidden"
+                                                                        name="P86_COMPLAINT_COPY_LAST_UPDATE"
+                                                                        id="P86_COMPLAINT_COPY_LAST_UPDATE"
+                                                                        value=""><input type="hidden"
+                                                                        name="P86_COMPLAINT_COPY_CHARSET"
+                                                                        id="P86_COMPLAINT_COPY_CHARSET" value=""><input
+                                                                        type="hidden" name="P86_COURT_FILE_NO"
+                                                                        id="P86_COURT_FILE_NO" value=""><input
+                                                                        type="hidden" name="P86_TYPE_OF_ORDER"
+                                                                        id="P86_TYPE_OF_ORDER" value=""><input
+                                                                        type="hidden" name="P86_INTERIM_DATE"
+                                                                        id="P86_INTERIM_DATE" value=""><input
+                                                                        type="hidden" name="P86_FINAL_DATE"
+                                                                        id="P86_FINAL_DATE" value=""><input
+                                                                        type="hidden" name="P86_AMOUNT_OF_COMPENSATION"
+                                                                        id="P86_AMOUNT_OF_COMPENSATION" value=""><input
+                                                                        type="hidden" name="P86_COURT_ATTACH_MIMETYPE"
+                                                                        id="P86_COURT_ATTACH_MIMETYPE" value=""><input
+                                                                        type="hidden" name="P86_COURT_ATTACH_FILENAME"
+                                                                        id="P86_COURT_ATTACH_FILENAME" value=""><input
+                                                                        type="hidden"
+                                                                        name="P86_COURT_ATTACH_LAST_UPDATE"
+                                                                        id="P86_COURT_ATTACH_LAST_UPDATE"
+                                                                        value=""><input type="hidden"
+                                                                        name="P86_COURT_ATTACH_CHARSET"
+                                                                        id="P86_COURT_ATTACH_CHARSET" value=""><input
+                                                                        type="hidden" name="P86_REQUEST_STATUS"
+                                                                        id="P86_REQUEST_STATUS" value="E"><input
+                                                                        type="hidden" name="P86_INTERIM_YES"
+                                                                        id="P86_INTERIM_YES" value=""><input
+                                                                        type="hidden" name="P86_FINAL_YES"
+                                                                        id="P86_FINAL_YES" value=""><input type="hidden"
+                                                                        name="P86_ID" id="P86_ID"
+                                                                        value="POCSO&#x2F;DECEMBER &#x2F;2024&#x2F;3764"><input
+                                                                        type="hidden" name="P86_DOC_REF"
+                                                                        id="P86_DOC_REF" value="">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="row ">
@@ -1139,12 +1164,12 @@
                                                     <table role="presentation" cellspacing="0" cellpadding="0"
                                                         border="0" width="100%">
                                                         <tr>
-                                                            <td align="left"><button
+                                                            <td align="left"><button onclick="handleCancelButton()"
                                                                     class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
                                                                     type="button" id="B16017703378736129"><span
                                                                         class="t-Button-label">Cancel</span></button>
                                                             </td>
-                                                            <td align="right"><button
+                                                            <td align="right"><button onclick="updateCaseForm()"
                                                                     class="t-Button t-Button--large&#x20;t-Button--success"
                                                                     type="button" id="B16017392024736129"><span
                                                                         class="t-Button-label">Submit</span></button>
@@ -1304,7 +1329,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
+                                                        <div class="row interimHide">
                                                             <div class="col col-4 apex-col-auto col-start">
                                                                 <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--date-picker-apex apex-item-wrapper--date-picker-apex-popup"
                                                                     id="P86_INTERIM_ORDER_DATE_CONTAINER">
@@ -1434,8 +1459,75 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <div class="col col-6 apex-col-auto col-end">
+                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--radiogroup"
+                                                                    id="P86_INTERIM_AWARDED_YES_CONTAINER">
+                                                                    <div class="t-Form-labelContainer col col-2">
+                                                                        <label for="P86_INTERIM_AWARDED_YES"
+                                                                            id="P86_INTERIM_AWARDED_YES_LABEL"
+                                                                            class="t-Form-label">Whether compensation
+                                                                            awarded? </label>
+                                                                    </div>
+                                                                    <div class="t-Form-inputContainer col col-4">
+                                                                        <div class="t-Form-itemWrapper">
+                                                                            <div tabindex="-1"
+                                                                                id="P86_INTERIM_AWARDED_YES"
+                                                                                aria-labelledby="P86_INTERIM_AWARDED_YES_LABEL"
+                                                                                class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"
+                                                                                role="radiogroup"
+                                                                                aria-orientation="vertical">
+                                                                                <div class="apex-item-option"><input
+                                                                                        type="radio"
+                                                                                        id="P86_INTERIM_AWARDED_YES_0"
+                                                                                        name="P86_INTERIM_AWARDED_YES"
+                                                                                        data-display="Yes" value="Yes"
+                                                                                        aria-label="Yes"><label
+                                                                                        class="u-radio"
+                                                                                        for="P86_INTERIM_AWARDED_YES_0"
+                                                                                        aria-hidden="true">Yes</label>
+                                                                                </div>
+                                                                                <div class="apex-item-option"><input
+                                                                                        type="radio"
+                                                                                        id="P86_INTERIM_AWARDED_YES_1"
+                                                                                        name="P86_INTERIM_AWARDED_YES"
+                                                                                        data-display="No" value="No"
+                                                                                        aria-label="No"><label
+                                                                                        class="u-radio"
+                                                                                        for="P86_INTERIM_AWARDED_YES_1"
+                                                                                        aria-hidden="true">No</label>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="t-Form-itemAssistance">
+                                                                            <span
+                                                                                id="P86_INTERIM_AWARDED_YES_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333364085741036567_ET"></span>
+                                                                            <div class="t-Form-itemRequired"
+                                                                                aria-hidden="true">Required</div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div><input type="hidden" name="P86_STATUS_1"
+                                                                    id="P86_STATUS_1" value="Y"><input type="hidden"
+                                                                    name="P86_CREATED_BY_1" id="P86_CREATED_BY_1"
+                                                                    value="511"><input type="hidden"
+                                                                    name="P86_CREATED_DATE_1" id="P86_CREATED_DATE_1"
+                                                                    value="12&#x2F;16&#x2F;2024"><input type="hidden"
+                                                                    name="P86_UPDATED_BY_1" id="P86_UPDATED_BY_1"
+                                                                    value=""><input type="hidden"
+                                                                    name="P86_UPDATED_DATE_1" id="P86_UPDATED_DATE_1"
+                                                                    value=""><input type="hidden" name="P86_YES_TYPE"
+                                                                    id="P86_YES_TYPE" value=""><input type="hidden"
+                                                                    name="P86_REMARKS" id="P86_REMARKS" value=""><input
+                                                                    type="hidden" name="P86_COURT_ID" id="P86_COURT_ID"
+                                                                    value="POCSO&#x2F;DECEMBER &#x2F;2024&#x2F;3764"><input
+                                                                    type="hidden" name="P86_FIR_NO_1" id="P86_FIR_NO_1"
+                                                                    value="">
+                                                            </div>
                                                         </div>
-                                                        <div class="row ">
+                                                        <div class="row finalHide">
                                                             <div class="col col-4 apex-col-auto col-start">
                                                                 <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--date-picker-apex apex-item-wrapper--date-picker-apex-popup"
                                                                     id="P86_FINAL_ORDER_DATE_CONTAINER">
@@ -1562,110 +1654,50 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="row ">
-                                                            <div class="col col-6 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
-                                                                    id="P86_JUDGEMENT_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_JUDGEMENT"
-                                                                            id="P86_JUDGEMENT_LABEL"
-                                                                            class="t-Form-label">Acquitted/Convicted
-                                                                        </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><select
-                                                                                id="P86_JUDGEMENT" name="P86_JUDGEMENT"
-                                                                                class="selectlist&#x20;apex-item-select"
-                                                                                data-native-menu="false" size="1">
-                                                                                <option value="" selected="selected">
-                                                                                </option>
-                                                                                <option value="Acquittal">Acquittal
-                                                                                </option>
-                                                                                <option value="Convicted">Convicted
-                                                                                </option>
-                                                                                <option value="Others">Others</option>
-                                                                            </select>
-                                                                        </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span id="P86_JUDGEMENT_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
 
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--radiogroup"
-                                                                    id="P86_INTERIM_AWARDED_YES_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_INTERIM_AWARDED_YES"
-                                                                            id="P86_INTERIM_AWARDED_YES_LABEL"
-                                                                            class="t-Form-label">Whether compensation
-                                                                            awarded? </label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper">
-                                                                            <div tabindex="-1"
-                                                                                id="P86_INTERIM_AWARDED_YES"
-                                                                                aria-labelledby="P86_INTERIM_AWARDED_YES_LABEL"
-                                                                                class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"
-                                                                                role="radiogroup"
-                                                                                aria-orientation="vertical">
-                                                                                <div class="apex-item-option"><input
-                                                                                        type="radio"
-                                                                                        id="P86_INTERIM_AWARDED_YES_0"
-                                                                                        name="P86_INTERIM_AWARDED_YES"
-                                                                                        data-display="Yes" value="Yes"
-                                                                                        aria-label="Yes"><label
-                                                                                        class="u-radio"
-                                                                                        for="P86_INTERIM_AWARDED_YES_0"
-                                                                                        aria-hidden="true">Yes</label>
-                                                                                </div>
-                                                                                <div class="apex-item-option"><input
-                                                                                        type="radio"
-                                                                                        id="P86_INTERIM_AWARDED_YES_1"
-                                                                                        name="P86_INTERIM_AWARDED_YES"
-                                                                                        data-display="No" value="No"
-                                                                                        aria-label="No"><label
-                                                                                        class="u-radio"
-                                                                                        for="P86_INTERIM_AWARDED_YES_1"
-                                                                                        aria-hidden="true">No</label>
-                                                                                </div>
+                                                            <div class="row ">
+                                                                <div class="col col-6 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
+                                                                        id="P86_JUDGEMENT_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_JUDGEMENT"
+                                                                                id="P86_JUDGEMENT_LABEL"
+                                                                                class="t-Form-label">Acquitted/Convicted
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><select
+                                                                                    id="P86_JUDGEMENT"
+                                                                                    name="P86_JUDGEMENT"
+                                                                                    class="selectlist&#x20;apex-item-select"
+                                                                                    data-native-menu="false" size="1">
+                                                                                    <option value=""
+                                                                                        selected="selected">
+                                                                                    </option>
+                                                                                    <option value="Acquittal">Acquittal
+                                                                                    </option>
+                                                                                    <option value="Convicted">Convicted
+                                                                                    </option>
+                                                                                    <option value="Others">Others
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="t-Form-itemAssistance">
+                                                                                <span
+                                                                                    id="P86_JUDGEMENT_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    data-template-id="333364085741036567_ET"></span>
+                                                                                <div class="t-Form-itemRequired"
+                                                                                    aria-hidden="true">Required</div>
                                                                             </div>
 
                                                                         </div>
-                                                                        <div class="t-Form-itemAssistance">
-                                                                            <span
-                                                                                id="P86_INTERIM_AWARDED_YES_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="333364085741036567_ET"></span>
-                                                                            <div class="t-Form-itemRequired"
-                                                                                aria-hidden="true">Required</div>
-                                                                        </div>
-
                                                                     </div>
-                                                                </div><input type="hidden" name="P86_STATUS_1"
-                                                                    id="P86_STATUS_1" value="Y"><input type="hidden"
-                                                                    name="P86_CREATED_BY_1" id="P86_CREATED_BY_1"
-                                                                    value="511"><input type="hidden"
-                                                                    name="P86_CREATED_DATE_1" id="P86_CREATED_DATE_1"
-                                                                    value="12&#x2F;16&#x2F;2024"><input type="hidden"
-                                                                    name="P86_UPDATED_BY_1" id="P86_UPDATED_BY_1"
-                                                                    value=""><input type="hidden"
-                                                                    name="P86_UPDATED_DATE_1" id="P86_UPDATED_DATE_1"
-                                                                    value=""><input type="hidden" name="P86_YES_TYPE"
-                                                                    id="P86_YES_TYPE" value=""><input type="hidden"
-                                                                    name="P86_REMARKS" id="P86_REMARKS" value=""><input
-                                                                    type="hidden" name="P86_COURT_ID" id="P86_COURT_ID"
-                                                                    value="POCSO&#x2F;DECEMBER &#x2F;2024&#x2F;3764"><input
-                                                                    type="hidden" name="P86_FIR_NO_1" id="P86_FIR_NO_1"
-                                                                    value="">
+                                                                </div>
+
                                                             </div>
                                                         </div>
+
                                                         <div class="row ">
                                                             <div class="col col-12 apex-col-auto col-start col-end">
                                                                 <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--radiogroup"
@@ -1684,8 +1716,8 @@
                                                                                 class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"
                                                                                 role="radiogroup"
                                                                                 aria-orientation="vertical">
-                                                                                <div class="apex-item-option"><input
-                                                                                        type="radio"
+                                                                                <div class="apex-item-option">
+                                                                                    <input type="radio"
                                                                                         id="P86_CHANGE_BANK_ACCOUNT_0"
                                                                                         name="P86_CHANGE_BANK_ACCOUNT"
                                                                                         data-display="Yes" value="Yes"
@@ -1713,143 +1745,158 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
-                                                            <div class="col col-6 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
-                                                                    id="P86_ACCOUNT_NUMBER_1_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_ACCOUNT_NUMBER_1"
-                                                                            id="P86_ACCOUNT_NUMBER_1_LABEL"
-                                                                            class="t-Form-label">Account Number</label>
+                                                        <div id="bankDetailsHide" style="display: none;">
+                                                            <div class="row ">
+                                                                <div class="col col-6 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
+                                                                        id="P86_ACCOUNT_NUMBER_1_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_ACCOUNT_NUMBER_1"
+                                                                                id="P86_ACCOUNT_NUMBER_1_LABEL"
+                                                                                class="t-Form-label">Account
+                                                                                Number</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="text"
+                                                                                    id="P86_ACCOUNT_NUMBER_1"
+                                                                                    name="P86_ACCOUNT_NUMBER_1"
+                                                                                    class="text_field&#x20;apex-item-text"
+                                                                                    value="" size="30"
+                                                                                    maxlength="1000" />
+                                                                            </div><span
+                                                                                id="P86_ACCOUNT_NUMBER_1_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333363771109036567_ET"></span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="text" id="P86_ACCOUNT_NUMBER_1"
-                                                                                name="P86_ACCOUNT_NUMBER_1"
-                                                                                class="text_field&#x20;apex-item-text"
-                                                                                value="" size="30" maxlength="1000" />
-                                                                        </div><span
-                                                                            id="P86_ACCOUNT_NUMBER_1_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="333363771109036567_ET"></span>
+                                                                </div>
+                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
+                                                                        id="P86_BAK_ACCOUNT_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_BAK_ACCOUNT"
+                                                                                id="P86_BAK_ACCOUNT_LABEL"
+                                                                                class="t-Form-label">Account Holder
+                                                                                Name</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="text" id="P86_BAK_ACCOUNT"
+                                                                                    name="P86_BAK_ACCOUNT"
+                                                                                    class="text_field&#x20;apex-item-text"
+                                                                                    value="" size="30"
+                                                                                    maxlength="1000" />
+                                                                            </div><span
+                                                                                id="P86_BAK_ACCOUNT_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333363771109036567_ET"></span>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
-                                                                    id="P86_BAK_ACCOUNT_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_BAK_ACCOUNT"
-                                                                            id="P86_BAK_ACCOUNT_LABEL"
-                                                                            class="t-Form-label">Account Holder
-                                                                            Name</label>
+                                                            <div class="row ">
+                                                                <div class="col col-6 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
+                                                                        id="P86_BANK_NAME_1_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_BANK_NAME_1"
+                                                                                id="P86_BANK_NAME_1_LABEL"
+                                                                                class="t-Form-label">Bank Name</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="text" id="P86_BANK_NAME_1"
+                                                                                    name="P86_BANK_NAME_1"
+                                                                                    class="text_field&#x20;apex-item-text"
+                                                                                    value="" size="30"
+                                                                                    maxlength="1000" />
+                                                                            </div><span
+                                                                                id="P86_BANK_NAME_1_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333363771109036567_ET"></span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="text" id="P86_BAK_ACCOUNT"
-                                                                                name="P86_BAK_ACCOUNT"
-                                                                                class="text_field&#x20;apex-item-text"
-                                                                                value="" size="30" maxlength="1000" />
-                                                                        </div><span
-                                                                            id="P86_BAK_ACCOUNT_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="333363771109036567_ET"></span>
+                                                                </div>
+                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
+                                                                        id="P86_BRANCH_NAME_1_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_BRANCH_NAME_1"
+                                                                                id="P86_BRANCH_NAME_1_LABEL"
+                                                                                class="t-Form-label">Branch Name</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="text" id="P86_BRANCH_NAME_1"
+                                                                                    name="P86_BRANCH_NAME_1"
+                                                                                    class="text_field&#x20;apex-item-text"
+                                                                                    value="" size="30"
+                                                                                    maxlength="1000" />
+                                                                            </div><span
+                                                                                id="P86_BRANCH_NAME_1_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333363771109036567_ET"></span>
+                                                                        </div>
                                                                     </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col col-12 apex-col-auto col-start col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
+                                                                        id="P86_IFSC_CODE_1_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P86_IFSC_CODE_1"
+                                                                                id="P86_IFSC_CODE_1_LABEL"
+                                                                                class="t-Form-label">IFSC Code</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-10">
+                                                                            <div class="t-Form-itemWrapper"><input
+                                                                                    type="text" id="P86_IFSC_CODE_1"
+                                                                                    name="P86_IFSC_CODE_1"
+                                                                                    class="text_field&#x20;apex-item-text"
+                                                                                    value="" size="30"
+                                                                                    maxlength="1000" />
+                                                                            </div><span
+                                                                                id="P86_IFSC_CODE_1_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333363771109036567_ET"></span>
+                                                                        </div>
+                                                                    </div><input type="hidden" name="P86_REMARKS_BANK"
+                                                                        id="P86_REMARKS_BANK" value=""><input
+                                                                        type="hidden" name="P86_INTERIM_ATTACH_MIMETYPE"
+                                                                        id="P86_INTERIM_ATTACH_MIMETYPE" value=""><input
+                                                                        type="hidden" name="P86_INTERIM_ATTACH_FILENAME"
+                                                                        id="P86_INTERIM_ATTACH_FILENAME" value=""><input
+                                                                        type="hidden"
+                                                                        name="P86_INTERIM_ATTACH_LAST_UPDATE"
+                                                                        id="P86_INTERIM_ATTACH_LAST_UPDATE"
+                                                                        value=""><input type="hidden"
+                                                                        name="P86_INTERIM_ATTACH_CHARSET"
+                                                                        id="P86_INTERIM_ATTACH_CHARSET" value=""><input
+                                                                        type="hidden" name="P86_FINAL_ATTACH_MIMETYPE"
+                                                                        id="P86_FINAL_ATTACH_MIMETYPE" value=""><input
+                                                                        type="hidden" name="P86_FINAL_ATTACH_FILENAME"
+                                                                        id="P86_FINAL_ATTACH_FILENAME" value=""><input
+                                                                        type="hidden"
+                                                                        name="P86_FINAL_ATTACH_LAST_UPDATE"
+                                                                        id="P86_FINAL_ATTACH_LAST_UPDATE"
+                                                                        value=""><input type="hidden"
+                                                                        name="P86_FINAL_ATTACH_CHARSET"
+                                                                        id="P86_FINAL_ATTACH_CHARSET" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
-                                                            <div class="col col-6 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
-                                                                    id="P86_BANK_NAME_1_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_BANK_NAME_1"
-                                                                            id="P86_BANK_NAME_1_LABEL"
-                                                                            class="t-Form-label">Bank Name</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="text" id="P86_BANK_NAME_1"
-                                                                                name="P86_BANK_NAME_1"
-                                                                                class="text_field&#x20;apex-item-text"
-                                                                                value="" size="30" maxlength="1000" />
-                                                                        </div><span
-                                                                            id="P86_BANK_NAME_1_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="333363771109036567_ET"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
-                                                                    id="P86_BRANCH_NAME_1_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_BRANCH_NAME_1"
-                                                                            id="P86_BRANCH_NAME_1_LABEL"
-                                                                            class="t-Form-label">Branch Name</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="text" id="P86_BRANCH_NAME_1"
-                                                                                name="P86_BRANCH_NAME_1"
-                                                                                class="text_field&#x20;apex-item-text"
-                                                                                value="" size="30" maxlength="1000" />
-                                                                        </div><span
-                                                                            id="P86_BRANCH_NAME_1_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="333363771109036567_ET"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row ">
-                                                            <div class="col col-12 apex-col-auto col-start col-end">
-                                                                <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
-                                                                    id="P86_IFSC_CODE_1_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P86_IFSC_CODE_1"
-                                                                            id="P86_IFSC_CODE_1_LABEL"
-                                                                            class="t-Form-label">IFSC Code</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-10">
-                                                                        <div class="t-Form-itemWrapper"><input
-                                                                                type="text" id="P86_IFSC_CODE_1"
-                                                                                name="P86_IFSC_CODE_1"
-                                                                                class="text_field&#x20;apex-item-text"
-                                                                                value="" size="30" maxlength="1000" />
-                                                                        </div><span
-                                                                            id="P86_IFSC_CODE_1_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="333363771109036567_ET"></span>
-                                                                    </div>
-                                                                </div><input type="hidden" name="P86_REMARKS_BANK"
-                                                                    id="P86_REMARKS_BANK" value=""><input type="hidden"
-                                                                    name="P86_INTERIM_ATTACH_MIMETYPE"
-                                                                    id="P86_INTERIM_ATTACH_MIMETYPE" value=""><input
-                                                                    type="hidden" name="P86_INTERIM_ATTACH_FILENAME"
-                                                                    id="P86_INTERIM_ATTACH_FILENAME" value=""><input
-                                                                    type="hidden" name="P86_INTERIM_ATTACH_LAST_UPDATE"
-                                                                    id="P86_INTERIM_ATTACH_LAST_UPDATE" value=""><input
-                                                                    type="hidden" name="P86_INTERIM_ATTACH_CHARSET"
-                                                                    id="P86_INTERIM_ATTACH_CHARSET" value=""><input
-                                                                    type="hidden" name="P86_FINAL_ATTACH_MIMETYPE"
-                                                                    id="P86_FINAL_ATTACH_MIMETYPE" value=""><input
-                                                                    type="hidden" name="P86_FINAL_ATTACH_FILENAME"
-                                                                    id="P86_FINAL_ATTACH_FILENAME" value=""><input
-                                                                    type="hidden" name="P86_FINAL_ATTACH_LAST_UPDATE"
-                                                                    id="P86_FINAL_ATTACH_LAST_UPDATE" value=""><input
-                                                                    type="hidden" name="P86_FINAL_ATTACH_CHARSET"
-                                                                    id="P86_FINAL_ATTACH_CHARSET" value="">
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                     <table role="presentation" cellspacing="0" cellpadding="0"
                                                         border="0" width="100%">
                                                         <tr>
                                                             <td align="left">
-                                                                <button=class="t-Button
-                                                                    js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
-                                                                    type="button" id="B15972647144736074"><span
+                                                                <button onclick="handleCancelButton()"
+                                                                    class="t-Button
+                                                                    js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning" type="button"
+                                                                    id="B15972647144736074"><span
                                                                         class="t-Button-label">Cancel</span></button>
                                                             </td>
                                                             <td align="right"><button
@@ -1880,8 +1927,9 @@
                                                     <h2 class="t-Region-title" id="R268833789252209701_heading"
                                                         data-apex-heading>Disbursal Status</h2>
                                                 </div>
-                                                <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
-                                                        class="js-maximizeButtonContainer"></span></div>
+                                                <div class="t-Region-headerItems t-Region-headerItems--buttons">
+                                                    <span class="js-maximizeButtonContainer"></span>
+                                                </div>
                                             </div>
                                             <div class="t-Region-bodyWrap">
                                                 <div class="t-Region-buttons t-Region-buttons--top">
@@ -1901,7 +1949,8 @@
                                                                     <div class="t-Form-labelContainer col col-2">
                                                                         <label for="P86_NEW_STATUS"
                                                                             id="P86_NEW_STATUS_LABEL"
-                                                                            class="t-Form-label">Update Order </label>
+                                                                            class="t-Form-label">Update Order
+                                                                        </label>
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-10">
                                                                         <div class="t-Form-itemWrapper"><select
@@ -1964,8 +2013,8 @@
                                                                             Proceedings</label>
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-10">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P86_INTERIM_PROCEEDINGS"
+                                                                        <div class="t-Form-itemWrapper">
+                                                                            <a-file-upload id="P86_INTERIM_PROCEEDINGS"
                                                                                 name="P86_INTERIM_PROCEEDINGS"
                                                                                 upload-type="FILE"
                                                                                 display-style="INLINE" size="30"
@@ -1983,17 +2032,22 @@
                                                                                             aria-hidden="true">
                                                                                         </span>
                                                                                     </div>
-                                                                                    <div class="a-FileDrop-body"><span
+                                                                                    <div class="a-FileDrop-body">
+                                                                                        <span
                                                                                             class="a-FileDrop-heading">Choose
                                                                                             File</span><span
                                                                                             class="a-FileDrop-description">Select
                                                                                             a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
+                                                                                            here.</span>
+                                                                                    </div>
+                                                                                    <div class="a-FileDrop-action">
+                                                                                        <span
                                                                                             class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span></div>
+                                                                                            File</span>
+                                                                                    </div>
                                                                                 </div>
-                                                                            </a-file-upload></div><span
+                                                                            </a-file-upload>
+                                                                        </div><span
                                                                             id="P86_INTERIM_PROCEEDINGS_error_placeholder"
                                                                             class="a-Form-error"
                                                                             data-template-id="333363771109036567_ET"></span>
@@ -2146,8 +2200,8 @@
                                                                             Proceedings</label>
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-10">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P86_FINAL_PROCEEDINGS"
+                                                                        <div class="t-Form-itemWrapper">
+                                                                            <a-file-upload id="P86_FINAL_PROCEEDINGS"
                                                                                 name="P86_FINAL_PROCEEDINGS"
                                                                                 upload-type="FILE"
                                                                                 display-style="INLINE" size="30"
@@ -2165,17 +2219,22 @@
                                                                                             aria-hidden="true">
                                                                                         </span>
                                                                                     </div>
-                                                                                    <div class="a-FileDrop-body"><span
+                                                                                    <div class="a-FileDrop-body">
+                                                                                        <span
                                                                                             class="a-FileDrop-heading">Choose
                                                                                             File</span><span
                                                                                             class="a-FileDrop-description">Select
                                                                                             a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
+                                                                                            here.</span>
+                                                                                    </div>
+                                                                                    <div class="a-FileDrop-action">
+                                                                                        <span
                                                                                             class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span></div>
+                                                                                            File</span>
+                                                                                    </div>
                                                                                 </div>
-                                                                            </a-file-upload></div><span
+                                                                            </a-file-upload>
+                                                                        </div><span
                                                                             id="P86_FINAL_PROCEEDINGS_error_placeholder"
                                                                             class="a-Form-error"
                                                                             data-template-id="333363771109036567_ET"></span>
@@ -2187,13 +2246,13 @@
                                                     <table role="presentation" cellspacing="0" cellpadding="0"
                                                         border="0" width="100%">
                                                         <tr>
-                                                            <td align="left"><button
+                                                            <td align="left"><button onclick="handleCancelButton()"
                                                                     class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
                                                                     type="button" id="B15995539065736102"><span
                                                                         class="t-Button-label">Cancel</span></button>
                                                             </td>
                                                             <td align="right">
-                                                                <button=class="t-Button
+                                                                <button class="t-Button
                                                                     t-Button--large&#x20;t-Button--success"
                                                                     type="button" id="B15995990869736103"><span
                                                                         class="t-Button-label">Submit</span></button>
@@ -2245,87 +2304,470 @@
             libVersions: { ckeditor5: "36.0.0", cropperJs: "1.5.13", domPurify: "3.0.5", fullcalendar: "6.1.8", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "2.4.0", markedJs: "5.1.2", prismJs: "1.29.0", oraclejet: "15.0.7", tinymce: "6.7.1", turndown: "7.1.1", monacoEditor: "0.32.1", lessJs: "4.1.3" }
         };
     </script>
-    <script src="/i/libraries/apex/minified/desktop_all.min.js?v=23.2.1"></script>
-    <script src="wwv_flow.js_messages?p_app_id=111&p_lang=en&p_version=23.2.1-695055922"></script>
-
-    <script type="text/javascript">
-        apex.da.initDaEventList = function () {
-            apex.da.gEventList = [
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_CHILD_AGE", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "waitForResult": true, javascriptFunction: apex.da.executePlSqlCode, "ajaxIdentifier": "REEgVFlQRX5-MTYwNTg3MjQxMTc3MzYxNzk\u002FacZ49ElXuCsXeWj-xyzusURkx6M6ofWgJLtmXX_S5J0in5W7JbAdi9RJl_osJpIKeV64zfLSUvWAtXTJrWjnYA", "attribute01": "#P86_CHILD_AGE", "attribute02": "#P86_AGE", "attribute04": "N", "action": "NATIVE_EXECUTE_PLSQL_CODE" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_CHARGE_SHEET_YES_NO", "conditionElement": "P86_CHARGE_SHEET_YES_NO", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Yes", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_CHARGE_SHEET_DATE", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_CHARGE_SHEET_DATE", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_CHARGE_SHEET_YES_NO", "conditionElement": "P86_CHARGE_SHEET_YES_NO", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Yes", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_CHARGE_SHEET_DATE", javascriptFunction: apex.da.refresh, "action": "NATIVE_REFRESH" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_WILLINGNESS_COMPENSATION", "conditionElement": "P86_WILLINGNESS_COMPENSATION", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Yes", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_ACCOUNT_HOLDER_NAME,P86_ACCOUNT_NUMBER,P86_BANK_NAME,P86_BRANCH_NAME,P86_IFSC_CODE,P86_WHO_APPLYING,P86_WHO_NAME,P86_WHO_RELATIONSHIP,P86_WHO_DATE,P86_BANK_DETAILS", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_ACCOUNT_HOLDER_NAME,P86_ACCOUNT_NUMBER,P86_BANK_NAME,P86_BRANCH_NAME,P86_IFSC_CODE,P86_WHO_APPLYING,P86_WHO_NAME,P86_WHO_RELATIONSHIP,P86_WHO_DATE,P86_BANK_DETAILS", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_WILLINGNESS_COMPENSATION", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_ACCOUNT_HOLDER_NAME,P86_ACCOUNT_NUMBER,P86_BANK_NAME,P86_BRANCH_NAME,P86_IFSC_CODE,P86_WHO_APPLYING,P86_WHO_NAME,P86_WHO_RELATIONSHIP,P86_WHO_DATE,P86_BANK_DETAILS", javascriptFunction: apex.da.clear, "action": "NATIVE_CLEAR" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_CHANGE_BANK_ACCOUNT", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_ACCOUNT_HOLDER_NAME,P86_ACCOUNT_NUMBER,P86_BANK_NAME,P86_BRANCH_NAME,P86_IFSC_CODE,P86_WHO_APPLYING,P86_WHO_NAME,P86_WHO_RELATIONSHIP,P86_WHO_DATE,P86_BANK_DETAILS", javascriptFunction: apex.da.clear, "action": "NATIVE_CLEAR" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_CHARGE_SHEET_YES_NO", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "click", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_CHARGE_SHEET_DATE", javascriptFunction: apex.da.clear, "action": "NATIVE_CLEAR" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_CHANGE_BANK_ACCOUNT", "conditionElement": "P86_CHANGE_BANK_ACCOUNT", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Yes", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_BANK_NAME_1,P86_BRANCH_NAME_1,P86_IFSC_CODE_1,P86_ACCOUNT_NUMBER_1,P86_BAK_ACCOUNT", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_BANK_NAME_1,P86_BRANCH_NAME_1,P86_IFSC_CODE_1,P86_ACCOUNT_NUMBER_1,P86_BAK_ACCOUNT", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_TYPE", "conditionElement": "P86_TYPE", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Interim Compensation", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_INTERIM_ORDER_DATE,P86_INTERIM_AMOUNT,P86_INTERIM_COPY", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_INTERIM_ORDER_DATE,P86_INTERIM_AMOUNT,P86_INTERIM_COPY", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_TYPE", "conditionElement": "P86_TYPE", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Final Compensation", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_FINAL_ORDER_DATE,P86_FINAL_AMOUNT,P86_JUDGEMENT,P86_FINAL_COPY", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_FINAL_ORDER_DATE,P86_FINAL_AMOUNT,P86_JUDGEMENT,P86_FINAL_COPY", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_NEW_STATUS", "conditionElement": "P86_NEW_STATUS", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Interim Order Status", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_INTERIM_PAYMENT_STATUS,P86_INTERIM_PROCEEDINGS", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_INTERIM_PAYMENT_STATUS,P86_INTERIM_PROCEEDINGS", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] },
-                { "triggeringElementType": "ITEM", "triggeringElement": "P86_NEW_STATUS", "conditionElement": "P86_NEW_STATUS", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Final Order Status", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "change", "anyActionsFireOnInit": true, actionList: [{ "eventResult": false, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_FINAL_PAYMENT_STATUS,P86_FINAL_PROCEEDINGS", javascriptFunction: apex.da.hide, "action": "NATIVE_HIDE" }, { "eventResult": true, "executeOnPageInit": true, "stopExecutionOnError": true, "affectedElementsType": "ITEM", "affectedElements": "P86_FINAL_PAYMENT_STATUS,P86_FINAL_PROCEEDINGS", javascriptFunction: apex.da.show, "action": "NATIVE_SHOW" }] }];
-        }
-    </script>
-
-    <script src="/i/libraries/apex/minified/widget.stickyWidget.min.js?v=23.2.1"></script>
-    <script src="/i/themes/theme_42/23.1/js/theme42.min.js?v=23.2.1"></script>
-
-    <script src="r/wspocso/111/files/static/v1962/aos.min.js"></script>
-
-
-
-
-
-    <script src="/i/libraries/apex/minified/item.FileUpload.min.js?v=23.2.1"></script>
-
-
-
-    <script type="text/javascript">
-        apex.session.initTimeouts(180, { "idle_time_ms": 1195000, "life_time_ms": 28738000, "max_idle_time_ms": 1200000 }, '\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fhome', '\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fhome');
-        apex.jQuery(function () {
-            apex.page.init(this, function () {
-                try {
-                    (function () {
-                        var e = apex.jQuery("#t_MenuNav", apex.gPageContext$);
-                        if (e.hasClass("js-addActions")) {
-                            apex.actions.addFromMarkup(e);
-                        }
-                        e.menu({
-                            behaveLikeTabs: e.hasClass("js-tabLike"),
-                            menubarShowSubMenuIcon: e.hasClass("js-showSubMenuIcons") || null,
-                            menubar: true,
-                            menubarOverflow: true,
-                            callout: e.hasClass("js-menu-callout")
-                        });
-                    })();
-                    (function () { apex.widget.checkboxAndRadio("#P86_CHARGE_SHEET_YES_NO", "radio", { "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MjY4OTk5ODMwODY2MzM3NDAy\u002FSSctOdCWzqk4DN8XL_KD_eGa5IPbfohy_aixxt6BrpWpl-ZoOTVktPZ2-4yoMg4OMCMNO_7xZ0zokcVq6GtCQA", "optimizeRefresh": true, "inputName": "P86_CHARGE_SHEET_YES_NO" }); })();
-                    (function () { apex.widget.selectList("#P86_NAME_OF_COURT", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MTk3ODE4NTkwMDA5NjkyMjIw\u002Fm58KZp_2KVWwL8SYZMEBHYaFOn8MaQuaVMCCqNe_7R5PEvxrvamHgkjsRbZH-JZc5l-o-DEhPM3P9p27ttUvtg" }); })();
-                    (function () { apex.widget.selectList("#P86_TYPE", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MjY4NzY1NjEyNTM0MDYyMzI1\u002FzFFvDNbiSoONZynP0QCtCngSTTEap2MjYnFMAwjCV-jZFdB6rubZ5vzQsTT5zsOIsLSlIDLvpV0RF-HnRdYadA" }); })();
-                    (function () { apex.widget.selectList("#P86_JUDGEMENT", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MjY4ODM1MDk5NTcxMjA5Njk3\u002Ftf3J3gGmEf9SfssNB4Ffv7_Ht6p-roUqrWLa5ie7HT17RTqPloabplkGFgj7iZRY7eCb9r07FUVpaRWhB8XLqQ" }); })();
-                    (function () { apex.widget.checkboxAndRadio("#P86_INTERIM_AWARDED_YES", "radio", { "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MTk3ODE4Njg5OTE3NjkyMjIx\u002FleY3AJ839G-XR5lwKMNIoqvdhM05RHHdG5dWyLsUJpIh7dPGoGBTn_DU9dLJNDYCiVpnD37-7sz4yBucPksy-A", "optimizeRefresh": true, "inputName": "P86_INTERIM_AWARDED_YES" }); })();
-                    (function () { apex.widget.checkboxAndRadio("#P86_CHANGE_BANK_ACCOUNT", "radio", { "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MjY4ODM1MjM2OTM4MjA5Njk4\u002FgcaxrzdKqqtksVk580yWbtaTUPHZnuc-mlJ-cYudTMq25vTX8KQGA_G_KnqvZCHDdG5ZsoBP71yji_6-la1UOg", "optimizeRefresh": true, "inputName": "P86_CHANGE_BANK_ACCOUNT" }); })();
-                    (function () { apex.widget.selectList("#P86_NEW_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-MjY4ODg0NDY2MzIzMjA5Nzg2\u002F-Tay4ZJKyOtJuciRza5N5Ek84v7TBokTccB7aisnuXVOShrflNjMZi9dIaAOcytwHXBKK85CPyX4s08kw_aZpQ" }); })();
-                    (function () { apex.widget.selectList("#P86_INTERIM_PAYMENT_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-NDU4NjA0MjcxMDU4NjUwMTg\u002Fdd6GNPsyzGVBXZCNf1NnSpVcQ2owzrSwQst0OpP1tRMcun_YiPsCc64iwR08wLHVlqtopWoPf5qY8GqL-iUR0A" }); })();
-                    (function () { apex.widget.selectList("#P86_FINAL_PAYMENT_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-NDU4NjAyNTg3MDc4NjUwMTc\u002FxguzjdLqS4HcQ3XAJiRv2nAei4jUPgDj6JYLvFVfpZhIfXb1RD_eMqinAzgNvMstNtREn7RcSmkPT3v1e0mIqg" }); })();
-                } catch (e) { apex.debug.error(e) };
-                apex.item.waitForDelayLoadItems().done(function () {
-                    try {
-                        (function () {
-                            apex.da.initDaEventList();
-                            apex.da.init();
-                        })();
-                        apex.theme42.initializePage.noSideCol();
-
-                        apex.page.warnOnUnsavedChanges();
-                    } finally {
-                        apex.event.trigger(apex.gPageContext$, 'apexreadyend');
-                    };
-                });
-            });
-        }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fsw.js?v=23.2.1-695055922\u0026lang=en' });
-    </script>
+    <script src="../assets/js/crypto-js.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/desktop_all.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/add.min.js"></script>
+    <script type="text/javascript" src="../assets/js/aos.js"></script>
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Include DataTables and Buttons JS -->
+    <script src="../assets/vendor/datatable/jquery.dataTables.min.js"></script>
+    <script src="../assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/jszip.min.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/pdfmake.min.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/vfs_fonts.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/buttons.colVis.min.js"></script>
 
     <script>
         AOS.init();
+
+        function showSuccessToast(message) {
+            const toastElement = document.getElementById('successToast');
+            const toastBody = document.getElementById('successMessage');
+
+            toastBody.textContent = message;
+            const toast = new bootstrap.Toast(toastElement, {
+                autohide: true,
+                delay: 3000
+            });
+            toast.show();
+        }
+        function showErrorToast(message) {
+            const toastElement = document.getElementById('errorToast');
+            const toastBody = document.getElementById('errorMessage');
+            toastBody.textContent = message;
+            const toast = new bootstrap.Toast(toastElement, {
+                autohide: true,
+                delay: 3000
+            });
+            toast.show();
+        }
+        const createDownloadLink = (content, mimeType, filename) => {
+            if (!content) return "N/A";
+
+            try {
+                const base64Pattern = /^[A-Za-z0-9+/=]+$/;
+                if (base64Pattern.test(content.replace(/\s/g, ""))) {
+                    // Decode Base64 content and create a blob
+                    const blob = new Blob(
+                        [new Uint8Array(atob(content).split("").map(c => c.charCodeAt(0)))],
+                        { type: mimeType }
+                    );
+                    const url = URL.createObjectURL(blob);
+                    return `<a href="${url}" download="${filename}" class="btn btn-sm btn-link">Download</a>`;
+                }
+
+                // If the content is not Base64, assume it's a URL
+                return `<a href="${content}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
+            } catch (error) {
+                console.error("Error creating download link:", error);
+                return "Invalid content";
+            }
+        };
+
+        function checkFile(selector) {
+            var fileInput = $(selector).find('input[type="file"]');
+            const validTypes = ['application/pdf', 'image/jpeg', 'image/jpg'];
+            const maxSize = 2 * 1024 * 1024; // 2MB in bytes
+            var file = fileInput[0].files[0];
+
+            // Check if a file has been selected
+            if (file) {
+                // Check file type
+                if (!validTypes.includes(file.type)) {
+                    errors = true;
+                    $('#' + selector.replace('#', '') + '_error_placeholder').text('Invalid file type. Supported types are .pdf, .jpg, .jpeg.').css('color', 'red');
+                    return;
+                }
+
+                // Check file size
+                if (file.size > maxSize) {
+                    errors = true;
+                    $('#' + selector.replace('#', '') + '_error_placeholder').text("File size exceeds the 2MB limit.").css('color', 'red');
+                    return;
+                }
+            }
+        }
+        function processFile(selector) {
+            return new Promise((resolve, reject) => {
+                var fileInput = $(selector)[0];
+                var file = fileInput.files[0];
+                if (file === undefined) showErrorToast('Please upload all the required files');
+                if (file) {
+                    const reader = new FileReader();
+                    const fileData = {};
+
+                    reader.onload = function (event) {
+                        // File processed as Base64 string
+                        fileData.fileBase64 = event.target.result.split(',')[1];
+                        fileData.mimetype = file.type;
+                        fileData.filename = file.name;
+
+                        resolve(fileData); // Resolve the promise with fileData
+                    };
+
+                    reader.onerror = function (error) {
+                        reject(error); // Reject the promise in case of error
+                    };
+
+                    reader.readAsDataURL(file); // Read the file as a data URL (Base64)
+                }
+            });
+        }
+
+        function formatDate(rawDate, format = 'dd/MM/yyyy') {
+            if (!rawDate) {
+                return "";
+            }
+
+            const dateObj = new Date(rawDate);
+
+            if (dateObj instanceof Date && !isNaN(dateObj)) {
+                const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+                let formattedDate = new Intl.DateTimeFormat('en-GB', options).format(dateObj);
+
+                const dateTimeParts = formattedDate.split(", ");
+                const date = dateTimeParts[0].split('/');
+                const time = dateTimeParts[1].split(':');
+
+                if (format === 'dd/MM/yyyy') {
+                    return `${date[0]}/${date[1]}/${date[2]}`;
+                } else if (format === 'dd/MM/yyyy hh:mm:ss') {
+                    return `${date[0]}/${date[1]}/${date[2]} ${time[0]}:${time[1]}:${time[2]}`;
+                }
+            }
+
+            return "";
+        }
+
+        function toggleChargeSheetDate() {
+            const chargeSheetYes = document.getElementById("P86_CHARGE_SHEET_YES_NO_0");
+            const chargeSheetDateContainer = document.getElementById("P86_CHARGE_SHEET_DATE_CONTAINER");
+
+            if (chargeSheetYes.checked) {
+                chargeSheetDateContainer.style.display = "block";
+            } else {
+                chargeSheetDateContainer.style.display = "none";
+            }
+        }
+        document
+            .querySelectorAll('input[name="P86_CHARGE_SHEET_YES_NO"]')
+            .forEach((radio) => {
+                radio.addEventListener("change", toggleChargeSheetDate);
+            });
+
+        document.addEventListener("DOMContentLoaded", toggleChargeSheetDate);
+
+        function loadPoliceData() {
+            debugger
+            let details = '';
+            const requestData = {
+                id: "POCSO/JULY     /2024/0332"
+            };
+
+            $.ajax({
+                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewPoliceEntryFormById`,
+                method: 'POST',
+                headers: {
+                    'X-App-Key': 'pocso',
+                    'X-App-Name': 'pocso',
+                },
+                contentType: "application/json",
+                data: JSON.stringify(requestData),
+                success: function (response) {
+                    if (response?.success === 1 && response?.data) {
+                        const details = response.data;
+
+                        const setTextContent = (id, value) => {
+                            const element = document.getElementById(id);
+                            if (element) element.textContent = value ?? "-";
+                        };
+                        setTextContent("P86_DISTRICT_NAME_DISPLAY", details?.district_name);
+                        setTextContent("P86_WILLINGNESS_COMPENSATION_DISPLAY", "yes");
+                        setTextContent("P86_COMPLAINT_NAME_DISPLAY", details?.complaint_data);
+                        setTextContent("P86_CHARGE_SHEET_YES_NO_DISPLAY", details?.charge_sheet_yes_no);
+                        setTextContent("P86_POL_STAT_DISPLAY", details?.pol_stat);
+                        setTextContent("P86_COMPLAINT_MADE_DISPLAY", details?.complaint_made);
+                        setTextContent("P86_FIR_NO_DISPLAY", details?.fir_no);
+                        const formattedDate = details?.date_of_fir ? formatDate(details.date_of_fir, 'dd/MM/yyyy hh:mm:ss') : "-";
+                        setTextContent("P86_DATE_OF_FIR_DISPLAY", formattedDate);
+                        setTextContent("P86_CHILD_GENDER_DISPLAY", details?.child_gender);
+                        setTextContent("P86_CHILD_AGE_DISPLAY", details?.child_age);
+                        setTextContent("P86_AGE_DISPLAY", details?.age);
+                        setTextContent("P86_NAME_PARENT_DISPLAY", details?.name_parent);
+                        setTextContent("P86_WHO_NAME_DISPLAY", details?.who_name);
+                        setTextContent("P86_WHO_RELATIONSHIP_DISPLAY", details?.who_relationship);
+                        setTextContent("P86_WHO_DATE_DISPLAY", details?.who_date);
+                        setTextContent("P86_BANK_NAME_DISPLAY", details?.bank_name);
+                        setTextContent("P86_ACCOUNT_HOLDER_NAME_DISPLAY", details?.account_holder_name);
+                        setTextContent("P86_BRANCH_NAME_DISPLAY", details?.branch_name);
+                        setTextContent("P86_IFSC_CODE_DISPLAY", details?.ifsc_code);
+                        setTextContent("P86_CHARGE_SHEET_DATE_DISPLAY", details?.charge_sheet_date);
+                        setTextContent("P86_NAME_MEDICAL_INSTITUTION_DISPLAY", details?.name_medical_institution);
+
+                        setTextContent("P86_DATE_REQUISITION_MEDICAL_EXAMINATION_DISPLAY", details?.date_requisition_medical_examination ? formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy') : "-");
+                        setTextContent("P86_DATE_OF_MEDICAL_EXAMINATION_VICTIM_DISPLAY", details?.date_requisition_medical_examination ? formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy') : "-");
+                        setTextContent("P86_DATE_OF_INTERIM_DISPLAY", details?.date_requisition_medical_examination ? formatDate(details.date_requisition_medical_examination, 'dd/MM/yyyy') : "-");
+
+                        const spanElement = document.getElementById("P86_WILLINGNESS_COMPENSATION_DISPLAY");
+                        const compensationDetails = document.getElementById("compensationDetails");
+
+                        if (spanElement && compensationDetails) {
+                            const spanValue = spanElement.textContent.trim().toLowerCase();
+                            compensationDetails.style.display = spanValue === "yes" ? "block" : "none";
+                        }
+
+                        const chargeSheetDetails = document.getElementById("chargeSheetDetails");
+                        const chargeSheetValue = details?.charge_sheet_yes_no?.trim().toLowerCase() || "no";
+
+                        if (chargeSheetDetails) {
+                            chargeSheetDetails.style.display = chargeSheetValue === "yes" ? "block" : "none";
+                        }
+                    }
+                },
+                error: function (xhr, status, error) {
+                    showErrorToast("Something went wrong");
+                    console.error('Error fetching data: ', error);
+                }
+            });
+        }
+        loadPoliceData();
+
+        function handleCourtData() {
+            const requestCourtData = {
+                court_id: "POCSO/JULY     /2024/0332"
+            };
+            function formatDate(rawDate, format = 'dd/MM/yyyy') {
+                if (!rawDate) {
+                    return "";
+                }
+                const dateObj = new Date(rawDate);
+                if (dateObj instanceof Date && !isNaN(dateObj)) {
+                    const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+                    let formattedDate = new Intl.DateTimeFormat('en-GB', options).format(dateObj);
+                    const dateTimeParts = formattedDate.split(", ");
+                    const date = dateTimeParts[0].split('/');
+                    const time = dateTimeParts[1].split(':');
+
+                    if (format === 'dd/MM/yyyy') {
+                        return `${date[0]}/${date[1]}/${date[2]}`;
+                    } else if (format === 'dd/MM/yyyy hh:mm:ss') {
+                        return `${date[0]}/${date[1]}/${date[2]} ${time[0]}:${time[1]}:${time[2]}`;
+                    }
+                }
+
+                return "";
+            }
+
+
+            // const urlParams = new URLSearchParams(window.location.search);
+            // const encodedDetails = urlParams.get('details');
+
+            let details = '';
+            let courtid = "POCSO/JULY     /2024/0332";
+            // const decodedDetails = atob(encodedDetails); // Base64 decode
+            // const eventIdObject = JSON.parse(decodedDetails);
+            // eventid = eventIdObject;
+            // console.log("Decoded Event Object:", eventIdObject);
+
+            // const decodedEventId = decodeURIComponent(eventIdObject); // Decode URI component
+            // console.log('Decoded Event ID:', decodedEventId);
+            // eventCom = decodedEventId
+            // Fetch data from the API
+            $.ajax({
+                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewCourtEntryFormById`,
+                method: 'POST',
+                headers: {
+                    'X-App-Key': 'pocso',
+                    'X-App-Name': 'pocso',
+                },
+                contentType: "application/json",
+                data: JSON.stringify(requestCourtData),
+                success: function (response) {
+                    if (response.success == 1) {
+                        details = response.data[0];
+                        document.getElementById('P86_ORDER_NO').val = 88;
+                        const formattedFileDate = formatDate(details.court_file_date, 'dd/MM/yyyy');
+                        document.getElementById('P56_COURT_FILE_DATE_DISPLAY').textContent = formattedFileDate;
+                        document.getElementById('P56_NAME_OF_COURT_DISPLAY').textContent = details.name_of_court || "-";
+                        document.getElementById('P56_TYPE_DISPLAY').textContent = details.type || "-";
+                        document.getElementById('P56_INTERIM_ORDER_DATE_DISPLAY').textContent = details.interim_order_date || "-";
+                        document.getElementById('P56_INTERIM_AMOUNT_DISPLAY').textContent = details.interim_amount || "-"
+                        const formattedFinalOrderDate = formatDate(details.final_order_date, 'dd/MM/yyyy');
+                        document.getElementById('P56_FINAL_ORDER_DATE_DISPLAY').textContent = formattedFinalOrderDate;
+                        document.getElementById('P56_JUDGEMENT_DISPLAY').textContent = details.judgement || "-";
+                        document.getElementById('P56_CHANGE_BANK_ACCOUNT_DISPLAY').textContent = "yes";
+
+                        const spanElement = document.getElementById('P56_CHANGE_BANK_ACCOUNT_DISPLAY');
+                        const compensationDetails = document.getElementById('bankDetailsHidden');
+
+                        if (spanElement && compensationDetails) {
+                            const spanValue = spanElement.textContent.trim().toLowerCase();
+                            if (spanValue === "yes") {
+                                compensationDetails.style.display = 'block';
+                            } else {
+                                compensationDetails.style.display = 'none';
+                            }
+                        }
+
+                        document.getElementById('P56_ACCOUNT_NUMBER_1_DISPLAY').textContent = details.account_number;
+                        document.getElementById('P56_BAK_ACCOUNT_DISPLAY').textContent = details.bak_account;
+                        document.getElementById('P56_BANK_NAME_1_DISPLAY').textContent = details.bank_name;
+                        document.getElementById('P56_BRANCH_NAME_1_DISPLAY').textContent = details.branch_name;
+                        document.getElementById('P56_IFSC_CODE_1_DISPLAY').textContent = details.ifsc_code;
+
+                        const interimLinkContainer = document.getElementById("P56_INTERIM_COPY_LINK_CONTAINER");
+                        if (interimLinkContainer) {
+                            const downloadLinkHTML = createDownloadLink(
+                                details.interim,
+                                details.interim_attach_mimetype,
+                                details.interim_attach_filename
+                            );
+                            interimLinkContainer.innerHTML = downloadLinkHTML;
+                        }
+
+                        const finalLinkContainer = document.getElementById("P56_FINAL_COPY_LINK_CONTAINER");
+                        if (finalLinkContainer) {
+                            const finalDownloadLinkHTML = createDownloadLink(
+                                details.final,
+                                details.final_attach_mimetype,
+                                details.final_attach_filename
+                            );
+                            finalLinkContainer.innerHTML = finalDownloadLinkHTML;
+                        }
+                    }
+                },
+                error: function (xhr, status, error) {
+                    showErrorToast("Something went wrong");
+                    console.error('Error fetching data: ', error);
+                }
+            });
+
+        }
+        handleCourtData();
+
+        document.getElementById('P86_TYPE').addEventListener('change', function () {
+            debugger
+            const selectedValue = this.value;
+            alert(selectedValue)
+
+            if (selectedValue === "Interim Compensation") {
+                $('.interimHide').show();
+                $('.finalHide').hide();
+            } else if ((selectedValue === "Final Compensation")) {
+                $('.interimHide').hide();
+                $('.finalHide').show();
+            }
+        });
+
+        $('#P86_CHANGE_BANK_ACCOUNT input').on('click', function () {
+            const WillingnessSelectedValue = $('input[name="P86_CHANGE_BANK_ACCOUNT"]:checked').val();
+            const bankDetailsHide = document.getElementById('bankDetailsHide');
+
+            if (WillingnessSelectedValue) {
+                if (WillingnessSelectedValue === "Yes") {
+                    //bankDetailsHide.style.display = 'block';
+                    $('#bankDetailsHide').show();
+                } else {
+                    //bankDetailsHide.style.display = 'none';
+                    $('#bankDetailsHide').hide();
+                }
+            }
+        }
+        )
+
+        async function handleCancelButton() {
+            window.location.href = 'home.html';
+        }
+
+        async function updateCaseForm() {
+            debugger;
+
+            try {
+                let chargesheetDate = "";
+                const chargesheetElement = document.querySelector('input[name="P86_CHARGE_SHEET_YES_NO"]:checked');
+                const chargesheet = chargesheetElement ? chargesheetElement.value : "";
+                console.log("Selected Value:", chargesheet);
+
+                if (chargesheet === "Yes") {
+                    chargesheetDate = $('#P86_CHARGE_SHEET_DATE').val();
+                }
+
+                console.log("Chargesheet Date:", chargesheetDate);
+
+                const payload = {
+                    "id": 12,
+                    "CHARGE_SHEET_FIELD": chargesheet,
+                    "CHARGE_SHEET_DATE": chargesheetDate,
+                };
+
+
+
+                const response = await $.ajax({
+                    url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/update/updateBankDetails',
+                    type: 'POST',
+                    headers: {
+                        'X-App-Key': 'pocso',
+                        'X-App-Name': 'pocso',
+                    },
+                    contentType: "application/json",
+
+                    data: JSON.stringify(payload),
+                });
+
+                console.log('Response:', response);
+                localStorage.setItem('participantRegistrationResponse', JSON.stringify(response));
+
+                showSuccessToast('Case Added Successfully');
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Redirect after success
+                }, 1000);
+
+            } catch (error) {
+                console.error('Error:', error);
+                showErrorToast('An error occurred during adding case.');
+            }
+        }
+
+        $('#P86_CHANGE_BANK_ACCOUNT input').on('click', function () {
+            const WillingnessSelectedValue = $('input[name="P86_CHANGE_BANK_ACCOUNT"]:checked').val();
+            const bankDetailsHide = document.getElementById('bankDetailsHide');
+
+            if (WillingnessSelectedValue) {
+                if (WillingnessSelectedValue === "Yes") {
+                    //bankDetailsHide.style.display = 'block';
+                    $('#bankDetailsHide').show();
+                } else {
+                    //bankDetailsHide.style.display = 'none';
+                    $('#bankDetailsHide').hide();
+                }
+            }
+        }
+        )
+
+
+        $(document).ready(function () {
+            $('.finalHide').hide();
+            $('.interimHide').hide();
+            $('.changeBankAcc').hide();
+
+            if ($('#P73_CHANGE_BANK_ACCOUNT_CONTAINER input').val() === "Yes") {
+                //$('.changeBankAcc').show();
+            } else {
+                $('.changeBankAcc').hide();
+            }
+        })
+
+
+
     </script>
 </body>
 

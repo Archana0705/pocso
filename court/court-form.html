@@ -1693,7 +1693,7 @@
             details = response.data.find(court => court.id === courtid);
 
             document.getElementById('P53_DISTRICT_NAME_DISPLAY').textContent = details.district_name || "-";
-            document.getElementById('P53_WILLINGNESS_COMPENSATION_DISPLAY').textContent = details.willingness_compensation || "-";
+            document.getElementById('P53_WILLINGNESS_COMPENSATION_DISPLAY').textContent = "yes";
             document.getElementById('P53_COMPLAINT_NAME_DISPLAY').textContent = details.complaint_data || "-";
             document.getElementById('P53_CHARGE_SHEET_YES_NO_DISPLAY').textContent = details.charge_sheet_yes_no || "-";
             document.getElementById('P53_POL_STAT_DISPLAY').textContent = details.pol_stat || "-";
