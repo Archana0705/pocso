@@ -15,9 +15,15 @@
     <link rel="icon" href="../assets/img/app-icon-32.png" />
     <script src="https://www.pocsoportal.tn.gov.in/ords/r/wspocso/111/files/static/v1962/apexcharts.min.js"></script>
     <style>
+      .apexcharts-menu-icon {
+        display: none;
+      }
       .titleForCanva {
         font-size: 16px;
         font-weight: bold;
+      }
+      canvas {
+        padding: 0.5rem;
       }
       /* #yearwiselineChart {
         height: 350px !important;
@@ -4301,6 +4307,10 @@
                 },
                 options: {
                     responsive: true,
+                    interaction: {
+                      mode: 'index',
+                      intersect: false
+                    },
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -4410,6 +4420,10 @@
                 },
                 options: {
                     responsive: true,
+                    interaction: {
+                      mode: 'index',
+                      intersect: false
+                    },
                     plugins: {
                         legend: {
                             position: 'bottom',
