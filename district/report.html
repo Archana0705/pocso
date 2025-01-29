@@ -15,6 +15,53 @@
     <link rel="icon" href="../assets/img/app-icon-32.png" />
     <script src="https://www.pocsoportal.tn.gov.in/ords/r/wspocso/111/files/static/v1962/apexcharts.min.js"></script>
     <style>
+       #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 9999;
+      overflow: hidden;
+      background: #12121261;
+      /*width: 57%;*/
+      border-radius: 13px 35px;
+    }
+
+    #preloader:before {
+      content: "";
+      position: fixed;
+      top: calc(50% - 30px);
+      left: calc(53% - 30px);
+      border: 6px solid #f92020b8;
+      border-top-color: #e2eefd;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      -webkit-animation: animate-preloader 1s linear infinite;
+      animation: animate-preloader 1s linear infinite;
+      z-index: 9999;
+    }
+
+    @-webkit-keyframes animate-preloader {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes animate-preloader {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
       .apexcharts-menu-icon {
         display: none;
       }
@@ -510,6 +557,7 @@
       }
     </style>
     <style type="text/css">.t-fht-cell { height: 1px; overflow: hidden; } .t-fht-wrapper { width: 100%; overflow: hidden; position: relative; } .t-fht-thead { overflow: hidden; position: relative; } .t-fht-tbody { overflow: auto; } </style>
+    <div id="preloader"></div>
   </head>
   <body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions t-PageTemplate--standard apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1 t-PageBody--topNav js-HeaderExpanded" id="t_PageBody" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
@@ -4182,6 +4230,16 @@
       });apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fsw.js?v=23.2.1-695055922\u0026lang=en' } );
     </script>
     <script>
+      $(document).on({
+      ajaxStart: function () {
+        $('#preloader').show();
+        $("body").addClass("user_loading");
+      },
+      ajaxStop: function () {
+        $('#preloader').hide();
+        $("body").removeClass("user_loading");
+      }
+    });
       AOS.init();
     </script>
     <svg id="SvgjsSvg2925" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
@@ -4272,6 +4330,7 @@
   </body>
   <script>
     $(document).ready(function () {
+      $('#preloader').hide();
       $.ajax({
           url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/StateAdminLogin/view/viewDistrict',
           method: 'POST',
