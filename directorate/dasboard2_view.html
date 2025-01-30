@@ -2448,6 +2448,14 @@
             return "";
         }
 
+        document.getElementById('P86_NAME_OF_COURT').addEventListener('change', function () {
+            debugger
+            const selectedValue = this.value;
+            alert(selectedValue)
+
+        });
+
+
         function toggleChargeSheetDate() {
             const chargeSheetYes = document.getElementById("P86_CHARGE_SHEET_YES_NO_0");
             const chargeSheetDateContainer = document.getElementById("P86_CHARGE_SHEET_DATE_CONTAINER");
@@ -2594,35 +2602,52 @@
                 success: function (response) {
                     if (response.success == 1) {
                         details = response.data[0];
-                        document.getElementById('P86_ORDER_NO').val = 88;
-                        const formattedFileDate = formatDate(details.court_file_date, 'dd/MM/yyyy');
-                        document.getElementById('P56_COURT_FILE_DATE_DISPLAY').textContent = formattedFileDate;
-                        document.getElementById('P56_NAME_OF_COURT_DISPLAY').textContent = details.name_of_court || "-";
-                        document.getElementById('P56_TYPE_DISPLAY').textContent = details.type || "-";
-                        document.getElementById('P56_INTERIM_ORDER_DATE_DISPLAY').textContent = details.interim_order_date || "-";
-                        document.getElementById('P56_INTERIM_AMOUNT_DISPLAY').textContent = details.interim_amount || "-"
+                        document.getElementById('P86_ORDER_NO').value = 88;
+                        const formattedFileDate = formatDate(details.created_date, 'dd/MM/yyyy');
+                        document.getElementById('P86_COURT_FILE_DATE_input').value = "03-07-2000";
+                        document.getElementById('P86_NAME_OF_COURT').value = "POCSO";
+                        document.getElementById('P86_TYPE').value = "Final Compensation";
+                        document.getElementById('P86_INTERIM_ORDER_DATE_input').value = "05-07-2000"
+                        document.getElementById('P86_INTERIM_AMOUNT').value = 8000;
                         const formattedFinalOrderDate = formatDate(details.final_order_date, 'dd/MM/yyyy');
-                        document.getElementById('P56_FINAL_ORDER_DATE_DISPLAY').textContent = formattedFinalOrderDate;
-                        document.getElementById('P56_JUDGEMENT_DISPLAY').textContent = details.judgement || "-";
-                        document.getElementById('P56_CHANGE_BANK_ACCOUNT_DISPLAY').textContent = "yes";
+                        document.getElementById('P86_FINAL_ORDER_DATE_input').value = "09-07-2005";
+                        document.getElementById('P86_FINAL_AMOUNT').value = 1000;
+                        document.getElementById('P86_JUDGEMENT').value = "Acquittal";
+                        // document.getElementById('P86_CHANGE_BANK_ACCOUNT').value = "yes";
 
-                        const spanElement = document.getElementById('P56_CHANGE_BANK_ACCOUNT_DISPLAY');
-                        const compensationDetails = document.getElementById('bankDetailsHidden');
+                        if (P86_TYPE === "Interim Compensation") {
+                            $('.interimHide').show();
+                            $('.finalHide').hide();
+                        } else if ((P86_TYPE === "Final Compensation")) {
+                            $('.interimHide').hide();
+                            $('.finalHide').show();
+                        }
 
-                        if (spanElement && compensationDetails) {
-                            const spanValue = spanElement.textContent.trim().toLowerCase();
-                            if (spanValue === "yes") {
-                                compensationDetails.style.display = 'block';
-                            } else {
-                                compensationDetails.style.display = 'none';
+                        // if (details.change_bank_account) {
+                        //     const selectedRadio = document.querySelector(`input[name="P86_CHANGE_BANK_ACCOUNT"][value="${details.change_bank_account}"]`);
+                        //     if (selectedRadio) {
+                        //         selectedRadio.checked = true;
+                        //     }
+                        // }
+                        var radioButonValue = "Yes"
+                        if (radioButonValue) {
+                            const selectedRadio = document.querySelector(`input[name="P86_CHANGE_BANK_ACCOUNT"][value="${radioButonValue}"]`);
+                            if (selectedRadio) {
+                                selectedRadio.checked = true;
+                                if (radioButonValue === "Yes") {
+                                    $('#bankDetailsHide').show();
+                                } else {
+                                    $('#bankDetailsHide').hide();
+                                }
+
                             }
                         }
 
-                        document.getElementById('P56_ACCOUNT_NUMBER_1_DISPLAY').textContent = details.account_number;
-                        document.getElementById('P56_BAK_ACCOUNT_DISPLAY').textContent = details.bak_account;
-                        document.getElementById('P56_BANK_NAME_1_DISPLAY').textContent = details.bank_name;
-                        document.getElementById('P56_BRANCH_NAME_1_DISPLAY').textContent = details.branch_name;
-                        document.getElementById('P56_IFSC_CODE_1_DISPLAY').textContent = details.ifsc_code;
+                        document.getElementById('P86_ACCOUNT_NUMBER_1').value = 78525;
+                        document.getElementById('P86_BAK_ACCOUNT').value = "siva";
+                        document.getElementById('P86_BANK_NAME_1').value = "indian";
+                        document.getElementById('P86_BRANCH_NAME_1').value = "anna salai";
+                        document.getElementById('P86_IFSC_CODE_1').value = 655454;
 
                         const interimLinkContainer = document.getElementById("P56_INTERIM_COPY_LINK_CONTAINER");
                         if (interimLinkContainer) {
@@ -2651,13 +2676,13 @@
                 }
             });
 
+
         }
         handleCourtData();
 
         document.getElementById('P86_TYPE').addEventListener('change', function () {
             debugger
             const selectedValue = this.value;
-            alert(selectedValue)
 
             if (selectedValue === "Interim Compensation") {
                 $('.interimHide').show();
@@ -2736,23 +2761,6 @@
                 showErrorToast('An error occurred during adding case.');
             }
         }
-
-        $('#P86_CHANGE_BANK_ACCOUNT input').on('click', function () {
-            const WillingnessSelectedValue = $('input[name="P86_CHANGE_BANK_ACCOUNT"]:checked').val();
-            const bankDetailsHide = document.getElementById('bankDetailsHide');
-
-            if (WillingnessSelectedValue) {
-                if (WillingnessSelectedValue === "Yes") {
-                    //bankDetailsHide.style.display = 'block';
-                    $('#bankDetailsHide').show();
-                } else {
-                    //bankDetailsHide.style.display = 'none';
-                    $('#bankDetailsHide').hide();
-                }
-            }
-        }
-        )
-
 
         $(document).ready(function () {
             $('.finalHide').hide();
