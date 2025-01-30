@@ -1567,6 +1567,16 @@
   <script src="../assets/vendor/datatables-buttons/js/buttons.colVis.min.js"></script>
 
   <script>
+    $(document).on({
+      ajaxStart: function () {
+        $('#preloader').show();
+        $("body").addClass("user_loading");
+      },
+      ajaxStop: function () {
+        $('#preloader').hide();
+        $("body").removeClass("user_loading");
+      }
+    });
     AOS.init();
 
     // $('.bankDetailsHide').hide();
