@@ -1415,37 +1415,32 @@
                                                                             class="t-Form-label">Interim Copy </label>
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-2">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P86_INTERIM_COPY"
+                                                                        <div class="t-Form-itemWrapper">
+                                                                            <a-file-upload id="P86_INTERIM_COPY"
                                                                                 name="P86_INTERIM_COPY"
                                                                                 upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                download-link="true"
-                                                                                capture="environment"><input type="file"
+                                                                                display-style="NATIVE"
+                                                                                accept=".pdf,.jpg,.jpeg" size="30"
+                                                                                max-file-size="2048">
+                                                                                <input type="file"
                                                                                     id="P86_INTERIM_COPY_input"
-                                                                                    aria-labelledby="P86_INTERIM_COPY_LABEL"
-                                                                                    class="u-vh" />
+                                                                                    name="P86_INTERIM_COPY"
+                                                                                    class="text_field&#x20;apex-item-text"
+                                                                                    value="" maxlength="1000" />
                                                                                 <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-body"><span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span></div>
+                                                                                    class="a-FileDrop a-FileDrop--native">
                                                                                 </div>
                                                                             </a-file-upload>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-2">
+                                                                            <div class="t-Form-itemWrapper"
+                                                                                id="P86_INTERIM_COPY_LINK_CONTAINER">
+                                                                                <!-- Download link will be injected dynamically -->
+                                                                            </div>
+                                                                            <span
+                                                                                id="P86_INTERIM_COPY_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="333363771109036567_ET"></span>
                                                                         </div>
                                                                         <div class="t-Form-itemAssistance">
                                                                             <span
@@ -1613,36 +1608,34 @@
                                                                             class="t-Form-label">Final Copy </label>
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-2">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P86_FINAL_COPY"
+                                                                        <div class="t-Form-itemWrapper">
+                                                                            <a-file-upload" id="P86_FINAL_COPY"
                                                                                 name="P86_FINAL_COPY" upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                download-link="true"><input type="file"
+                                                                                display-style="NATIVE"
+                                                                                accept=".pdf,.jpg,.jpeg" size="30"
+                                                                                max-file-size="2048">
+                                                                                <input type="file"
                                                                                     id="P86_FINAL_COPY_input"
-                                                                                    aria-labelledby="P86_FINAL_COPY_LABEL"
-                                                                                    class="u-vh" />
+                                                                                    name="P86_FINAL_COPY"
+                                                                                    class="text_field&#x20;apex-item-text"
+                                                                                    value="" maxlength="1000" />
                                                                                 <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-body"><span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span></div>
+                                                                                    class="a-FileDrop a-FileDrop--native">
                                                                                 </div>
-                                                                            </a-file-upload>
+                                                                                </a-file-upload>
+                                                                                <div
+                                                                                    class="t-Form-inputContainer col col-2">
+                                                                                    <div class="t-Form-itemWrapper"
+                                                                                        id="P86_FINAL_COPY_LINK_CONTAINER">
+                                                                                        <!-- Download link will be injected dynamically -->
+                                                                                    </div>
+                                                                                    <span
+                                                                                        id="P56_INTERIM_COPY_error_placeholder"
+                                                                                        class="a-Form-error"
+                                                                                        data-template-id="333363771109036567_ET"></span>
+                                                                                </div>
                                                                         </div>
+
                                                                         <div class="t-Form-itemAssistance">
                                                                             <span id="P86_FINAL_COPY_error_placeholder"
                                                                                 class="a-Form-error"
@@ -1974,7 +1967,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
+                                                        <div class="row" id="interimDetails" style="display: none;">
                                                             <div class="col col-12 apex-col-auto col-start col-end">
                                                                 <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
                                                                     id="P86_INTERIM_PAYMENT_STATUS_CONTAINER">
@@ -2001,8 +1994,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="row ">
                                                             <div class="col col-12 apex-col-auto col-start col-end">
                                                                 <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
                                                                     id="P86_INTERIM_PROCEEDINGS_CONTAINER">
@@ -2017,35 +2008,19 @@
                                                                             <a-file-upload id="P86_INTERIM_PROCEEDINGS"
                                                                                 name="P86_INTERIM_PROCEEDINGS"
                                                                                 upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                download-link="true"><input type="file"
+                                                                                display-style="NATIVE"
+                                                                                accept=".pdf,.jpg,.jpeg" size="30"
+                                                                                max-file-size="2048">
+                                                                                <input type="file"
                                                                                     id="P86_INTERIM_PROCEEDINGS_input"
-                                                                                    aria-labelledby="P86_INTERIM_PROCEEDINGS_LABEL"
-                                                                                    class="u-vh" />
+                                                                                    name="P86_INTERIM_PROCEEDINGS"
+                                                                                    value="" maxlength="1000" />
                                                                                 <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-body">
-                                                                                        <span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-action">
-                                                                                        <span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span>
-                                                                                    </div>
+                                                                                    class="a-FileDrop a-FileDrop--native">
                                                                                 </div>
+                                                                                <a id="P86_INTERIM_PROCEEDINGS_file_exist"
+                                                                                    target="_blank"
+                                                                                    class="btn btn-sm btn-link">Download</a>
                                                                             </a-file-upload>
                                                                         </div><span
                                                                             id="P86_INTERIM_PROCEEDINGS_error_placeholder"
@@ -2055,7 +2030,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
+
+                                                        <div class="row" id="finalDetails" style="display: none;">
                                                             <div class="col col-12 apex-col-auto col-start col-end">
                                                                 <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
                                                                     id="P86_FINAL_PAYMENT_STATUS_CONTAINER">
@@ -2080,159 +2056,36 @@
                                                                             class="a-Form-error"
                                                                             data-template-id="333363771109036567_ET"></span>
                                                                     </div>
-                                                                </div><input type="hidden" name="P86_REMARKS_1"
-                                                                    id="P86_REMARKS_1" value=""><input type="hidden"
-                                                                    name="P86_STATUS_2" id="P86_STATUS_2"
-                                                                    value=""><input type="hidden"
-                                                                    data-for="P86_STATUS_2"
-                                                                    value="nuHOu5p3bnVaqIli_oaRq6eJrx3Sws2wFJcNHbqbPqeT1I0q0MwgxcGoWtRA02Jocx2SG4ATMDL-Ff6giKbUrQ"><input
-                                                                    type="hidden" name="P86_CREATED_BY_2"
-                                                                    id="P86_CREATED_BY_2" value=""><input type="hidden"
-                                                                    data-for="P86_CREATED_BY_2"
-                                                                    value="jORLUNVT2PsCODQ-qfQWDfeCAdesjkPJszj9Jj_yX3AxqhaPgc-JwFyIaabaLzewYQE_nnWVyPiapauWxGW57Q"><input
-                                                                    type="hidden" name="P86_CREATED_DATE_2"
-                                                                    id="P86_CREATED_DATE_2" value=""><input
-                                                                    type="hidden" data-for="P86_CREATED_DATE_2"
-                                                                    value="eDo_7hvLl6yTO_jo8SHCZfWMpuU1cw5PWB3Qj6wU5VlQun47zVhNSU7V-Kki7iS-brWUOfHpDnOnCemdZwQQiA"><input
-                                                                    type="hidden" name="P86_UPDATED_BY_2"
-                                                                    id="P86_UPDATED_BY_2" value=""><input type="hidden"
-                                                                    data-for="P86_UPDATED_BY_2"
-                                                                    value="bWkEif-AU_HPa7vTUhMP8IbS9yfSBZ-53MhNqNfNrXM7nFonOplpeFG0D-8Y3bUd7WBA1p7-QCMAqoKEm7zkqw"><input
-                                                                    type="hidden" name="P86_UPDATED_DATE_2"
-                                                                    id="P86_UPDATED_DATE_2" value=""><input
-                                                                    type="hidden" data-for="P86_UPDATED_DATE_2"
-                                                                    value="Qw8oEGTtIRAImU7mErETup14__DwkCwJzlLH8sF1DKRjYBVkvVXXnkNze9M29s3GqNpbgrZ0EaHGw8qY07jlEA"><input
-                                                                    type="hidden" name="P86_PROCEED_ATTACH_MIMETYPE"
-                                                                    id="P86_PROCEED_ATTACH_MIMETYPE" value=""><input
-                                                                    type="hidden" data-for="P86_PROCEED_ATTACH_MIMETYPE"
-                                                                    value="NDne432K2sfHnlf3wSY8qXCvmnWCP_k_Bsx0ZJipfdfojpkH-goTSNQEoWKLY4svqh-QjrT56xBbPEEJcpXE0Q"><input
-                                                                    type="hidden" name="P86_PROCEED_ATTACH_FILENAME"
-                                                                    id="P86_PROCEED_ATTACH_FILENAME" value=""><input
-                                                                    type="hidden" data-for="P86_PROCEED_ATTACH_FILENAME"
-                                                                    value="Lkfl9EK3uyfQhsgV6d2CErfLL3Sv67TM75qWpvxZNlkw6uULzATnvBX8-1DORVtQIGQGZnfk3IBeINKshZLAxg"><input
-                                                                    type="hidden" name="P86_PROCEED_ATTACH_CHARSET"
-                                                                    id="P86_PROCEED_ATTACH_CHARSET" value=""><input
-                                                                    type="hidden" data-for="P86_PROCEED_ATTACH_CHARSET"
-                                                                    value="vuTTxP3sUkClnwZJphurImdISzFS9SG1KCQaC6t_gzKBPNOhC-cbjKeja2UBn9fb1rgtmE_X2il2sUg6UNFPHQ"><input
-                                                                    type="hidden" name="P86_PROCEED_ATTACH_LAST_UPDATE"
-                                                                    id="P86_PROCEED_ATTACH_LAST_UPDATE" value=""><input
-                                                                    type="hidden"
-                                                                    data-for="P86_PROCEED_ATTACH_LAST_UPDATE"
-                                                                    value="ixUJb6mzgoE2NX8CnVgFuARnS73AKWSE-dAgcQ7hzOTlouIPCtnF_rhvUJ6w89WvTyWcvwBuOell0aqoZqkzsg"><input
-                                                                    type="hidden" name="P86_SENIORITY_LEVEL"
-                                                                    id="P86_SENIORITY_LEVEL" value=""><input
-                                                                    type="hidden" data-for="P86_SENIORITY_LEVEL"
-                                                                    value="d5qAXZescdW1TutWZS-h0xXw_u7fupPLZOGs4sN4LgQqy9s_w4hxAa0Ek7eqIEHpg3AJY4jwm-RPGmbCUg7DfA"><input
-                                                                    type="hidden" name="P86_FIR_NO_2" id="P86_FIR_NO_2"
-                                                                    value=""><input type="hidden"
-                                                                    data-for="P86_FIR_NO_2"
-                                                                    value="knLtk-nVb0GabaF5u7CEmIRz6VuN64nj0YN0SwDa_rUrTJaCMEH9U0XwFWpA_obIIao57F9SIMRJWU3gSSM2oQ"><input
-                                                                    type="hidden" name="P86_COURT_FILE_NO_1"
-                                                                    id="P86_COURT_FILE_NO_1" value=""><input
-                                                                    type="hidden" data-for="P86_COURT_FILE_NO_1"
-                                                                    value="UBJF_JtaSTwEg2F4PhmX-ZUkVYevX0ghPTkS39P-YYZEyXXGYx5ITfB34TTOTCTyAxVQeOj8XVpOAhyXex-3pw"><input
-                                                                    type="hidden" name="P86_NEFT_ATTACH_MIMETYPE"
-                                                                    id="P86_NEFT_ATTACH_MIMETYPE" value=""><input
-                                                                    type="hidden" data-for="P86_NEFT_ATTACH_MIMETYPE"
-                                                                    value="Z5Hap_VGzytiT1nxoisQ6t1IjMeSY9ho5359Fb078fhXf42SqHEJFWBvxovHpQqsety-a7xoaphWfJpa0bjN7w"><input
-                                                                    type="hidden" name="P86_NEFT_ATTACH_FILENAME"
-                                                                    id="P86_NEFT_ATTACH_FILENAME" value=""><input
-                                                                    type="hidden" data-for="P86_NEFT_ATTACH_FILENAME"
-                                                                    value="8W46QNQ_Q8uvZ7cNslI_ARTNNMPa3h2FJzd_Isr59YVgLMmNOlF4x9kl5_yyUS9cAL_BQtAb5aJCJl8LbdhoTw"><input
-                                                                    type="hidden" name="P86_NEFT_ATTACH_CHARSET"
-                                                                    id="P86_NEFT_ATTACH_CHARSET" value=""><input
-                                                                    type="hidden" data-for="P86_NEFT_ATTACH_CHARSET"
-                                                                    value="xR14W3SOIabaWJYCOu1KXFLX5Q0UDhQHT8UuSwj6GVpb0v_0JU0EZ3bUHnnYBfXhtwCmiIui3hZSgga8_oXZOw"><input
-                                                                    type="hidden" name="P86_NEFT_ATTACH_LAST_UPDATE"
-                                                                    id="P86_NEFT_ATTACH_LAST_UPDATE" value=""><input
-                                                                    type="hidden" data-for="P86_NEFT_ATTACH_LAST_UPDATE"
-                                                                    value="ovXqfi9DFjDu8QVgWXHZ_E0-fOs-Jc2ilOsQuawU8dz50hYGovPeraiG2RW_DY4Kp7LhpPB3jKIpnz-KTXCQyw"><input
-                                                                    type="hidden" name="P86_CHANGE_BANK_ACCOUNT_1"
-                                                                    id="P86_CHANGE_BANK_ACCOUNT_1" value=""><input
-                                                                    type="hidden" data-for="P86_CHANGE_BANK_ACCOUNT_1"
-                                                                    value="juTZQpFPRk7yHze2DFOSfQUS84xbsSy12Grm7vkBkI2b2PK5vGifTOaRfySObLMsWedwXRZhL3XDEpoKa52vUg"><input
-                                                                    type="hidden" name="P86_BAK_ACCOUNT_1"
-                                                                    id="P86_BAK_ACCOUNT_1" value=""><input type="hidden"
-                                                                    data-for="P86_BAK_ACCOUNT_1"
-                                                                    value="qWSVcmKsvId22zdbLtRXX5F-Qx8VjyzWgiMMKtzRzvr9N071oeCaZRqMpHK2AdVPT0fJA_0KpLNK9mSHl-NzwA"><input
-                                                                    type="hidden" name="P86_BANK_NAME_2"
-                                                                    id="P86_BANK_NAME_2" value=""><input type="hidden"
-                                                                    data-for="P86_BANK_NAME_2"
-                                                                    value="p5Ww6qtlPz2j6sirNayiVW-DUBj4iKPAzsfBBVijHCH3aIYsCDXSK5uL5pDF4DFOmzJhpUFCPCFnExZuIF7v3A"><input
-                                                                    type="hidden" name="P86_BRANCH_NAME_2"
-                                                                    id="P86_BRANCH_NAME_2" value=""><input type="hidden"
-                                                                    data-for="P86_BRANCH_NAME_2"
-                                                                    value="Ga6GuWBOWrTMvXlHpNOcgB195Cp3paU2pj3qaWcTmBLnhR3t4218VzuWCDv-5up7jOuEEAqjAaqEdrXX7hsUZQ"><input
-                                                                    type="hidden" name="P86_ACCOUNT_NUMBER_2"
-                                                                    id="P86_ACCOUNT_NUMBER_2" value=""><input
-                                                                    type="hidden" data-for="P86_ACCOUNT_NUMBER_2"
-                                                                    value="da4oE5CASGFOf0en47Ui90k_Bf228KLnARgyie-whdTeC-apuQpgVV5O27Fgid2L6NPBIOJBg9x8irgQzxL7xw"><input
-                                                                    type="hidden" name="P86_IFSC_CODE_2"
-                                                                    id="P86_IFSC_CODE_2" value=""><input type="hidden"
-                                                                    data-for="P86_IFSC_CODE_2"
-                                                                    value="BR1HpfqnDrlX8ld1Z6BULeBtMiSN--XTU7yJzaVR8OHdBZUiUL_1QcFCI-d1jFCzlC6il37ZoFxHH2fEb4OgKA"><input
-                                                                    type="hidden" name="P86_REMARKS_BANK_1"
-                                                                    id="P86_REMARKS_BANK_1" value=""><input
-                                                                    type="hidden" data-for="P86_REMARKS_BANK_1"
-                                                                    value="MJvSYzQujbNtEtYYOmkmPIMNhaf89HNaIN6n9183Qn-tFlynao5Cwkni3d-U9tjoJQuexbSDJvQmqMV8Qg5Xdw"><input
-                                                                    type="hidden" name="P86_ACC_HOLDER_NAME"
-                                                                    id="P86_ACC_HOLDER_NAME" value=""><input
-                                                                    type="hidden" data-for="P86_ACC_HOLDER_NAME"
-                                                                    value="SwyBpCq7wlADUKexx9ncEICwycTnfSLrieTzpdi9b14NkyurMRLDsSrlNlLNJAqKQO5FWfue6NVHkF6mZV4IqQ"><input
-                                                                    type="hidden" name="P86_PROCEED_INTERIM"
-                                                                    id="P86_PROCEED_INTERIM" value=""><input
-                                                                    type="hidden" data-for="P86_PROCEED_INTERIM"
-                                                                    value="LmK-8twdhNMVRUw-DlCM9rc6riWKugbjB9kZnJ3NzDua0ycwYajfLhOLdziXll0a9S-NXtSXKy7FUhlCDcSNtg"><input
-                                                                    type="hidden" name="P86_PROCEED_FINAL"
-                                                                    id="P86_PROCEED_FINAL" value=""><input type="hidden"
-                                                                    data-for="P86_PROCEED_FINAL"
-                                                                    value="NHsWl_GpOjK79g7wB6AXHw1WGng_hPXKvQhBDohWyG4OC-rALQhAaWK_ux5zyU1wetj7yKdfZaHSj2YtNILYSA">
+                                                                </div>
+
                                                             </div>
-                                                        </div>
-                                                        <div class="row ">
                                                             <div class="col col-12 apex-col-auto col-start col-end">
                                                                 <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
                                                                     id="P86_FINAL_PROCEEDINGS_CONTAINER">
                                                                     <div class="t-Form-labelContainer col col-2">
                                                                         <label for="P86_FINAL_PROCEEDINGS"
                                                                             id="P86_FINAL_PROCEEDINGS_LABEL"
-                                                                            class="t-Form-label">Final
-                                                                            Proceedings</label>
+                                                                            class="t-Form-label">
+                                                                            Final Proceedings</label>
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-10">
                                                                         <div class="t-Form-itemWrapper">
                                                                             <a-file-upload id="P86_FINAL_PROCEEDINGS"
                                                                                 name="P86_FINAL_PROCEEDINGS"
                                                                                 upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                download-link="true"><input type="file"
+                                                                                display-style="NATIVE"
+                                                                                accept=".pdf,.jpg,.jpeg" size="30"
+                                                                                max-file-size="2048">
+                                                                                <input type="file"
                                                                                     id="P86_FINAL_PROCEEDINGS_input"
-                                                                                    aria-labelledby="P86_FINAL_PROCEEDINGS_LABEL"
-                                                                                    class="u-vh" />
+                                                                                    name="P86_FINAL_PROCEEDINGS"
+                                                                                    value="" maxlength="1000" />
                                                                                 <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-body">
-                                                                                        <span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-action">
-                                                                                        <span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span>
-                                                                                    </div>
+                                                                                    class="a-FileDrop a-FileDrop--native">
                                                                                 </div>
+                                                                                <a id="P86_FINAL_PROCEEDINGS_file_exist"
+                                                                                    target="_blank"
+                                                                                    class="btn btn-sm btn-link">Download</a>
                                                                             </a-file-upload>
                                                                         </div><span
                                                                             id="P86_FINAL_PROCEEDINGS_error_placeholder"
@@ -2241,36 +2094,37 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <table role="presentation" cellspacing="0" cellpadding="0"
-                                                        border="0" width="100%">
-                                                        <tr>
-                                                            <td align="left"><button onclick="handleCancelButton()"
-                                                                    class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
-                                                                    type="button" id="B15995539065736102"><span
-                                                                        class="t-Button-label">Cancel</span></button>
-                                                            </td>
-                                                            <td align="right">
-                                                                <button class="t-Button
-                                                                    t-Button--large&#x20;t-Button--success"
-                                                                    type="button" id="B15995990869736103"><span
-                                                                        class="t-Button-label">Submit</span></button>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
 
-                                                </div>
-                                                <div class="t-Region-buttons t-Region-buttons--bottom">
-                                                    <div class="t-Region-buttons-left"></div>
-                                                    <div class="t-Region-buttons-right"></div>
+                                                        </div>
+                                                        <table role="presentation" cellspacing="0" cellpadding="0"
+                                                            border="0" width="100%">
+                                                            <tr>
+                                                                <td align="left"><button onclick="handleCancelButton()"
+                                                                        class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
+                                                                        type="button" id="B15995539065736102"><span
+                                                                            class="t-Button-label">Cancel</span></button>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <button class="t-Button
+                                                                    t-Button--large&#x20;t-Button--success"
+                                                                        onclick="registerDisbursalEntry()" type="button"
+                                                                        id="B15995990869736103"><span
+                                                                            class="t-Button-label">Submit</span></button>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                    </div>
+                                                    <div class="t-Region-buttons t-Region-buttons--bottom">
+                                                        <div class="t-Region-buttons-left"></div>
+                                                        <div class="t-Region-buttons-right"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </main>
                     <footer class="t-Footer" id="t_Footer" role="contentinfo">
                         <div class="t-Footer-body">
@@ -2615,10 +2469,10 @@
                         document.getElementById('P86_JUDGEMENT').value = "Acquittal";
                         // document.getElementById('P86_CHANGE_BANK_ACCOUNT').value = "yes";
 
-                        if (P86_TYPE === "Interim Compensation") {
+                        if (document.getElementById('P86_TYPE').value === "Interim Compensation") {
                             $('.interimHide').show();
                             $('.finalHide').hide();
-                        } else if ((P86_TYPE === "Final Compensation")) {
+                        } else if ((document.getElementById('P86_TYPE').value === "Final Compensation")) {
                             $('.interimHide').hide();
                             $('.finalHide').show();
                         }
@@ -2649,7 +2503,7 @@
                         document.getElementById('P86_BRANCH_NAME_1').value = "anna salai";
                         document.getElementById('P86_IFSC_CODE_1').value = 655454;
 
-                        const interimLinkContainer = document.getElementById("P56_INTERIM_COPY_LINK_CONTAINER");
+                        const interimLinkContainer = document.getElementById("P86_INTERIM_COPY_LINK_CONTAINER");
                         if (interimLinkContainer) {
                             const downloadLinkHTML = createDownloadLink(
                                 details.interim,
@@ -2659,7 +2513,7 @@
                             interimLinkContainer.innerHTML = downloadLinkHTML;
                         }
 
-                        const finalLinkContainer = document.getElementById("P56_FINAL_COPY_LINK_CONTAINER");
+                        const finalLinkContainer = document.getElementById("P86_FINAL_COPY_LINK_CONTAINER");
                         if (finalLinkContainer) {
                             const finalDownloadLinkHTML = createDownloadLink(
                                 details.final,
@@ -2690,6 +2544,19 @@
             } else if ((selectedValue === "Final Compensation")) {
                 $('.interimHide').hide();
                 $('.finalHide').show();
+            }
+        });
+
+        document.getElementById('P86_NEW_STATUS').addEventListener('change', function () {
+
+            const selectedValue = this.value;
+            alert(selectedValue)
+            if (selectedValue === "Interim Order Status") {
+                $('#interimDetails').show();
+                $('#finalDetails').hide();
+            } else if ((selectedValue === "Final Order Status")) {
+                $('#interimDetails').hide();
+                $('#finalDetails').show();
             }
         });
 
@@ -2761,6 +2628,125 @@
                 showErrorToast('An error occurred during adding case.');
             }
         }
+
+        function handleDisbursalData() {
+            debugger
+            const requestDisbursalData = {
+                id: 137
+            };
+
+            $.ajax({
+                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewDisbersalStatusById`,
+                method: 'POST',
+                headers: {
+                    'X-App-Key': 'pocso',
+                    'X-App-Name': 'pocso',
+                },
+                contentType: "application/json",
+                data: JSON.stringify(requestDisbursalData),
+                success: function (response) {
+                    if (response.success === 1) {
+                        const details = response.data[0];
+
+                        const interimField = document.getElementById("P86_NEW_STATUS");
+                        const interimPaymentField = document.getElementById("P86_INTERIM_PAYMENT_STATUS");
+                        const defaultValue = "Interim Order Status";
+                        const defaultPaymentValue = "Completed"
+
+                        if (defaultPaymentValue) {
+                            interimPaymentField.value = defaultPaymentValue;
+                        }
+
+                        if (defaultValue) {
+                            interimField.value = defaultValue;
+                            // Automatically display sections based on the default value
+                            if (defaultValue === "Interim Order Status") {
+                                $('#interimDetails').show();
+                                $('#finalDetails').hide();
+                            } else if (defaultValue === "Final Order Status") {
+                                $('#interimDetails').hide();
+                                $('#finalDetails').show();
+                            }
+                        }
+
+                        const fileContent = details.fileContent;
+                        const mimeType = 'application/pdf';
+                        const filename = 'example-file.pdf';
+                        const fileLinkContainer = document.getElementById('P86_INTERIM_PROCEEDINGS_file_exist');
+                        const downloadLinkHTML = createDownloadLink(fileContent, mimeType, filename);
+                        fileLinkContainer.innerHTML = downloadLinkHTML;
+
+                    }
+                },
+                error: function (error) {
+                    console.error("Error fetching disbursal data:", error);
+                }
+            });
+        }
+
+        handleDisbursalData();
+
+        async function registerDisbursalEntry() {
+            debugger
+            try {
+                const interimField = document.getElementById("P86_NEW_STATUS").value;
+                const interimPaymentField = document.getElementById("P86_INTERIM_PAYMENT_STATUS").value;
+                const finalPaymentField = document.getElementById("P86_FINAL_PAYMENT_STATUS").value;
+                let finalInputFile = null;
+                let interimInputFile = null;
+
+                // if ($('#P86_INTERIM_PROCEEDINGS_input')) {
+                //   interimInputFile = await processFile('#P53_INTERIM_input');
+                // }
+
+                // Automatically display sections based on the default value
+                if (interimField === "Interim Order Status") {
+                    if ($('#P86_INTERIM_PROCEEDINGS_input')) {
+                        interimInputFile = await processFile('#P86_INTERIM_PROCEEDINGS_input');
+                    }
+                } else if (interimField === "Final Order Status") {
+                    if ($('#P86_INTERIM_PROCEEDINGS_input')) {
+                        finalInputFile = await processFile('#P86_FINAL_PROCEEDINGS_input');
+                    }
+                }
+                const selectedFile = interimField === "Interim Order Status" ? interimInputFile : finalInputFile;
+
+                var disbursalSubmitPayload = {
+                    "COURT_ID_1": "POCSO/JULY     /2024/0363",
+                    "NEW_STATUS": interimField,
+                    "INTERIM_PAYMENT_STATUS": interimPaymentField,
+                    "FINAL_PAYMENT_STATUS": finalPaymentField,
+                    "INTERIM_PROCEEDINGS": selectedFile?.fileBase64,
+                    "PROCEED_INTERIM": "Some interim proceed details",
+                    "FILENAME": selectedFile?.filename || null,
+                    "MIME_TYPE": selectedFile?.mimetype || null,
+                    "FINAL_PROCEEDINGS": selectedFile?.fileBase64,
+                    "PROCEED_FINAL": "Final details"
+                }
+
+                return
+                $.ajax({
+                    url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimAttactFileMinetype',
+                    type: 'POST',
+                    headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
+                    contentType: 'application/json',
+                    data: JSON.stringify(disbursalSubmitPayload),
+                    success: function () {
+                        showSuccessToast("Final Upload updated successfully");
+                    },
+                    error: function (error) {
+                        console.error('Error:', error);
+                        showErrorToast("An error occurred while updating File Upload.");
+                    }
+                });
+
+
+            } catch (error) {
+                console.error('Error:', error);
+                showErrorToast("An unexpected error occurred.");
+            }
+        }
+
 
         $(document).ready(function () {
             $('.finalHide').hide();
