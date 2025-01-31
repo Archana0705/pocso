@@ -1378,7 +1378,7 @@
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-2">
                                                                         <div class="t-Form-itemWrapper"><input
-                                                                                type="text" id="P86_INTERIM_AMOUNT"
+                                                                                type="number" id="P86_INTERIM_AMOUNT"
                                                                                 name="P86_INTERIM_AMOUNT"
                                                                                 class="number_field&#x20;apex-item-text&#x20;apex-item-number"
                                                                                 value="" size="30" inputmode="decimal"
@@ -1571,7 +1571,7 @@
                                                                     </div>
                                                                     <div class="t-Form-inputContainer col col-2">
                                                                         <div class="t-Form-itemWrapper"><input
-                                                                                type="text" id="P86_FINAL_AMOUNT"
+                                                                                type="number" id="P86_FINAL_AMOUNT"
                                                                                 name="P86_FINAL_AMOUNT"
                                                                                 class="number_field&#x20;apex-item-text&#x20;apex-item-number"
                                                                                 value="" size="30" inputmode="decimal"
@@ -1740,7 +1740,7 @@
                                                                         </div>
                                                                         <div class="t-Form-inputContainer col col-4">
                                                                             <div class="t-Form-itemWrapper"><input
-                                                                                    type="text"
+                                                                                    type="number"
                                                                                     id="P86_ACCOUNT_NUMBER_1"
                                                                                     name="P86_ACCOUNT_NUMBER_1"
                                                                                     class="text_field&#x20;apex-item-text"
@@ -2203,28 +2203,61 @@
             });
             toast.show();
         }
+        // const createDownloadLink = (content, mimeType, filename) => {
+        //     if (!content) return "N/A";
+
+        //     try {
+        //         const base64Pattern = /^[A-Za-z0-9+/=]+$/;
+        //         if (base64Pattern.test(content.replace(/\s/g, ""))) {
+        //             // Decode Base64 content and create a blob
+        //             const blob = new Blob(
+        //                 [new Uint8Array(atob(content).split("").map(c => c.charCodeAt(0)))],
+        //                 { type: mimeType }
+        //             );
+        //             const url = URL.createObjectURL(blob);
+        //             return `<a href="${url}" download="${filename}" class="btn btn-sm btn-link">Download</a>`;
+        //         }
+
+        //         // If the content is not Base64, assume it's a URL
+        //         return `<a href="${content}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
+        //     } catch (error) {
+        //         console.error("Error creating download link:", error);
+        //         return "Invalid content";
+        //     }
+        // };
+
         const createDownloadLink = (content, mimeType, filename) => {
             if (!content) return "N/A";
 
             try {
-                const base64Pattern = /^[A-Za-z0-9+/=]+$/;
-                if (base64Pattern.test(content.replace(/\s/g, ""))) {
+                // Check if the content is a valid Base64 string
+                const isBase64 = (str) => {
+                    try {
+                        return btoa(atob(str)) === str; // Double check encoding & decoding works
+                    } catch (err) {
+                        return false; // If decoding fails, it's not Base64
+                    }
+                };
+
+                if (isBase64(content)) {
                     // Decode Base64 content and create a blob
-                    const blob = new Blob(
-                        [new Uint8Array(atob(content).split("").map(c => c.charCodeAt(0)))],
-                        { type: mimeType }
-                    );
+                    const byteCharacters = atob(content);
+                    const byteNumbers = new Array(byteCharacters.length).fill(0).map((_, i) => byteCharacters.charCodeAt(i));
+                    const byteArray = new Uint8Array(byteNumbers);
+                    const blob = new Blob([byteArray], { type: mimeType });
                     const url = URL.createObjectURL(blob);
+
                     return `<a href="${url}" download="${filename}" class="btn btn-sm btn-link">Download</a>`;
                 }
 
-                // If the content is not Base64, assume it's a URL
+                // If it's not Base64, assume it's a URL
                 return `<a href="${content}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
             } catch (error) {
                 console.error("Error creating download link:", error);
                 return "Invalid content";
             }
         };
+
 
         function checkFile(selector) {
             var fileInput = $(selector).find('input[type="file"]');
@@ -2276,7 +2309,7 @@
             });
         }
 
-        function formatDate(rawDate, format = 'dd/MM/yyyy') {
+        function formatDate(rawDate, format = 'dd-MM-yyyy') {
             if (!rawDate) {
                 return "";
             }
@@ -2291,9 +2324,9 @@
                 const date = dateTimeParts[0].split('/');
                 const time = dateTimeParts[1].split(':');
 
-                if (format === 'dd/MM/yyyy') {
+                if (format === 'dd-MM-yyyy') {
                     return `${date[0]}/${date[1]}/${date[2]}`;
-                } else if (format === 'dd/MM/yyyy hh:mm:ss') {
+                } else if (format === 'dd-MM-yyyy hh:mm:ss') {
                     return `${date[0]}/${date[1]}/${date[2]} ${time[0]}:${time[1]}:${time[2]}`;
                 }
             }
@@ -2329,7 +2362,7 @@
             };
 
             $.ajax({
-                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewPoliceEntryFormById`,
+                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/dashboard2/viewPoliceEntryFormById`,
                 method: 'POST',
                 headers: {
                     'X-App-Key': 'pocso',
@@ -2339,7 +2372,7 @@
                 data: JSON.stringify(requestData),
                 success: function (response) {
                     if (response?.success === 1 && response?.data) {
-                        const details = response.data;
+                        const details = response.data[0];
 
                         const setTextContent = (id, value) => {
                             const element = document.getElementById(id);
@@ -2351,8 +2384,16 @@
                         };
 
                         // Example usage:
-                        setInputValue("P86_CHARGE_SHEET_DATE", details?.date_requisition_medical_examination);
-                        setInputValue("P86_DATE_OF_MEDICAL_EXAMINATION_VICTIM", details?.date_requisition_medical_examination);
+                        const formatDateForInput = (dateStr) => {
+                            if (!dateStr) return "";
+                            const date = new Date(dateStr);
+                            if (isNaN(date)) return "";
+                            return date.toISOString().split("T")[0];
+                        };
+
+                        setInputValue("P86_CHARGE_SHEET_DATE", formatDateForInput(details?.date_requisition_medical_examination));
+                        setInputValue("P86_DATE_OF_MEDICAL_EXAMINATION_VICTIM", formatDateForInput(details?.date_of_medical_examination_victim));
+
                         setTextContent("P86_DISTRICT_NAME_DISPLAY", details?.district_name);
                         setTextContent("P86_WILLINGNESS_COMPENSATION_DISPLAY", "yes");
                         setTextContent("P86_COMPLAINT_NAME_DISPLAY", details?.complaint_data);
@@ -2360,7 +2401,7 @@
                         setTextContent("P86_POL_STAT_DISPLAY", details?.pol_stat);
                         setTextContent("P86_COMPLAINT_MADE_DISPLAY", details?.complaint_made);
                         setTextContent("P86_FIR_NO_DISPLAY", details?.fir_no);
-                        const formattedDate = details?.date_of_fir ? formatDate(details.date_of_fir, 'dd/MM/yyyy hh:mm:ss') : "-";
+                        const formattedDate = details?.date_of_fir ? formatDate(details.date_of_fir, 'dd-MM-yyyy hh:mm:ss') : "-";
                         setTextContent("P86_DATE_OF_FIR_DISPLAY", formattedDate);
                         setTextContent("P86_CHILD_GENDER_DISPLAY", details?.child_gender);
                         setTextContent("P86_CHILD_AGE_DISPLAY", details?.child_age);
@@ -2499,7 +2540,7 @@
 
         function handleCourtData() {
             const requestCourtData = {
-                court_id: "POCSO/JULY     /2024/0332"
+                court_id: "POCSO/PO/2025/0140"
             };
             function formatDate(rawDate, format = 'dd/MM/yyyy') {
                 if (!rawDate) {
@@ -2528,7 +2569,7 @@
             // const encodedDetails = urlParams.get('details');
 
             let details = '';
-            let courtid = "POCSO/JULY     /2024/0332";
+            let courtid = "POCSO/PO/2025/0140";
             // const decodedDetails = atob(encodedDetails); // Base64 decode
             // const eventIdObject = JSON.parse(decodedDetails);
             // eventid = eventIdObject;
@@ -2539,7 +2580,7 @@
             // eventCom = decodedEventId
             // Fetch data from the API
             $.ajax({
-                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewCourtEntryFormById`,
+                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/dashboard2/viewCourtEntryFormById`,
                 method: 'POST',
                 headers: {
                     'X-App-Key': 'pocso',
@@ -2550,18 +2591,18 @@
                 success: function (response) {
                     if (response.success == 1) {
                         details = response.data[0];
-                        document.getElementById('P86_ORDER_NO').value = 88;
+                        document.getElementById('P86_ORDER_NO').value = details?.order_no;
                         const formattedFileDate = formatDate(details.created_date, 'dd/MM/yyyy');
-                        document.getElementById('P86_COURT_FILE_DATE').value = "03/07/2000";
-                        document.getElementById('P86_NAME_OF_COURT').value = "POCSO";
-                        document.getElementById('P86_TYPE').value = "Final Compensation";
-                        document.getElementById('P86_INTERIM_ORDER_DATE').value = "05/07/2000"
-                        document.getElementById('P86_INTERIM_AMOUNT').value = 8000;
+                        document.getElementById('P86_COURT_FILE_DATE').value = details?.court_file_date;
+                        document.getElementById('P86_NAME_OF_COURT').value = details?.name_of_court;
+                        document.getElementById('P86_TYPE').value = details?.type;
+                        document.getElementById('P86_INTERIM_ORDER_DATE').value = details?.interim_order_date;
+                        document.getElementById('P86_INTERIM_AMOUNT').value = details?.interim_amount;
                         const formattedFinalOrderDate = formatDate(details.final_order_date, 'dd/MM/yyyy');
-                        document.getElementById('P86_FINAL_ORDER_DATE_input').value = "09/07/2005";
-                        document.getElementById('P86_FINAL_AMOUNT').value = 1000;
-                        document.getElementById('P86_JUDGEMENT').value = "Acquittal";
-                        // document.getElementById('P86_CHANGE_BANK_ACCOUNT').value = "yes";
+                        document.getElementById('P86_FINAL_ORDER_DATE_input').value = formattedFinalOrderDate;
+                        document.getElementById('P86_FINAL_AMOUNT').value = details?.final_amount;
+                        document.getElementById('P86_JUDGEMENT').value = details?.judgement;
+                        document.getElementById('P86_CHANGE_BANK_ACCOUNT').value = details?.change_bank_account;
 
                         if (document.getElementById('P86_TYPE').value === "Interim Compensation") {
                             $('.interimHide').show();
@@ -2577,7 +2618,8 @@
                         //         selectedRadio.checked = true;
                         //     }
                         // }
-                        var radioButonValue = "Yes"
+                        var radioButonValue = document.getElementById('P86_CHANGE_BANK_ACCOUNT').value;
+                        console.log(radioButonValue + "radioButonValue")
                         if (radioButonValue) {
                             const selectedRadio = document.querySelector(`input[name="P86_CHANGE_BANK_ACCOUNT"][value="${radioButonValue}"]`);
                             if (selectedRadio) {
@@ -2754,7 +2796,7 @@
             };
 
             $.ajax({
-                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/viewDisbersalStatusById`,
+                url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/dashboard2/viewDisbersalStatusById`,
                 method: 'POST',
                 headers: {
                     'X-App-Key': 'pocso',
