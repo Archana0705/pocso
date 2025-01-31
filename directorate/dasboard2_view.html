@@ -2808,22 +2808,17 @@
                     if (response.success === 1) {
                         const details = response.data[0];
 
-                        const interimField = document.getElementById("P86_NEW_STATUS");
-                        const interimPaymentField = document.getElementById("P86_INTERIM_PAYMENT_STATUS");
-                        const defaultValue = "Interim Order Status";
-                        const defaultPaymentValue = "Completed"
+                        document.getElementById("P86_NEW_STATUS").value = details?.new_status;
+                        document.getElementById("P86_INTERIM_PAYMENT_STATUS").value = details?.interim_payment_status;
+                        document.getElementById("P86_FINAL_PAYMENT_STATUS").value = details?.final_payment_status;
 
-                        if (defaultPaymentValue) {
-                            interimPaymentField.value = defaultPaymentValue;
-                        }
+                        var updateOrder = document.getElementById("P86_NEW_STATUS").value;
 
-                        if (defaultValue) {
-                            interimField.value = defaultValue;
-                            // Automatically display sections based on the default value
-                            if (defaultValue === "Interim Order Status") {
+                        if (updateOrder) {
+                            if (updateOrder === "Interim Order Status") {
                                 $('#interimDetails').show();
                                 $('#finalDetails').hide();
-                            } else if (defaultValue === "Final Order Status") {
+                            } else if (updateOrder === "Final Order Status") {
                                 $('#interimDetails').hide();
                                 $('#finalDetails').show();
                             }
