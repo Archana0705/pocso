@@ -2844,6 +2844,7 @@
         async function registerDisbursalEntry() {
             debugger
             try {
+                alert("disbursal")
                 const interimField = document.getElementById("P86_NEW_STATUS").value;
                 const interimPaymentField = document.getElementById("P86_INTERIM_PAYMENT_STATUS").value;
                 const finalPaymentField = document.getElementById("P86_FINAL_PAYMENT_STATUS").value;
@@ -2867,21 +2868,23 @@
                 const selectedFile = interimField === "Interim Order Status" ? interimInputFile : finalInputFile;
 
                 var disbursalSubmitPayload = {
+                    "ID": 138,
                     "COURT_ID_1": "POCSO/JULY     /2024/0363",
                     "NEW_STATUS": interimField,
                     "INTERIM_PAYMENT_STATUS": interimPaymentField,
                     "FINAL_PAYMENT_STATUS": finalPaymentField,
                     "INTERIM_PROCEEDINGS": selectedFile?.fileBase64,
                     "PROCEED_INTERIM": "Some interim proceed details",
-                    "FILENAME": selectedFile?.filename || null,
-                    "MIME_TYPE": selectedFile?.mimetype || null,
+                    "PROCEED_ATTACH_FILENAME": selectedFile?.filename || null,
+                    "PROCEED_ATTACH_MIMETYPE": selectedFile?.mimetype || null,
                     "FINAL_PROCEEDINGS": selectedFile?.fileBase64,
-                    "PROCEED_FINAL": "Final details"
+                    "PROCEED_FINAL": "Final details",
+                    "NEFT_ATTACH_FILENAME": selectedFile?.filename || null,
+                    "NEFT_ATTACH_MIMETYPE": selectedFile?.mimetype || null,
                 }
 
-                return
                 $.ajax({
-                    url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimAttactFileMinetype',
+                    url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/dashboard2/update/updateRecordSubmit3',
                     type: 'POST',
                     headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
                     contentType: 'application/json',
