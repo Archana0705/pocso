@@ -542,10 +542,11 @@
         //       fixedHeader: true
         // });
         $('#preloader').hide();
+        const userId = localStorage.getItem("role_id");
         const apiUrl = "https://tngis.tnega.org/lcap_api/pocso/api/v1/StateAdminLogin/view/viewDashboard";
         const tableBody = $("#state_dashboard tbody");
         const viewDashboardPayload = {
-            "EMPLOYEE_ID": "12345",
+            "EMPLOYEE_ID": userId,
             "DISTRICT_NAME": "Sample District",
             "DATE_OF_FIR_FROM": "2023-01-01",
             "DATE_OF_FIR_TO": "2023-12-31",
