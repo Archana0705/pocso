@@ -179,7 +179,7 @@
                         </div>
                       </div>
                       <div class="t-Login-buttons" data-aos="flip-up" data-aos-duration="1200">
-                        <button onclick="document.getElementById('login').click()"
+                        <button onclick="handleSignUp()"
                           class="logbtn t-Login-buttons t-Button">Sign in</button>
                         <a id="open-modal-btn" class="forgot-pwd-btn">Forgot password?</a>
                         <button class="t-Button t-Button--hot hide-btns" type="button" id="login"><span
@@ -402,6 +402,7 @@
       $(".close-button").on("click", function () {
         $("#modal").dialog("close");
       });
+      
     });
   </script>
 
@@ -455,6 +456,52 @@
   </script>
   <script>
     AOS.init();
+    function handleSignUp () {
+      let usrName = $('#P9999_USERNAME').val();
+      let pasWrd = $('#P9999_PASSWORD').val();
+      let captchaVal = $('#P9999_CAPTCHA').val();
+      if (!usrName || !pasWrd || !captchaVal) {
+        alert('Please fill all the Required fields');
+      } else {
+        let loginPayload = 
+        {
+          "username" : usrName,
+          "password" : pasWrd
+        }
+        $.ajax({
+          url: "https://tngis.tnega.org/lcap_api/pocso/api/v1/login",
+          method: "POST",
+          headers: {
+            "X-APP-KEY": "pocso",
+            "X-APP-NAME": "pocso"
+          },
+          contentType: "application/json",
+          data: JSON.stringify(loginPayload),
+          success: function (response) {
+            localStorage.setItem("role_id", response.role_id);
+            if(response.role_id === "1175") {
+              window.location.href="/police/index.html";
+            }
+            else if(response.role_id === "67") {
+              window.location.href="/court/index.html";
+            }
+            else if(response.role_id === "82") {
+              window.location.href="/directorate/home.html";
+            }
+            else if(response.role_id === "42") {
+              window.location.href="/district/state-dashboard.html";
+            }
+            else {
+              window.location.href="/index.html"
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching data: ", error);
+            tableBody.html('<tr><td colspan="9" class="text-center">Failed to load data</td></tr>');
+          }
+        });
+      }
+    }
   </script>
 </body>
 

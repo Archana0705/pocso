@@ -1872,13 +1872,16 @@
             showErrorToast("An error occurred during submission of data.");
           }
         });
-
+        const userId = localStorage.getItem("role_id");
+        let updateRequestStatusPayload = {
+          id: userId
+        }
         await $.ajax({
           url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/update/updateRequestStatus',
           type: 'POST',
           headers: { 'X-App-Key': 'pocso', 'X-App-Name': 'pocso' },
           contentType: 'application/json',
-          data: JSON.stringify(user_id),
+          data: JSON.stringify(updateRequestStatusPayload),
           success: function () {
             //showSuccessToast("Request status updated successfully");
           },

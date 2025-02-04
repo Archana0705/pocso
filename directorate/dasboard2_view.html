@@ -2790,11 +2790,10 @@
 
 
         function handleDisbursalData() {
-            debugger
+            const userId = localStorage.getItem("role_id");
             const requestDisbursalData = {
-                id: 137
+                id: userId
             };
-
             $.ajax({
                 url: `https://tngis.tnega.org/lcap_api/pocso/api/v1/directorate/view/dashboard2/viewDisbersalStatusById`,
                 method: 'POST',
@@ -2807,7 +2806,6 @@
                 success: function (response) {
                     if (response.success === 1) {
                         const details = response.data[0];
-
                         document.getElementById("P86_NEW_STATUS").value = details?.new_status;
                         document.getElementById("P86_INTERIM_PAYMENT_STATUS").value = details?.interim_payment_status;
                         document.getElementById("P86_FINAL_PAYMENT_STATUS").value = details?.final_payment_status;

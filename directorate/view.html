@@ -1925,9 +1925,9 @@
     });
 
     function handleDisbursalData() {
-      debugger
+      const userId = localStorage.getItem("role_id");
       const requestDisbursalData = {
-        id: 137
+        id: userId
       };
 
       $.ajax({
