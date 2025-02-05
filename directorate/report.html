@@ -1394,9 +1394,9 @@
     bodyTR.hide();
     bodyTR.filter(function (i, v) {
       // let td = tr[i].getElementsByTagName("td")[0];
-        var $t = $(this);
+        var fieldContains = $(this);
         for (var d = 0; d < data.length; ++d) {
-            if ($t.is(":contains('" + data[d] + "')")) {
+            if (fieldContains.is(":contains('" + data[d] + "')")) {
                 return true;
             }
         }
@@ -1404,26 +1404,6 @@
     })
     .show();
     });
-  //   $("#searchFilter").on("click", function () {
-  //   debugger;
-  //   var fieldVal = $("#P70_NEW_4_input").val();
-  //   var bodyTR = $("#fbody").find("tr");
-  //   var complaintDateIndex = $("#fbody").closest("table").find("thead th").filter(function () {
-  //       return $(this).text().trim() === "Complaint Date";
-  //   }).index();
-
-  //   if (fieldVal === "") {
-  //       bodyTR.show();
-  //       return;
-  //   }
-
-  //   bodyTR.hide().filter(function () {
-  //       var $t = $(this);
-  //       var complaintDateText = $t.find("td").eq(2).text().trim().toLowerCase();
-        
-  //       return complaintDateText.includes(fieldVal);
-  //   }).show();
-  // });
 
   </script>
 </body>
