@@ -989,11 +989,12 @@
 
     let userId = "1354";
     $(document).ready(function () {
+      const userId = localStorage.getItem("role_id");
       const apiUrl = `https://tngis.tnega.org/lcap_api/pocso/api/v1/court/view/viewDashboardById`;
       const tableBody = $("#courtFormTable tbody");
 
       const requestData = {
-        "id": "44"
+        "id": userId
       };
 
       function fetchTableData() {

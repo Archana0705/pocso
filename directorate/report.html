@@ -20,6 +20,25 @@
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <script src="r/wspocso/111/files/static/v1962/apexcharts.min.js"></script> -->
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    input {
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 200px;
+    }
+</style>
 </head>
 
 <body
@@ -141,8 +160,8 @@
                     </div>
                   </div>
                   <div class="col col-4 apex-col-auto "><button
-                      class="t-Button t-Button--large&#x20;t-Button--success&#x20;t-Button--gapLeft&#x20;t-Button--gapRight&#x20;t-Button--padTop&#x20;t-Button--padBottom"
-                      type="button" id="B13766508202474020"><span class="t-Button-label">Search</span></button></div>
+                      class="searchHandle t-Button t-Button--large&#x20;t-Button--success&#x20;t-Button--gapLeft&#x20;t-Button--gapRight&#x20;t-Button--padTop&#x20;t-Button--padBottom"
+                      type="button" id="searchFilter"><span class="t-Button-label">Search</span></button></div>
                   <div class="col col-4 apex-col-auto col-end"><button
                       class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning&#x20;t-Button--padLeft&#x20;t-Button--gapRight&#x20;t-Button--padTop&#x20;t-Button--padBottom"
                       type="button" id="B13766945682474021"><span class="t-Button-label">Clear</span></button></div>
@@ -639,559 +658,564 @@
                                 <div class="a-IRR-tableContainer">
                                   <table
                                     aria-label="Customize&#x20;Report,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
-                                    class="a-IRR-table" id="257189065703759247">
-                                    <tr>
-                                      <th class="a-IRR-header u-tC" id="C257121062557707023"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257121062557707023" href="#">District
-                                          Name</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257121149467707024"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257121149467707024" href="#">Police
-                                          Station</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257189872408759249"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257189872408759249" href="#">Complaint
-                                          Date</a></th>
-                                      <th class="a-IRR-header u-tC" id="C16911975542704301"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="16911975542704301" href="#">Complaint
-                                          made by</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257190611406759250"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257190611406759250" href="#">FIR No</a>
-                                      </th>
-                                      <th class="a-IRR-header u-tC" id="C257190219127759249"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257190219127759249" href="#">Date Of
-                                          FIR</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257198227166759253"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257198227166759253"
-                                          href="#">Chargesheet/Final Report Filed</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257198603046759253"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257198603046759253"
-                                          href="#">Chargesheet/Final Report Date</a></th>
-                                      <th class="a-IRR-header u-tC" id="C16514380086310149"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="16514380086310149" href="#">Gender of
-                                          the Victim</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257202585774759255"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257202585774759255" href="#">Name Of
-                                          Court</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257197777059759253"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257197777059759253" href="#">Case No
-                                          (Spl SC/SC/JC)</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257191052679759250"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257191052679759250" href="#">Taken on
-                                          File Date</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257194206078759251"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257194206078759251" href="#">Willingness
-                                          for Compensation</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257194637098759251"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257194637098759251"
-                                          href="#">Compensation applied by</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257195062510759251"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257195062510759251"
-                                          href="#">Relationship with victim</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257195387164759252"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257195387164759252" href="#">Applied
-                                          On</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257197034166759252"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257197034166759252" href="#">Account
-                                          Holder Name</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257195859630759252"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257195859630759252" href="#">Account
-                                          Number</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257196226211759252"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257196226211759252" href="#">Bank
-                                          Name</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257196633465759252"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257196633465759252" href="#">Branch
-                                          Name</a></th>
-                                      <th class="a-IRR-header u-tC" id="C16514496114310150"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="16514496114310150" href="#">Name of the
-                                          medical institution</a></th>
-                                      <th class="a-IRR-header u-tC" id="C16912018939704302"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="16912018939704302" href="#">Date of
-                                          requisition sent by police</a></th>
-                                      <th class="a-IRR-header u-tC" id="C16912160523704303"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="16912160523704303" href="#">Date of
-                                          medical examination of the victim</a></th>
-                                      <th class="a-IRR-header u-tC" id="C16912298484704304"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="16912298484704304" href="#">Date of
-                                          Interim/Provisional medical opinion</a></th>
-                                      <th class="a-IRR-header u-tC" id="C13986828236448602"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="13986828236448602" href="#">Is Interim
-                                          Compensation awarded?</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257199016171759253"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257199016171759253" href="#">Interim
-                                          Order Date</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257200181359759254"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257200181359759254" href="#">Interim
-                                          Compensation</a></th>
-                                      <th class="a-IRR-header u-tC" id="C13987522011448609"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="13987522011448609" href="#">Interim
-                                          Order Copy</a></th>
-                                      <th class="a-IRR-header u-tC" id="C13987799442448611"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="13987799442448611" href="#">Interim
-                                          Compensation Status</a></th>
-                                      <th class="a-IRR-header u-tC" id="C13987841237448612"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="13987841237448612" href="#">Court Case
-                                          Status</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257201456406759254"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257201456406759254"
-                                          href="#">Acquitted/Convicted</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257200584984759254"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257200584984759254" href="#">Final Order
-                                          Date</a></th>
-                                      <th class="a-IRR-header u-tC" id="C257199808051759254"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="257199808051759254" href="#">Final
-                                          Compensation</a></th>
-                                      <th class="a-IRR-header u-tC" id="C13987611377448610"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="13987611377448610" href="#">Final Order
-                                          Copy</a></th>
-                                      <th class="a-IRR-header u-tC" id="C13987920886448613"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="13987920886448613" href="#">Final
-                                          Compensation Status</a></th>
-                                      <th class="a-IRR-header u-tC" id="C15603557365557815"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="15603557365557815" href="#">Aging Of
-                                          Cases</a></th>
-                                      <th class="a-IRR-header u-tC" id="C15603662640557816"><a aria-haspopup="dialog"
-                                          class="a-IRR-headerLink" data-column="15603662640557816" href="#">Aging Of
-                                          Chargesheet Date</a></th>
-                                    </tr>
-                                    <tr class="rule_143781894965200838">
-                                      <td class=" u-tC" headers="C257121062557707023">Pudukkottai</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Awps-pudukottai</td>
-                                      <td class=" u-tC" headers="C257189872408759249">05-Jul-2024</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Self</td>
-                                      <td class=" u-tC" headers="C257190611406759250">3</td>
-                                      <td class=" u-tC" headers="C257190219127759249">06-Jul-2024</td>
-                                      <td class=" u-tC" headers="C257198227166759253">Yes</td>
-                                      <td class=" u-tC" headers="C257198603046759253">23-Aug-2024</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">No</td>
-                                      <td class=" u-tC" headers="C257194637098759251">-</td>
-                                      <td class=" u-tC" headers="C257195062510759251">-</td>
-                                      <td class=" u-tC" headers="C257195387164759252">-</td>
-                                      <td class=" u-tC" headers="C257197034166759252">-</td>
-                                      <td class=" u-tC" headers="C257195859630759252">-</td>
-                                      <td class=" u-tC" headers="C257196226211759252">-</td>
-                                      <td class=" u-tC" headers="C257196633465759252">-</td>
-                                      <td class=" u-tC" headers="C16514496114310150">pudukkottai ranees hospital</td>
-                                      <td class=" u-tC" headers="C16912018939704302">07-Jul-2024</td>
-                                      <td class=" u-tC" headers="C16912160523704303">07-Jul-2024</td>
-                                      <td class=" u-tC" headers="C16912298484704304">25-Sep-2024</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Not awarded</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Not awarded</td>
-                                      <td class=" u-tC" headers="C15603557365557815">142</td>
-                                      <td class=" u-tC" headers="C15603662640557816">94</td>
-                                    </tr>
-                                    <tr>
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Kunnam</td>
-                                      <td class=" u-tC" headers="C257189872408759249">19-Jan-2024</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Self</td>
-                                      <td class=" u-tC" headers="C257190611406759250">28</td>
-                                      <td class=" u-tC" headers="C257190219127759249">19-Jan-2024</td>
-                                      <td class=" u-tC" headers="C257198227166759253">No</td>
-                                      <td class=" u-tC" headers="C257198603046759253">-</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">JANANI</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Others </td>
-                                      <td class=" u-tC" headers="C257195387164759252">13-Feb-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">JANANI</td>
-                                      <td class=" u-tC" headers="C257195859630759252">1788120001068</td>
-                                      <td class=" u-tC" headers="C257196226211759252">CANARA BANK</td>
-                                      <td class=" u-tC" headers="C257196633465759252">AGARAMSIGOOR</td>
-                                      <td class=" u-tC" headers="C16514496114310150">Government Head Quarter Hospital
-                                        Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">24-Jan-2024</td>
-                                      <td class=" u-tC" headers="C16912160523704303">24-Jan-2024</td>
-                                      <td class=" u-tC" headers="C16912298484704304">24-Jan-2024</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">311</td>
-                                      <td class=" u-tC" headers="C15603662640557816"></td>
-                                    </tr>
-                                    <tr class="rule_143781894965200838">
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Kunnam</td>
-                                      <td class=" u-tC" headers="C257189872408759249">10-Mar-2024</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Parent</td>
-                                      <td class=" u-tC" headers="C257190611406759250">113</td>
-                                      <td class=" u-tC" headers="C257190219127759249">10-Mar-2024</td>
-                                      <td class=" u-tC" headers="C257198227166759253">Yes</td>
-                                      <td class=" u-tC" headers="C257198603046759253">02-May-2024</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">Rajpriya</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Others </td>
-                                      <td class=" u-tC" headers="C257195387164759252">26-Apr-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">Rajpriya</td>
-                                      <td class=" u-tC" headers="C257195859630759252">117001000016904</td>
-                                      <td class=" u-tC" headers="C257196226211759252">Indian Overseas bank</td>
-                                      <td class=" u-tC" headers="C257196633465759252">Thungapuram</td>
-                                      <td class=" u-tC" headers="C16514496114310150">Govt Head quarter Hospital
-                                        Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">26-Mar-2024</td>
-                                      <td class=" u-tC" headers="C16912160523704303">26-Mar-2024</td>
-                                      <td class=" u-tC" headers="C16912298484704304">26-Mar-2024</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">260</td>
-                                      <td class=" u-tC" headers="C15603662640557816">207</td>
-                                    </tr>
-                                    <tr class="rule_143781894965200838">
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">V.Kalathur</td>
-                                      <td class=" u-tC" headers="C257189872408759249">27-Feb-2024</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Parent</td>
-                                      <td class=" u-tC" headers="C257190611406759250">43</td>
-                                      <td class=" u-tC" headers="C257190219127759249">27-Feb-2024</td>
-                                      <td class=" u-tC" headers="C257198227166759253">Yes</td>
-                                      <td class=" u-tC" headers="C257198603046759253">12-Apr-2024</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">SNEHA</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Others </td>
-                                      <td class=" u-tC" headers="C257195387164759252">06-May-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">SNEHA</td>
-                                      <td class=" u-tC" headers="C257195859630759252">57401000028123</td>
-                                      <td class=" u-tC" headers="C257196226211759252">Indian Overseas Bank</td>
-                                      <td class=" u-tC" headers="C257196633465759252">V KALATHUR</td>
-                                      <td class=" u-tC" headers="C16514496114310150">Government Head Quarter Hospital
-                                        Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">05-Mar-2024</td>
-                                      <td class=" u-tC" headers="C16912160523704303">05-Mar-2024</td>
-                                      <td class=" u-tC" headers="C16912298484704304">05-Mar-2024</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">272</td>
-                                      <td class=" u-tC" headers="C15603662640557816">227</td>
-                                    </tr>
-                                    <tr>
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">V.Kalathur</td>
-                                      <td class=" u-tC" headers="C257189872408759249">25-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Parent</td>
-                                      <td class=" u-tC" headers="C257190611406759250">257</td>
-                                      <td class=" u-tC" headers="C257190219127759249">25-Dec-2023</td>
-                                      <td class=" u-tC" headers="C257198227166759253">No</td>
-                                      <td class=" u-tC" headers="C257198603046759253">-</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">KASTHURI</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Others </td>
-                                      <td class=" u-tC" headers="C257195387164759252">06-May-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">KASTHURI</td>
-                                      <td class=" u-tC" headers="C257195859630759252">57401000028585</td>
-                                      <td class=" u-tC" headers="C257196226211759252">Indian Overseas Bank</td>
-                                      <td class=" u-tC" headers="C257196633465759252">V KALATHUR</td>
-                                      <td class=" u-tC" headers="C16514496114310150">Government Head Quarters Hospital
-                                        Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">26-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16912160523704303">26-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16912298484704304">26-Dec-2023</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">336</td>
-                                      <td class=" u-tC" headers="C15603662640557816"></td>
-                                    </tr>
-                                    <tr class="rule_143781894965200838">
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Mangalamedu</td>
-                                      <td class=" u-tC" headers="C257189872408759249">29-Nov-2023</td>
-                                      <td class=" u-tC" headers="C16911975542704301">DCPO</td>
-                                      <td class=" u-tC" headers="C257190611406759250">556</td>
-                                      <td class=" u-tC" headers="C257190219127759249">29-Nov-2023</td>
-                                      <td class=" u-tC" headers="C257198227166759253">Yes</td>
-                                      <td class=" u-tC" headers="C257198603046759253">01-Feb-2024</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">Tharsaniya</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Others </td>
-                                      <td class=" u-tC" headers="C257195387164759252">11-Dec-2023</td>
-                                      <td class=" u-tC" headers="C257197034166759252">Tharsaniya</td>
-                                      <td class=" u-tC" headers="C257195859630759252">6443729752</td>
-                                      <td class=" u-tC" headers="C257196226211759252">Indian bank</td>
-                                      <td class=" u-tC" headers="C257196633465759252">Keelapuliyur Perambalur</td>
-                                      <td class=" u-tC" headers="C16514496114310150">Govt Head quarter Hospital
-                                        Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">01-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16912160523704303">01-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16912298484704304">01-Dec-2023</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">362</td>
-                                      <td class=" u-tC" headers="C15603662640557816">298</td>
-                                    </tr>
-                                    <tr class="rule_143781894965200838">
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Mangalamedu</td>
-                                      <td class=" u-tC" headers="C257189872408759249">25-Feb-2024</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Parent</td>
-                                      <td class=" u-tC" headers="C257190611406759250">77</td>
-                                      <td class=" u-tC" headers="C257190219127759249">25-Feb-2024</td>
-                                      <td class=" u-tC" headers="C257198227166759253">Yes</td>
-                                      <td class=" u-tC" headers="C257198603046759253">26-Apr-2024</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">Atchaya</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Parent</td>
-                                      <td class=" u-tC" headers="C257195387164759252">25-Mar-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">M ATCHAYA</td>
-                                      <td class=" u-tC" headers="C257195859630759252">71901000030611</td>
-                                      <td class=" u-tC" headers="C257196226211759252">Indian Overseas Bank</td>
-                                      <td class=" u-tC" headers="C257196633465759252">Pennakonam Perambalur District
-                                      </td>
-                                      <td class=" u-tC" headers="C16514496114310150">Goverment Head Quarters Hospitel
-                                        Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">16-Mar-2024</td>
-                                      <td class=" u-tC" headers="C16912160523704303">16-Mar-2024</td>
-                                      <td class=" u-tC" headers="C16912298484704304">16-Mar-2024</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">274</td>
-                                      <td class=" u-tC" headers="C15603662640557816">213</td>
-                                    </tr>
-                                    <tr class="rule_143781894965200838">
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Mangalamedu</td>
-                                      <td class=" u-tC" headers="C257189872408759249">17-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Parent</td>
-                                      <td class=" u-tC" headers="C257190611406759250">571</td>
-                                      <td class=" u-tC" headers="C257190219127759249">17-Dec-2023</td>
-                                      <td class=" u-tC" headers="C257198227166759253">Yes</td>
-                                      <td class=" u-tC" headers="C257198603046759253">15-Apr-2024</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">K Monisha</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Parent</td>
-                                      <td class=" u-tC" headers="C257195387164759252">30-Jan-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">ABIRAMI</td>
-                                      <td class=" u-tC" headers="C257195859630759252">1788101034491</td>
-                                      <td class=" u-tC" headers="C257196226211759252">CANARA BANK</td>
-                                      <td class=" u-tC" headers="C257196633465759252">AGARAMSIGOOR Perambalur District
-                                      </td>
-                                      <td class=" u-tC" headers="C16514496114310150">Govtment Head quarters Hospitel
-                                        Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">17-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16912160523704303">17-Dec-2023</td>
-                                      <td class=" u-tC" headers="C16912298484704304">17-Dec-2023</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">344</td>
-                                      <td class=" u-tC" headers="C15603662640557816">224</td>
-                                    </tr>
-                                    <tr class="rule_143781894965200838">
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Awps-perambalur</td>
-                                      <td class=" u-tC" headers="C257189872408759249">02-Feb-2024</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Child Helpline</td>
-                                      <td class=" u-tC" headers="C257190611406759250">06</td>
-                                      <td class=" u-tC" headers="C257190219127759249">02-Feb-2024</td>
-                                      <td class=" u-tC" headers="C257198227166759253">Yes</td>
-                                      <td class=" u-tC" headers="C257198603046759253">06-May-2024</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">Ananthi</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Parent</td>
-                                      <td class=" u-tC" headers="C257195387164759252">02-Feb-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">Ananthi</td>
-                                      <td class=" u-tC" headers="C257195859630759252">34711259182</td>
-                                      <td class=" u-tC" headers="C257196226211759252">State Bank of India</td>
-                                      <td class=" u-tC" headers="C257196633465759252">Perambalur</td>
-                                      <td class=" u-tC" headers="C16514496114310150">Govt Hospital Perambalur</td>
-                                      <td class=" u-tC" headers="C16912018939704302">05-Feb-2024</td>
-                                      <td class=" u-tC" headers="C16912160523704303">05-Feb-2024</td>
-                                      <td class=" u-tC" headers="C16912298484704304">05-Feb-2024</td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">297</td>
-                                      <td class=" u-tC" headers="C15603662640557816">203</td>
-                                    </tr>
-                                    <tr>
-                                      <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
-                                      <td class=" u-tC" headers="C257121149467707024">Awps-perambalur</td>
-                                      <td class=" u-tC" headers="C257189872408759249">25-Apr-2024</td>
-                                      <td class=" u-tC" headers="C16911975542704301">Parent</td>
-                                      <td class=" u-tC" headers="C257190611406759250">15</td>
-                                      <td class=" u-tC" headers="C257190219127759249">25-Apr-2024</td>
-                                      <td class=" u-tC" headers="C257198227166759253">No</td>
-                                      <td class=" u-tC" headers="C257198603046759253">-</td>
-                                      <td class=" u-tC" headers="C16514380086310149">Female</td>
-                                      <td class=" u-tC" headers="C257202585774759255"></td>
-                                      <td class=" u-tC" headers="C257197777059759253"></td>
-                                      <td class=" u-tC" headers="C257191052679759250"></td>
-                                      <td class=" u-tC" headers="C257194206078759251">Yes</td>
-                                      <td class=" u-tC" headers="C257194637098759251">Aksaya</td>
-                                      <td class=" u-tC" headers="C257195062510759251">Parent</td>
-                                      <td class=" u-tC" headers="C257195387164759252">25-Apr-2024</td>
-                                      <td class=" u-tC" headers="C257197034166759252">Aksaya</td>
-                                      <td class=" u-tC" headers="C257195859630759252">29942210001258</td>
-                                      <td class=" u-tC" headers="C257196226211759252">Union Bank of India</td>
-                                      <td class=" u-tC" headers="C257196633465759252">Thaluthalai</td>
-                                      <td class=" u-tC" headers="C16514496114310150"></td>
-                                      <td class=" u-tC" headers="C16912018939704302"></td>
-                                      <td class=" u-tC" headers="C16912160523704303"></td>
-                                      <td class=" u-tC" headers="C16912298484704304"></td>
-                                      <td class=" u-tC" headers="C13986828236448602"></td>
-                                      <td class=" u-tC" headers="C257199016171759253"></td>
-                                      <td class=" u-tC" headers="C257200181359759254"></td>
-                                      <td class=" u-tC" headers="C13987522011448609"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          INTERIM_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
-                                      <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
-                                      <td class=" u-tC" headers="C257201456406759254"></td>
-                                      <td class=" u-tC" headers="C257200584984759254"></td>
-                                      <td class=" u-tC" headers="C257199808051759254"></td>
-                                      <td class=" u-tC" headers="C13987611377448610"><a
-                                          href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
-                                          FINAL_REF>Download</a></td>
-                                      <td class=" u-tC" headers="C13987920886448613">Pending</td>
-                                      <td class=" u-tC" headers="C15603557365557815">214</td>
-                                      <td class=" u-tC" headers="C15603662640557816"></td>
-                                    </tr>
+                                    class="a-IRR-table" id="DataSearchTable">
+                                    <thead>
+                                      <tr>
+                                        <th class="a-IRR-header u-tC" id="C257121062557707023"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257121062557707023" href="#">District
+                                            Name</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257121149467707024"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257121149467707024" href="#">Police
+                                            Station</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257189872408759249"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257189872408759249" href="#">Complaint
+                                            Date</a></th>
+                                        <th class="a-IRR-header u-tC" id="C16911975542704301"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="16911975542704301" href="#">Complaint
+                                            made by</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257190611406759250"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257190611406759250" href="#">FIR No</a>
+                                        </th>
+                                        <th class="a-IRR-header u-tC" id="C257190219127759249"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257190219127759249" href="#">Date Of
+                                            FIR</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257198227166759253"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257198227166759253"
+                                            href="#">Chargesheet/Final Report Filed</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257198603046759253"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257198603046759253"
+                                            href="#">Chargesheet/Final Report Date</a></th>
+                                        <th class="a-IRR-header u-tC" id="C16514380086310149"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="16514380086310149" href="#">Gender of
+                                            the Victim</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257202585774759255"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257202585774759255" href="#">Name Of
+                                            Court</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257197777059759253"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257197777059759253" href="#">Case No
+                                            (Spl SC/SC/JC)</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257191052679759250"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257191052679759250" href="#">Taken on
+                                            File Date</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257194206078759251"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257194206078759251" href="#">Willingness
+                                            for Compensation</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257194637098759251"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257194637098759251"
+                                            href="#">Compensation applied by</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257195062510759251"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257195062510759251"
+                                            href="#">Relationship with victim</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257195387164759252"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257195387164759252" href="#">Applied
+                                            On</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257197034166759252"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257197034166759252" href="#">Account
+                                            Holder Name</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257195859630759252"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257195859630759252" href="#">Account
+                                            Number</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257196226211759252"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257196226211759252" href="#">Bank
+                                            Name</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257196633465759252"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257196633465759252" href="#">Branch
+                                            Name</a></th>
+                                        <th class="a-IRR-header u-tC" id="C16514496114310150"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="16514496114310150" href="#">Name of the
+                                            medical institution</a></th>
+                                        <th class="a-IRR-header u-tC" id="C16912018939704302"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="16912018939704302" href="#">Date of
+                                            requisition sent by police</a></th>
+                                        <th class="a-IRR-header u-tC" id="C16912160523704303"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="16912160523704303" href="#">Date of
+                                            medical examination of the victim</a></th>
+                                        <th class="a-IRR-header u-tC" id="C16912298484704304"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="16912298484704304" href="#">Date of
+                                            Interim/Provisional medical opinion</a></th>
+                                        <th class="a-IRR-header u-tC" id="C13986828236448602"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="13986828236448602" href="#">Is Interim
+                                            Compensation awarded?</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257199016171759253"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257199016171759253" href="#">Interim
+                                            Order Date</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257200181359759254"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257200181359759254" href="#">Interim
+                                            Compensation</a></th>
+                                        <th class="a-IRR-header u-tC" id="C13987522011448609"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="13987522011448609" href="#">Interim
+                                            Order Copy</a></th>
+                                        <th class="a-IRR-header u-tC" id="C13987799442448611"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="13987799442448611" href="#">Interim
+                                            Compensation Status</a></th>
+                                        <th class="a-IRR-header u-tC" id="C13987841237448612"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="13987841237448612" href="#">Court Case
+                                            Status</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257201456406759254"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257201456406759254"
+                                            href="#">Acquitted/Convicted</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257200584984759254"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257200584984759254" href="#">Final Order
+                                            Date</a></th>
+                                        <th class="a-IRR-header u-tC" id="C257199808051759254"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="257199808051759254" href="#">Final
+                                            Compensation</a></th>
+                                        <th class="a-IRR-header u-tC" id="C13987611377448610"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="13987611377448610" href="#">Final Order
+                                            Copy</a></th>
+                                        <th class="a-IRR-header u-tC" id="C13987920886448613"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="13987920886448613" href="#">Final
+                                            Compensation Status</a></th>
+                                        <th class="a-IRR-header u-tC" id="C15603557365557815"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="15603557365557815" href="#">Aging Of
+                                            Cases</a></th>
+                                        <th class="a-IRR-header u-tC" id="C15603662640557816"><a aria-haspopup="dialog"
+                                            class="a-IRR-headerLink" data-column="15603662640557816" href="#">Aging Of
+                                            Chargesheet Date</a></th>
+                                      </tr>
+                                    </thead>
+                                    
+                                    <tbody id="fbody">
+                                      <tr class="rule_143781894965200838">
+                                        <td class=" u-tC" headers="C257121062557707023">Pudukkottai</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Awps-pudukottai</td>
+                                        <td class=" u-tC" headers="C257189872408759249">05-Jul-2024</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Self</td>
+                                        <td class=" u-tC" headers="C257190611406759250">3</td>
+                                        <td class=" u-tC" headers="C257190219127759249">06-Jul-2024</td>
+                                        <td class=" u-tC" headers="C257198227166759253">Yes</td>
+                                        <td class=" u-tC" headers="C257198603046759253">23-Aug-2024</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">No</td>
+                                        <td class=" u-tC" headers="C257194637098759251">-</td>
+                                        <td class=" u-tC" headers="C257195062510759251">-</td>
+                                        <td class=" u-tC" headers="C257195387164759252">-</td>
+                                        <td class=" u-tC" headers="C257197034166759252">-</td>
+                                        <td class=" u-tC" headers="C257195859630759252">-</td>
+                                        <td class=" u-tC" headers="C257196226211759252">-</td>
+                                        <td class=" u-tC" headers="C257196633465759252">-</td>
+                                        <td class=" u-tC" headers="C16514496114310150">pudukkottai ranees hospital</td>
+                                        <td class=" u-tC" headers="C16912018939704302">07-Jul-2024</td>
+                                        <td class=" u-tC" headers="C16912160523704303">07-Jul-2024</td>
+                                        <td class=" u-tC" headers="C16912298484704304">25-Sep-2024</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Not awarded</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Not awarded</td>
+                                        <td class=" u-tC" headers="C15603557365557815">142</td>
+                                        <td class=" u-tC" headers="C15603662640557816">94</td>
+                                      </tr>
+                                      <tr>
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Kunnam</td>
+                                        <td class=" u-tC" headers="C257189872408759249">19-Jan-2024</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Self</td>
+                                        <td class=" u-tC" headers="C257190611406759250">28</td>
+                                        <td class=" u-tC" headers="C257190219127759249">19-Jan-2024</td>
+                                        <td class=" u-tC" headers="C257198227166759253">No</td>
+                                        <td class=" u-tC" headers="C257198603046759253">-</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">JANANI</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Others </td>
+                                        <td class=" u-tC" headers="C257195387164759252">13-Feb-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">JANANI</td>
+                                        <td class=" u-tC" headers="C257195859630759252">1788120001068</td>
+                                        <td class=" u-tC" headers="C257196226211759252">CANARA BANK</td>
+                                        <td class=" u-tC" headers="C257196633465759252">AGARAMSIGOOR</td>
+                                        <td class=" u-tC" headers="C16514496114310150">Government Head Quarter Hospital
+                                          Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">24-Jan-2024</td>
+                                        <td class=" u-tC" headers="C16912160523704303">24-Jan-2024</td>
+                                        <td class=" u-tC" headers="C16912298484704304">24-Jan-2024</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">311</td>
+                                        <td class=" u-tC" headers="C15603662640557816"></td>
+                                      </tr>
+                                      <tr class="rule_143781894965200838">
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Kunnam</td>
+                                        <td class=" u-tC" headers="C257189872408759249">10-Mar-2024</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Parent</td>
+                                        <td class=" u-tC" headers="C257190611406759250">113</td>
+                                        <td class=" u-tC" headers="C257190219127759249">10-Mar-2024</td>
+                                        <td class=" u-tC" headers="C257198227166759253">Yes</td>
+                                        <td class=" u-tC" headers="C257198603046759253">02-May-2024</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">Rajpriya</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Others </td>
+                                        <td class=" u-tC" headers="C257195387164759252">26-Apr-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">Rajpriya</td>
+                                        <td class=" u-tC" headers="C257195859630759252">117001000016904</td>
+                                        <td class=" u-tC" headers="C257196226211759252">Indian Overseas bank</td>
+                                        <td class=" u-tC" headers="C257196633465759252">Thungapuram</td>
+                                        <td class=" u-tC" headers="C16514496114310150">Govt Head quarter Hospital
+                                          Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">26-Mar-2024</td>
+                                        <td class=" u-tC" headers="C16912160523704303">26-Mar-2024</td>
+                                        <td class=" u-tC" headers="C16912298484704304">26-Mar-2024</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">260</td>
+                                        <td class=" u-tC" headers="C15603662640557816">207</td>
+                                      </tr>
+                                      <tr class="rule_143781894965200838">
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">V.Kalathur</td>
+                                        <td class=" u-tC" headers="C257189872408759249">27-Feb-2024</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Parent</td>
+                                        <td class=" u-tC" headers="C257190611406759250">43</td>
+                                        <td class=" u-tC" headers="C257190219127759249">27-Feb-2024</td>
+                                        <td class=" u-tC" headers="C257198227166759253">Yes</td>
+                                        <td class=" u-tC" headers="C257198603046759253">12-Apr-2024</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">SNEHA</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Others </td>
+                                        <td class=" u-tC" headers="C257195387164759252">06-May-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">SNEHA</td>
+                                        <td class=" u-tC" headers="C257195859630759252">57401000028123</td>
+                                        <td class=" u-tC" headers="C257196226211759252">Indian Overseas Bank</td>
+                                        <td class=" u-tC" headers="C257196633465759252">V KALATHUR</td>
+                                        <td class=" u-tC" headers="C16514496114310150">Government Head Quarter Hospital
+                                          Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">05-Mar-2024</td>
+                                        <td class=" u-tC" headers="C16912160523704303">05-Mar-2024</td>
+                                        <td class=" u-tC" headers="C16912298484704304">05-Mar-2024</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">272</td>
+                                        <td class=" u-tC" headers="C15603662640557816">227</td>
+                                      </tr>
+                                      <tr>
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">V.Kalathur</td>
+                                        <td class=" u-tC" headers="C257189872408759249">25-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Parent</td>
+                                        <td class=" u-tC" headers="C257190611406759250">257</td>
+                                        <td class=" u-tC" headers="C257190219127759249">25-Dec-2023</td>
+                                        <td class=" u-tC" headers="C257198227166759253">No</td>
+                                        <td class=" u-tC" headers="C257198603046759253">-</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">KASTHURI</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Others </td>
+                                        <td class=" u-tC" headers="C257195387164759252">06-May-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">KASTHURI</td>
+                                        <td class=" u-tC" headers="C257195859630759252">57401000028585</td>
+                                        <td class=" u-tC" headers="C257196226211759252">Indian Overseas Bank</td>
+                                        <td class=" u-tC" headers="C257196633465759252">V KALATHUR</td>
+                                        <td class=" u-tC" headers="C16514496114310150">Government Head Quarters Hospital
+                                          Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">26-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16912160523704303">26-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16912298484704304">26-Dec-2023</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">336</td>
+                                        <td class=" u-tC" headers="C15603662640557816"></td>
+                                      </tr>
+                                      <tr class="rule_143781894965200838">
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Mangalamedu</td>
+                                        <td class=" u-tC" headers="C257189872408759249">29-Nov-2023</td>
+                                        <td class=" u-tC" headers="C16911975542704301">DCPO</td>
+                                        <td class=" u-tC" headers="C257190611406759250">556</td>
+                                        <td class=" u-tC" headers="C257190219127759249">29-Nov-2023</td>
+                                        <td class=" u-tC" headers="C257198227166759253">Yes</td>
+                                        <td class=" u-tC" headers="C257198603046759253">01-Feb-2024</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">Tharsaniya</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Others </td>
+                                        <td class=" u-tC" headers="C257195387164759252">11-Dec-2023</td>
+                                        <td class=" u-tC" headers="C257197034166759252">Tharsaniya</td>
+                                        <td class=" u-tC" headers="C257195859630759252">6443729752</td>
+                                        <td class=" u-tC" headers="C257196226211759252">Indian bank</td>
+                                        <td class=" u-tC" headers="C257196633465759252">Keelapuliyur Perambalur</td>
+                                        <td class=" u-tC" headers="C16514496114310150">Govt Head quarter Hospital
+                                          Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">01-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16912160523704303">01-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16912298484704304">01-Dec-2023</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">362</td>
+                                        <td class=" u-tC" headers="C15603662640557816">298</td>
+                                      </tr>
+                                      <tr class="rule_143781894965200838">
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Mangalamedu</td>
+                                        <td class=" u-tC" headers="C257189872408759249">25-Feb-2024</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Parent</td>
+                                        <td class=" u-tC" headers="C257190611406759250">77</td>
+                                        <td class=" u-tC" headers="C257190219127759249">25-Feb-2024</td>
+                                        <td class=" u-tC" headers="C257198227166759253">Yes</td>
+                                        <td class=" u-tC" headers="C257198603046759253">26-Apr-2024</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">Atchaya</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Parent</td>
+                                        <td class=" u-tC" headers="C257195387164759252">25-Mar-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">M ATCHAYA</td>
+                                        <td class=" u-tC" headers="C257195859630759252">71901000030611</td>
+                                        <td class=" u-tC" headers="C257196226211759252">Indian Overseas Bank</td>
+                                        <td class=" u-tC" headers="C257196633465759252">Pennakonam Perambalur District
+                                        </td>
+                                        <td class=" u-tC" headers="C16514496114310150">Goverment Head Quarters Hospitel
+                                          Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">16-Mar-2024</td>
+                                        <td class=" u-tC" headers="C16912160523704303">16-Mar-2024</td>
+                                        <td class=" u-tC" headers="C16912298484704304">16-Mar-2024</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">274</td>
+                                        <td class=" u-tC" headers="C15603662640557816">213</td>
+                                      </tr>
+                                      <tr class="rule_143781894965200838">
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Mangalamedu</td>
+                                        <td class=" u-tC" headers="C257189872408759249">17-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Parent</td>
+                                        <td class=" u-tC" headers="C257190611406759250">571</td>
+                                        <td class=" u-tC" headers="C257190219127759249">17-Dec-2023</td>
+                                        <td class=" u-tC" headers="C257198227166759253">Yes</td>
+                                        <td class=" u-tC" headers="C257198603046759253">15-Apr-2024</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">K Monisha</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Parent</td>
+                                        <td class=" u-tC" headers="C257195387164759252">30-Jan-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">ABIRAMI</td>
+                                        <td class=" u-tC" headers="C257195859630759252">1788101034491</td>
+                                        <td class=" u-tC" headers="C257196226211759252">CANARA BANK</td>
+                                        <td class=" u-tC" headers="C257196633465759252">AGARAMSIGOOR Perambalur District
+                                        </td>
+                                        <td class=" u-tC" headers="C16514496114310150">Govtment Head quarters Hospitel
+                                          Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">17-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16912160523704303">17-Dec-2023</td>
+                                        <td class=" u-tC" headers="C16912298484704304">17-Dec-2023</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">344</td>
+                                        <td class=" u-tC" headers="C15603662640557816">224</td>
+                                      </tr>
+                                      <tr class="rule_143781894965200838">
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Awps-perambalur</td>
+                                        <td class=" u-tC" headers="C257189872408759249">02-Feb-2024</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Child Helpline</td>
+                                        <td class=" u-tC" headers="C257190611406759250">06</td>
+                                        <td class=" u-tC" headers="C257190219127759249">02-Feb-2024</td>
+                                        <td class=" u-tC" headers="C257198227166759253">Yes</td>
+                                        <td class=" u-tC" headers="C257198603046759253">06-May-2024</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">Ananthi</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Parent</td>
+                                        <td class=" u-tC" headers="C257195387164759252">02-Feb-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">Ananthi</td>
+                                        <td class=" u-tC" headers="C257195859630759252">34711259182</td>
+                                        <td class=" u-tC" headers="C257196226211759252">State Bank of India</td>
+                                        <td class=" u-tC" headers="C257196633465759252">Perambalur</td>
+                                        <td class=" u-tC" headers="C16514496114310150">Govt Hospital Perambalur</td>
+                                        <td class=" u-tC" headers="C16912018939704302">05-Feb-2024</td>
+                                        <td class=" u-tC" headers="C16912160523704303">05-Feb-2024</td>
+                                        <td class=" u-tC" headers="C16912298484704304">05-Feb-2024</td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">297</td>
+                                        <td class=" u-tC" headers="C15603662640557816">203</td>
+                                      </tr>
+                                      <tr>
+                                        <td class=" u-tC" headers="C257121062557707023">Perambalur</td>
+                                        <td class=" u-tC" headers="C257121149467707024">Awps-perambalur</td>
+                                        <td class=" u-tC" headers="C257189872408759249">25-Apr-2024</td>
+                                        <td class=" u-tC" headers="C16911975542704301">Parent</td>
+                                        <td class=" u-tC" headers="C257190611406759250">15</td>
+                                        <td class=" u-tC" headers="C257190219127759249">25-Apr-2024</td>
+                                        <td class=" u-tC" headers="C257198227166759253">No</td>
+                                        <td class=" u-tC" headers="C257198603046759253">-</td>
+                                        <td class=" u-tC" headers="C16514380086310149">Female</td>
+                                        <td class=" u-tC" headers="C257202585774759255"></td>
+                                        <td class=" u-tC" headers="C257197777059759253"></td>
+                                        <td class=" u-tC" headers="C257191052679759250"></td>
+                                        <td class=" u-tC" headers="C257194206078759251">Yes</td>
+                                        <td class=" u-tC" headers="C257194637098759251">Aksaya</td>
+                                        <td class=" u-tC" headers="C257195062510759251">Parent</td>
+                                        <td class=" u-tC" headers="C257195387164759252">25-Apr-2024</td>
+                                        <td class=" u-tC" headers="C257197034166759252">Aksaya</td>
+                                        <td class=" u-tC" headers="C257195859630759252">29942210001258</td>
+                                        <td class=" u-tC" headers="C257196226211759252">Union Bank of India</td>
+                                        <td class=" u-tC" headers="C257196633465759252">Thaluthalai</td>
+                                        <td class=" u-tC" headers="C16514496114310150"></td>
+                                        <td class=" u-tC" headers="C16912018939704302"></td>
+                                        <td class=" u-tC" headers="C16912160523704303"></td>
+                                        <td class=" u-tC" headers="C16912298484704304"></td>
+                                        <td class=" u-tC" headers="C13986828236448602"></td>
+                                        <td class=" u-tC" headers="C257199016171759253"></td>
+                                        <td class=" u-tC" headers="C257200181359759254"></td>
+                                        <td class=" u-tC" headers="C13987522011448609"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            INTERIM_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987799442448611">Other Condition</td>
+                                        <td class=" u-tC" headers="C13987841237448612">Pending Trail</td>
+                                        <td class=" u-tC" headers="C257201456406759254"></td>
+                                        <td class=" u-tC" headers="C257200584984759254"></td>
+                                        <td class=" u-tC" headers="C257199808051759254"></td>
+                                        <td class=" u-tC" headers="C13987611377448610"><a
+                                            href="javascript&#x3A;call_url&#x28;&#x27;&#x27;&#x29;&#x3B;"
+                                            FINAL_REF>Download</a></td>
+                                        <td class=" u-tC" headers="C13987920886448613">Pending</td>
+                                        <td class=" u-tC" headers="C15603557365557815">214</td>
+                                        <td class=" u-tC" headers="C15603662640557816"></td>
+                                      </tr>
+                                    </tbody>
                                   </table>
                                 </div>
                                 <div role="region" aria-label="Pagination&#x20;of&#x20;Customize&#x20;Report"
@@ -1359,6 +1383,28 @@
   </script>
   <script>
     AOS.init();
+    $("#searchFilter").on('click', function () { debugger;
+    var fieldVal = $('#P70_NEW_4_input').val();
+    var data = fieldVal.split(" ");
+    var bodyTR = $("#fbody").find("tr");
+    if (data == "") {
+        bodyTR.show();
+        return;
+    }
+    bodyTR.hide();
+    bodyTR.filter(function (i, v) {
+      // let td = tr[i].getElementsByTagName("td")[0];
+        var fieldContains = $(this);
+        for (var d = 0; d < data.length; ++d) {
+            if (fieldContains.is(":contains('" + data[d] + "')")) {
+                return true;
+            }
+        }
+        return false;
+    })
+    .show();
+    });
+
   </script>
 </body>
 

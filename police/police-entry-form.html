@@ -1508,8 +1508,9 @@
 
   <script>
     AOS.init();
+    const userId = localStorage.getItem("role_id");
     const requestData = {
-      id: "12"
+      id: userId
     };
     // Fetch data from the API
     $.ajax({
@@ -1712,8 +1713,9 @@
         // }
 
         // Prepare the payload if all fields are valid
+        const userId = localStorage.getItem("role_id");
         const payload = {
-          "id": 12,
+          "id": userId,
           "CHARGE_SHEET_FIELD": chargesheet,
           "CHARGE_SHEET_DATE": chargesheetDate,
         };

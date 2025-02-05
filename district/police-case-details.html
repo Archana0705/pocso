@@ -402,10 +402,19 @@ apex.event.trigger(apex.gPageContext$,'apexreadyend');
       </script>
       <script>
     $(document).ready(function () {
+      let policeStationName;
+      function getQueryParam(name) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+        let statusValue = getQueryParam("status");
+        if (statusValue) {
+          policeStationName = statusValue; // Display in an element (if needed)
+        }
       const apiUrl = "https://tngis.tnega.org/lcap_api/pocso/api/v1/district_admin/view/viewPoliceReportsByPoliceStationName";
         const tableBody = $("#police_case_dashboard tbody");
         const viewDashboardPayload = {
-                "policeStaionName": "Magudamchavadi"
+                "policeStaionName": policeStationName
         }
         tableBody.html('<tr><td colspan="9" class="text-center">Loading...</td></tr>');
         $.ajax({
