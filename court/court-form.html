@@ -1826,7 +1826,7 @@
           return "";
         } else {
           let [month, day, year] = dateString.split("/");
-          return `${year}-${month}-${day}`;
+          return `${day}-${month}-${year}`;
         }
       }
 
@@ -1874,7 +1874,7 @@
         }
 
         var bankDetailsPayload = {
-          COURT_ID: "POCSO/JULY     /2024/0332",
+          COURT_ID: "POCSO/JULY     /2024/0345",
           IFSC_CODE: ifscCode,
           BANK_NAME: bankName,
           BRANCH_NAME: branchName,
@@ -1888,16 +1888,16 @@
         }
 
         var interimStatusPayload = {
-          "COURT_ID_1": "1234",
+          "COURT_ID_1": "POCSO/JULY     /2024/0345",
           "ID": "5678"
         }
 
         var interimPayload = {
-          "COURT_ID": "12345",
+          "COURT_ID": "POCSO/JULY     /2024/0345",
           "ORDER_NO": orderNumber,
-          "COURT_FILE_DATE": courtFileDate,
+          "COURT_FILE_DATE": convertDateFormat(courtFileDate),
           "NAME_OF_COURT": nameOfCourt,
-          "INTERIM_ORDER_DATE": orderDate,
+          "INTERIM_ORDER_DATE": convertDateFormat(orderDate),
           "INTERIM_AMOUNT": interimAmount,
           "JUDGEMENT": judgement,
           "TYPE": typeOfOrder,
@@ -1912,10 +1912,10 @@
 
         var finalPayload = {
           "ORDER_NO": orderNumber,
-          "COURT_FILE_DATE": courtFileDate,
+          "COURT_FILE_DATE": convertDateFormat(courtFileDate),
           "NAME_OF_COURT": nameOfCourt,
           "FINAL_AMOUNT": finalAmount,
-          "FINAL_ORDER_DATE": finalOrderDate,
+          "FINAL_ORDER_DATE": convertDateFormat(finalOrderDate),
           "JUDGEMENT": judgement,
           "TYPE": typeOfOrder,
           "CHANGE_BANK_ACCOUNT": changeBankAccount,
@@ -1925,15 +1925,15 @@
           "IFSC_CODE_1": ifscCode,
           "ACCOUNT_NUMBER_1": accountNumber,
           "BANK_NAME_1": bankName,
-          "ID": "POCSO/FEBRUARY /2024/0044",
+          "ID": "POCSO/JULY     /2024/0345",
           "INTERIM_AMOUNT": null,
           "INTERIM_ORDER_DATE": null,
         }
 
         var finalOrderDatePayload = {
           "FINAL_AMOUNT": finalAmount,
-          "FINAL_ORDER_DATE": finalOrderDate,
-          "ID": "POCSO/FEBRUARY/2024/0048"
+          "FINAL_ORDER_DATE": convertDateFormat(finalOrderDate),
+          "ID": "POCSO/JULY     /2024/0345"
         }
 
 
@@ -1972,7 +1972,7 @@
               "INTERIM": interimInputFile && interimInputFile.fileBase64 ? interimInputFile.fileBase64 : null,
               "INTERIM_ATTACH_FILENAME": interimInputFile && interimInputFile.filename ? interimInputFile.filename : null,
               "INTERIM_ATTACH_MIMETYPE": interimInputFile && interimInputFile.mimetype ? interimInputFile.mimetype : null,
-              "COURT_ID": "POCSO/FEBRUARY /2024/0048"
+              "COURT_ID": "POCSO/JULY     /2024/0345"
             }
 
             $.ajax({
@@ -2034,7 +2034,7 @@
             "FINAL": finalInputFile && finalInputFile.fileBase64 ? finalInputFile.fileBase64 : null,
             "FINAL_ATTACH_FILENAME": finalInputFile && finalInputFile.filename ? finalInputFile.filename : null,
             "FINAL_ATTACH_MIMETYPE": finalInputFile && finalInputFile.mimetype ? finalInputFile.mimetype : null,
-            "COURT_ID": "POCSO/FEBRUARY /2024/0048"
+            "COURT_ID": "POCSO/JULY     /2024/0345"
           }
           $.ajax({
             url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/court/update/updateInterimOrderFinal',
@@ -2091,10 +2091,10 @@
   </script>
   <script>
     const requestData = {
-      "user_id": "POCSO/FEBRUARY /2024/0044"
+      "user_id": "POCSO/JULY     /2024/0345"
     };
 
-    var courtId = "POCSO/FEBRUARY /2024/0044";
+    var courtId = "POCSO/JULY     /2024/0345";
 
     function viewDisbursal() {
       debugger
