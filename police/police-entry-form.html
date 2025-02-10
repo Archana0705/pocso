@@ -150,7 +150,7 @@
                 <div class="t-NavigationBar-menu" id="menu_L333486390590036621">
                   <ul>
                     <li class="" data-current="false" data-icon="fa fa-sign-out">
-                      <a href="../index.html" title="" target="">Sign Out</a>
+                      <a href="" title="" target="">Sign Out</a>
                     </li>
                     <li class="" data-current="false" data-icon="">
                       <a href="javascript:apex.theme42.dialog('/ords/r/wspocso/pocso182168171/change-password?session=4924695955763&dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg', {title:'Change Password', h:'auto', w:'720', mxw:'960', modal:true, dialog:null, dlgCls:'t-Dialog-page--standard '+''},'', apex.gPageContext$)"
@@ -1522,6 +1522,8 @@
   <script src="../assets/js/chartBundle.min.js"></script>
 
   <script>
+
+
     document.addEventListener("DOMContentLoaded", function () {
       const dropdownIcon = document.getElementById("dropdown-icon");
       const menu = document.getElementById("menu_L333486390590036621");
@@ -1584,7 +1586,16 @@
         }, 1000);
       }
     }
-    userData()
+    userData();
+
+    $(document).ready(function () {
+      $('li[data-icon="fa fa-sign-out"] a').click(function (event) {
+        event.preventDefault();
+        localStorage.clear();
+        window.location.href = "../index.html";
+      });
+    });
+
     const requestData = {
       id: userId
     };

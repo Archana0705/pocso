@@ -208,7 +208,7 @@
                 <div class="t-NavigationBar-menu" id="menu_L333486390590036621">
                   <ul>
                     <li class="" data-current="false" data-icon="fa fa-sign-out">
-                      <a href="../index.html" title="" target="">Sign Out</a>
+                      <a href="" title="" target="">Sign Out</a>
                     </li>
                     <li class="" data-current="false" data-icon="">
                       <a href="javascript:apex.theme42.dialog('/ords/r/wspocso/pocso182168171/change-password?session=4924695955763&dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg', {title:'Change Password', h:'auto', w:'720', mxw:'960', modal:true, dialog:null, dlgCls:'t-Dialog-page--standard '+''},'', apex.gPageContext$)"
@@ -1598,7 +1598,28 @@
   <script src="../assets/vendor/datatables-buttons/js/buttons.html5.min.js"></script>
   <script src="../assets/vendor/datatables-buttons/js/buttons.print.min.js"></script>
   <script src="../assets/vendor/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownIcon = document.getElementById("dropdown-icon");
+      const menu = document.getElementById("menu_L333486390590036621");
 
+      dropdownIcon.addEventListener("click", function () {
+        // Toggle the visibility of the menu
+        if (menu.style.display === "none" || menu.style.display === "") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      });
+
+      // Optional: Close the menu if clicking outside
+      window.addEventListener("click", function (event) {
+        if (!event.target.closest('.t-NavigationBar-item')) {
+          menu.style.display = "none"; // Hide menu if clicked outside
+        }
+      });
+    });
+  </script>
   <script>
     $(document).on({
       ajaxStart: function () {
@@ -1611,6 +1632,32 @@
       }
     });
     AOS.init();
+
+    function userData() {
+      debugger
+      const userDetails = JSON.parse(localStorage.getItem("user_details")); // Parse back to object
+
+      var userNameElement = document.querySelector('.t-Button-label-role');
+
+      if (userDetails) {
+        userNameElement.textContent = userDetails.role;
+      } else {
+        showErrorToast("Something went wrong");
+        localStorage.clear();
+        sessionStorage.clear();
+        setTimeout(function () {
+          window.location.href = "../index.html";
+        }, 1000);
+      }
+    }
+    userData();
+    $(document).ready(function () {
+      $('li[data-icon="fa fa-sign-out"] a').click(function (event) {
+        event.preventDefault(); // Prevent default action (optional)
+        localStorage.clear(); // Clears all localStorage data
+        window.location.href = "../index.html"; // Redirect to login or home page
+      });
+    });
 
     // $('.bankDetailsHide').hide();
     // $('#P53_CHANGE_BANK_ACCOUNT input').on('click', function () {
@@ -1891,7 +1938,7 @@
           showErrorToast("Please fill in all required fields.");
           return;
         }
-        
+
 
         if (typeOfOrder === "Interim Compensation") {
           if (!interimAmount) {
