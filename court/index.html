@@ -25,6 +25,37 @@
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <style type="text/css">
+    /* Initially hide the menu */
+    #menu_L333486390590036621 {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      z-index: 10;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    /* Optional styling for the dropdown menu */
+    .t-NavigationBar-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .t-NavigationBar-menu li {
+      padding: 8px;
+    }
+
+    .t-NavigationBar-menu li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .t-NavigationBar-menu li a:hover {
+      background-color: #f1f1f1;
+    }
+
     body {
       background-image: linear-gradient(to right, var(--shade1), var(--shade2));
     }
@@ -117,33 +148,36 @@
             <ul class="t-NavigationBar " id="333474357255036612">
               <li class="t-NavigationBar-item ">
                 <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
-                  id="L333486390590036621" data-menu="menu_L333486390590036621" title="">
-                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" last-log></span><span
-                    class="t-Button-label">Pocso_Chennai</span><span class="t-Button-badge"></span><span
-                    class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+                  id="L333486390590036621" title="">
+                  <span class="t-Icon fa fa-user" aria-hidden="true" last-log></span>
+                  <span class="t-Button-label-role">Awps - Avadi</span>
+                  <span class="t-Button-badge"></span>
+                  <span class="a-Icon icon-down-arrow" aria-hidden="true" id="dropdown-icon"></span>
                 </button>
-                <div class="t-NavigationBar-menu" style="display: none" id="menu_L333486390590036621">
+                <div class="t-NavigationBar-menu" id="menu_L333486390590036621">
                   <ul>
-                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
-                        href="apex_authentication.logout?p_app_id=111&p_session_id=16167970441650" title=""
-                        target="">Sign Out</a></li>
-                    <li class="" data-current="false" data-icon=""><a
-                        href="javascript:apex.theme42.dialog('\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fchange-password?session=16167970441650\u0026dialogCs=siG3Xmc8lP23TOG-HYyKdp7gR_B3uL9YB-txP_Cqf8wAP-k69DbkIQzKrLO28GLk4C0EF54ggMl5yswlpvUuEA',{title:'Change Password',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)"
-                        title="" target="">Change Password</a></li>
+                    <li class="" data-current="false" data-icon="fa fa-sign-out">
+                      <a href="../index.html" title="" target="">Sign Out</a>
+                    </li>
+                    <li class="" data-current="false" data-icon="">
+                      <a href="javascript:apex.theme42.dialog('/ords/r/wspocso/pocso182168171/change-password?session=4924695955763&dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg', {title:'Change Password', h:'auto', w:'720', mxw:'960', modal:true, dialog:null, dlgCls:'t-Dialog-page--standard '+''},'', apex.gPageContext$)"
+                        title="" target="">Change Password</a>
+                    </li>
                   </ul>
                 </div>
               </li>
               <li class="t-NavigationBar-item ">
                 <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-                  <span class="t-Icon " aria-hidden="true" last-log></span><span class="t-Button-label">Last Logged in:
-                    13-11-2024 03:19 PM</span><span class="t-Button-badge"></span>
+                  <span class="t-Icon" aria-hidden="true" last-log></span>
+                  <span class="t-Button-label">Last Logged in: 13-11-2024 11:40 AM</span>
+                  <span class="t-Button-badge"></span>
                 </a>
               </li>
             </ul>
           </div>
           <div class="t-Header-navBar--end"></div>
         </div>
+
       </div>
       <div class="t-Header-nav">
         <div class="t-Header-nav-list js-tabLike js-tabLike" id="t_MenuNav">
@@ -936,7 +970,48 @@
   <script src="../assets/vendor/datatables-buttons/js/buttons.colVis.min.js"></script>
 
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownIcon = document.getElementById("dropdown-icon");
+      const menu = document.getElementById("menu_L333486390590036621");
+
+      dropdownIcon.addEventListener("click", function () {
+        // Toggle the visibility of the menu
+        if (menu.style.display === "none" || menu.style.display === "") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      });
+
+      // Optional: Close the menu if clicking outside
+      window.addEventListener("click", function (event) {
+        if (!event.target.closest('.t-NavigationBar-item')) {
+          menu.style.display = "none"; // Hide menu if clicked outside
+        }
+      });
+    });
+  </script>
+  <script>
     AOS.init();
+    function userData() {
+      debugger
+      const userDetails = JSON.parse(localStorage.getItem("user_details")); // Parse back to object
+
+      var userNameElement = document.querySelector('.t-Button-label-role');
+
+      if (userDetails) {
+        userNameElement.textContent = userDetails.role;
+      } else {
+        showErrorToast("Something went wrong");
+        localStorage.clear();
+        sessionStorage.clear();
+        setTimeout(function () {
+          window.location.href = "../index.html";
+        }, 1000);
+      }
+    }
+    userData()
+
 
     function showSuccessToast(message) {
       const toastElement = document.getElementById('successToast');

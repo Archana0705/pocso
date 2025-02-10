@@ -1310,6 +1310,24 @@
     </script>
 
     <script>
+        function userData() {
+            debugger
+            const userDetails = JSON.parse(localStorage.getItem("user_details")); // Parse back to object
+
+            var userNameElement = document.querySelector('.t-Button-label-role');
+
+            if (userDetails) {
+                userNameElement.textContent = userDetails.role;
+            } else {
+                showErrorToast("Something went wrong");
+                localStorage.clear();
+                sessionStorage.clear();
+                setTimeout(function () {
+                    window.location.href = "../index.html";
+                }, 1000);
+            }
+        }
+        userData()
         $(document).ready(function () {
             let today = new Date().toISOString().split('T')[0];
             $('#inspectionDate').attr('min', today);
