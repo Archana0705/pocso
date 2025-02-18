@@ -1,287 +1,485 @@
 <!DOCTYPE html>
-<html class="no-js  page-1 app-POCSO182168171" lang="en" >
-  <head>
-    <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <meta charset="utf-8">
-    <title>POCSO</title>
-    
-    <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css" />
-    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css" />
-    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css" />
-    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css" />
-    <link rel="stylesheet" href="../assets/css/Core-new.min.css" type="text/css" />
-    <link rel="stylesheet" href="../assets/css/new-custom.min.css" type="text/css" />
-    <link rel="stylesheet" href="../assets/css/aos.min.css" type="text/css" />
-    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png" />
-    <link rel="icon" href="../assets/img/app-icon-32.png" />
-    <style type="text/css">
-      body{
-      background-image: linear-gradient(to right, var(--shade1),var(--shade2));
-      }
-      #dyy{
-      width:160px !important;
-      }
-    </style>
-    <style type="text/css">
-      .a-Menu {
-      display: none; /* Initially hidden */
+<html class="no-js  page-1 app-POCSO182168171" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>POCSO</title>
+
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/Core-new.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/new-custom.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/aos.min.css" type="text/css" />
+  <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png" />
+  <link rel="icon" href="../assets/img/app-icon-32.png" />
+  <link rel="icon" href="../assets/img/app-icon-32.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <style type="text/css">
+    #menu_L333486390590036621 {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      z-index: 10;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    /* Optional styling for the dropdown menu */
+    .t-NavigationBar-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .t-NavigationBar-menu li {
+      padding: 8px;
+    }
+
+    .t-NavigationBar-menu li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .t-NavigationBar-menu li a:hover {
+      background-color: #f1f1f1;
+    }
+
+    body {
+      background-image: linear-gradient(to right, var(--shade1), var(--shade2));
+    }
+
+    #dyy {
+      width: 160px !important;
+    }
+  </style>
+  <style type="text/css">
+    .a-Menu {
+      display: none;
+      /* Initially hidden */
       border: 1px solid #ccc;
       background-color: #fff;
       z-index: 1000;
     }
+
     .a-Menu--top {
       position: absolute;
     }
-    </style>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="-1" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://www.pocsoportal.tn.gov.in/ords/r/wspocso/111/files/static/v1962/apexcharts.min.js"></script>
-  </head>
-  <body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
-    <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
-    <form role="none" action="wwv_flow.accept?p_context=pocso182168171/home/8099699564352" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  autocomplete="off">
-      <input type="hidden" name="p_flow_id" value="111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="8099699564352" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="170574712540054293134513058203922223439" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="pocso182168171&#x2F;home&#x2F;8099699564352" id="pContext" /><input type="hidden" value="170574712540054293134513058203922223439" id="pSalt" />
-      <header class="t-Header" id="t_Header" role="banner">
-        <div class="t-Header-branding pad">
-          <div class="t-Header-controls">
-            <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
-          </div>
-          <div class="t-Header-logo row">
-            <!-- <a href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;home?session=8099699564352" class="t-Header-logo-link"><img src="&#x9;r&#x2F;wspocso&#x2F;111&#x2F;files&#x2F;static&#x2F;v1962&#x2F;tnlogo.png" alt="" class="apex-logo-img" /><span class="apex-logo-text">POCSO Database Management and VCF Dispersal Portal</span></a> -->
-            <div class="col"><img class="header-logo" src="../assets/img/tnlogo.png" data-aos="fade-left" data-aos-delay="600" data-aos-duration="800"></div>
-            <div class="col-8 heading text-middle">
-              <h2 data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200">Department of Children Welfare and Special Services</h2>
-              <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200">குழந்தைகள் நலன் மற்றும் சிறப்புச் சேவைகள் துறை</h2>
-            </div>
-            <div class="col"><img class="header-logo" src="../assets/img/deptlogo.png" data-aos="fade-right" data-aos-delay="600" data-aos-duration="800"></div>
-          </div>
-          <div class="t-Header-navBar">
-            <div class="t-Header-navBar--start"></div>
-            <div class="t-Header-navBar--center">
-              <ul class="t-NavigationBar " id="333474357255036612">
-                <li class="t-NavigationBar-item ">
-                  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L333486390590036621" data-menu="menu_L333486390590036621" title="">
-                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" last-log></span><span class="t-Button-label">Sivagangai</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
-                  </button>
-                  <div class="t-NavigationBar-menu" style="display: none" id="menu_L333486390590036621">
-                    <ul>
-                      <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
-                      <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=111&p_session_id=8099699564352" title="" target="">Sign Out</a></li>
-                      <li class="" data-current="false" data-icon=""><a href="javascript:apex.theme42.dialog('\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fchange-password?session=8099699564352\u0026dialogCs=YDeUjMHMBnfNX1hkobD4zrSNN78GpPFPRiT8NAuWc_z95oOVgUibmYEnfgkjHrjRldg8x7pUvbzX7vvNOZlq_A',{title:'Change Password',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)" title="" target="">Change Password</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="t-NavigationBar-item ">
-                  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-                  <span class="t-Icon " aria-hidden="true" last-log></span><span class="t-Button-label">Last Logged in: 13-11-2024 08:25 PM</span><span class="t-Button-badge"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="t-Header-navBar--end"></div>
-          </div>
+
+    .toast-container {
+      right: 0.5%;
+    }
+
+    #successToast {
+      background: #198754 !important;
+    }
+
+    #errorToast {
+      background: #ff0000 !important;
+    }
+  </style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.pocsoportal.tn.gov.in/ords/r/wspocso/111/files/static/v1962/apexcharts.min.js"></script>
+  <!-- Toast -->
+  <div class="toast-container position-fixed p-3 custom_toast" x-data="transButtonComponent()">
+    <div id="errorToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="errorMessage" class="mb-0"></p>
         </div>
-        <div class="t-Header-nav">
-  <div class="t-Header-nav-list js-tabLike js-tabLike a-MenuBar a-MenuBar--overflow a-MenuBar--tabs" id="t_MenuNav" role="menubar">
-    <ul role="none">
-      <li role="none" id="t_MenuNav_0" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_0i" href="/ords/r/wspocso/pocso182168171/home?session=3758679301233">Dashboard</a></li>
-      <li role="none" id="t_MenuNav_1" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_1i" href="/ords/r/wspocso/pocso182168171/police-registration-for-pocso-vcf?session=3758679301233" tabindex="-1">Police Registration Form</a></li>
-      <li role="none" id="t_MenuNav_2" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_2i" href="/ords/r/wspocso/pocso182168171/interim-final-order2?session=3758679301233" tabindex="-1">New Request</a></li>
-      <li role="none" id="t_MenuNav_3" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_3i" href="/ords/r/wspocso/pocso182168171/pocso-directorate?session=3758679301233" tabindex="-1">New Request</a></li>
-      <li role="none" id="t_MenuNav_4" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_4i" href="/ords/r/wspocso/pocso182168171/paid-request?session=3758679301233" tabindex="-1">Update Payment Status</a></li>
-      <li role="none" id="t_MenuNav_5" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_5i" href="/ords/r/wspocso/pocso182168171/police-details?session=3758679301233" tabindex="-1">Received Application</a></li>
-      <li role="none" id="t_MenuNav_6" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_6i" href="/ords/r/wspocso/pocso182168171/court-form?session=3758679301233" tabindex="-1">Court Form</a></li>
-      <li role="none" id="t_MenuNav_7" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_7i" href="/ords/r/wspocso/pocso182168171/court-details?session=3758679301233" tabindex="-1">Received Interim Court Orders</a></li>
-      <li role="none" id="t_MenuNav_8" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label" id="t_MenuNav_8i" href="/ords/r/wspocso/pocso182168171/directorate-form?session=3758679301233" tabindex="-1">Directorate Form</a></li>
-      <li role="none" id="t_MenuNav_9" class="a-MenuBar-item a-MenuBar-item--overflow is-focused">
-        <button type="button" role="menuitem" class="a-MenuBar-label" id="t_MenuNav_9i" tabindex="-1" aria-expanded="false" title="APEX.MENU.OVERFLOW_LABEL"><span class="a-Icon icon-down-chevron"></span></button>
-        <div id="t_MenuNav_9m" class="a-Menu a-Menu--top" role="menu" style="position: absolute; top: 48.0047px; left: 1241.48px; min-width: 56px; display: none;">
-          <div class="a-Menu-content">
-            <ul role="group" aria-labelledby="t_MenuNav_9i">
-              <li role="none" id="t_MenuNav_9_0" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"></span><a href="/ords/r/wspocso/pocso182168171/status?session=3758679301233" id="t_MenuNav_9_0i" role="menuitem" class="a-Menu-label">Update Status</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+    <div id="successToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="successMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+</head>
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form role="none" action="wwv_flow.accept?p_context=pocso182168171/home/8099699564352" method="post" name="wwv_flow"
+    id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
+    <input type="hidden" name="p_flow_id" value="111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
+      value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="8099699564352" id="pInstance" /><input
+      type="hidden" name="p_page_submission_id" value="170574712540054293134513058203922223439"
+      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
+      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
+      value="pocso182168171&#x2F;home&#x2F;8099699564352" id="pContext" /><input type="hidden"
+      value="170574712540054293134513058203922223439" id="pSalt" />
+    <header class="t-Header" id="t_Header" role="banner">
+      <div class="t-Header-branding pad">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo row">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;wspocso&#x2F;pocso182168171&#x2F;home?session=8099699564352" class="t-Header-logo-link"><img src="&#x9;r&#x2F;wspocso&#x2F;111&#x2F;files&#x2F;static&#x2F;v1962&#x2F;tnlogo.png" alt="" class="apex-logo-img" /><span class="apex-logo-text">POCSO Database Management and VCF Dispersal Portal</span></a> -->
+          <div class="col"><img class="header-logo" src="../assets/img/tnlogo.png" data-aos="fade-left"
+              data-aos-delay="600" data-aos-duration="800"></div>
+          <div class="col-8 heading text-middle">
+            <h2 data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200">Department of Children Welfare and
+              Special Services</h2>
+            <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200">குழந்தைகள் நலன் மற்றும் சிறப்புச்
+              சேவைகள் துறை</h2>
+          </div>
+          <div class="col"><img class="header-logo" src="../assets/img/deptlogo.png" data-aos="fade-right"
+              data-aos-delay="600" data-aos-duration="800"></div>
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div class="t-Header-navBar--center">
+            <ul class="t-NavigationBar " id="333474357255036612">
+              <li class="t-NavigationBar-item ">
+                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
+                  id="L333486390590036621" title="">
+                  <span class="t-Icon fa fa-user" aria-hidden="true" last-log></span>
+                  <span class="t-Button-label-role">Awps - Avadi</span>
+                  <span class="t-Button-badge"></span>
+                  <span class="a-Icon icon-down-arrow" aria-hidden="true" id="dropdown-icon"></span>
+                </button>
+                <div class="t-NavigationBar-menu" id="menu_L333486390590036621">
+                  <ul>
+                    <li class="" data-current="false" data-icon="fa fa-sign-out">
+                      <a href="" title="" target="">Sign Out</a>
+                    </li>
+                    <li class="" data-current="false" data-icon="">
+                      <a href="javascript:apex.theme42.dialog('/ords/r/wspocso/pocso182168171/change-password?session=4924695955763&dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg', {title:'Change Password', h:'auto', w:'720', mxw:'960', modal:true, dialog:null, dlgCls:'t-Dialog-page--standard '+''},'', apex.gPageContext$)"
+                        title="" target="">Change Password</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li role="none" id="t_MenuNav_9_1" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"></span><a href="/ords/r/wspocso/pocso182168171/update-status1?session=3758679301233" id="t_MenuNav_9_1i" role="menuitem" class="a-Menu-label">Received Final Court Orders</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_2" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-table"></span></span><a href="/ords/r/wspocso/pocso182168171/overall-report1?session=3758679301233" id="t_MenuNav_9_2i" role="menuitem" class="a-Menu-label">Overall Report</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_3" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"></span><a href="/ords/r/wspocso/pocso182168171/application-details?session=3758679301233" id="t_MenuNav_9_3i" role="menuitem" class="a-Menu-label">Dashboard</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_4" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-table"></span></span><a href="/ords/r/wspocso/pocso182168171/state-dashboard?session=3758679301233" id="t_MenuNav_9_4i" role="menuitem" class="a-Menu-label">State Dashboard</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_5" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"></span><a href="/ords/r/wspocso/pocso182168171/district-wise-all-report1?session=3758679301233" id="t_MenuNav_9_5i" role="menuitem" class="a-Menu-label">Overall Report - District</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_6" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"></span><a href="/ords/r/wspocso/pocso182168171/overall-report-station?session=3758679301233" id="t_MenuNav_9_6i" role="menuitem" class="a-Menu-label">Overall State Report</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_7" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-table"></span></span><a href="/ords/r/wspocso/pocso182168171/police-case-details?session=3758679301233" id="t_MenuNav_9_7i" role="menuitem" class="a-Menu-label">Police Case Details</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_8" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-table"></span></span><a href="/ords/r/wspocso/pocso182168171/overall-state-report?session=3758679301233" id="t_MenuNav_9_8i" role="menuitem" class="a-Menu-label">Overall State Report</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_9" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-table"></span></span><a href="/ords/r/wspocso/pocso182168171/dashboard-report?session=3758679301233" id="t_MenuNav_9_9i" role="menuitem" class="a-Menu-label">Dashboard</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_10" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-table"></span></span><a href="/ords/r/wspocso/pocso182168171/dashboard-report1?session=3758679301233" id="t_MenuNav_9_10i" role="menuitem" class="a-Menu-label">Dashboard</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_11" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"></span><a href="/ords/r/wspocso/pocso182168171/customize-report-district?session=3758679301233" id="t_MenuNav_9_11i" role="menuitem" class="a-Menu-label">Customize Report</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_12" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-dashboard"></span></span><a href="/ords/r/wspocso/pocso182168171/test-dash?session=3758679301233" id="t_MenuNav_9_12i" role="menuitem" class="a-Menu-label">test  dash</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
-              </li>
-              <li role="none" id="t_MenuNav_9_13" class="a-Menu-item">
-                <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span class="fa fa-dashboard"></span></span><a href="/ords/r/wspocso/pocso182168171/test2?session=3758679301233" id="t_MenuNav_9_13i" role="menuitem" class="a-Menu-label">test</a></span><span class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+              <li class="t-NavigationBar-item ">
+                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+                  <span class="t-Icon" aria-hidden="true" last-log></span>
+                  <span class="t-Button-label">Last Logged in: 13-11-2024 11:40 AM</span>
+                  <span class="t-Button-badge"></span>
+                </a>
               </li>
             </ul>
           </div>
+          <div class="t-Header-navBar--end"></div>
         </div>
-      </li>
-    </ul>
-  </div>
-</div>
-      </header>
-      <div class="t-Body">
-        <div class="t-Body-main">
-          <div class="t-Body-title" id="t_Body_title"></div>
-          <div class="t-Body-content" id="t_Body_content">
-            <main id="main" class="t-Body-mainContent">
-              <span id="APEX_SUCCESS_MESSAGE" data-template-id="345766732811634868_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="345766732811634868_E" class="apex-page-error u-hidden"></span>
-              <div class="t-Body-fullContent"></div>
-              <div class="t-Body-contentInner">
-                <div class="container">
-                  <div class="row ">
-                    <div class="col col-12 apex-col-auto col-start col-end" >
-                      <div id="R166688235952765257"  role="region" aria-label="Dashboard&#x2F;Report&#x20;for&#x20;District"  class="t-IRR-region grid-all">
-                        <div class="t-Region-orderBy"></div>
-                        <div id="R166688235952765257_ig">
-                          <div class="a-GV-columnItemContainer u-vh" aria-hidden="true">
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15095981838493716"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096057177493717"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096172501493718"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096260530493719"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096365162493720"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096454271493721"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096562442493722"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096644557493723"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096764274493724"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096895264493725"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15096928364493726"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097081404493727"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097131608493728"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097277241493729"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097357165493730"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097404536493731"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097549881493732"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097654801493733"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097706306493734"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097880481493735"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15097975879493736"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15098056598493737"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15098113689493738"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15098249101493739"></div>
-                            <div class="a-GV-columnItem"><input type="hidden" id="C15098340072493740"></div>
-                          </div>
-                        </div>
-                        <script type="text/javascript">
-                          var gIg166688235952765257data = {
-                          "values":[
-                          [
-                          "1"
-                          ,"Sivagangai"
-                          ,"Awps-karaikudi"
-                          ,"10"
-                          ,"10"
-                          ,"10"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,"0"
-                          ,{
-                          "salt":"65nmPhYYG-fr9HnI4BxiLw"
-                          ,"protected":"\/0srsOZU2MXO6_IVfWcrca8CFZxVpWbn0KAM8P0Fp9xoqo44OEakQKwrJogoYVJLn2tXOyfTl7AEAFe-jRMemTA"
-                          ,"rowVersion":"YwYHks6m4HjKNEY3sxpEmVDWj8JrOqVMooTJd2rt9jRi-t4TAM5pQWPRixvwfypJBbUFbbV16PzrBPkVxd0qMA"
-                          ,"fields":{
-                          "POL_STAT":{
-                          "url":"\/ords\/r\/wspocso\/pocso182168171\/police-case-details1?p83_police=Awps-karaikudi\u0026session=8099699564352\u0026cs=1k1VvTm6GJ0ep27MhXypU44kB8FMxC6t__5NDb0f4JRin0N_6cXQ-5nANPESwo-jNPssJwTdDpp3wVyrvK_6JOg"
-                          }
-                          }
-                          }
-                          ]
-                          ]
-                          ,"firstRow":1
-                          ,"moreData":false
-                          }
-                          ;
-                        </script>
-                      </div>
-                    </div>
-                  </div>
-                  <input type="hidden" name="P1_IS_LOGGED_IN" id="P1_IS_LOGGED_IN" value="YES">
+      </div>
+      <div class="t-Header-nav">
+        <div class="t-Header-nav-list js-tabLike js-tabLike a-MenuBar a-MenuBar--overflow a-MenuBar--tabs"
+          id="t_MenuNav" role="menubar">
+          <ul role="none">
+            <li role="none" id="t_MenuNav_0" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_0i" href="/ords/r/wspocso/pocso182168171/home?session=3758679301233">Dashboard</a></li>
+            <li role="none" id="t_MenuNav_1" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_1i"
+                href="/ords/r/wspocso/pocso182168171/police-registration-for-pocso-vcf?session=3758679301233"
+                tabindex="-1">Police Registration Form</a></li>
+            <li role="none" id="t_MenuNav_2" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_2i" href="/ords/r/wspocso/pocso182168171/interim-final-order2?session=3758679301233"
+                tabindex="-1">New Request</a></li>
+            <li role="none" id="t_MenuNav_3" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_3i" href="/ords/r/wspocso/pocso182168171/pocso-directorate?session=3758679301233"
+                tabindex="-1">New Request</a></li>
+            <li role="none" id="t_MenuNav_4" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_4i" href="/ords/r/wspocso/pocso182168171/paid-request?session=3758679301233"
+                tabindex="-1">Update Payment Status</a></li>
+            <li role="none" id="t_MenuNav_5" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_5i" href="/ords/r/wspocso/pocso182168171/police-details?session=3758679301233"
+                tabindex="-1">Received Application</a></li>
+            <li role="none" id="t_MenuNav_6" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_6i" href="/ords/r/wspocso/pocso182168171/court-form?session=3758679301233"
+                tabindex="-1">Court Form</a></li>
+            <li role="none" id="t_MenuNav_7" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_7i" href="/ords/r/wspocso/pocso182168171/court-details?session=3758679301233"
+                tabindex="-1">Received Interim Court Orders</a></li>
+            <li role="none" id="t_MenuNav_8" class="a-MenuBar-item"><a role="menuitem" class="a-MenuBar-label"
+                id="t_MenuNav_8i" href="/ords/r/wspocso/pocso182168171/directorate-form?session=3758679301233"
+                tabindex="-1">Directorate Form</a></li>
+            <li role="none" id="t_MenuNav_9" class="a-MenuBar-item a-MenuBar-item--overflow is-focused">
+              <button type="button" role="menuitem" class="a-MenuBar-label" id="t_MenuNav_9i" tabindex="-1"
+                aria-expanded="false" title="APEX.MENU.OVERFLOW_LABEL"><span
+                  class="a-Icon icon-down-chevron"></span></button>
+              <div id="t_MenuNav_9m" class="a-Menu a-Menu--top" role="menu"
+                style="position: absolute; top: 48.0047px; left: 1241.48px; min-width: 56px; display: none;">
+                <div class="a-Menu-content">
+                  <ul role="group" aria-labelledby="t_MenuNav_9i">
+                    <li role="none" id="t_MenuNav_9_0" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span
+                            class="a-Menu-statusCol"></span><a
+                            href="/ords/r/wspocso/pocso182168171/status?session=3758679301233" id="t_MenuNav_9_0i"
+                            role="menuitem" class="a-Menu-label">Update Status</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_1" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span
+                            class="a-Menu-statusCol"></span><a
+                            href="/ords/r/wspocso/pocso182168171/update-status1?session=3758679301233"
+                            id="t_MenuNav_9_1i" role="menuitem" class="a-Menu-label">Received Final Court
+                            Orders</a></span><span class="a-Menu-accelContainer"><span
+                            class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_2" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-table"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/overall-report1?session=3758679301233"
+                            id="t_MenuNav_9_2i" role="menuitem" class="a-Menu-label">Overall Report</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_3" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span
+                            class="a-Menu-statusCol"></span><a
+                            href="/ords/r/wspocso/pocso182168171/application-details?session=3758679301233"
+                            id="t_MenuNav_9_3i" role="menuitem" class="a-Menu-label">Dashboard</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_4" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-table"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/state-dashboard?session=3758679301233"
+                            id="t_MenuNav_9_4i" role="menuitem" class="a-Menu-label">State Dashboard</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_5" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span
+                            class="a-Menu-statusCol"></span><a
+                            href="/ords/r/wspocso/pocso182168171/district-wise-all-report1?session=3758679301233"
+                            id="t_MenuNav_9_5i" role="menuitem" class="a-Menu-label">Overall Report -
+                            District</a></span><span class="a-Menu-accelContainer"><span
+                            class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_6" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span
+                            class="a-Menu-statusCol"></span><a
+                            href="/ords/r/wspocso/pocso182168171/overall-report-station?session=3758679301233"
+                            id="t_MenuNav_9_6i" role="menuitem" class="a-Menu-label">Overall State
+                            Report</a></span><span class="a-Menu-accelContainer"><span
+                            class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_7" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-table"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/police-case-details?session=3758679301233"
+                            id="t_MenuNav_9_7i" role="menuitem" class="a-Menu-label">Police Case Details</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_8" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-table"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/overall-state-report?session=3758679301233"
+                            id="t_MenuNav_9_8i" role="menuitem" class="a-Menu-label">Overall State
+                            Report</a></span><span class="a-Menu-accelContainer"><span
+                            class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_9" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-table"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/dashboard-report?session=3758679301233"
+                            id="t_MenuNav_9_9i" role="menuitem" class="a-Menu-label">Dashboard</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_10" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-table"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/dashboard-report1?session=3758679301233"
+                            id="t_MenuNav_9_10i" role="menuitem" class="a-Menu-label">Dashboard</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_11" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span
+                            class="a-Menu-statusCol"></span><a
+                            href="/ords/r/wspocso/pocso182168171/customize-report-district?session=3758679301233"
+                            id="t_MenuNav_9_11i" role="menuitem" class="a-Menu-label">Customize Report</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_12" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-dashboard"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/test-dash?session=3758679301233" id="t_MenuNav_9_12i"
+                            role="menuitem" class="a-Menu-label">test dash</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                    <li role="none" id="t_MenuNav_9_13" class="a-Menu-item">
+                      <div class="a-Menu-inner"><span class="a-Menu-labelContainer"><span class="a-Menu-statusCol"><span
+                              class="fa fa-dashboard"></span></span><a
+                            href="/ords/r/wspocso/pocso182168171/test2?session=3758679301233" id="t_MenuNav_9_13i"
+                            role="menuitem" class="a-Menu-label">test</a></span><span
+                          class="a-Menu-accelContainer"><span class="a-Menu-subMenuCol"></span></span></div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="t-Body-contentInner">
-                <div class="container">
-                  <div class="row ">
-                    <div class="col col-12 apex-col-auto col-start col-end" >
-                      <div id="R380244710647794734"  role="region" aria-label="Overall&#x20;Report"  class="t-IRR-region ">
-                        <div class="t-Region-orderBy"></div>
-                        <input type="hidden" name="P65_DISTRICT_NAME" id="P65_DISTRICT_NAME" value=""><input type="hidden" data-for="P65_DISTRICT_NAME" value="g53O-dTqCrhe5EbyolbHjhO5aA0aIa3Y3rJQ8G4SE3-YDjefcUz6MzRgGtaiwUfA903SYrE6nbErKAS470WcPg">
-                        <div id="R380244710647794734_ir" class="a-IRR-container">
-                          <div id="R380244710647794734_worksheet_region" class="a-IRR" aria-live="polite">
-                            <div id="R380244710647794734_single_row_view" class="a-IRR-singleRowView"></div>
-                            <div id="R380244710647794734_full_view" class="a-IRR-fullView">
-                              <div id="R380244710647794734_actions_menu"></div>
-                              <div id="R253031006449437511_toolbar" class="a-IRR-toolbar"><div role="search" aria-label="Search bar of Police Case Details" id="R253031006449437511_toolbar_controls" class="a-IRR-controls"><div class="a-IRR-controlGroup a-IRR-controlGroup--search">
-                                <!-- <div class="a-IRR-search"> -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="t-Body">
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"></div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="345766732811634868_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="345766732811634868_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent"></div>
+            <div class="t-Body-contentInner">
+              <div class="container">
+                <div class="row ">
+                  <div class="col col-12 apex-col-auto col-start col-end">
+                    <div id="R166688235952765257" role="region"
+                      aria-label="Dashboard&#x2F;Report&#x20;for&#x20;District" class="t-IRR-region grid-all">
+                      <div class="t-Region-orderBy"></div>
+                      <div id="R166688235952765257_ig">
+                        <div class="a-GV-columnItemContainer u-vh" aria-hidden="true">
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15095981838493716"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096057177493717"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096172501493718"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096260530493719"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096365162493720"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096454271493721"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096562442493722"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096644557493723"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096764274493724"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096895264493725"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15096928364493726"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097081404493727"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097131608493728"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097277241493729"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097357165493730"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097404536493731"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097549881493732"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097654801493733"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097706306493734"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097880481493735"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15097975879493736"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15098056598493737"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15098113689493738"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15098249101493739"></div>
+                          <div class="a-GV-columnItem"><input type="hidden" id="C15098340072493740"></div>
+                        </div>
+                      </div>
+                      <script type="text/javascript">
+                        var gIg166688235952765257data = {
+                          "values": [
+                            [
+                              "1"
+                              , "Sivagangai"
+                              , "Awps-karaikudi"
+                              , "10"
+                              , "10"
+                              , "10"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , "0"
+                              , {
+                                "salt": "65nmPhYYG-fr9HnI4BxiLw"
+                                , "protected": "\/0srsOZU2MXO6_IVfWcrca8CFZxVpWbn0KAM8P0Fp9xoqo44OEakQKwrJogoYVJLn2tXOyfTl7AEAFe-jRMemTA"
+                                , "rowVersion": "YwYHks6m4HjKNEY3sxpEmVDWj8JrOqVMooTJd2rt9jRi-t4TAM5pQWPRixvwfypJBbUFbbV16PzrBPkVxd0qMA"
+                                , "fields": {
+                                  "POL_STAT": {
+                                    "url": "\/ords\/r\/wspocso\/pocso182168171\/police-case-details1?p83_police=Awps-karaikudi\u0026session=8099699564352\u0026cs=1k1VvTm6GJ0ep27MhXypU44kB8FMxC6t__5NDb0f4JRin0N_6cXQ-5nANPESwo-jNPssJwTdDpp3wVyrvK_6JOg"
+                                  }
+                                }
+                              }
+                            ]
+                          ]
+                          , "firstRow": 1
+                          , "moreData": false
+                        }
+                          ;
+                      </script>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="P1_IS_LOGGED_IN" id="P1_IS_LOGGED_IN" value="YES">
+              </div>
+            </div>
+            <div class="t-Body-contentInner">
+              <div class="container">
+                <div class="row ">
+                  <div class="col col-12 apex-col-auto col-start col-end">
+                    <div id="R380244710647794734" role="region" aria-label="Overall&#x20;Report" class="t-IRR-region ">
+                      <div class="t-Region-orderBy"></div>
+                      <input type="hidden" name="P65_DISTRICT_NAME" id="P65_DISTRICT_NAME" value=""><input type="hidden"
+                        data-for="P65_DISTRICT_NAME"
+                        value="g53O-dTqCrhe5EbyolbHjhO5aA0aIa3Y3rJQ8G4SE3-YDjefcUz6MzRgGtaiwUfA903SYrE6nbErKAS470WcPg">
+                      <div id="R380244710647794734_ir" class="a-IRR-container">
+                        <div id="R380244710647794734_worksheet_region" class="a-IRR" aria-live="polite">
+                          <div id="R380244710647794734_single_row_view" class="a-IRR-singleRowView"></div>
+                          <div id="R380244710647794734_full_view" class="a-IRR-fullView">
+                            <div id="R380244710647794734_actions_menu"></div>
+                            <div id="R253031006449437511_toolbar" class="a-IRR-toolbar">
+                              <div role="search" aria-label="Search bar of Police Case Details"
+                                id="R253031006449437511_toolbar_controls" class="a-IRR-controls">
+                                <div class="a-IRR-controlGroup a-IRR-controlGroup--search">
+                                  <!-- <div class="a-IRR-search"> -->
                                   <!-- <input type="hidden" id="R253031006449437511_column_search_current_column"> -->
                                   <!-- <div class="a-IRR-colSelector"><button id="R253031006449437511_column_search_root" data-menu="R253031006449437511_column_search_drop" class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel" title="Select columns to search" aria-label="Select columns to search" type="button" aria-haspopup="menu"><span class="a-Icon icon-search" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div> -->
-                              <!-- <div class="a-IRR-searchFieldContainer">
+                                  <!-- <div class="a-IRR-searchFieldContainer">
                                 <input class="a-IRR-search-field" id="R253031006449437511_search_field" title="Search Report" type="search" size="30" maxlength="4000" value="">
                               </div> -->
-                              <!-- <div class="a-IRR-searchButtonContainer">
+                                  <!-- <div class="a-IRR-searchButtonContainer">
                                 <button id="R253031006449437511_search_button" class="a-Button a-IRR-button a-IRR-button--search" type="button"><span>Go</span></button>
                               </div> -->
-                            <!-- </div> -->
-                          </div>
-                              <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
-                              <div class="a-IRR-controlGroup a-IRR-controlGroup--options">
-                                <input type="hidden" id="R253031006449437511_row_select" value="50">
-                              <div class="a-IRR-actions">
-                                <button id="R253031006449437511_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="R253031006449437511_actions_menu" aria-haspopup="menu">
-                                Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span>
-                                </button>
-                              </div>
-                              </div>
+                                  <!-- </div> -->
+                                </div>
+                                <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
+                                <div class="a-IRR-controlGroup a-IRR-controlGroup--options">
+                                  <input type="hidden" id="R253031006449437511_row_select" value="50">
+                                  <div class="a-IRR-actions">
+                                    <button id="R253031006449437511_actions_button"
+                                      class="a-Button a-IRR-button a-IRR-button--actions" type="button"
+                                      data-menu="R253031006449437511_actions_menu" aria-haspopup="menu">
+                                      Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span>
+                                    </button>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                              <!-- <div role="region" aria-label="Report settings of Police Case Details" class="a-MediaBlock a-IRR-controlsContainer a-Collapsible is-expanded" id="R253031006449437511_control_panel"><div class="a-MediaBlock-graphic"><h3 aria-hidden="true" class="u-vh a-Collapsible-heading" id="a_Collapsible1_R253031006449437511_control_panel_heading">Report Settings</h3>
+                            <!-- <div role="region" aria-label="Report settings of Police Case Details" class="a-MediaBlock a-IRR-controlsContainer a-Collapsible is-expanded" id="R253031006449437511_control_panel"><div class="a-MediaBlock-graphic"><h3 aria-hidden="true" class="u-vh a-Collapsible-heading" id="a_Collapsible1_R253031006449437511_control_panel_heading">Report Settings</h3>
                                 <span role="heading" aria-level="3"><button type="button" class="a-Button a-IRR-button a-IRR-button--controls" aria-labelledby="a_Collapsible1_R253031006449437511_control_panel_heading" aria-controls="a_Collapsible1_R253031006449437511_control_panel_content" aria-expanded="true"><span class="a-Icon a-Collapsible-icon icon-down-arrow" aria-hidden="true"></span></button></span>
                                 </div>
                                 <div class="a-MediaBlock-content a-Collapsible-content" id="a_Collapsible1_R253031006449437511_control_panel_content" aria-hidden="false">
@@ -296,115 +494,379 @@
                                 </ul>
                                 </div>
                                 <div class="a-IRR-reportSummaryContainer" id="R253031006449437511_control_panel_summary" style="display: none;"><ul class="a-IRR-reportSummary"><li class="a-IRR-reportSummary-item a-IRR-reportSummary-item--highlight"><a href="#" class="a-IRR-reportSummary-label"><span class="a-IRR-reportSummary-icon" aria-label="Highlight, 3" role="img"><span class="a-Icon icon-irr-highlight"></span><span class="a-IRR-reportSummary-count">3</span></span><span class="a-IRR-reportSummary-value">Aging Of Chargesheet..., Aging Of Chargesheet..., Aging Of Chargesheet...</span></a></li></ul></div></div> -->
-                              <div id="DMCF_content" class="a-IRR-content ">
-                                <div id="DMCF_dialog_js" class="a-IRR-dialogBody" style="display:none"></div>
-                                <input type="hidden" id="DMCF_worksheet_id" value="9998004421635189198" />
-                                <input type="hidden" id="DMCF_app_user" value="9962109933" />
-                                <input type="hidden" id="DMCF_report_id" value="9998518817966199258" />
-                                <input type="hidden" id="DMCF_view_mode" value="REPORT" />
-                                <style id="DMCF_worksheet_css" type="text/css"></style>
-                                <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;GO&#x20;Report"
-                                  id="DMCF_chart" class="a-IRR-chartView"></div>
-                                <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;GO&#x20;Report"
-                                  id="DMCF_group_by" class="a-IRR-groupByView"></div>
-                                <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;GO&#x20;Report"
-                                  id="DMCF_pivot" class="a-IRR-pivotView"></div>
-                                <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;GO&#x20;Report"
-                                  id="DMCF_data_panel" class="a-IRR-reportView">
-                                  <div class="a-IRR-tableContainer scroll_Hidden">
-                                    <table aria-label="" class="a-IRR-table" id="district_dashboard">
-                                      <thead>
-                                        <!-- Group header row -->
-                                        <tr class="group-header">
-                                          
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="3" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">FIR & Charge Sheet</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur">Case Status<span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="4" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Status Of Case</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim Awarded</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim Disbursed</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim Pending</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final Awarded</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final Disbursed</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final Pending</span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
-                                          <th role="columnheader" class="a-GV-headerGroup" aria-roledescription="Group header" colspan="8" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;""></div></th>
+                            <div id="DMCF_content" class="a-IRR-content ">
+                              <div id="DMCF_dialog_js" class="a-IRR-dialogBody" style="display:none"></div>
+                              <input type="hidden" id="DMCF_worksheet_id" value="9998004421635189198" />
+                              <input type="hidden" id="DMCF_app_user" value="9962109933" />
+                              <input type="hidden" id="DMCF_report_id" value="9998518817966199258" />
+                              <input type="hidden" id="DMCF_view_mode" value="REPORT" />
+                              <style id="DMCF_worksheet_css" type="text/css"></style>
+                              <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                id="DMCF_chart" class="a-IRR-chartView"></div>
+                              <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                id="DMCF_group_by" class="a-IRR-groupByView"></div>
+                              <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                id="DMCF_pivot" class="a-IRR-pivotView"></div>
+                              <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;GO&#x20;Report"
+                                id="DMCF_data_panel" class="a-IRR-reportView">
+                                <div class="a-IRR-tableContainer scroll_Hidden">
+                                  <table aria-label="" class="a-IRR-table" id="district_dashboard">
+                                    <thead>
+                                      <!-- Group header row -->
+                                      <tr class="group-header">
+
+                                        <th role="columnheader" class="a-GV-headerGroup"
+                                          aria-roledescription="Group header" colspan="3" data-idx="1" tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                          id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel"
+                                            id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                            aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0"
+                                            aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                            id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel"
+                                              id="R153010267768955516_ig_grid_vc_g_153010885406955522">FIR & Charge
+                                              Sheet</span>
+                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                              style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                              aria-roledescription="Group header" colspan="2" data-idx="1" tabindex="0"
+                                              aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                              id="R153010267768955516_ig_grid_vc_cur">Case Status<span
+                                                class="a-GV-headerLabel"
+                                                id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span>
+                                              <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                aria-roledescription="Group header" colspan="4" data-idx="1"
+                                                tabindex="0"
+                                                aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel"
+                                                  id="R153010267768955516_ig_grid_vc_g_153010885406955522">Status Of
+                                                  Case</span>
+                                                <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                  style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                  aria-roledescription="Group header" colspan="" data-idx="1"
+                                                  tabindex="0"
+                                                  aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                  id="R153010267768955516_ig_grid_vc_cur"><span class="a-GV-headerLabel"
+                                                    id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span>
+                                                  <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                    style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                    aria-roledescription="Group header" colspan="2" data-idx="1"
+                                                    tabindex="0"
+                                                    aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                    id="R153010267768955516_ig_grid_vc_cur"><span
+                                                      class="a-GV-headerLabel"
+                                                      id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim
+                                                      Awarded</span>
+                                                    <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                      style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                      aria-roledescription="Group header" colspan="2" data-idx="1"
+                                                      tabindex="0"
+                                                      aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                      id="R153010267768955516_ig_grid_vc_cur"><span
+                                                        class="a-GV-headerLabel"
+                                                        id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim
+                                                        Disbursed</span>
+                                                      <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                        style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                        aria-roledescription="Group header" colspan="2" data-idx="1"
+                                                        tabindex="0"
+                                                        aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                        id="R153010267768955516_ig_grid_vc_cur"><span
+                                                          class="a-GV-headerLabel"
+                                                          id="R153010267768955516_ig_grid_vc_g_153010885406955522">Interim
+                                                          Pending</span>
+                                                        <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                          style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                          aria-roledescription="Group header" colspan="2" data-idx="1"
+                                                          tabindex="0"
+                                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                          id="R153010267768955516_ig_grid_vc_cur"><span
+                                                            class="a-GV-headerLabel"
+                                                            id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final
+                                                            Awarded</span>
+                                                          <div
+                                                            class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                            style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                            aria-roledescription="Group header" colspan="2" data-idx="1"
+                                                            tabindex="0"
+                                                            aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                            id="R153010267768955516_ig_grid_vc_cur"><span
+                                                              class="a-GV-headerLabel"
+                                                              id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final
+                                                              Disbursed</span>
+                                                            <div
+                                                              class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                              style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                              aria-roledescription="Group header" colspan="2"
+                                                              data-idx="1" tabindex="0"
+                                                              aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                              id="R153010267768955516_ig_grid_vc_cur"><span
+                                                                class="a-GV-headerLabel"
+                                                                id="R153010267768955516_ig_grid_vc_g_153010885406955522">Final
+                                                                Pending</span>
+                                                              <div
+                                                                class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                                style="display: none;""></div></th>
+                                          <th role=" columnheader" class="a-GV-headerGroup"
+                                                                aria-roledescription="Group header" colspan="8"
+                                                                data-idx="1" tabindex="0"
+                                                                aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                                id="R153010267768955516_ig_grid_vc_cur"><span
+                                                                  class="a-GV-headerLabel"
+                                                                  id="R153010267768955516_ig_grid_vc_g_153010885406955522"></span>
+                                                                <div
+                                                                  class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                                  style="display: none;""></div></th>
                                         </tr>
                                         <!-- Updated header row -->
                                         <!-- <tr>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="1" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur" id="R153010267768955516_ig_grid_vc_cur">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Case Id</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="2" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_district_name" id="R153010267768955516_ig_grid_vc_district_name">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Police Station</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="3" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_pocso_cases_filed" id="R153010267768955516_ig_grid_vc_no_of_pocso_cases_filed">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">FIR NO</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="4" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_chargesheet_filed" id="R153010267768955516_ig_grid_vc_no_of_chargesheet_filed">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Date Of FIR</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="7" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_cases_acquitted" id="R153010267768955516_ig_grid_vc_no_of_cases_acquitted">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">ChargeSheet Filled Status</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="8" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_cases_convicted" id="R153010267768955516_ig_grid_vc_no_of_cases_convicted">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Order No</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="9" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_other_disposals" id="R153010267768955516_ig_grid_vc_other_disposals">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Court File Date</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="10" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_conviction_rate" id="R153010267768955516_ig_grid_vc_conviction_rate">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Status</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="11" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_willingness_compensation" id="R153010267768955516_ig_grid_vc_willingness_compensation">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Judgement</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="5" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_case_status_pending" id="R153010267768955516_ig_grid_vc_case_status_pending">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Amount</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="6" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_case_status_completed" id="R153010267768955516_ig_grid_vc_case_status_completed">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Interim Status</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="12" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_awarded" id="R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_awarded">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Amount</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="13" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_awarded_amount" id="R153010267768955516_ig_grid_vc_interim_compensation_awarded_amount">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Final Status</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="14" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_disbursed" id="R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_disbursed">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Aging Of Cases</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                          <th role="columnheader" class="a-GV-header is-readonly" data-idx="15" tabindex="0" aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_disbursed_amount" id="R153010267768955516_ig_grid_vc_interim_compensation_disbursed_amount">
-                                            <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link" aria-haspopup="dialog">Aging Of ChargeSheet Date</span>
-                                            <div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div>
-                                          </th>
-                                        </tr> -->
+                                          <th role=" columnheader" class="a-GV-header is-readonly" data-idx="1"
+                                                                  tabindex="0"
+                                                                  aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_cur"
+                                                                  id="R153010267768955516_ig_grid_vc_cur">
+                                                                  <span class="a-GV-headerLabel"
+                                                                    id="C153011483558955528_HDR" role="link"
+                                                                    aria-haspopup="dialog">Case Id</span>
+                                                                  <div
+                                                                    class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                                                    style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="2"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_district_name"
+                                          id="R153010267768955516_ig_grid_vc_district_name">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Police Station</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="3"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_pocso_cases_filed"
+                                          id="R153010267768955516_ig_grid_vc_no_of_pocso_cases_filed">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">FIR NO</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="4"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_chargesheet_filed"
+                                          id="R153010267768955516_ig_grid_vc_no_of_chargesheet_filed">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Date Of FIR</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="7"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_cases_acquitted"
+                                          id="R153010267768955516_ig_grid_vc_no_of_cases_acquitted">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">ChargeSheet Filled Status</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="8"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_no_of_cases_convicted"
+                                          id="R153010267768955516_ig_grid_vc_no_of_cases_convicted">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Order No</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="9"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_other_disposals"
+                                          id="R153010267768955516_ig_grid_vc_other_disposals">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Court File Date</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="10"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_conviction_rate"
+                                          id="R153010267768955516_ig_grid_vc_conviction_rate">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Status</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="11"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_willingness_compensation"
+                                          id="R153010267768955516_ig_grid_vc_willingness_compensation">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Judgement</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="5"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_case_status_pending"
+                                          id="R153010267768955516_ig_grid_vc_case_status_pending">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Interim Amount</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="6"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_case_status_completed"
+                                          id="R153010267768955516_ig_grid_vc_case_status_completed">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Interim Status</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="12"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_awarded"
+                                          id="R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_awarded">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Final Amount</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="13"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_awarded_amount"
+                                          id="R153010267768955516_ig_grid_vc_interim_compensation_awarded_amount">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Final Status</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="14"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_disbursed"
+                                          id="R153010267768955516_ig_grid_vc_interim_compensation_no_of_cases_disbursed">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Aging Of Cases</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="15"
+                                          tabindex="0"
+                                          aria-labelledby="R153010267768955516_ig_grid_vc_ctx R153010267768955516_ig_grid_vc_interim_compensation_disbursed_amount"
+                                          id="R153010267768955516_ig_grid_vc_interim_compensation_disbursed_amount">
+                                          <span class="a-GV-headerLabel" id="C153011483558955528_HDR" role="link"
+                                            aria-haspopup="dialog">Aging Of ChargeSheet Date</span>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                      </tr> -->
                                       <tr class="a-GV-row" role="row">
-                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="0" tabindex="0" aria-labelledby="R166688235952765257_ig_grid_vc_ctx R166688235952765257_ig_grid_vc_cur" id="R166688235952765257_ig_grid_vc_cur"><span class="a-GV-headerLabel" id="C15095981838493716_HDR" role="link" aria-haspopup="dialog">SI.No</span><div class="a-GV-columnControls" style="display: none;"><button class="a-Button js-asc" type="button" aria-label="Sort Ascending" title="Sort Ascending" tabindex="-1"><span aria-hidden="true" class="a-Icon icon-up-chevron"></span></button><button class="a-Button js-desc" type="button" aria-label="Sort Descending" title="Sort Descending" tabindex="-1"><span aria-hidden="true" class="a-Icon icon-down-chevron"></span></button></div><div class="a-GV-columnHandle ui-draggable ui-draggable-handle" style="display: none;"></div></th>
-                                        <th role="columnheader" class="a-GV-header u-tS is-readonly" data-idx="2" tabindex="-1"><span class="a-GV-headerLabel" id="C15096172501493718_HDR" role="link" aria-haspopup="dialog">District</span></th>
-                                        <th role="columnheader" class="a-GV-header u-tS is-readonly" data-idx="2" tabindex="-1"><span class="a-GV-headerLabel" id="C15096172501493718_HDR" role="link" aria-haspopup="dialog">Police Station</span></th>
-                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="3" tabindex="-1"><span class="a-GV-headerLabel" id="C15096365162493720_HDR" role="link" aria-haspopup="dialog">No Of FIR Cases Filed</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="4" tabindex="-1"><span class="a-GV-headerLabel" id="C15098113689493738_HDR" role="link" aria-haspopup="dialog">No Of Chargesheet/Final Report filed</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="5" tabindex="-1"><span class="a-GV-headerLabel" id="C15096454271493721_HDR" role="link" aria-haspopup="dialog">Pending</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="6" tabindex="-1"><span class="a-GV-headerLabel" id="C15096562442493722_HDR" role="link" aria-haspopup="dialog">Disposed</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="7" tabindex="-1"><span class="a-GV-headerLabel" id="C15096644557493723_HDR" role="link" aria-haspopup="dialog">No Of Cases Acquitted</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="8" tabindex="-1"><span class="a-GV-headerLabel" id="C15096764274493724_HDR" role="link" aria-haspopup="dialog">No Of Cases Convicted</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="9" tabindex="-1"><span class="a-GV-headerLabel" id="C15096895264493725_HDR" role="link" aria-haspopup="dialog">Other Disposals</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="10" tabindex="-1"><span class="a-GV-headerLabel" id="C15098249101493739_HDR" role="link" aria-haspopup="dialog">Conviction Rate</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="11" tabindex="-1"><span class="a-GV-headerLabel" id="C15096260530493719_HDR" role="link" aria-haspopup="dialog">Willingness for Compensation</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="12" tabindex="-1"><span class="a-GV-headerLabel" id="C15096928364493726_HDR" role="link" aria-haspopup="dialog">No Of Cases</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="13" tabindex="-1"><span class="a-GV-headerLabel" id="C15097081404493727_HDR" role="link" aria-haspopup="dialog">Amount (Rs)</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="14" tabindex="-1"><span class="a-GV-headerLabel" id="C15097131608493728_HDR" role="link" aria-haspopup="dialog">No Of Cases</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="15" tabindex="-1"><span class="a-GV-headerLabel" id="C15097277241493729_HDR" role="link" aria-haspopup="dialog">Amount (Rs)</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="16" tabindex="-1"><span class="a-GV-headerLabel" id="C15097357165493730_HDR" role="link" aria-haspopup="dialog">No Of Cases</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="17" tabindex="-1"><span class="a-GV-headerLabel" id="C15097404536493731_HDR" role="link" aria-haspopup="dialog">Amount (Rs)</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="18" tabindex="-1"><span class="a-GV-headerLabel" id="C15097706306493734_HDR" role="link" aria-haspopup="dialog">No Of Cases</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="19" tabindex="-1"><span class="a-GV-headerLabel" id="C15097880481493735_HDR" role="link" aria-haspopup="dialog">Amount (Rs)</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="20" tabindex="-1"><span class="a-GV-headerLabel" id="C15097549881493732_HDR" role="link" aria-haspopup="dialog">No Of Cases</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="21" tabindex="-1"><span class="a-GV-headerLabel" id="C15097654801493733_HDR" role="link" aria-haspopup="dialog">Amount (Rs)</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="22" tabindex="-1"><span class="a-GV-headerLabel" id="C15097975879493736_HDR" role="link" aria-haspopup="dialog">No Of Cases</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="23" tabindex="-1"><span class="a-GV-headerLabel" id="C15098056598493737_HDR" role="link" aria-haspopup="dialog">Amount (Rs)</span></th><th role="columnheader" class="a-GV-header is-readonly" data-idx="24" tabindex="-1"><span class="a-GV-headerLabel" id="C15098340072493740_HDR" role="link" aria-haspopup="dialog">Total Victim Compensation Pending</span></th></tr>
-                                      </thead>
-                                      <tbody></tbody>
-                                    </table>
-                                    
-                                    
-                                  </div>
-                                  <!-- <div role="region" aria-label="Pagination&#x20;of&#x20;GO&#x20;Report"
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="0"
+                                          tabindex="0"
+                                          aria-labelledby="R166688235952765257_ig_grid_vc_ctx R166688235952765257_ig_grid_vc_cur"
+                                          id="R166688235952765257_ig_grid_vc_cur"><span class="a-GV-headerLabel"
+                                            id="C15095981838493716_HDR" role="link" aria-haspopup="dialog">SI.No</span>
+                                          <div class="a-GV-columnControls" style="display: none;"><button
+                                              class="a-Button js-asc" type="button" aria-label="Sort Ascending"
+                                              title="Sort Ascending" tabindex="-1"><span aria-hidden="true"
+                                                class="a-Icon icon-up-chevron"></span></button><button
+                                              class="a-Button js-desc" type="button" aria-label="Sort Descending"
+                                              title="Sort Descending" tabindex="-1"><span aria-hidden="true"
+                                                class="a-Icon icon-down-chevron"></span></button></div>
+                                          <div class="a-GV-columnHandle ui-draggable ui-draggable-handle"
+                                            style="display: none;"></div>
+                                        </th>
+                                        <th role="columnheader" class="a-GV-header u-tS is-readonly" data-idx="2"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096172501493718_HDR"
+                                            role="link" aria-haspopup="dialog">District</span></th>
+                                        <th role="columnheader" class="a-GV-header u-tS is-readonly" data-idx="2"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096172501493718_HDR"
+                                            role="link" aria-haspopup="dialog">Police Station</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="3"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096365162493720_HDR"
+                                            role="link" aria-haspopup="dialog">No Of FIR Cases Filed</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="4"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15098113689493738_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Chargesheet/Final Report
+                                            filed</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="5"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096454271493721_HDR"
+                                            role="link" aria-haspopup="dialog">Pending</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="6"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096562442493722_HDR"
+                                            role="link" aria-haspopup="dialog">Disposed</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="7"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096644557493723_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases Acquitted</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="8"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096764274493724_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases Convicted</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="9"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096895264493725_HDR"
+                                            role="link" aria-haspopup="dialog">Other Disposals</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="10"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15098249101493739_HDR"
+                                            role="link" aria-haspopup="dialog">Conviction Rate</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="11"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096260530493719_HDR"
+                                            role="link" aria-haspopup="dialog">Willingness for Compensation</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="12"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15096928364493726_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="13"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097081404493727_HDR"
+                                            role="link" aria-haspopup="dialog">Amount (Rs)</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="14"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097131608493728_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="15"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097277241493729_HDR"
+                                            role="link" aria-haspopup="dialog">Amount (Rs)</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="16"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097357165493730_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="17"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097404536493731_HDR"
+                                            role="link" aria-haspopup="dialog">Amount (Rs)</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="18"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097706306493734_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="19"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097880481493735_HDR"
+                                            role="link" aria-haspopup="dialog">Amount (Rs)</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="20"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097549881493732_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="21"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097654801493733_HDR"
+                                            role="link" aria-haspopup="dialog">Amount (Rs)</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="22"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15097975879493736_HDR"
+                                            role="link" aria-haspopup="dialog">No Of Cases</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="23"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15098056598493737_HDR"
+                                            role="link" aria-haspopup="dialog">Amount (Rs)</span></th>
+                                        <th role="columnheader" class="a-GV-header is-readonly" data-idx="24"
+                                          tabindex="-1"><span class="a-GV-headerLabel" id="C15098340072493740_HDR"
+                                            role="link" aria-haspopup="dialog">Total Victim Compensation Pending</span>
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                  </table>
+
+
+                                </div>
+                                <!-- <div role="region" aria-label="Pagination&#x20;of&#x20;GO&#x20;Report"
                                     class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
                                     <ul class="a-IRR-pagination">
                                       <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
@@ -417,42 +879,79 @@
                                             class="a-Icon icon-right-chevron" aria-hidden="true"></span></button></li>
                                     </ul>
                                   </div> -->
-                                </div>
                               </div>
-                              <div id="R380244710647794734_content" class="a-IRR-content ">
-                                <div id="R380244710647794734_dialog_js" class="a-IRR-dialogBody" style="display:none"></div>
-                                <input type="hidden" id="R380244710647794734_worksheet_id" value="380244798555794734" />
-                                <input type="hidden" id="R380244710647794734_app_user" value="SIVAGANGAI" />
-                                <input type="hidden" id="R380244710647794734_report_id" value="380252440162795112" />
-                                <input type="hidden" id="R380244710647794734_view_mode" value="REPORT" />
-                                <style id="R380244710647794734_worksheet_css" type="text/css"></style>
-                                <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Overall&#x20;Report" id="R380244710647794734_chart" class="a-IRR-chartView"></div>
-                                <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Overall&#x20;Report" id="R380244710647794734_group_by" class="a-IRR-groupByView"></div>
-                                <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Overall&#x20;Report" id="R380244710647794734_pivot" class="a-IRR-pivotView"></div>
-                                <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Overall&#x20;Report" id="R380244710647794734_data_panel" class="a-IRR-reportView">
-                                  <!-- <div role="region" aria-label="Message" class="a-IRR-noDataMsg">
+                            </div>
+                            <div id="R380244710647794734_content" class="a-IRR-content ">
+                              <div id="R380244710647794734_dialog_js" class="a-IRR-dialogBody" style="display:none">
+                              </div>
+                              <input type="hidden" id="R380244710647794734_worksheet_id" value="380244798555794734" />
+                              <input type="hidden" id="R380244710647794734_app_user" value="SIVAGANGAI" />
+                              <input type="hidden" id="R380244710647794734_report_id" value="380252440162795112" />
+                              <input type="hidden" id="R380244710647794734_view_mode" value="REPORT" />
+                              <style id="R380244710647794734_worksheet_css" type="text/css"></style>
+                              <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Overall&#x20;Report"
+                                id="R380244710647794734_chart" class="a-IRR-chartView"></div>
+                              <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Overall&#x20;Report"
+                                id="R380244710647794734_group_by" class="a-IRR-groupByView"></div>
+                              <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Overall&#x20;Report"
+                                id="R380244710647794734_pivot" class="a-IRR-pivotView"></div>
+                              <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Overall&#x20;Report"
+                                id="R380244710647794734_data_panel" class="a-IRR-reportView">
+                                <!-- <div role="region" aria-label="Message" class="a-IRR-noDataMsg">
                                     <div class="a-IRR-noDataMsg-icon"><span class="a-Icon icon-irr-no-results" aria-hidden="true"></span></div>
                                     <span class="a-IRR-noDataMsg-text">No data found.</span>
                                   </div> -->
-                                </div>
                               </div>
                             </div>
                           </div>
-                          <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget" id="R380244710647794734_sort_widget" style="display:none;">
-                            <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column Actions</h1>
-                            <ul role="toolbar" class="a-IRR-sortWidget-actions" id="R380244710647794734_sort_widget_actions">
-                              <li role="none" class="a-IRR-sortWidget-actions-item" id="R380244710647794734_sort_widget_action_up"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li>
-                              <li role="none" class="a-IRR-sortWidget-actions-item" id="R380244710647794734_sort_widget_action_down"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li>
-                              <li role="none" class="a-IRR-sortWidget-actions-item" id="R380244710647794734_sort_widget_action_hide"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
-                              <li role="none" class="a-IRR-sortWidget-actions-item" id="R380244710647794734_sort_widget_action_break"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
-                              <li role="none" class="a-IRR-sortWidget-actions-item" id="R380244710647794734_sort_widget_action_help"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help" aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true" class="a-Icon icon-irr-help"></span></button></li>
-                              <li role="none" class="a-IRR-sortWidget-actions-item" id="R380244710647794734_sort_widget_action_computation"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute" aria-label="Compute" data-option="computation"><span aria-hidden="true" class="a-Icon icon-irr-calculator"></span></button></li>
-                            </ul>
-                            <div role="region" aria-label="Help" class="a-IRR-sortWidget-help" id="R380244710647794734_sort_widget_help"></div>
-                            <div role="search" class="a-IRR-sortWidget-search" id="R380244710647794734_sort_widget_search">
-                              <label for="R380244710647794734_sort_widget_search_field" class="a-IRR-sortWidget-searchLabel"><span class="u-vh">Search</span></label><input id="R380244710647794734_sort_widget_search_field" class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." />
-                              <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows" id="R380244710647794734_sort_widget_rows"></div>
-                            </div>
+                        </div>
+                        <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
+                          id="R380244710647794734_sort_widget" style="display:none;">
+                          <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column
+                            Actions</h1>
+                          <ul role="toolbar" class="a-IRR-sortWidget-actions"
+                            id="R380244710647794734_sort_widget_actions">
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R380244710647794734_sort_widget_action_up"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R380244710647794734_sort_widget_action_down"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R380244710647794734_sort_widget_action_hide"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R380244710647794734_sort_widget_action_break"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
+                                  aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R380244710647794734_sort_widget_action_help"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
+                                aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
+                                  class="a-Icon icon-irr-help"></span></button></li>
+                            <li role="none" class="a-IRR-sortWidget-actions-item"
+                              id="R380244710647794734_sort_widget_action_computation"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
+                                aria-label="Compute" data-option="computation"><span aria-hidden="true"
+                                  class="a-Icon icon-irr-calculator"></span></button></li>
+                          </ul>
+                          <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
+                            id="R380244710647794734_sort_widget_help"></div>
+                          <div role="search" class="a-IRR-sortWidget-search"
+                            id="R380244710647794734_sort_widget_search">
+                            <label for="R380244710647794734_sort_widget_search_field"
+                              class="a-IRR-sortWidget-searchLabel"><span class="u-vh">Search</span></label><input
+                              id="R380244710647794734_sort_widget_search_field" class="a-IRR-sortWidget-searchField"
+                              type="text" placeholder="Filter..." />
+                            <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
+                              id="R380244710647794734_sort_widget_rows"></div>
                           </div>
                         </div>
                       </div>
@@ -460,133 +959,169 @@
                   </div>
                 </div>
               </div>
-            </main>
-            <footer class="t-Footer" id="t_Footer" role="contentinfo">
-              <div class="t-Footer-body">
-                <div class="t-Footer-content"></div>
-                <div class="t-Footer-apex">
-                  <div class="t-Footer-version">Release 1.0</div>
-                  <div class="t-Footer-customize"></div>
-                </div>
+            </div>
+          </main>
+          <footer class="t-Footer" id="t_Footer" role="contentinfo">
+            <div class="t-Footer-body">
+              <div class="t-Footer-content"></div>
+              <div class="t-Footer-apex">
+                <div class="t-Footer-version">Release 1.0</div>
+                <div class="t-Footer-customize"></div>
               </div>
-              <div class="t-Footer-top">
-                <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
-              </div>
-            </footer>
-          </div>
+            </div>
+            <div class="t-Footer-top">
+              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+            </div>
+          </footer>
         </div>
       </div>
-      <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div>
-      <input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
-      <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="&#x2F;eTr93q84PSTU2ZfTvkmsVyehvUyloAQASN3RV8BvSh3baW__-AiLHjxIidPqWv4zMpNOmppD3p2rkA9PeUfF9Q" />
-    </form>
-    <script>
-      var apex_img_dir = "\u002Fi\u002F";
-      var apex = {env: {APP_USER: "SIVAGANGAI",APP_ID: "111",APP_PAGE_ID: "1",APP_SESSION: "8099699564352",APP_FILES: "r\u002Fwspocso\u002F111\u002Ffiles\u002Fstatic\u002Fv1962\u002F",WORKSPACE_FILES: "r\u002Fwspocso\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "23.2.1",APEX_BASE_VERSION: "23.2"},
-      libVersions:{ckeditor5:"36.0.0",cropperJs:"1.5.13",domPurify:"3.0.5",fullcalendar:"6.1.8",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"2.4.0",markedJs:"5.1.2",prismJs:"1.29.0",oraclejet:"15.0.7",tinymce:"6.7.1",turndown:"7.1.1",monacoEditor:"0.32.1",lessJs:"4.1.3"}};
-    </script>
+    </div>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div>
+    <input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="&#x2F;eTr93q84PSTU2ZfTvkmsVyehvUyloAQASN3RV8BvSh3baW__-AiLHjxIidPqWv4zMpNOmppD3p2rkA9PeUfF9Q" />
+  </form>
+  <script>
+    var apex_img_dir = "\u002Fi\u002F";
+    var apex = {
+      env: { APP_USER: "SIVAGANGAI", APP_ID: "111", APP_PAGE_ID: "1", APP_SESSION: "8099699564352", APP_FILES: "r\u002Fwspocso\u002F111\u002Ffiles\u002Fstatic\u002Fv1962\u002F", WORKSPACE_FILES: "r\u002Fwspocso\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "23.2.1", APEX_BASE_VERSION: "23.2" },
+      libVersions: { ckeditor5: "36.0.0", cropperJs: "1.5.13", domPurify: "3.0.5", fullcalendar: "6.1.8", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "2.4.0", markedJs: "5.1.2", prismJs: "1.29.0", oraclejet: "15.0.7", tinymce: "6.7.1", turndown: "7.1.1", monacoEditor: "0.32.1", lessJs: "4.1.3" }
+    };
+  </script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/add.min.js"></script>
+  <script type="text/javascript" src="../assets/js/aos.js"></script>
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Include DataTables and Buttons JS -->
+  <script src="../assets/vendor/datatable/jquery.dataTables.min.js"></script>
+  <script src="../assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
 
-    <script type="text/javascript">
-      apex.theme.initResponsiveDialogs = function () { };
-      function call_url(p_doc_no) {
-        //apex.item("P3_FILENAME").setValue(p_doc_no);
-       // alert(p_doc_no);
-        apex.navigation.dialog(
-          'f?p=111:1:8099699564352:APPLICATION_PROCESS=viewDocument&x01='+p_doc_no+'&scrollbar=0&toolbar=0&statusbar=0&messages=0&navpanes=0&annot=0',
-          {             title:'Document Viewer',           
-         height: '600',           
-         width:'1200',             modal:true,            
-         resizable:true         },        
-         'a-Dialog--uiDialog',       
-         $('#pdfview') );
-      }
-      
-      function hideBackButton() {
-          if ($v('P1_IS_LOGGED_IN') === 'YES') {
-              // Hide the back button or any navigation element
-              document.querySelector('.t-Button--back').style.display = 'none';
-          }
-      }
-      
-    </script>
 
-    <script src="../assets/js/desktop_all.min.js"></script>
-    <script src="../assets/js/theme42.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/widget.interactiveReport.min.js"></script>
-    <script src="../assets/js/widget.iconList.min.js"></script>
-    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
-    <script src="../assets/js/widget.stickyWidget.min.js"></script>
-    <script src="../assets/js/item.Colorpicker.min.js"></script>
-    <script src="../assets/js/require.js"></script>
-    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
-    <script src="../assets/js/jetCommonBundle.min.js"></script>
-    <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/require.js"></script>
+  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownIcon = document.getElementById("dropdown-icon");
+      const menu = document.getElementById("menu_L333486390590036621");
 
-    <script type="text/javascript">
-      apex.session.initTimeouts(180,{"idle_time_ms":1189000,"life_time_ms":28655000,"max_idle_time_ms":1200000},'\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fhome','\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fhome');
-      apex.jQuery( function() {
-      apex.page.init( this, function() {
-      try {
-      (function(){var e = apex.jQuery("#t_MenuNav", apex.gPageContext$);
-      if (e.hasClass("js-addActions")) {
-        apex.actions.addFromMarkup( e );
+      dropdownIcon.addEventListener("click", function () {
+        // Toggle the visibility of the menu
+        if (menu.style.display === "none" || menu.style.display === "") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      });
+
+      // Optional: Close the menu if clicking outside
+      window.addEventListener("click", function (event) {
+        if (!event.target.closest('.t-NavigationBar-item')) {
+          menu.style.display = "none"; // Hide menu if clicked outside
+        }
+      });
+    });
+  </script>
+  <script>
+    function showSuccessToast(message) {
+      const toastElement = document.getElementById('successToast');
+      const toastBody = document.getElementById('successMessage');
+
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    function showErrorToast(message) {
+      const toastElement = document.getElementById('errorToast');
+      const toastBody = document.getElementById('errorMessage');
+      toastBody.textContent = message;
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+
+    AOS.init();
+    function userData() {
+      debugger
+      const userDetails = JSON.parse(localStorage.getItem("user_details")); // Parse back to object
+
+      var userNameElement = document.querySelector('.t-Button-label-role');
+
+      if (userDetails) {
+        userNameElement.textContent = userDetails.role;
+      } else {
+        showErrorToast("Something went wrong");
+        localStorage.clear();
+        sessionStorage.clear();
+        setTimeout(function () {
+          window.location.href = "../index.html";
+        }, 1000);
       }
-      e.menu({
-        behaveLikeTabs: e.hasClass("js-tabLike"),
-        menubarShowSubMenuIcon: e.hasClass("js-showSubMenuIcons") || null,
-        menubar: true,
-        menubarOverflow: true,
-        callout: e.hasClass("js-menu-callout")
+    }
+    userData();
+
+    $(document).ready(function () {
+      $('li[data-icon="fa fa-sign-out"] a').click(function (event) {
+        event.preventDefault(); // Prevent default action (optional)
+        localStorage.clear(); // Clears all localStorage data
+        window.location.href = "../index.html"; // Redirect to login or home page
       });
-      })();
-      (function(){var ig$=apex.jQuery('#R166688235952765257_ig');ig$.interactiveGrid({"config":{"columns":[{"id":"15095981838493716","name":"ROWNUM","staticId":"C15095981838493716","dataType":"NUMBER","heading":{"heading":"SI.No"},"layout":{"columnAlignment":"center"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096057177493717","name":"DISTRICT_NAME","staticId":"C15096057177493717","heading":{"heading":"District Name","alignment":"start"},"filter":{"hasLov":false},"features":{"sort":false,"controlBreak":false,"groupBy":false,"aggregate":false}},{"id":"15096172501493718","name":"POL_STAT","staticId":"C15096172501493718","heading":{"heading":"Police Station","alignment":"start"},"link":{"text":"\u0026POL_STAT."},"filter":{"hasLov":false},"features":{"sort":false,"controlBreak":false,"groupBy":false,"aggregate":false}},{"id":"15096260530493719","name":"WILLINGNESS_COMPENSATION","staticId":"C15096260530493719","dataType":"NUMBER","heading":{"heading":"Willingness for Compensation"},"layout":{"columnAlignment":"center"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096365162493720","name":"No_of_POCSO_cases_filed","staticId":"C15096365162493720","dataType":"NUMBER","heading":{"heading":"No Of FIR Cases Filed"},"layout":{"columnAlignment":"center","groupId":"15098893304493745"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096454271493721","name":"Case_Status_Pending","staticId":"C15096454271493721","dataType":"NUMBER","heading":{"heading":"Pending"},"layout":{"columnAlignment":"center","groupId":"15098457104493741"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096562442493722","name":"Case_Status_Completed","staticId":"C15096562442493722","dataType":"NUMBER","heading":{"heading":"Disposed"},"layout":{"columnAlignment":"center","groupId":"15098457104493741"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096644557493723","name":"No_of_cases_Acquitted","staticId":"C15096644557493723","dataType":"NUMBER","heading":{"heading":"No Of Cases Acquitted"},"layout":{"columnAlignment":"center","groupId":"15905305378498125"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096764274493724","name":"No_of_cases_Convicted","staticId":"C15096764274493724","dataType":"NUMBER","heading":{"heading":"No Of Cases Convicted"},"layout":{"columnAlignment":"center","groupId":"15905305378498125"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096895264493725","name":"Other_Disposals","staticId":"C15096895264493725","dataType":"NUMBER","heading":{"heading":"Other Disposals"},"layout":{"columnAlignment":"center","groupId":"15905305378498125"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15096928364493726","name":"Interim_Compensation_No_of_cases_awarded","staticId":"C15096928364493726","dataType":"NUMBER","heading":{"heading":"No Of Cases"},"layout":{"columnAlignment":"center","groupId":"15098926628493746"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097081404493727","name":"Interim_Compensation_awarded_Amount","staticId":"C15097081404493727","dataType":"NUMBER","heading":{"heading":"Amount (Rs)"},"layout":{"columnAlignment":"center","groupId":"15098926628493746"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097131608493728","name":"Interim_Compensation_No_of_cases_Disbursed","staticId":"C15097131608493728","dataType":"NUMBER","heading":{"heading":"No Of Cases"},"layout":{"columnAlignment":"center","groupId":"15099040833493747"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097277241493729","name":"Interim_Compensation_Disbursed_Amount","staticId":"C15097277241493729","dataType":"NUMBER","heading":{"heading":"Amount (Rs)"},"layout":{"columnAlignment":"center","groupId":"15099040833493747"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097357165493730","name":"Interim_Compensation_No_of_cases_Pending","staticId":"C15097357165493730","dataType":"NUMBER","heading":{"heading":"No Of Cases"},"layout":{"columnAlignment":"center","groupId":"15099126978493748"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097404536493731","name":"Interim_Compensation_Pending_Amount","staticId":"C15097404536493731","dataType":"NUMBER","heading":{"heading":"Amount (Rs)"},"layout":{"columnAlignment":"center","groupId":"15099126978493748"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097549881493732","name":"Final_Compensation_No_of_cases_Disbursed","staticId":"C15097549881493732","dataType":"NUMBER","heading":{"heading":"No Of Cases"},"layout":{"columnAlignment":"center","groupId":"15098681413493743"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097654801493733","name":"Final_Compensation_Disbursed_Amount","staticId":"C15097654801493733","dataType":"NUMBER","heading":{"heading":"Amount (Rs)"},"layout":{"columnAlignment":"center","groupId":"15098681413493743"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097706306493734","name":"Final_Compensation_No_of_cases_awarded","staticId":"C15097706306493734","dataType":"NUMBER","heading":{"heading":"No Of Cases"},"layout":{"columnAlignment":"center","groupId":"15098568305493742"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097880481493735","name":"Final_Compensation_awarded_Amount","staticId":"C15097880481493735","dataType":"NUMBER","heading":{"heading":"Amount (Rs)"},"layout":{"columnAlignment":"center","groupId":"15098568305493742"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15097975879493736","name":"Final_Compensation_No_of_cases_Pending","staticId":"C15097975879493736","dataType":"NUMBER","heading":{"heading":"No Of Cases"},"layout":{"columnAlignment":"center","groupId":"15098727530493744"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15098056598493737","name":"Final_Compensation_Pending_Amount","staticId":"C15098056598493737","dataType":"NUMBER","heading":{"heading":"Amount (Rs)"},"layout":{"columnAlignment":"center","groupId":"15098727530493744"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15098113689493738","name":"No_of_Chargesheet_filed","staticId":"C15098113689493738","dataType":"NUMBER","heading":{"heading":"No Of Chargesheet\u002FFinal Report filed"},"layout":{"columnAlignment":"center","groupId":"15098893304493745"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15098249101493739","name":"Conviction_rate","staticId":"C15098249101493739","dataType":"NUMBER","heading":{"heading":"Conviction Rate"},"layout":{"columnAlignment":"center","groupId":"15905305378498125"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"15098340072493740","name":"TOTAL","staticId":"C15098340072493740","dataType":"NUMBER","heading":{"heading":"Total Victim Compensation Pending"},"layout":{"columnAlignment":"center"},"appearance":{"formatExample":"2.54"},"filter":{"dataType":"NUMBER","hasLov":false}}],"ajaxColumns":"MTUwOTU5ODE4Mzg0OTM3MTY6MTUwOTYwNTcxNzc0OTM3MTc6MTUwOTYxNzI1MDE0.,OTM3MTg6MTUwOTYyNjA1MzA0OTM3MTk6MTUwOTYzNjUxNjI0OTM3MjA6MTUwOTY0.,NTQyNzE0OTM3MjE6MTUwOTY1NjI0NDI0OTM3MjI6MTUwOTY2NDQ1NTc0OTM3MjM6.,MTUwOTY3NjQyNzQ0OTM3MjQ6MTUwOTY4OTUyNjQ0OTM3MjU6MTUwOTY5MjgzNjQ0.,OTM3MjY6MTUwOTcwODE0MDQ0OTM3Mjc6MTUwOTcxMzE2MDg0OTM3Mjg6MTUwOTcy.,NzcyNDE0OTM3Mjk6MTUwOTczNTcxNjU0OTM3MzA6MTUwOTc0MDQ1MzY0OTM3MzE6.,MTUwOTc1NDk4ODE0OTM3MzI6MTUwOTc2NTQ4MDE0OTM3MzM6MTUwOTc3MDYzMDY0.,OTM3MzQ6MTUwOTc4ODA0ODE0OTM3MzU6MTUwOTc5NzU4Nzk0OTM3MzY6MTUwOTgw.,NTY1OTg0OTM3Mzc6MTUwOTgxMTM2ODk0OTM3Mzg6MTUwOTgyNDkxMDE0OTM3Mzk6.,MTUwOTgzNDAwNzI0OTM3NDA\u002FKvWTPlKoXYxp5bPamJCjXoJy8vL5YC84Pvu-jO1uiYIrXd6OWQKWIy8jL8NJRyUNdtFmDxkv_pBTSG3y6i8uGw","columnGroups":[{"id":"15098457104493741","heading":"Case Status"},{"id":"15098568305493742","heading":"Final Awarded"},{"id":"15098681413493743","heading":"Final Disbursed"},{"id":"15098727530493744","heading":"Final Pending"},{"id":"15098893304493745","heading":"FIR \u0026 Chargesheet"},{"id":"15098926628493746","heading":"Interim Awarded"},{"id":"15099040833493747","heading":"Interim Disbursed"},{"id":"15099126978493748","heading":"Interim Pending"},{"id":"15905305378498125","heading":"Status of Case"}],"regionId":"166688235952765257","regionAccTitle":"Dashboard\u002FReport for District","regionStaticId":"R166688235952765257","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjE2NjY4ODIzNTk1Mjc2NTI1Nw\u002FMqx6lK0tYuaJ4xR6mbivQXSyaG_PFMeLHJ0fDWnE3PehYPFblWYUCwlFWJgQacgnZCBtookOkfZjAoIx_FNhTQ","pagination":{"type":"set"},"toolbar":{"columnSelection":false,"searchField":false,"reset":false},"features":{"flashback":false,"download":{"downloadCs":"dHJ1ZQ\u002Fov5hj0MHZRjwjr7DPVHScUNNfNAUpH0RP4UXqfu6mVmeb0FvRIiMX5MFKGZJAYCYnZFJZluvimeEPPQP3Chk4w","formats":"PDF:XLSX".split(":"),"email":false,"print":{"orientation":"HORIZONTAL"}}},"views":{"grid":{"features":{"rowSelector":false}},"chart":false}},"savedReports":[{"id":"15208645144769202","isCurrent":true,"reportSettingsArea":"expanded","versionNumber":115,"views":{"grid":{"columns":[{"id":"15212504968769212","seq":1,"columnId":"15095981838493716"},{"id":"15213486312769217","seq":2,"columnId":"15096057177493717","isVisible":false},{"id":"15214304693769222","seq":3,"columnId":"15096172501493718"},{"id":"15216147030769233","seq":4,"columnId":"15096365162493720"},{"id":"15232209621769345","seq":5,"columnId":"15098113689493738"},{"id":"15217079010769239","seq":6,"columnId":"15096454271493721"},{"id":"15217979506769244","seq":7,"columnId":"15096562442493722"},{"id":"15218854858769250","seq":8,"columnId":"15096644557493723"},{"id":"15219786810769255","seq":9,"columnId":"15096764274493724"},{"id":"15220646771769263","seq":10,"columnId":"15096895264493725"},{"id":"15233181433769350","seq":11,"columnId":"15098249101493739"},{"id":"15215283758769228","seq":12,"columnId":"15096260530493719"},{"id":"15221598409769268","seq":13,"columnId":"15096928364493726"},{"id":"15222495425769273","seq":14,"columnId":"15097081404493727"},{"id":"15223229969769279","seq":15,"columnId":"15097131608493728"},{"id":"15224142891769284","seq":16,"columnId":"15097277241493729"},{"id":"15225000983769290","seq":17,"columnId":"15097357165493730"},{"id":"15225919038769303","seq":18,"columnId":"15097404536493731"},{"id":"15228636494769322","seq":19,"columnId":"15097706306493734"},{"id":"15229592451769327","seq":20,"columnId":"15097880481493735"},{"id":"15226858173769309","seq":21,"columnId":"15097549881493732"},{"id":"15227760357769316","seq":22,"columnId":"15097654801493733"},{"id":"15230450186769333","seq":23,"columnId":"15097975879493736"},{"id":"15231356731769339","seq":24,"columnId":"15098056598493737"},{"id":"15234077799769356","seq":25,"columnId":"15098340072493740"}]}}}],"data":gIg166688235952765257data});})();
-      } catch(e) {apex.debug.error(e)};
-      apex.item.waitForDelayLoadItems().done(function() {
-      try {
-      apex.theme42.initializePage.noSideCol();
-      hideBackButton();
-      apex.page.warnOnUnsavedChanges();
-      } finally {
-      apex.event.trigger(apex.gPageContext$,'apexreadyend');
-      };
-      });
-      });
-      });apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fsw.js?v=23.2.1-342036393\u0026lang=en' } );
-    </script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
+    });
+
+  </script>
+  <script>
     $(document).ready(function () {
       const userId = localStorage.getItem("role_id");
       const apiUrl = "https://tngis.tnega.org/lcap_api/pocso/api/v1/district_admin/view/viewDashboardById";
-        const tableBody = $("#district_dashboard tbody");
-        const viewDashboardPayload = {
-          "id" : userId
-        }
-        tableBody.html('<tr><td colspan="9" class="text-center">Loading...</td></tr>');
-        $.ajax({
-          url: apiUrl,
-          method: "POST",
-          headers: {
-            "X-APP-KEY": "pocso",
-            "X-APP-NAME": "pocso"
-          },
-          contentType: "application/json", // Specify raw JSON
-          data: JSON.stringify(viewDashboardPayload),
-          success: function (response) {
-            const tableData = response.data;
-            tableBody.empty();
+      const tableBody = $("#district_dashboard tbody");
+      const viewDashboardPayload = {
+        "id": userId
+      }
+      tableBody.html('<tr><td colspan="9" class="text-center">Loading...</td></tr>');
+      $.ajax({
+        url: apiUrl,
+        method: "POST",
+        headers: {
+          "X-APP-KEY": "pocso",
+          "X-APP-NAME": "pocso"
+        },
+        contentType: "application/json",
+        data: JSON.stringify(viewDashboardPayload),
+        success: function (response) {
+          const tableData = response.data;
+          tableBody.empty();
 
-            if (!tableData || tableData.length === 0) {
-              tableBody.append('<tr><td colspan="9" class="text-center">No Data Found</td></tr>');
-              return;
-            }
-            tableData.map((item, i) => {
-              const newRow = `
+          if (!tableData || tableData.length === 0) {
+            tableBody.append('<tr><td colspan="9" class="text-center">No Data Found</td></tr>');
+            return;
+          }
+          tableData.map((item, i) => {
+            const newRow = `
               <tr>
-                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(i+1) || 'N/A'}</td>
+                <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(i + 1) || 'N/A'}</td>
                 <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.district_name) || 'N/A'}</td>
                 <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly" onclick="updateHref(this)">
                     <a href="/district/police-case-details.html" class="colorBlue">
@@ -616,74 +1151,74 @@
                 <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.final_compensation_pending_amount) || 'N/A'}</td>
                 <td tabindex="-1" role="gridcell" class="a-GV-cell u-tC is-readonly">${(item.total) || 'N/A'}</td>
               </tr>`;
-              tableBody.append(newRow);
-            })
-            // tableData.forEach(item => {
-              
-              
-            // });
+            tableBody.append(newRow);
+          })
+          // tableData.forEach(item => {
 
-            if ($.fn.DataTable.isDataTable('#police_case_dashboard')) {
-              $('#police_case_dashboard').DataTable().destroy();
-            }
 
-            $(document).on('click', '.download-btn', function () {
-              debugger
-              const fileBase64 = $(this).data('download');
-              const fileName = $(this).data('filename');
-              const fileMimeType = $(this).data('mimetype');
+          // });
 
-              let newWindow = window.open('', '_blank');  // Open an empty new tab
-
-              if (newWindow) {
-                if (fileMimeType.startsWith("image")) {
-                  // If the file is an image (JPEG, JPG, PNG, etc.)
-                  openImageInNewPage(newWindow, fileBase64, fileName, fileMimeType);
-                } else if (fileMimeType.startsWith("application/pdf")) {
-                  // If the file is a PDF
-                  openPdfInNewPage(newWindow, fileBase64, fileName);
-                } else if (fileMimeType.startsWith("text")) {
-                  // If the file is a text file
-                  openTextInNewPage(newWindow, fileBase64, fileName);
-                } else {
-                  console.error("Unknown MIME type: ", fileMimeType);
-                }
-              } else {
-                console.error("Failed to open a new tab.");
-              }
-            });
-
-            // Function to open image in the same window/tab
-            function openImageInNewPage(newWindow, fileBase64, fileName, fileMimeType) {
-              const img = new Image();
-              img.src = fileBase64;  // Directly using base64 as src
-              newWindow.document.body.innerHTML = '';  // Clear the existing content
-              newWindow.document.body.appendChild(img);
-            }
-
-            // Function to open PDF in the same window/tab
-            function openPdfInNewPage(newWindow, fileBase64, fileName) {
-              newWindow.document.body.innerHTML = '';  // Clear the existing content
-              newWindow.document.write(`<iframe width="100%" height="100%" src="data:application/pdf;base64,${fileBase64}" frameborder="0"></iframe>`);
-            }
-
-            // Function to open text in the same window/tab
-            function openTextInNewPage(newWindow, fileBase64, fileName) {
-              const textContent = atob(fileBase64); // Decode the base64 string
-              newWindow.document.body.innerHTML = '';  // Clear the existing content
-              newWindow.document.write(`<pre>${textContent}</pre>`);
-            }
-          },
-          error: function (xhr, status, error) {
-            console.error("Error fetching data: ", error);
-            tableBody.html('<tr><td colspan="9" class="text-center">Failed to load data</td></tr>');
+          if ($.fn.DataTable.isDataTable('#police_case_dashboard')) {
+            $('#police_case_dashboard').DataTable().destroy();
           }
-        });
+
+          $(document).on('click', '.download-btn', function () {
+            debugger
+            const fileBase64 = $(this).data('download');
+            const fileName = $(this).data('filename');
+            const fileMimeType = $(this).data('mimetype');
+
+            let newWindow = window.open('', '_blank');  // Open an empty new tab
+
+            if (newWindow) {
+              if (fileMimeType.startsWith("image")) {
+                // If the file is an image (JPEG, JPG, PNG, etc.)
+                openImageInNewPage(newWindow, fileBase64, fileName, fileMimeType);
+              } else if (fileMimeType.startsWith("application/pdf")) {
+                // If the file is a PDF
+                openPdfInNewPage(newWindow, fileBase64, fileName);
+              } else if (fileMimeType.startsWith("text")) {
+                // If the file is a text file
+                openTextInNewPage(newWindow, fileBase64, fileName);
+              } else {
+                console.error("Unknown MIME type: ", fileMimeType);
+              }
+            } else {
+              console.error("Failed to open a new tab.");
+            }
+          });
+
+          // Function to open image in the same window/tab
+          function openImageInNewPage(newWindow, fileBase64, fileName, fileMimeType) {
+            const img = new Image();
+            img.src = fileBase64;  // Directly using base64 as src
+            newWindow.document.body.innerHTML = '';  // Clear the existing content
+            newWindow.document.body.appendChild(img);
+          }
+
+          // Function to open PDF in the same window/tab
+          function openPdfInNewPage(newWindow, fileBase64, fileName) {
+            newWindow.document.body.innerHTML = '';  // Clear the existing content
+            newWindow.document.write(`<iframe width="100%" height="100%" src="data:application/pdf;base64,${fileBase64}" frameborder="0"></iframe>`);
+          }
+
+          // Function to open text in the same window/tab
+          function openTextInNewPage(newWindow, fileBase64, fileName) {
+            const textContent = atob(fileBase64); // Decode the base64 string
+            newWindow.document.body.innerHTML = '';  // Clear the existing content
+            newWindow.document.write(`<pre>${textContent}</pre>`);
+          }
+        },
+        error: function (xhr, status, error) {
+          console.error("Error fetching data: ", error);
+          tableBody.html('<tr><td colspan="9" class="text-center">Failed to load data</td></tr>');
+        }
+      });
       // Toggle dropdown visibility on button click
       $("#t_MenuNav_9i").on("click", function (e) {
         e.stopPropagation(); // Prevent event bubbling
         const dropdown = $("#t_MenuNav_9m");
-        
+
         // Toggle dropdown visibility
         if (dropdown.is(":visible")) {
           dropdown.hide();
@@ -696,19 +1231,22 @@
       $(document).on("click", function () {
         $("#t_MenuNav_9m").hide();
       });
-      $(".a-GV-cell").on("click", function () { debugger;
-            let anchor = $(this).find("a");
-            let value = anchor.text().trim(); // Get the text inside <a>
+      $(".a-GV-cell").on("click", function () {
+        debugger;
+        let anchor = $(this).find("a");
+        let value = anchor.text().trim(); // Get the text inside <a>
 
-            // Update the href dynamically
-            anchor.attr("href", "/district/police-case-details.html?status=" + encodeURIComponent(value));
-        });
+        // Update the href dynamically
+        anchor.attr("href", "/district/police-case-details.html?status=" + encodeURIComponent(value));
+      });
     });
-      function updateHref(tdElement) { debugger;
-        const anchor = tdElement.querySelector("a");
-        const value = anchor.textContent.trim();
-        anchor.href = `/district/police-case-details.html?status=${encodeURIComponent(value)}`;
+    function updateHref(tdElement) {
+      debugger;
+      const anchor = tdElement.querySelector("a");
+      const value = anchor.textContent.trim();
+      anchor.href = `/district/police-case-details.html?status=${encodeURIComponent(value)}`;
     }
   </script>
-  </body>
+</body>
+
 </html>

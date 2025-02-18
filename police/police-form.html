@@ -36,6 +36,37 @@
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <style type="text/css">
+    #menu_L333486390590036621 {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      z-index: 10;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    /* Optional styling for the dropdown menu */
+    .t-NavigationBar-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .t-NavigationBar-menu li {
+      padding: 8px;
+    }
+
+    .t-NavigationBar-menu li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .t-NavigationBar-menu li a:hover {
+      background-color: #f1f1f1;
+    }
+
+
     .toast-container {
       right: 0.5%;
     }
@@ -122,33 +153,36 @@
             <ul class="t-NavigationBar " id="333474357255036612">
               <li class="t-NavigationBar-item ">
                 <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
-                  id="L333486390590036621" data-menu="menu_L333486390590036621" title="">
-                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" last-log></span><span
-                    class="t-Button-label">Awps - Avadi</span><span class="t-Button-badge"></span><span
-                    class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+                  id="L333486390590036621" title="">
+                  <span class="t-Icon fa fa-user" aria-hidden="true" last-log></span>
+                  <span class="t-Button-label-role">Awps - Avadi</span>
+                  <span class="t-Button-badge"></span>
+                  <span class="a-Icon icon-down-arrow" aria-hidden="true" id="dropdown-icon"></span>
                 </button>
-                <div class="t-NavigationBar-menu" style="display: none" id="menu_L333486390590036621">
+                <div class="t-NavigationBar-menu" id="menu_L333486390590036621">
                   <ul>
-                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
-                        href="apex_authentication.logout?p_app_id=111&p_session_id=2794229862693" title=""
-                        target="">Sign Out</a></li>
-                    <li class="" data-current="false" data-icon=""><a
-                        href="javascript:apex.theme42.dialog('\u002Fords\u002Fr\u002Fwspocso\u002Fpocso182168171\u002Fchange-password?session=2794229862693\u0026dialogCs=_k0ekBq53foQPgQ8maez51LDModMXI-tgBzS6aUeIqeMOIn6HpKBZwjIDokCmXfOZUH_lGph55xXsr1VH0y0Iw',{title:'Change Password',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)"
-                        title="" target="">Change Password</a></li>
+                    <li class="" data-current="false" data-icon="fa fa-sign-out">
+                      <a href="" title="" target="">Sign Out</a>
+                    </li>
+                    <li class="" data-current="false" data-icon="">
+                      <a href="javascript:apex.theme42.dialog('/ords/r/wspocso/pocso182168171/change-password?session=4924695955763&dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg', {title:'Change Password', h:'auto', w:'720', mxw:'960', modal:true, dialog:null, dlgCls:'t-Dialog-page--standard '+''},'', apex.gPageContext$)"
+                        title="" target="">Change Password</a>
+                    </li>
                   </ul>
                 </div>
               </li>
               <li class="t-NavigationBar-item ">
                 <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-                  <span class="t-Icon " aria-hidden="true" last-log></span><span class="t-Button-label">Last Logged in:
-                    13-11-2024 02:52 PM</span><span class="t-Button-badge"></span>
+                  <span class="t-Icon" aria-hidden="true" last-log></span>
+                  <span class="t-Button-label">Last Logged in: 13-11-2024 11:40 AM</span>
+                  <span class="t-Button-badge"></span>
                 </a>
               </li>
             </ul>
           </div>
           <div class="t-Header-navBar--end"></div>
         </div>
+
       </div>
       <div class="t-Header-nav">
         <div class="t-Header-nav-list js-tabLike js-tabLike" id="t_MenuNav">
@@ -270,9 +304,10 @@
                                           aria-label="Select&#x20;Date" class="a-Button&#x20;a-Button--calendar"
                                           tabindex="-1" title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                            
-                                              <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_COMPLAINT_NAME" size="30">
+
+                                      <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                        class="apex-item-text&#x20;apex-item-datepicker" name="P50_COMPLAINT_NAME"
+                                        size="30">
                                     </div>
                                     <div class="t-Form-itemAssistance">
                                       <span id="P50_COMPLAINT_NAME_error_placeholder" class="a-Form-error"
@@ -355,8 +390,9 @@
                                           aria-label="Select&#x20;Date" class="a-Button&#x20;a-Button--calendar"
                                           tabindex="-1" title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                            <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_DATE_OF_FIR" size="30">
+                                      <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                        class="apex-item-text&#x20;apex-item-datepicker" name="P50_DATE_OF_FIR"
+                                        size="30">
                                     </div>
                                     <div class="t-Form-itemAssistance">
                                       <span id="P50_DATE_OF_FIR_error_placeholder" class="a-Form-error"
@@ -417,9 +453,9 @@
                                           aria-label="Select&#x20;Date" class="a-Button&#x20;a-Button--calendar"
                                           tabindex="-1" title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                          
-                                    </div>  <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_CHILD_AGE" size="30">
+
+                                    </div> <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                      class="apex-item-text&#x20;apex-item-datepicker" name="P50_CHILD_AGE" size="30">
                                     <div class="t-Form-itemAssistance">
                                       <span id="P50_CHILD_AGE_error_placeholder" class="a-Form-error"
                                         data-template-id="333364085741036567_ET"></span>
@@ -605,8 +641,8 @@
                                           aria-label="Select&#x20;Date" class="a-Button&#x20;a-Button--calendar"
                                           tabindex="-1" title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                            <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_WHO_DATE" size="30">
+                                      <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                        class="apex-item-text&#x20;apex-item-datepicker" name="P50_WHO_DATE" size="30">
                                     </div>
                                     <div class="t-Form-itemAssistance">
                                       <span id="P50_WHO_DATE_error_placeholder" class="a-Form-error"
@@ -810,8 +846,9 @@
                                           class="a-Button&#x20;a-Button--calendar" tabindex="-1"
                                           title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                            <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_CHARGE_SHEET_DATE" size="30">
+                                      <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                        class="apex-item-text&#x20;apex-item-datepicker" name="P50_CHARGE_SHEET_DATE"
+                                        size="30">
                                     </div>
                                     <span id="P50_CHARGE_SHEET_DATE_error_placeholder" class="a-Form-error"
                                       data-template-id="333363771109036567_ET"></span>
@@ -881,8 +918,9 @@
                                           class="a-Button&#x20;a-Button--calendar" tabindex="-1"
                                           title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                            <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_DATE_REQUISITION_MEDICAL_EXAMINATION" size="30">
+                                      <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                        class="apex-item-text&#x20;apex-item-datepicker"
+                                        name="P50_DATE_REQUISITION_MEDICAL_EXAMINATION" size="30">
                                     </div>
                                     <span id="P50_DATE_REQUISITION_MEDICAL_EXAMINATION_error_placeholder"
                                       class="a-Form-error" data-template-id="333363771109036567_ET"></span>
@@ -915,8 +953,9 @@
                                           class="a-Button&#x20;a-Button--calendar" tabindex="-1"
                                           title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                            <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_DATE_OF_MEDICAL_EXAMINATION_VICTIM" size="30">
+                                      <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                        class="apex-item-text&#x20;apex-item-datepicker"
+                                        name="P50_DATE_OF_MEDICAL_EXAMINATION_VICTIM" size="30">
                                     </div>
                                     <span id="P50_DATE_OF_MEDICAL_EXAMINATION_VICTIM_error_placeholder"
                                       class="a-Form-error" data-template-id="333363771109036567_ET"></span>
@@ -945,8 +984,9 @@
                                           aria-label="Select&#x20;Date" class="a-Button&#x20;a-Button--calendar"
                                           tabindex="-1" title="Select&#x20;Date" type="button"><span
                                             class="a-Icon icon-calendar"></span></button></a-date-picker> -->
-                                            <input type="date" placeholder="Select Date" aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker"
-                                              name="P50_DATE_OF_INTERIM" size="30">
+                                      <input type="date" placeholder="Select Date" aria-haspopup="dialog"
+                                        class="apex-item-text&#x20;apex-item-datepicker" name="P50_DATE_OF_INTERIM"
+                                        size="30">
                                     </div>
                                     <span id="P50_DATE_OF_INTERIM_error_placeholder" class="a-Form-error"
                                       data-template-id="333363771109036567_ET"></span>
@@ -1705,27 +1745,72 @@
   <script src="../assets/vendor/datatables-buttons/js/buttons.html5.min.js"></script>
   <script src="../assets/vendor/datatables-buttons/js/buttons.print.min.js"></script>
   <script src="../assets/vendor/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownIcon = document.getElementById("dropdown-icon");
+      const menu = document.getElementById("menu_L333486390590036621");
 
+      dropdownIcon.addEventListener("click", function () {
+        // Toggle the visibility of the menu
+        if (menu.style.display === "none" || menu.style.display === "") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      });
+
+      // Optional: Close the menu if clicking outside
+      window.addEventListener("click", function (event) {
+        if (!event.target.closest('.t-NavigationBar-item')) {
+          menu.style.display = "none"; // Hide menu if clicked outside
+        }
+      });
+    });
+  </script>
   <script>
     AOS.init();
+    function userData() {
+      debugger
+      const userDetails = JSON.parse(localStorage.getItem("user_details")); // Parse back to object
+
+      var userNameElement = document.querySelector('.t-Button-label-role');
+
+      if (userDetails) {
+        userNameElement.textContent = userDetails.role;
+      } else {
+        showErrorToast("Something went wrong");
+        localStorage.clear();
+        sessionStorage.clear();
+        setTimeout(function () {
+          window.location.href = "../index.html";
+        }, 1000);
+      }
+    }
+    userData();
+
     $(document).ready(function () {
+      $('li[data-icon="fa fa-sign-out"] a').click(function (event) {
+        event.preventDefault(); // Prevent default action (optional)
+        localStorage.clear(); // Clears all localStorage data
+        window.location.href = "../index.html"; // Redirect to login or home page
+      });
       // $(document).on('blur', '#P50_CHILD_AGE input', function () {
       //     $(this).trigger('change');
       // });
       $(document).on('blur', '#P50_CHILD_AGE_CONTAINER input, #P50_CHILD_AGE_CONTAINER input', function () {
-        var selectedDate = $('#P50_CHILD_AGE_CONTAINER input').val();        
+        var selectedDate = $('#P50_CHILD_AGE_CONTAINER input').val();
         if (selectedDate) {
-            var birthDate = new Date(selectedDate);
-            var today = new Date();
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var monthDiff = today.getMonth() - birthDate.getMonth();            
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            $('#P50_AGE').val(age);
+          var birthDate = new Date(selectedDate);
+          var today = new Date();
+          var age = today.getFullYear() - birthDate.getFullYear();
+          var monthDiff = today.getMonth() - birthDate.getMonth();
+          if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+          }
+          $('#P50_AGE').val(age);
         }
-    });
-      
+      });
+
       $('.initWillHide').hide();
       $('.initChargeSheetHide').hide();
       $('#P50_WILLINGNESS_COMPENSATION input').on('click', function () {
@@ -1801,7 +1886,7 @@
         var branchName = document.getElementById('P50_BRANCH_NAME').value || "";
         var ifsc = document.getElementById('P50_IFSC_CODE').value || "";
         var charge = $('input[id="P50_CHARGE_SHEET_YES_NO_0"]:checked').val();
-        var chargeDate = $('#P50_CHARGE_SHEET_DATE_CONTAINER input').val( ) || "";
+        var chargeDate = $('#P50_CHARGE_SHEET_DATE_CONTAINER input').val() || "";
         //var formatchargeDate = convertDateFormat(chargeDate);
         var nameOfMedInst = document.getElementById('P50_NAME_MEDICAL_INSTITUTION').value || "";
         var dateOfReq = $('#P50_DATE_REQUISITION_MEDICAL_EXAMINATION_CONTAINER input').val() || "";
@@ -1811,9 +1896,9 @@
         var dateOfInterm = $('#P50_DATE_OF_INTERIM_CONTAINER input').val() || "";
         //var formatdateOfInterm = convertDateFormat(dateOfInterm);
 
-        if (!polStn || !districtName || !ComplaintData || !complaintMadeBy || !firNo || !dateOfFIR || !childGender || !childDOB || !childAge || !nameOfGuardian ) {
-          if(willingness === "Yes") {
-            if(!willingness || !willName || !willRelation || !willDate || !accName || !accNo || !bankName || !branchName || !ifsc) {
+        if (!polStn || !districtName || !ComplaintData || !complaintMadeBy || !firNo || !dateOfFIR || !childGender || !childDOB || !childAge || !nameOfGuardian) {
+          if (willingness === "Yes") {
+            if (!willingness || !willName || !willRelation || !willDate || !accName || !accNo || !bankName || !branchName || !ifsc) {
               showErrorToast("Please fill in all required fields.");
               return;
             }
@@ -1892,7 +1977,7 @@
         });
 
 
-        
+
         await $.ajax({
           url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/police/insert/insertJudgeLogin',
           type: 'POST',
@@ -1934,7 +2019,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       let today = new Date();
-      let formattedDate = today.toISOString().split("T")[0]; 
+      let formattedDate = today.toISOString().split("T")[0];
       $("#P50_COMPLAINT_NAME_CONTAINER input").attr("max", formattedDate);
       $("#P50_DATE_OF_FIR_CONTAINER input").attr("max", formattedDate);
       $("#P50_CHILD_AGE_CONTAINER input").attr("max", formattedDate);

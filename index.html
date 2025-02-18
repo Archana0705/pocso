@@ -20,7 +20,47 @@
   <meta http-equiv="Expires" content="-1" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <style type="text/css">
+    #P9999_CAPT_DISPLAY {
+      font-size: 25px;
+    }
+
+    .captchaa {
+      font-size: 22px;
+      font-style: italic;
+      font-family: cursive;
+      color: #ffffff;
+      border-radius: 2px;
+      background: url('assets/img/Captcha_bg2.png');
+      cursor: not-allowed;
+      opacity: 1;
+    }
+
+    #P9999_CAPTCHA_CONTAINER {
+      margin-top: 10px;
+    }
+
+    .toast-container {
+      right: 0.5%;
+    }
+
+    #successToast {
+      background: #198754 !important;
+    }
+
+    #errorToast {
+      background: #ff0000 !important;
+    }
+
     #modal {
       display: none;
       /* Hidden by default */
@@ -39,6 +79,31 @@
       float: right;
     }
   </style>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed p-3 custom_toast" x-data="transButtonComponent()">
+    <div id="errorToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="errorMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+    <div id="successToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="successMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <!-- Toast -->
 </head>
 
 <body class="t-PageBody--login t-PageTemplate--login no-anim   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1">
@@ -155,32 +220,46 @@
                               data-template-id="333363702140036567_ET"></span>
                           </div>
                         </div>
-                        <input type="hidden" name="P9999_CAPT" id="P9999_CAPT" value="121289">
                         <div
-                          class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--has-placeholder apex-item-wrapper--text-field"
-                          id="P9999_CAPTCHA_CONTAINER">
-                          <div class="t-Form-labelContainer">
-                            <label for="P9999_CAPTCHA" id="P9999_CAPTCHA_LABEL" class="t-Form-label">Enter the number as
-                              shown in image:</label>
+                          class="t-Form-fieldContainer rel-col text-middle t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                          id="P9999_CAPT_CONTAINER">
+                          <div class="t-Form-labelContainer col col-null">
+                            <label for="P9999_CAPT" id="P9999_CAPT_LABEL" class="t-Form-label">Enter the number as shown
+                              in image:</label>
                           </div>
-                          <div class="t-Form-inputContainer">
+                          <div class="t-Form-inputContainer col col-null">
                             <div class="t-Form-itemWrapper">
-                              <span class="t-Form-itemText t-Form-itemText--pre">
-                                <div class="captchaa" data-aos="fade-left" data-aos-duration="800">121289</div>
-                                &nbsp;&nbsp;&nbsp;
-                              </span>
-                              <input type="text" id="P9999_CAPTCHA" name="P9999_CAPTCHA" required
-                                placeholder="Type&#x20;the&#x20;captcha" class="text_field&#x20;apex-item-text" value=""
-                                size="6" />
+                              <input type="hidden" id="P9999_CAPT" name="P9999_CAPT" value="616176">
+                              <input type="hidden" data-for="P9999_CAPT"
+                                value="y0IxQ7No5cA2CJn5To5X0-lqMYdSgT2M2imFA1JFXLMxjumo95Y2xEB6jX3Mm1UOAlxuPuy3NIFSJj1l0P-MQQ">
+                              <span id="P9999_CAPT_DISPLAY" class="display_only apex-item-display-only capt-cha"
+                                data-escape="true">616176</span>
                             </div>
-                            <span id="P9999_CAPTCHA_error_placeholder" class="a-Form-error"
-                              data-template-id="333363882085036567_ET"></span>
+                            <span id="P9999_CAPT_error_placeholder" class="a-Form-error"
+                              data-template-id="70091003022793546032_ET"></span>
+                          </div>
+
+                          <!-- Container for CAPTCHA and input -->
+                          <div
+                            class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
+                            id="P9999_CAPTCHA_CONTAINER">
+                            <div class="t-Form-inputContainer col col-null">
+                              <div class="t-Form-itemWrapper">
+                                <input type="text" id="P9999_CAPTCHA" name="P9999_CAPTCHA" required
+                                  class="text_field apex-item-text" value="" size="30" />
+                              </div>
+                              <div class="t-Form-itemAssistance">
+                                <span id="P9999_CAPTCHA_error_placeholder" class="a-Form-error"
+                                  data-template-id="70091003340642546032_ET"></span>
+                                <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                              </div>
+                            </div>
                           </div>
                         </div>
+
                       </div>
                       <div class="t-Login-buttons" data-aos="flip-up" data-aos-duration="1200">
-                        <button onclick="handleSignUp()"
-                          class="logbtn t-Login-buttons t-Button">Sign in</button>
+                        <button onclick="handleSignUp()" class="logbtn t-Login-buttons t-Button">Sign in</button>
                         <a id="open-modal-btn" class="forgot-pwd-btn">Forgot password?</a>
                         <button class="t-Button t-Button--hot hide-btns" type="button" id="login"><span
                             class="t-Button-label">Sign In</span></button><button
@@ -402,12 +481,12 @@
       $(".close-button").on("click", function () {
         $("#modal").dialog("close");
       });
-      
+
     });
   </script>
 
 
-
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/index-widget.stickyWidget.min.js"></script>
   <script src="assets/js/index-theme42.min.js"></script>
   <script src="assets/js/index-add.min.js"></script>
@@ -456,17 +535,73 @@
   </script>
   <script>
     AOS.init();
-    function handleSignUp () {
+    function generateCaptcha(length) {
+      var characters = '0123456789';
+      var captcha = '';
+      for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * characters.length);
+        captcha += characters.charAt(randomIndex);
+      }
+      return captcha;
+    }
+
+    function showSuccessToast(message) {
+      const toastElement = document.getElementById('successToast');
+      const toastBody = document.getElementById('successMessage');
+
+      // Set the dynamic message
+      toastBody.textContent = message;
+
+      // Initialize and show the toast
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    // Function to show a error toast with a dynamic message
+    function showErrorToast(message) {
+      const toastElement = document.getElementById('errorToast');
+      const toastBody = document.getElementById('errorMessage');
+
+      // Set the dynamic message
+      toastBody.textContent = message;
+
+      // Initialize and show the toast
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+
+
+    var generatedCaptcha = generateCaptcha(6);  // Generate a 6-character CAPTCHA
+    document.getElementById('P9999_CAPT').value = generatedCaptcha;  // Store the correct CAPTCHA value in the hidden field
+    document.getElementById('P9999_CAPT_DISPLAY').textContent = generatedCaptcha;  // Display the CAPTCHA for the user
+    // Function to show a success toast with a dynamic message
+
+    function handleSignUp() {
+      debugger
       let usrName = $('#P9999_USERNAME').val();
       let pasWrd = $('#P9999_PASSWORD').val();
       let captchaVal = $('#P9999_CAPTCHA').val();
+
       if (!usrName || !pasWrd || !captchaVal) {
-        alert('Please fill all the Required fields');
+        showErrorToast('Please fill all the Required fields');
+        return
+      }
+
+      var correctCaptcha = $('#P9999_CAPT').val(); // Get the correct CAPTCHA value from the hidden input
+      if (captchaVal !== correctCaptcha) {
+        errors = true;
+        showErrorToast('Captcha does not match. Please try again.');
+        return
       } else {
-        let loginPayload = 
+        let loginPayload =
         {
-          "username" : usrName,
-          "password" : pasWrd
+          "username": usrName,
+          "password": pasWrd
         }
         $.ajax({
           url: "https://tngis.tnega.org/lcap_api/pocso/api/v1/login",
@@ -479,20 +614,25 @@
           data: JSON.stringify(loginPayload),
           success: function (response) {
             localStorage.setItem("role_id", response.role_id);
-            if(response.role_id === "1175") {
-              window.location.href="/police/index.html";
+            localStorage.setItem("user_details", JSON.stringify(response));
+            console.log(response)
+            if (response.role_id === "1175") {
+              window.location.href = "/police/index.html";
             }
-            else if(response.role_id === "67") {
-              window.location.href="/court/index.html";
+            else if (response.role_id === "67") {
+              window.location.href = "/court/index.html";
             }
-            else if(response.role_id === "82") {
-              window.location.href="/directorate/home.html";
+            else if (response.role_id === "82") {
+              window.location.href = "/directorate/home.html";
             }
-            else if(response.role_id === "42") {
-              window.location.href="/district/state-dashboard.html";
+            else if (response.role_id === "24") {
+              window.location.href = "/district/dashboard.html";
+            }
+            else if (response.role_id === "42") {
+              window.location.href = "/director-admin/home.html";
             }
             else {
-              window.location.href="/index.html"
+              window.location.href = "/index.html"
             }
           },
           error: function (xhr, status, error) {
