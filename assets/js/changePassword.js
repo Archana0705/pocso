@@ -1,4 +1,4 @@
-
+let userId = localStorage.getItem('role_id');
 function loadPopup() {
     debugger
     fetch('../assets/ChangePassword/changePassword.html')
@@ -20,30 +20,6 @@ function loadPopup() {
 //         window.location.href = "../index.html";
 //     }
 // });
-$(document).ready(function () {
-    debugger
-    //$('body').attr('onload', 'loadPopup()');
-    // $(window).on("pageshow", function (event) {
-    //     if (window.location.href === "https://tngis.tnega.org/jallikattu/index.html") {
-    //         if (event.originalEvent.persisted) {
-    //             alert('loaded-from-cache');
-    //             window.location.href = "../index.html";
-    //         }
-    //     }
-    // });
-    let encryptedDataFromStorage = localStorage.getItem('role_id');
-    // let decryptedData;
-    // if (encryptedDataFromStorage) {
-    //     const secretKey = 'V7gN4dY8pT2xB3kRz';
-    //     const bytes = CryptoJS.AES.decrypt(encryptedDataFromStorage, secretKey);
-    //     decryptedData = bytes.toString(CryptoJS.enc.Utf8);
-    // } else {
-    //     console.log('No data found in localStorage');
-    // }
-    let userDetails = encryptedDataFromStorage;
-    const user = JSON.parse(userDetails);
-    let userId = user.role_id;
-});
 
 $(document).on('click', '.a-Menu-item', function () {
     if ($(this).is(':last-of-type')) {
