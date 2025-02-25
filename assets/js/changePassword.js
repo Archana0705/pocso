@@ -57,6 +57,7 @@ $(document).on('click', '.a-Menu-item', function () {
                             $('#popup-overlay').fadeOut();
                             $('.t-Header').css('z-index', '800');
                         }, 1000);
+                        $('#Old_password_input, #New_password_input').val('');
                     },
                     error: function (xhr, status, error) {
                         console.error('Error:');
