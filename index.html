@@ -106,7 +106,8 @@
   <!-- Toast -->
 </head>
 
-<body class="t-PageBody--login t-PageTemplate--login no-anim   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1">
+<body class="t-PageBody--login t-PageTemplate--login no-anim   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  onload="loadPopup()">
   <img id="backgroundVideo" src="assets/img/login-bg.png">
   <div class="bg">
     <div class="circles">
@@ -414,8 +415,9 @@
               <div class="t-ButtonRegion-buttons"></div>
             </div>
             <div class="t-ButtonRegion-col t-ButtonRegion-col--right">
-              <div class="t-ButtonRegion-buttons"><button class="t-Button t-Button--large t-Button--success"
-                  type="button" id="B239968811284459347"><span class="t-Button-label">Change Password</span></button>
+              <div class="t-ButtonRegion-buttons"><button id="forgetPasswordSubmit"
+                  class="t-Button t-Button--large t-Button--success" type="button" id="B239968811284459347"><span
+                    class="t-Button-label">Change Password</span></button>
               </div>
             </div>
           </div>
@@ -423,7 +425,6 @@
       </div>
     </div>
   </div>
-
 
   <script>
     var apex_img_dir = "\u002Fi\u002F";
@@ -481,6 +482,46 @@
       $(".close-button").on("click", function () {
         $("#modal").dialog("close");
       });
+
+      $('#forgetPasswordSubmit').on('click', async function () {
+        const mobile = $('#P64_NAME').val();
+        const email = $('#P64_EMAIL').val();
+        const new_password = $('#P64_PASSWORD').val();
+        const Confirm_password = $('#P64_CONFIRM_PASSWORD').val();
+        if (mobile === "" || email === "" || new_password === "") {
+          showErrorToast("Please fill all required fields");
+        }
+        if (new_password !== confirm_password) {
+          showErrorToast("New Password and Confirm Password do not match");
+          return;
+        }
+        const formData = new FormData();
+        formData.append('mobile_no', mobile);
+        formData.append('email', email);
+        formData.append('new_password', new_password);
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/jallikattu/v1/access/forget_password',
+          type: 'POST',
+          headers: {
+            'X-App-Key': 'j6ll!k@ttu',
+            'X-App-Name': 'tn jallikattu',
+          },
+          processData: false,
+          contentType: false,
+          data: formData,
+          success: function (response) {
+            console.log('Response:', response);
+            showSuccessToast("Password Changed Successfully");
+            $('#P64_NAME, #P64_EMAIL, #P64_PASSWORD', '#P64_CONFIRM_PASSWORD').val('');
+            $("#modal").dialog("close");
+          },
+          error: function (xhr, status, error) {
+            console.error('Error:');
+            showErrorToast('error occured');
+          }
+        });
+
+      })
 
     });
   </script>
@@ -617,22 +658,22 @@
             localStorage.setItem("user_details", JSON.stringify(response));
             console.log(response)
             if (response.role_id === "1175") {
-              window.location.href = "/police/index.html";
+              window.location.href = "/pocso/police/index.html";
             }
             else if (response.role_id === "67") {
-              window.location.href = "/court/index.html";
+              window.location.href = "/pocso/court/index.html";
             }
             else if (response.role_id === "82") {
-              window.location.href = "/directorate/home.html";
+              window.location.href = "/pocso/directorate/home.html";
             }
             else if (response.role_id === "24") {
-              window.location.href = "/district/dashboard.html";
+              window.location.href = "/pocso/district/dashboard.html";
             }
             else if (response.role_id === "42") {
-              window.location.href = "/director-admin/home.html";
+              window.location.href = "/pocso/director-admin/home.html";
             }
             else {
-              window.location.href = "/index.html"
+              window.location.href = "/pocso/index.html"
             }
           },
           error: function (xhr, status, error) {
@@ -643,6 +684,9 @@
       }
     }
   </script>
+  <script src="../assets/js/changePassword.js">
+  </script>
+  <link rel="stylesheet" href="../assets/css/popUp.css" type="text/css" />
 </body>
 
 </html>

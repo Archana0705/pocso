@@ -161,7 +161,7 @@
 
 <body
   class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"
-  id="t_PageBody">
+  id="t_PageBody" onload="loadPopup()">
   <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
   <form role="none" action="wwv_flow.accept?p_context=pocso182168171/court-form/16167970441650" method="post"
     name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate enctype="multipart/form-data"
@@ -210,9 +210,8 @@
                     <li class="" data-current="false" data-icon="fa fa-sign-out">
                       <a href="" title="" target="">Sign Out</a>
                     </li>
-                    <li class="" data-current="false" data-icon="">
-                      <a href="javascript:apex.theme42.dialog('/ords/r/wspocso/pocso182168171/change-password?session=4924695955763&dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg', {title:'Change Password', h:'auto', w:'720', mxw:'960', modal:true, dialog:null, dlgCls:'t-Dialog-page--standard '+''},'', apex.gPageContext$)"
-                        title="" target="">Change Password</a>
+                    <li class="a-Menu-item" style="color: #000;" data-current="false" data-icon="">
+                      <a title="" target="">Change Password</a>
                     </li>
                   </ul>
                 </div>
@@ -2224,6 +2223,9 @@
     viewDisbursal();
 
   </script>
+  <script src="../assets/js/changePassword.js">
+  </script>
+  <link rel="stylesheet" href="../assets/css/popUp.css" type="text/css" />
 </body>
 
 </html>

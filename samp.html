@@ -1,49 +1,47 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const dropdownIcon = document.getElementById("dropdown-icon");
-  const menu = document.getElementById("menu_L333486390590036621");
-
-  dropdownIcon.addEventListener("click", function () {
-        // Toggle the visibility of the menu
-        if (menu.style.display === "none" || menu.style.display === "") {
-    menu.style.display = "block";
-        } else {
-    menu.style.display = "none";
-        }
-      });
-
-  // Optional: Close the menu if clicking outside
-  window.addEventListener("click", function (event) {
-        if (!event.target.closest('.t-NavigationBar-item')) {
-    menu.style.display = "none"; // Hide menu if clicked outside
-        }
-      });
-    });
-</script>
-
-function userData() {
-  debugger
-  const userDetails = JSON.parse(localStorage.getItem("user_details")); // Parse back to object
-
-  var userNameElement = document.querySelector('.t-Button-label-role');
-
-  if (userDetails) {
-    userNameElement.textContent = userDetails.role;
-  } else {
-    showErrorToast("Something went wrong");
-    localStorage.clear();
-    sessionStorage.clear();
-    setTimeout(function () {
-      window.location.href = "../index.html";
-    }, 1000);
-  }
+{
+  "id": "POCSO\/DECEMBER \/2024\/5493",
+  "complaint_name": "2024-10-17",
+  "complaint_copy": "COMPLAINT_COPY",
+  "complaint_copy_mimetype": null,
+  "complaint_copy_filename": null,
+  "fir_no": "91",
+  "date_of_fir": "2024-10-17 00:00:00",
+  "fir_attach": "FIR_ATTACH",
+  "fir_attach_mimetype": null,
+  "fir_attach_filename": null,
+  "charge_sheet_yes_no": "Yes",
+  "charge_sheet_date": "04-Dec-2024",
+  "child_age": "2007-09-01",
+  "name_parent": "ADAIKKALAM",
+  "willingness_compensation": "Yes",
+  "who_name": "KAVIYA",
+  "who_relationship": "Parent",
+  "who_date": "22-Oct-2024",
+  "account_holder_name": "KAVIYA",
+  "account_number": "6266474930",
+  "bank_name": "INDIAN BANK",
+  "branch_name": "THIRUPPATHUR",
+  "ifsc_code": "IDIB000T037",
+  "district_name": "Sivagangai",
+  "pol_stat": "S.S.Kottai",
+  "year_dat": null,
+  "child_gender": "Female",
+  "status": "Y",
+  "created_by": "1175",
+  "created_date": "2025-01-23 12:44:45.485965",
+  "updated_date": "2024-12-30 00:00:00",
+  "updated_by": "1175",
+  "child_name": null,
+  "age": "17",
+  "ds": "Sivagangai",
+  "payment_status": "Pending",
+  "condition_status": "Pending",
+  "condition_status_1": "Orders passed",
+  "condition_status_2": "Pending",
+  "interim_awarded_yes": "-",
+  "name_medical_institution": "Sivagangai medical college",
+  "complaint_made": "Parent",
+  "date_requisition_medical_examination": "2024-10-30",
+  "date_of_medical_examination_victim": "2024-10-22",
+  "date_of_interim": "2024-10-30"
 }
-userData();
-
-$(document).ready(function () {
-  $('li[data-icon="fa fa-sign-out"] a').click(function (event) {
-    event.preventDefault(); // Prevent default action (optional)
-    localStorage.clear(); // Clears all localStorage data
-    window.location.href = "../index.html"; // Redirect to login or home page
-  });
-});

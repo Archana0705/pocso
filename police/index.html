@@ -111,7 +111,7 @@
 
 <body
   class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"
-  id="t_PageBody">
+  id="t_PageBody" onload="loadPopup()">
   <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
   <form role="none" action="wwv_flow.accept?p_context=pocso182168171/home/4924695955763" method="post" name="wwv_flow"
     id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
@@ -159,9 +159,8 @@
                     <li class="" data-current="false" data-icon="fa fa-sign-out">
                       <a href="" title="" target="">Sign Out</a>
                     </li>
-                    <li class="" data-current="false" data-icon="">
-                      <a href="javascript:apex.theme42.dialog('/ords/r/wspocso/pocso182168171/change-password?session=4924695955763&dialogCs=3GbJWyABUXId5mhgRBSxLhrNfEQTx5JbaHdSvr00HdeAFbAewYSxKO-f_ONMDnQnijbwv11ttTO39a-0In9Mbg', {title:'Change Password', h:'auto', w:'720', mxw:'960', modal:true, dialog:null, dlgCls:'t-Dialog-page--standard '+''},'', apex.gPageContext$)"
-                        title="" target="">Change Password</a>
+                    <li class="a-Menu-item" style="color: #000;" data-current="false" data-icon="">
+                      <a title="" target="">Change Password</a>
                     </li>
                   </ul>
                 </div>
@@ -828,7 +827,6 @@
 
     $(document).ready(function () {
       const userId = localStorage.getItem("role_id");
-      alert(userId);
       const apiUrl = `https://tngis.tnega.org/lcap_api/pocso/api/v1/police/dashboard`;
       const tableBody = $("#policeFormTable tbody");
 
@@ -861,30 +859,30 @@
               const newRow = `
             <tr>
               <td class="u-tL"><a href="police-entry-form.html"><i class="bi bi-pencil-square"></i></a></td>
-              <td>${(item.bulls_id) || 'N/A'}</td>
-              <td>${(item.event_type) || 'N/A'}</td>
-              <td>${(item.event_date) || 'N/A'}</td>
-              <td>${(item.place_of_event) || 'N/A'}</td>
-              <td>${(item.district) || 'N/A'}</td>
-              <td>${(item.selected_bull) || 'N/A'}</td>
-              <td>${(item.mobile) || 'N/A'}</td>
-              <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
-              <td>${(item.bulls_id) || 'N/A'}</td>
-              <td>${(item.event_type) || 'N/A'}</td>
-              <td>${(item.event_date) || 'N/A'}</td>
-              <td>${(item.place_of_event) || 'N/A'}</td>
-              <td>${(item.district) || 'N/A'}</td>
-              <td>${(item.selected_bull) || 'N/A'}</td>
-              <td>${(item.mobile) || 'N/A'}</td>
-              <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
-              <td>${(item.bulls_id) || 'N/A'}</td>
-              <td>${(item.event_type) || 'N/A'}</td>
-              <td>${(item.event_date) || 'N/A'}</td>
-              <td>${(item.place_of_event) || 'N/A'}</td>
-              <td>${(item.district) || 'N/A'}</td>
-              <td>${(item.selected_bull) || 'N/A'}</td>
-              <td>${(item.mobile) || 'N/A'}</td>
-              <td>${(item.status) === "Y" ? "Approved" : "Pending"}</td>
+              <td>${(item.complaint_name) || 'N/A'}</td>
+              <td>${(item.complaint_made) || 'N/A'}</td>
+              <td>${(item.fir_no) || 'N/A'}</td>
+              <td>${(item.date_of_fir) || 'N/A'}</td>
+              <td>${(item.charge_sheet_yes_no) || 'N/A'}</td>
+              <td>${(item.charge_sheet_date) || 'N/A'}</td>
+              <td>${(item.child_gender) || 'N/A'}</td>
+              <td>${(item.who_relationship) || 'N/A'}</td>
+              <td>${(item.willingness_compensation) || 'N/A'}</td>
+              <td>${(item.who_name) || 'N/A'}</td>
+              <td>${(item.who_date) || 'N/A'}</td>
+              <td>${(item.who_relationship) || 'N/A'}</td>
+              <td>${(item.account_holder_name) || 'N/A'}</td>
+              <td>${(item.account_number) || 'N/A'}</td>
+              <td>${(item.bank_name) || 'N/A'}</td>
+              <td>${(item.branch_name) || 'N/A'}</td>
+              <td>${(item.name_medical_institution) || 'N/A'}</td>
+              <td>${(item.date_requisition_medical_examination) || 'N/A'}</td>
+              <td>${(item.date_of_medical_examination_victim) || 'N/A'}</td>
+              <td>${(item.date_of_interim) || 'N/A'}</td>
+              <td>${(item.willingness_compensation) || 'N/A'}</td>
+              <td>${(item.payment_status) || 'N/A'}</td>
+              <td>${(item.condition_status) || 'N/A'}</td>
+              <td>${(item.condition_status_2) === "Y" ? "Approved" : "Pending"}</td>
             </tr>`;
               tableBody.append(newRow);
             });
@@ -920,6 +918,9 @@
     });
 
   </script>
+  <script src="../assets/js/changePassword.js">
+  </script>
+  <link rel="stylesheet" href="../assets/css/popUp.css" type="text/css" />
 </body>
 
 </html>
