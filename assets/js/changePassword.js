@@ -1,7 +1,7 @@
 
 function loadPopup() {
     debugger
-    fetch('../assets/ChangePassword/ChangePassword.html')
+    fetch('../assets/ChangePassword/changePassword.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -20,6 +20,31 @@ function loadPopup() {
 //         window.location.href = "../index.html";
 //     }
 // });
+$(document).ready(function () {
+    debugger
+    //$('body').attr('onload', 'loadPopup()');
+    // $(window).on("pageshow", function (event) {
+    //     if (window.location.href === "https://tngis.tnega.org/jallikattu/index.html") {
+    //         if (event.originalEvent.persisted) {
+    //             alert('loaded-from-cache');
+    //             window.location.href = "../index.html";
+    //         }
+    //     }
+    // });
+    let encryptedDataFromStorage = localStorage.getItem('role_id');
+    // let decryptedData;
+    // if (encryptedDataFromStorage) {
+    //     const secretKey = 'V7gN4dY8pT2xB3kRz';
+    //     const bytes = CryptoJS.AES.decrypt(encryptedDataFromStorage, secretKey);
+    //     decryptedData = bytes.toString(CryptoJS.enc.Utf8);
+    // } else {
+    //     console.log('No data found in localStorage');
+    // }
+    let userDetails = encryptedDataFromStorage;
+    const user = JSON.parse(userDetails);
+    let userId = user.role_id;
+});
+
 $(document).on('click', '.a-Menu-item', function () {
     if ($(this).is(':last-of-type')) {
         $('#popup-overlay').fadeIn();
@@ -29,7 +54,6 @@ $(document).on('click', '.a-Menu-item', function () {
             $('.t-Header').css('z-index', '800');
         });
         $('#changePasswordSubmit').on('click', async function () {
-            debugger
             const old_password = $('#Old_password_input').val();
             const new_password = $('#New_password_input').val();
             if (old_password === "" || new_password === "") {
@@ -41,11 +65,11 @@ $(document).on('click', '.a-Menu-item', function () {
                 formData.append('new_password', new_password);
                 formData.append('old_password', old_password);
                 $.ajax({
-                    url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/changePassword',
+                    url: 'https://tngis.tnega.org/lcap_api/jallikattu/v1/access/change_password',
                     type: 'POST',
                     headers: {
-                        'X-App-Key': 'pocso',
-                        'X-App-Name': 'pocso',
+                        'X-App-Key': 'j6ll!k@ttu',
+                        'X-App-Name': 'tn jallikattu',
                     },
                     processData: false,
                     contentType: false,
@@ -71,26 +95,3 @@ $(document).on('click', '.a-Menu-item', function () {
     }
 });
 
-$(document).ready(function () {
-    //$('body').attr('onload', 'loadPopup()');
-    $(window).on("pageshow", function (event) {
-        if (window.location.href === "https://tngis.tnega.org/jallikattu/index.html") {
-            if (event.originalEvent.persisted) {
-                alert('loaded-from-cache');
-                window.location.href = "../index.html";
-            }
-        }
-    });
-    let encryptedDataFromStorage = localStorage.getItem('userDetails');
-    let decryptedData;
-    if (encryptedDataFromStorage) {
-        const secretKey = 'V7gN4dY8pT2xB3kRz';
-        const bytes = CryptoJS.AES.decrypt(encryptedDataFromStorage, secretKey);
-        decryptedData = bytes.toString(CryptoJS.enc.Utf8);
-    } else {
-        console.log('No data found in localStorage');
-    }
-    let userDetails = decryptedData;
-    const user = JSON.parse(userDetails);
-    let userId = user.user_id;
-});
