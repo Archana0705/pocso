@@ -490,7 +490,7 @@
         if (mobile === "" || email === "" || new_password === "") {
           showErrorToast("Please fill all required fields");
         }
-        if (new_password !== confirm_password) {
+        if (new_password !== Confirm_password) {
           showErrorToast("New Password and Confirm Password do not match");
           return;
         }
@@ -499,11 +499,11 @@
         formData.append('email', email);
         formData.append('new_password', new_password);
         $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/jallikattu/v1/access/forget_password',
+          url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/forgetPassword',
           type: 'POST',
           headers: {
-            'X-App-Key': 'j6ll!k@ttu',
-            'X-App-Name': 'tn jallikattu',
+            'X-App-Key': 'pocso',
+            'X-App-Name': 'pocso',
           },
           processData: false,
           contentType: false,

@@ -41,11 +41,11 @@ $(document).on('click', '.a-Menu-item', function () {
                 formData.append('new_password', new_password);
                 formData.append('old_password', old_password);
                 $.ajax({
-                    url: 'https://tngis.tnega.org/lcap_api/jallikattu/v1/access/change_password',
+                    url: 'https://tngis.tnega.org/lcap_api/pocso/api/v1/changePassword',
                     type: 'POST',
                     headers: {
-                        'X-App-Key': 'j6ll!k@ttu',
-                        'X-App-Name': 'tn jallikattu',
+                        'X-App-Key': 'pocso',
+                        'X-App-Name': 'pocso',
                     },
                     processData: false,
                     contentType: false,
